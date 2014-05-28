@@ -1,0 +1,81 @@
+ <div>
+	<!--Body content-->
+	<h1>{{message}}</h1>
+	<div>
+		<label> Upload File: </label>
+		<input type="text" ng-model="file.location"/>
+		<button class="btn">Browse</button>
+		<h2>Compilation Results</h2>
+		<button class="btn btn-success" ng-click="compile()">Compile</button>
+		<div class="Compilation_Results" >
+			<table>
+				<tr ng-repeat="res in compile_result">
+					<td>
+						<!--
+						
+						-->
+						<pre>{{res.Compile_Message}}</pre>
+						<pre>{{res.Output_Message}}</pre>
+					</td>
+				</tr>
+			</table>
+			
+			<!-- Error Codes-->
+			<div ng-class="{true:'',false:'disabled'}[compile_result[0].Has_Error==true]">
+				<h3> ERROR TABLE</h3>
+				<table>
+					<tr ng-repeat="error in error_list">
+						<td>
+							<pre>Error Code: {{error.Error_Code}}Error: {{error.Error}}What to do: {{error.What_to_do}}Class: {{error.Class}}Feature: {{error.Feature}}{{error.Before_Line}}Line:{{error.Line}}{{error.After_Line}}</pre>
+						</td>
+					</tr>
+				</table>
+			</div>
+			<!--Warning Codes-->
+			<div ng-class="{true:'',false:'disabled'}[compile_result[0].Has_Warning==true]">
+				<h3> WARNING TABLE </h3>
+				<table>
+					<tr ng-repeat="warning in warning_list">
+						<td>
+							<pre>Warning Code: {{warning.Warning_Code}}Warning: {{warning.Warning}}What to do: {{warning.What_to_do}}Class: {{warning.Class}}Feature: {{warning.Feature}}{{warning.After_Feature}}</pre>
+						</td>
+					</tr>
+				</table>
+			</div>
+			
+		</div>
+		<h2>Execution Results</h2>
+		<button class="btn" ng-click="run_exe()">Run</button>
+		<div class="Execution_Results">
+			{{run_result[0].result}}
+		</div>
+		<label> Select Class: </label>
+		<div class="Class_Views">
+			<input type="text" ng-model="file.class"/>
+			<h2>Class View (Interface)</h2>
+			<button class="btn" ng-click="get_interface_view()">Get Interface View</button>
+			<div class="Interface_View">
+				{{interface_view_result[0].result}}
+			</div>
+		</div>
+		<div class="Class_Views">
+			<h2>Class View (Flat)</h2>
+			<button class="btn" ng-click="get_flat_view()">Get Flat View</button>
+			<div class="Flat_View">
+				{{flat_view_result[0].result}}
+			</div>
+		</div>
+		<div class="Class_Views">
+			<h2>Class View (Contract)</h2>
+			<button class="btn" ng-click="get_contract_view()">Get Contract View</button>
+			<div class="Contract_View">
+				{{contract_view_result[0].result}}
+			</div>
+		</div>
+		<h2>Class Descendants</h2>
+		<button class="btn" ng-click="get_class_descendants()">Get Class Descendants</button>
+		<div class="Class_Descendants">
+			{{class_descendants_result[0].result}}
+		</div>
+	</div>
+ </div>

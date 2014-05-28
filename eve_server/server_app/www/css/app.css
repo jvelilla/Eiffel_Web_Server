@@ -1,0 +1,61 @@
+/* app css stylesheet */
+
+body {
+  padding-top: 20px;
+}
+
+.Compilation_Results {
+  padding:20px;
+  width: 600px;
+  height: 600px;
+  border: 10px;
+  border-color: #E6E6FA;
+  background-color:#E6E6FA;
+}
+
+.Execution_Results {
+  padding:20px;
+  width: 600px;
+  height: 150px;
+  border: 10px;
+  border-color: #E6E6FA;
+  background-color:#E6E6FA;
+}
+.Interface_View {
+  padding:20px;
+  width: 600px;
+  height: 150px;
+  border: 10px;
+  border-color: #E6E6FA;
+  background-color:#E6E6FA;
+}
+.Flat_View {
+  padding:20px;
+  width: 600px;
+  height: 150px;
+  border: 10px;
+  border-color: #E6E6FA;
+  background-color:#E6E6FA;
+}
+.Contract_View {
+  padding:20px;
+  width: 600px;
+  height: 150px;
+  border: 10px;
+  border-color: #E6E6FA;
+  background-color:#E6E6FA;
+}
+.Class_Descendants {
+  padding:20px;
+  width: 600px;
+  height: 150px;
+  border: 10px;
+  border-color: #E6E6FA;
+  background-color:#E6E6FA;
+}
+
+.disabled{
+  display: none;
+}
+
+p .content {white-space: pre}
