@@ -41,15 +41,15 @@ SYSTEM_IN_DYNAMIC_LIB = app.dll
 
 OBJECTS = big_file_C26_c.obj 
 
-OLDOBJECTS =  fu839.obj fu839d.obj ty832.obj ty832d.obj ty833.obj ty833d.obj ty836.obj ty836d.obj \
-	ty837.obj ty837d.obj ty834.obj ty834d.obj ty838.obj ty838d.obj li853.obj li853d.obj \
-	re852.obj re852d.obj li841.obj li841d.obj in825.obj in825d.obj it850.obj it850d.obj \
-	it851.obj it851d.obj ce829.obj ce829d.obj ce856.obj ce856d.obj se857.obj se857d.obj \
-	li848.obj li848d.obj li855.obj li855d.obj li854.obj li854d.obj un828.obj un828d.obj \
-	ta826.obj ta826d.obj in849.obj in849d.obj cu844.obj cu844d.obj tr842.obj tr842d.obj \
-	ac845.obj ac845d.obj dy827.obj dy827d.obj ba846.obj ba846d.obj co847.obj co847d.obj \
-	co843.obj co843d.obj rt835.obj rt835d.obj li840.obj li840d.obj st831.obj st831d.obj \
-	ar830.obj ar830d.obj 
+OLDOBJECTS =  ar829.obj ar829d.obj fu853.obj fu853d.obj ty855.obj ty855d.obj ty856.obj ty856d.obj \
+	ar842.obj ar842d.obj re825.obj re825d.obj li831.obj li831d.obj re830.obj re830d.obj \
+	in848.obj in848d.obj to841.obj to841d.obj it827.obj it827d.obj it828.obj it828d.obj \
+	ce852.obj ce852d.obj li846.obj li846d.obj se843.obj se843d.obj dy845.obj dy845d.obj \
+	un851.obj un851d.obj ta849.obj ta849d.obj in826.obj in826d.obj cu832.obj cu832d.obj \
+	tr837.obj tr837d.obj bo838.obj bo838d.obj ch847.obj ch847d.obj ar854.obj ar854d.obj \
+	ac833.obj ac833d.obj bi844.obj bi844d.obj fi839.obj fi839d.obj dy850.obj dy850d.obj \
+	ba834.obj ba834d.obj co835.obj co835d.obj co836.obj co836d.obj rt857.obj rt857d.obj \
+	bo840.obj bo840d.obj 
 
 all::  Cobj26.lib
 

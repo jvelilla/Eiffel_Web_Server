@@ -91,7 +91,7 @@ void F9_3722 (EIF_REFERENCE Current)
 	
 	*(EIF_INTEGER_32 *)(Current + RTWA(3727, dtype)) = (EIF_INTEGER_32) ((EIF_INTEGER_32) 5000L);
 	RTHOOK(5);
-	RTDBGAA(Current, dtype, 3722, 0xF8000155, 0); /* document_root */
+	RTDBGAA(Current, dtype, 3722, 0xF800015A, 0); /* document_root */
 	
 	tr1 = RTMS_EX_H("htdocs",6,1890384755);
 	RTAR(Current, tr1);
@@ -228,7 +228,7 @@ void F9_3732 (EIF_REFERENCE Current, EIF_TYPED_VALUE arg1x)
 	RTCC(arg1, 8, l_feature_name, 1, RTWCT(3723, Dtype(Current), Dftype(Current)));
 	RTIV(Current, RTAL);
 	RTHOOK(1);
-	RTDBGAA(Current, Dtype(Current), 3723, 0xF8000155, 0); /* http_server_name */
+	RTDBGAA(Current, Dtype(Current), 3723, 0xF800015A, 0); /* http_server_name */
 	
 	RTAR(Current, arg1);
 	*(EIF_REFERENCE *)(Current + RTWA(3723, Dtype(Current))) = (EIF_REFERENCE) RTCCL(arg1);
@@ -312,7 +312,7 @@ void F9_3734 (EIF_REFERENCE Current, EIF_TYPED_VALUE arg1x)
 	RTCC(arg1, 8, l_feature_name, 1, RTWCT(3722, Dtype(Current), Dftype(Current)));
 	RTIV(Current, RTAL);
 	RTHOOK(1);
-	RTDBGAA(Current, Dtype(Current), 3722, 0xF8000155, 0); /* document_root */
+	RTDBGAA(Current, Dtype(Current), 3722, 0xF800015A, 0); /* document_root */
 	
 	RTAR(Current, arg1);
 	*(EIF_REFERENCE *)(Current + RTWA(3722, Dtype(Current))) = (EIF_REFERENCE) RTCCL(arg1);

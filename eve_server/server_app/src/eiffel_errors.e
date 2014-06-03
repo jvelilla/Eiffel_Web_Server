@@ -41,8 +41,8 @@ feature --Execution
 
 	create_syntax_error_list
 		--Parses the syntax errors
-		--Syntax errors do not have an error code, what_to_do, feature
-		--They have error, class, line, and the dump
+		--Syntax errors do not have an error, what_to_do, feature
+		--They have error_code, class, line, and the dump according to my feature
 		local
 			class_start_index:INTEGER
 			line_start_index:INTEGER
@@ -88,8 +88,8 @@ feature --Execution
 				end
 				line_last_index:=i-1
 
-				error_code_string:=""
-				error_string:="Syntax error"
+				error_code_string:="Syntax Error<br>"
+				error_string:=""
 				what_to_do_string:=""
 				class_string:=error_message.substring (class_start_index,class_last_index)
 				feature_string:=""
@@ -116,18 +116,17 @@ feature --Execution
 				error_count:=error_count+1
 
 				--Checking the parsed error
-				io.put_string (json_array.i_th (error_count).representation)
-				io.put_new_line
+--				io.put_string (json_array.i_th (error_count).representation)
+--				io.put_new_line
 			end
 		end
 
 	create_error_list
 		--Parses the error line number, type, and description
 		--Assumptions for error messages:
-			--	Message is always expected to have Error_Code and Error
-			--	Message is always expected to have "What_To_Do".
-			-- 	If the message does not have a Class, then it is not expected to have a feature or line either.
-			--	So simply dump it in after_line key(including the what to do)
+			--	Message is always expected to have Error_Code
+			--	If the message does not a particular "key", then it should not have any string between it and the next key, otherwise
+			--  the dump will start after the last known key, and the string in between the missing key and the last found key will not be shown
 
 		local
 			error_code_start_index:INTEGER
@@ -158,6 +157,8 @@ feature --Execution
 			i:INTEGER
 			error_index:INTEGER
 
+			has_error_code: BOOLEAN
+			has_error:BOOLEAN
 			has_what_to_do:BOOLEAN
 			has_class:BOOLEAN
 			has_feature:BOOLEAN
@@ -174,37 +175,80 @@ feature --Execution
 				error_index=0
 			loop
 				create json_object.make
+				has_error_code:=true
+				has_error:=true
 				has_what_to_do:=true
 				has_class:=true
 				has_feature:=true
 				has_line:=true
 				has_before_line:=true
 
-				--Message is always expected to have Error_Code and Error
+				--Message is always expected to have Error_Code
 				error_code_start_index:=error_message.substring_index ("Error code: ", error_index)+12
-				error_code_last_index:=error_message.substring_index ("Error:", error_index)-1
-				if error_code_last_index=-1 then
-					error_code_last_index:=error_message.substring_index ("Type error:", error_index)-1
-					error_start_index:=error_message.substring_index ("Type error: ", error_index)+12
+				if error_code_start_index=12 then
+					has_error_code:=false
+					dump_index:=1
+					error_code_last_index:=dump_index-1
+					message_end:=error_message.count
 				else
-					error_start_index:=error_message.substring_index ("Error: ", error_index)+7
+					from
+						i:=error_code_start_index
+					until
+						--Change this line if the line breaker changes
+						error_message.at (i)='>'
+					loop
+						i:=i+1
+					end
+					--Change this line if the line breaker changes
+					error_code_last_index:=i
+					dump_index:=error_code_last_index+1
+					message_end:=error_message.substring_index ("-----", error_code_start_index+1)-1
 				end
 
-				error_last_index:=error_message.substring_index ("What to do:", error_index)-1
 
-				message_end:=error_message.substring_index ("-----", error_code_start_index+1)-1
+				-- If the message does not have an error or type error, then dump it
+				-- If however the message has what_to_do, class, feature or line after it, then the dump will start after them
+				-- and the dump from error will not be shown
+				error_start_index:=error_message.substring_index ("Error: ", error_index)+7
+				if error_start_index=7 then
+					error_start_index:=error_message.substring_index ("Type error: ", error_index)+12
+				end
+				--If the error does not contain a error in the error message's length
+				if error_start_index=12 or error_start_index>message_end then
+					has_error:=false
+					dump_index:=error_code_last_index+1
+					error_last_index:=dump_index-1
+				else
+					from
+						i:=error_start_index
+					until
+						--Change this line if the line breaker changes
+						error_message.at (i)='>'
+					loop
+						i:=i+1
+					end
+					--Change this line if the line breaker changes
+					error_last_index:=i
+					dump_index:=error_last_index+1
+				end
 
-				--	Message is always expected to have "What_To_Do".
-				-- 	If the message does not have a Class, then it is not expected to have a feature or line either.
-				--	So simply dump it.
+				-- 	If the message does not have a What_to_do, then dump it
+				--  If the message has a what_to_do but no class then dump it, it should not have feature or line in it, later
+				--  Otherwise the what_to_do will not be dumped and the dump will start from after the feature or the line
 				what_to_do_start_index:=error_message.substring_index ("What to do: ", error_index)+12
-
-				what_to_do_last_index:=error_message.substring_index ("Class:", error_index)-1
-				--If no class exists in the error message's length, then dump what_to_do
-				if what_to_do_last_index=-1 or what_to_do_last_index>message_end then
+				--If no what_to_do exists in the error message's length, then dump it
+				if what_to_do_start_index=-12 or what_to_do_start_index>message_end then
 					has_what_to_do:=false
-					dump_index:=what_to_do_start_index-12
+					dump_index:=error_last_index+1
 					what_to_do_last_index:=dump_index-1
+				else
+					what_to_do_last_index:=error_message.substring_index ("Class:", error_index)-1
+					--If no class exists in the error message's length, then dump what_to_do
+					if what_to_do_last_index=-1 or what_to_do_last_index>message_end then
+						has_what_to_do:=false
+						dump_index:=error_last_index-12
+						what_to_do_last_index:=dump_index-1
+					end
 				end
 
 				class_start_index:=error_message.substring_index ("Class: ", error_index)+7
@@ -268,8 +312,17 @@ feature --Execution
 					dump_index:=line_last_index+5
 				end
 
-				error_code_string:=error_message.substring (error_code_start_index, error_code_last_index)
-				error_string:=error_message.substring (error_start_index,error_last_index)
+				if has_error_code then
+					error_code_string:=error_message.substring (error_code_start_index, error_code_last_index)
+				else
+					error_code_string:=""
+				end
+
+				if has_error then
+					error_string:=error_message.substring (error_start_index,error_last_index)
+				else
+					error_string:=""
+				end
 
 				if has_what_to_do then
 					what_to_do_string:=error_message.substring (what_to_do_start_index,what_to_do_last_index)
@@ -307,8 +360,6 @@ feature --Execution
 				json_object.put_string (class_string,"Class")
 				json_object.put_string (feature_string,"Feature")
 				json_object.put_integer (line_string, "Line")
-
-				--Optional before line and after line strings
 				json_object.put_string (before_line_string, "Before_Line")
 				json_object.put_string (after_line_string, "After_Line")
 
@@ -316,12 +367,29 @@ feature --Execution
 				json_array.add (json_object)
 
 				--Updating the loop variable
-				error_index:=error_message.substring_index ("Error code",message_end)
+				error_index:=error_message.substring_index ("Error code:",message_end)
 				error_count:=error_count+1
 
 				--Checking the parsed error
-				io.put_string (json_array.i_th (error_count).representation)
-				io.put_new_line
+--				io.put_string (json_array.i_th (error_count).representation)
+--				io.put_new_line
+			end
+
+			if json_array.count=0 then
+				create json_object.make
+
+				--Create the parsed error
+				json_object.put_string ("","Error_Code")
+				json_object.put_string ("","Error")
+				json_object.put_string ("","What_to_do")
+				json_object.put_string ("","Class")
+				json_object.put_string ("","Feature")
+				json_object.put_integer (-1, "Line")
+				json_object.put_string ("", "Before_Line")
+				after_line_string:=error_message
+				json_object.put_string (after_line_string, "After_Line")
+				json_array.add (json_object)
+				error_count:=1
 			end
 		end
 end

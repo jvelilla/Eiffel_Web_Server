@@ -81,7 +81,7 @@ feature -- Test routines
 			end
 
 			--Testing the JSON objects
-			assert ("Warning Code",warning_code.is_equal ("Unused_local_warning\n\n"))
+			assert ("Warning Code",warning_code.is_equal ("Unused_local_warning\n"))
 			assert ("Warning",warning.is_equal ("unreferenced local variable(s)\n"))
 			assert ("What to do",what_to_do.is_equal ("Remove it if you don't plan to use it in the future.\n\n"))
 			assert ("Class",e_class.is_equal ("APPLICATION\n"))

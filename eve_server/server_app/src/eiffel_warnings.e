@@ -38,10 +38,9 @@ feature --Execution
 	create_warning_list
 		--Parses the warning line number, type, and description
 		--Assumptions for warning messages:
-			--	Message is always expected to have Warning_Code and Warning
-			--	Message is always expected to have "What_To_Do".
-			-- 	If the message does not have a Class, then it is not expected to have a Feature either.
-			--	So simply dump it in after_feature key (including the what to do)
+			--	Message is always expected to have Warning_Code
+			--	If the message does not a particular "key", then it should not have any string between it and the next key, otherwise
+			--  the dump will start after the last known key, and the string in between the missing key and the last found key will not be shown
 		local
 			warning_code_start_index:INTEGER
 			warning_start_index: INTEGER
@@ -67,6 +66,8 @@ feature --Execution
 			message_end:INTEGER
 			dump_index:INTEGER
 
+			has_warning_code:BOOLEAN
+			has_warning: BOOLEAN
 			has_what_to_do:BOOLEAN
 			has_class:BOOLEAN
 			has_Feature:BOOLEAN
@@ -81,30 +82,76 @@ feature --Execution
 				warning_index=0
 			loop
 				create json_object.make
+				has_warning_code:=true
+				has_warning:=true
 				has_what_to_do:=true
 				has_class:=true
 				has_feature:=true
 
-				--Message is always expected to have Warning_Code and Warning
+				--Message is always expected to have Warning_Code
 				warning_code_start_index:=warning_message.substring_index ("Warning code: ", warning_index)+14
-				warning_code_last_index:=warning_message.substring_index ("Warning:", warning_index)-1
+				if warning_code_start_index=14 then
+					has_warning_code:=false
+					dump_index:=1
+					warning_code_last_index:=dump_index-1
+					message_end:=warning_message.count
+				else
+					from
+						i:=warning_code_start_index
+					until
+						--Change this line if the line breaker changes
+						warning_message.at (i)='>'
+					loop
+						i:=i+1
+					end
+					--Change this line if the line breaker changes
+					warning_code_last_index:=i
+					dump_index:=warning_code_last_index+1
 
+					message_end:=warning_message.substring_index ("-----", warning_code_start_index+1)-1
+				end
+
+
+				-- If the message does not have an warning, then dump it
+				-- If however the message has what_to_do, class, feature after it, then the dump will start after them
+				-- and the dump from warning will not be shown
 				warning_start_index:=warning_message.substring_index ("Warning: ", warning_index)+9
-				warning_last_index:=warning_message.substring_index ("What to do:", warning_index)-1
+				--If the warning does not contain a warning in the warning message's length
+				if warning_start_index=9 or warning_start_index>message_end then
+					has_warning:=false
+					dump_index:=warning_code_last_index+1
+					warning_last_index:=dump_index-1
+				else
+					from
+						i:=warning_start_index
+					until
+						--Change this line if the line breaker changes
+						warning_message.at (i)='>'
+					loop
+						i:=i+1
+					end
+					--Change this line if the line breaker changes
+					warning_last_index:=i
+					dump_index:=warning_last_index+1
+				end
 
-				message_end:=warning_message.substring_index ("-----", warning_code_start_index+1)-1
-
-				--	Message is always expected to have "What_To_Do".
-				-- 	If the message does not have a Class, then it is not expected to have a feature or line either.
-				--	So simply dump it.
+				-- 	If the message does not have a What_to_do, then dump it
+				--  If the message has a what_to_do but no class then dump it, it should not have feature in it, later
+				--  Otherwise the what_to_do will not be dumped and the dump will start from after the feature
 				what_to_do_start_index:=warning_message.substring_index ("What to do: ", warning_index)+12
-
-				what_to_do_last_index:=warning_message.substring_index ("Class:", warning_index)-1
-				--If no class exists in the warning message's length, then dump what_to_do
-				if what_to_do_last_index=-1 or what_to_do_last_index>message_end then
+				--If no what_to_do exists in the warning message's length, then dump it
+				if what_to_do_start_index=-12 or what_to_do_start_index>message_end then
 					has_what_to_do:=false
-					dump_index:=what_to_do_start_index-12
+					dump_index:=warning_last_index+1
 					what_to_do_last_index:=dump_index-1
+				else
+					what_to_do_last_index:=warning_message.substring_index ("Class:", warning_index)-1
+					--If no class exists in the warning message's length, then dump what_to_do
+					if what_to_do_last_index=-1 or what_to_do_last_index>message_end then
+						has_what_to_do:=false
+						dump_index:=warning_last_index-12
+						what_to_do_last_index:=dump_index-1
+					end
 				end
 
 				class_start_index:=warning_message.substring_index ("Class: ", warning_index)+7
@@ -147,12 +194,16 @@ feature --Execution
 					dump_index:=feature_last_index+1
 				end
 
-				warning_code_string:=warning_message.substring (warning_code_start_index, warning_code_last_index)
-				warning_string:=warning_message.substring (warning_start_index,warning_last_index)
---				what_to_do_string:=warning_message.substring (what_to_do_start_index,what_to_do_last_index)
---				class_string:=warning_message.substring (class_start_index,class_last_index)
---				feature_string:=warning_message.substring (feature_start_index,feature_last_index)
---				after_feature_string:=warning_message.substring (feature_last_index+1, warning_message.substring_index ("-----", warning_index)-1)
+				if has_warning_code then
+					warning_code_string:=warning_message.substring (warning_code_start_index, warning_code_last_index)
+				else
+					warning_code_string:=""
+				end
+				if has_warning then
+					warning_string:=warning_message.substring (warning_start_index,warning_last_index)
+				else
+					warning_string:=""
+				end
 
 				if has_what_to_do then
 					what_to_do_string:=warning_message.substring (what_to_do_start_index,what_to_do_last_index)
@@ -191,8 +242,8 @@ feature --Execution
 				warning_count:=warning_count+1
 
 				--Checking the parsed warning
-				io.put_string (json_array.i_th (warning_count).representation)
-				io.put_new_line
+--				io.put_string (json_array.i_th (warning_count).representation)
+--				io.put_new_line
 			end
 		end
 end

@@ -41,14 +41,14 @@ SYSTEM_IN_DYNAMIC_LIB = app.dll
 
 OBJECTS = big_file_C3_c.obj 
 
-OLDOBJECTS =  ws77.obj ws77d.obj ws79.obj ws79d.obj eq82.obj eq82d.obj wg80.obj wg80d.obj ws76.obj \
-	ws76d.obj ws78.obj ws78d.obj wg75.obj wg75d.obj js66.obj js66d.obj pr74.obj pr74d.obj \
-	ad73.obj ad73d.obj ob72.obj ob72d.obj it71.obj it71d.obj wg69.obj wg69d.obj ws67.obj \
-	ws67d.obj wg81.obj wg81d.obj pr97.obj pr97d.obj da94.obj da94d.obj da93.obj da93d.obj \
-	eq83.obj eq83d.obj wg70.obj wg70d.obj pr96.obj pr96d.obj ti89.obj ti89d.obj da91.obj \
-	da91d.obj ti90.obj ti90d.obj da92.obj da92d.obj ti88.obj ti88d.obj th98.obj th98d.obj \
-	we95.obj we95d.obj ws68.obj ws68d.obj ti87.obj ti87d.obj co86.obj co86d.obj we85.obj \
-	we85d.obj ur84.obj ur84d.obj 
+OLDOBJECTS =  ws78.obj ws78d.obj ws80.obj ws80d.obj wg81.obj wg81d.obj ws77.obj ws77d.obj ws79.obj \
+	ws79d.obj wg76.obj wg76d.obj pr75.obj pr75d.obj js66.obj js66d.obj ad74.obj ad74d.obj \
+	ob73.obj ob73d.obj it72.obj it72d.obj wg70.obj wg70d.obj ws68.obj ws68d.obj wg82.obj \
+	wg82d.obj pr67.obj pr67d.obj pr96.obj pr96d.obj da92.obj da92d.obj da91.obj da91d.obj \
+	wg71.obj wg71d.obj pr95.obj pr95d.obj ti88.obj ti88d.obj ti87.obj ti87d.obj da89.obj \
+	da89d.obj da90.obj da90d.obj ti86.obj ti86d.obj th97.obj th97d.obj th98.obj th98d.obj \
+	we94.obj we94d.obj ws69.obj ws69d.obj co93.obj co93d.obj ti85.obj ti85d.obj we84.obj \
+	we84d.obj ur83.obj ur83d.obj 
 
 all::  Cobj3.lib
 

@@ -1,0 +1,78 @@
+/*
+ * Class NUMERIC
+ */
+
+#include "eif_macros.h"
+
+
+#ifdef __cplusplus
+extern "C" {
+#endif
+
+static EIF_TYPE_INDEX gen_type0_383 [] = {446,382,0xFFFF};
+static EIF_TYPE_INDEX gen_type1_383 [] = {0,0xFFFF};
+static EIF_TYPE_INDEX gen_type2_383 [] = {0,0xFFFF};
+static EIF_TYPE_INDEX gen_type3_383 [] = {0,0xFFFF};
+
+
+static struct desc_info desc_383[] = {
+	{(BODY_INDEX) -1, (BODY_INDEX) -1, INVALID_DTYPE, NULL},
+	{0, (BODY_INDEX)-1, 346, NULL},
+	{1, (BODY_INDEX)-1, 446, gen_type0_383},
+	{2, (BODY_INDEX)-1, 333, NULL},
+	{3, (BODY_INDEX)-1, 333, NULL},
+	{4, (BODY_INDEX)-1, 333, NULL},
+	{5, (BODY_INDEX)-1, 333, NULL},
+	{6, (BODY_INDEX)-1, 333, NULL},
+	{7, (BODY_INDEX)-1, 333, NULL},
+	{8, (BODY_INDEX)-1, 333, NULL},
+	{9, (BODY_INDEX)-1, 333, NULL},
+	{10, (BODY_INDEX)-1, 382, NULL},
+	{11, (BODY_INDEX)-1, (EIF_TYPE_INDEX)-1, NULL},
+	{12, (BODY_INDEX)-1, (EIF_TYPE_INDEX)-1, NULL},
+	{13, (BODY_INDEX)-1, 0, gen_type1_383},
+	{14, (BODY_INDEX)-1, 0, gen_type2_383},
+	{15, (BODY_INDEX)-1, 382, NULL},
+	{16, (BODY_INDEX)-1, 382, NULL},
+	{17, (BODY_INDEX)-1, 0, gen_type3_383},
+	{18, (BODY_INDEX)-1, (EIF_TYPE_INDEX)-1, NULL},
+	{19, (BODY_INDEX)-1, (EIF_TYPE_INDEX)-1, NULL},
+	{20, (BODY_INDEX)-1, 37, NULL},
+	{21, (BODY_INDEX)-1, 346, NULL},
+	{22, (BODY_INDEX)-1, 346, NULL},
+	{23, (BODY_INDEX)-1, (EIF_TYPE_INDEX)-1, NULL},
+	{24, (BODY_INDEX)-1, 36, NULL},
+	{25, (BODY_INDEX)-1, (EIF_TYPE_INDEX)-1, NULL},
+	{26, (BODY_INDEX)-1, (EIF_TYPE_INDEX)-1, NULL},
+	{27, (BODY_INDEX)-1, (EIF_TYPE_INDEX)-1, NULL},
+	{28, (BODY_INDEX)-1, 382, NULL},
+	{29, (BODY_INDEX)-1, 336, NULL},
+	{30, (BODY_INDEX)-1, 382, NULL},
+	{31, (BODY_INDEX)-1, (EIF_TYPE_INDEX)-1, NULL},
+	{32, (BODY_INDEX)-1, (EIF_TYPE_INDEX)-1, NULL},
+	{21, (BODY_INDEX)-1, 346, NULL},
+	{(BODY_INDEX)-1, (BODY_INDEX)-1, 382, NULL},
+	{(BODY_INDEX)-1, (BODY_INDEX)-1, 382, NULL},
+	{(BODY_INDEX)-1, (BODY_INDEX)-1, 333, NULL},
+	{(BODY_INDEX)-1, (BODY_INDEX)-1, 333, NULL},
+	{(BODY_INDEX)-1, (BODY_INDEX)-1, 382, NULL},
+	{(BODY_INDEX)-1, (BODY_INDEX)-1, 382, NULL},
+	{(BODY_INDEX)-1, (BODY_INDEX)-1, 382, NULL},
+	{(BODY_INDEX)-1, (BODY_INDEX)-1, 382, NULL},
+	{(BODY_INDEX)-1, (BODY_INDEX)-1, 382, NULL},
+	{(BODY_INDEX)-1, (BODY_INDEX)-1, 382, NULL},
+};
+
+extern void Init383(void);
+void Init383(void)
+{
+	IDSC(desc_383, 0, 382);
+	IDSC(desc_383 + 1, 4, 382);
+	IDSC(desc_383 + 34, 106, 382);
+	IDSC(desc_383 + 35, 235, 382);
+}
+
+
+#ifdef __cplusplus
+}
+#endif

@@ -55,15 +55,15 @@ $spitshell >>Makefile <<'!NO!SUBS!'
 
 OBJECTS = big_file_C22_c.obj 
 
-OLDOBJECTS =  sp693.o sp693d.o sp704.o sp704d.o ar711.o ar711d.o ty705.o ty705d.o \
-	ar694.o ar694d.o ar724.o ar724d.o na706.o na706d.o re707.o re707d.o \
-	li715.o li715d.o re712.o re712d.o in700.o in700d.o to723.o to723d.o \
-	it709.o it709d.o it710.o it710d.o li696.o li696d.o se697.o se697d.o \
-	dy695.o dy695d.o dy725.o dy725d.o un703.o un703d.o ta701.o ta701d.o \
-	in708.o in708d.o cu718.o cu718d.o tr716.o tr716d.o bo713.o bo713d.o \
-	ch699.o ch699d.o ac719.o ac719d.o bi698.o bi698d.o fi714.o fi714d.o \
-	dy702.o dy702d.o ba720.o ba720d.o co721.o co721d.o co717.o co717d.o \
-	bo722.o bo722d.o 
+OLDOBJECTS =  ar722.o ar722d.o ty715.o ty715d.o ty716.o ty716d.o ty717.o ty717d.o \
+	ty723.o ty723d.o ar702.o ar702d.o ha718.o ha718d.o na724.o na724d.o \
+	re725.o re725d.o in708.o in708d.o to701.o to701d.o ta720.o ta720d.o \
+	ta719.o ta719d.o li706.o li706d.o se703.o se703d.o dy705.o dy705d.o \
+	ha721.o ha721d.o un711.o un711d.o ta709.o ta709d.o tr697.o tr697d.o \
+	bo698.o bo698d.o ch707.o ch707d.o ac693.o ac693d.o bi704.o bi704d.o \
+	fi699.o fi699d.o dy710.o dy710d.o ba694.o ba694d.o co695.o co695d.o \
+	co696.o co696d.o rt714.o rt714d.o bo700.o bo700d.o st713.o st713d.o \
+	ar712.o ar712d.o 
 
 all: Cobj22.o
 

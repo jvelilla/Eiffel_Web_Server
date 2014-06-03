@@ -93,7 +93,7 @@ feature -- Test routines
 			read_into_variables(1)
 
 			--Testing the JSON objects
-			assert ("Error Code",error_code.is_equal ("VEEN\n\n"))
+			assert ("Error Code",error_code.is_equal ("VEEN\n"))
 			assert ("Error",error.is_equal ("unknown identifier.\n"))
 			assert ("What to do",what_to_do.is_equal ("make sure that identifier, if needed, is final name of\n  feature of class, or local entity or formal argument of routine.\n\n"))
 			assert ("Class",e_class.is_equal ("APPLICATION\n"))
@@ -121,8 +121,8 @@ feature -- Test routines
 			read_into_variables(1)
 
 			--Testing the JSON objects
-			assert ("Error Code",error_code.is_equal (""))
-			assert ("Error",error.is_equal ("Syntax error"))
+			assert ("Error Code",error_code.is_equal ("Syntax Error\n"))
+			assert ("Error",error.is_equal (""))
 			assert ("What to do",what_to_do.is_equal (""))
 			assert ("Class",e_class.is_equal ("APPLICATION\n"))
 			assert ("Feature", e_feature.is_equal (""))
@@ -149,7 +149,7 @@ feature -- Test routines
 			read_into_variables(1)
 
 			--Testing the JSON objects
-			assert ("Error Code",error_code.is_equal ("VUAR(1)\n\n"))
+			assert ("Error Code",error_code.is_equal ("VUAR(1)\n"))
 			assert ("Error",error.is_equal ("wrong number of actual arguments in feature call. \n"))
 			assert ("What to do",what_to_do.is_equal ("make sure that number of actuals matches number of formals.\n\n"))
 			assert ("Class",e_class.is_equal ("APPLICATION\n"))
@@ -177,7 +177,7 @@ feature -- Test routines
 			read_into_variables(1)
 
 			--Testing the JSON objects
-			assert ("Error Code",error_code.is_equal ("VJAR\n\n"))
+			assert ("Error Code",error_code.is_equal ("VJAR\n"))
 			assert ("Error",error.is_equal ("source of assignment is not compatible with target. \n"))
 			assert ("What to do",what_to_do.is_equal ("make sure that type of source (right-hand side)\n  is compatible with type of target. \n\n"))
 			assert ("Class",e_class.is_equal ("APPLICATION\n"))
@@ -205,7 +205,7 @@ feature -- Test routines
 			read_into_variables(1)
 
 			--Testing the JSON objects
-			assert ("Error Code",error_code.is_equal ("VMFN\n\n"))
+			assert ("Error Code",error_code.is_equal ("VMFN\n"))
 			assert ("Error",error.is_equal ("two or more features have same name.\n"))
 			assert ("What to do",what_to_do.is_equal ("if they must indeed be different features...\n  names or use renaming; if not, arrange for a join (b...\n  features), an effecting (of deferred by effective), or ...\n\n"))
 			assert ("Class",e_class.is_equal ("APPLICATION\n"))
@@ -233,7 +233,7 @@ feature -- Test routines
 
 			read_into_variables(1)
 			--Testing the JSON objects
-			assert ("Error Code",error_code.is_equal ("VMFN\n\n"))
+			assert ("Error Code",error_code.is_equal ("VMFN\n"))
 			assert ("Error",error.is_equal ("two or more features have same name.\n"))
 			assert ("What to do",what_to_do.is_equal ("if they must indeed be different features...\n  names or use renaming; if not, arrange for a join (b...\n  features), an effecting (of deferred by effective), or ...\n\n"))
 			assert ("Class",e_class.is_equal ("APPLICATION\n"))
@@ -245,7 +245,7 @@ feature -- Test routines
 
 			read_into_variables(2)
 			--Testing the JSON objects
-			assert ("Error Code",error_code.is_equal ("VUAR(1)\n\n"))
+			assert ("Error Code",error_code.is_equal ("VUAR(1)\n"))
 			assert ("Error",error.is_equal ("wrong number of actual arguments in feature call. \n"))
 			assert ("What to do",what_to_do.is_equal ("make sure that number of actuals matches number of formals.\n\n"))
 			assert ("Class",e_class.is_equal ("APPLICATION\n"))
@@ -254,6 +254,34 @@ feature -- Test routines
 			assert ("Line", line=27)
 			assert ("After_Line", after_line.is_equal ("        c:=a\n->      print(c.out,a)\n      end"))
 
+		end
+
+	task_error_unknown_error
+			-- New test routine (Unknown errors)
+		note
+			testing:  "covers/{EIFFEL_ERRORS}"
+		do
+			--Read the file
+			create my_file.make_with_path (create {PATH}.make_from_string (address+"Unknown_Error.txt"))
+			my_file.open_read
+			my_file.read_stream (my_file.count)
+			input_string:=my_file.last_string
+
+			create errors.make (input_string)
+			json_array:=errors.json_array
+			assert ("Number of errors", json_array.count=1)
+
+			read_into_variables(1)
+
+			--Testing the JSON objects
+			assert ("Error Code",error_code.is_equal (""))
+			assert ("Error",error.is_equal (""))
+			assert ("What to do",what_to_do.is_equal (""))
+			assert ("Class",e_class.is_equal (""))
+			assert ("Feature", e_feature.is_equal (""))
+			assert ("Before_Line", before_line.is_equal (""))
+			assert ("Line", line=-1)
+			assert ("After_Line", after_line.is_equal ("\n-------------------------------------------------------------------------------\n\nASKJNDAKSJNDKLN\n\n-------------------------------------------------------------------------------\n"))
 		end
 end
 

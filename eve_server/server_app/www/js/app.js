@@ -29,12 +29,20 @@ serverApp.factory('CompileService', function($resource) {
   return $resource('/compile',{}, {query: {method:'GET', isArray:true}, 'save':   {method:'POST'}});
 });
 
+serverApp.factory('CleanCompileService', function($resource) {
+  return $resource('/cleanCompile',{}, {query: {method:'GET', isArray:true}, 'save':   {method:'POST'}});
+});
+
 serverApp.factory('ErrorService', function($resource) {
   return $resource('/errorList',{}, {query: {method:'GET', isArray:true}, 'save':   {method:'POST'}});
 });
 
 serverApp.factory('WarningService', function($resource) {
   return $resource('/warningList',{}, {query: {method:'GET', isArray:true}, 'save':   {method:'POST'}});
+});
+
+serverApp.factory('RuntimeService', function($resource) {
+  return $resource('/runtimeErrorList',{}, {query: {method:'GET', isArray:true}, 'save':   {method:'POST'}});
 });
 
 serverApp.factory('RunService', function($resource) {

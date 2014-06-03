@@ -1,5 +1,5 @@
 /*
- * Code for class WSF_ROUTER_MAPPING_FACTORY
+ * Code for class WSF_RESPONSE_EXPORTER
  */
 
 #include "eif_eiffel.h"

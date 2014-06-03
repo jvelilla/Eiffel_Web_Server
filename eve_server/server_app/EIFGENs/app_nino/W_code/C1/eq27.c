@@ -75,7 +75,7 @@ void F27_3947 (EIF_REFERENCE Current, EIF_TYPED_VALUE arg1x, EIF_TYPED_VALUE arg
 	RTGC;
 	RTDBGEAA(26, Current, 437);
 	if (arg1) {
-		RTCC(arg1, 26, l_feature_name, 1, 333);
+		RTCC(arg1, 26, l_feature_name, 1, 338);
 	}
 	RTIV(Current, RTAL);
 	if ((RTAL & CK_REQUIRE) || RTAC) {
@@ -99,17 +99,17 @@ body:;
 		ur1 = RTCCL(arg1);
 		(FUNCTION_CAST(void, (EIF_REFERENCE, EIF_TYPED_VALUE)) RTWF(3945, dtype))(Current, ur1x);
 		RTHOOK(5);
-		RTDBGAL(Current, 1, 0xF80000A7, 0, 0); /* loc1 */
+		RTDBGAL(Current, 1, 0xF80000A6, 0, 0); /* loc1 */
 		
-		tr1 = RTLN(167);
+		tr1 = RTLN(166);
 		(FUNCTION_CAST(void, (EIF_REFERENCE)) RTWC(32, Dtype(tr1)))(tr1);
 		RTNHOOK(5,1);
 		loc1 = (EIF_REFERENCE) RTCCL(tr1);
 		RTHOOK(6);
 		ur1 = RTCCL(arg1);
-		(FUNCTION_CAST(void, (EIF_REFERENCE, EIF_TYPED_VALUE)) RTVF(8886, "set_description", loc1))(loc1, ur1x);
+		(FUNCTION_CAST(void, (EIF_REFERENCE, EIF_TYPED_VALUE)) RTVF(8873, "set_description", loc1))(loc1, ur1x);
 		RTHOOK(7);
-		(FUNCTION_CAST(void, (EIF_REFERENCE)) RTVF(8871, "raise", loc1))(loc1);
+		(FUNCTION_CAST(void, (EIF_REFERENCE)) RTVF(8858, "raise", loc1))(loc1);
 	} else {
 		RTHOOK(8);
 		ur1 = RTCCL(arg1);
@@ -163,7 +163,7 @@ void F27_3948 (EIF_REFERENCE Current, EIF_TYPED_VALUE arg1x, EIF_TYPED_VALUE arg
 	RTGC;
 	RTDBGEAA(26, Current, 438);
 	if (arg1) {
-		RTCC(arg1, 26, l_feature_name, 1, 333);
+		RTCC(arg1, 26, l_feature_name, 1, 338);
 	}
 	RTIV(Current, RTAL);
 	if ((RTAL & CK_REQUIRE) || RTAC) {
@@ -222,7 +222,7 @@ void F27_3949 (EIF_REFERENCE Current, EIF_TYPED_VALUE arg1x)
 	RTGC;
 	RTDBGEAA(26, Current, 439);
 	if (arg1) {
-		RTCC(arg1, 26, l_feature_name, 1, 333);
+		RTCC(arg1, 26, l_feature_name, 1, 338);
 	}
 	RTIV(Current, RTAL);
 	if ((RTAL & CK_REQUIRE) || RTAC) {
@@ -279,7 +279,7 @@ void F27_3950 (EIF_REFERENCE Current, EIF_TYPED_VALUE arg1x)
 	RTGC;
 	RTDBGEAA(26, Current, 440);
 	if (arg1) {
-		RTCC(arg1, 26, l_feature_name, 1, 333);
+		RTCC(arg1, 26, l_feature_name, 1, 338);
 	}
 	RTIV(Current, RTAL);
 	if ((RTAL & CK_REQUIRE) || RTAC) {

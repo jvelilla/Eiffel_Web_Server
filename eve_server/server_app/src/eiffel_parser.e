@@ -44,6 +44,7 @@ feature --Execution
 			syntax_index:INTEGER
 			warning_index_end:INTEGER
 			error_index_end:INTEGER
+			unknown_index:INTEGER
 		do
 			create warning_message.make_empty
 			create error_message.make_empty
@@ -70,8 +71,8 @@ feature --Execution
 			loop
 				if warning_index/=0 then
 				--	warning_index_end:=
-					warning_message.append (input_string.substring (warning_index, input_string.substring_index ("-----", warning_index)-1))
-					warning_message.append ("-----------------------------------")
+					warning_message.append (input_string.substring (warning_index, input_string.substring_index ("------", warning_index)-1))
+					warning_message.append ("-------------------------------------------------------------------------------")
 
 					--Updating Loop Variables
 					warning_index:=input_string.substring_index ("Warning code: ",warning_index+1)
@@ -80,7 +81,7 @@ feature --Execution
 				if error_index/=0 then
 
 					error_message.append (input_string.substring (error_index, input_string.substring_index ("-----", error_index)-1))
-					error_message.append ("----------------------------------")
+					error_message.append ("-------------------------------------------------------------------------------")
 
 					--Updating Loop Variables
 					error_index:=input_string.substring_index ("Error code: ", error_index+1)
@@ -90,8 +91,14 @@ feature --Execution
 			--Add the remaining compiler_message (System recompiled here)
 			if not warning_message.is_empty and error_message.is_empty then
 				compile_end_index:=input_string.last_index_of ('-', input_string.count)+1
-				compile_message.append (input_string.substring (compile_end_index, input_string.count))
+				compile_message.append (input_string.substring (compile_end_index, input_string.substring_index ("Recompiled.", compile_end_index)+10))
 			end
-			
+
+			unknown_index:=input_string.substring_index ("--------", 1)
+			if unknown_index/=0 then
+				if compile_message.count/=input_string.count and error_message.is_empty and syntax_error.is_empty and warning_message.is_empty then
+					error_message.append (input_string.substring (compile_message.count, input_string.count))
+				end
+			end
 		end
 end

@@ -41,10 +41,10 @@ SYSTEM_IN_DYNAMIC_LIB = app.dll
 
 OBJECTS = big_file_C1_c.obj 
 
-OLDOBJECTS =  an1.obj an1d.obj ut32.obj ut32d.obj ei31.obj ei31d.obj ei30.obj ei30d.obj pr29.obj \
-	pr29d.obj ei28.obj ei28d.obj eq27.obj eq27d.obj eq26.obj eq26d.obj eq25.obj eq25d.obj \
-	it24.obj it24d.obj ch23.obj ch23d.obj sy22.obj sy22d.obj ht21.obj ht21d.obj ws20.obj \
-	ws20d.obj js19.obj js19d.obj pr18.obj pr18d.obj ws17.obj ws17d.obj c_16.obj c_16d.obj \
+OLDOBJECTS =  an1.obj an1d.obj ei32.obj ei32d.obj ei31.obj ei31d.obj ei30.obj ei30d.obj ei29.obj \
+	ei29d.obj pr28.obj pr28d.obj eq27.obj eq27d.obj eq26.obj eq26d.obj eq25.obj eq25d.obj \
+	it24.obj it24d.obj ch23.obj ch23d.obj sy22.obj sy22d.obj ht21.obj ht21d.obj pr20.obj \
+	pr20d.obj js19.obj js19d.obj ws18.obj ws18d.obj ws17.obj ws17d.obj c_16.obj c_16d.obj \
 	eq15.obj eq15d.obj ve14.obj ve14d.obj er13.obj er13d.obj fi11.obj fi11d.obj fi12.obj \
 	fi12d.obj ht10.obj ht10d.obj ht9.obj ht9d.obj we8.obj we8d.obj fi7.obj fi7d.obj pa6.obj \
 	pa6d.obj we5.obj we5d.obj ur4.obj ur4d.obj eq3.obj eq3d.obj eq2.obj eq2d.obj 

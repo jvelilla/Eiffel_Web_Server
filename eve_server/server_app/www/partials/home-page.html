@@ -7,13 +7,11 @@
 		<button class="btn">Browse</button>
 		<h2>Compilation Results</h2>
 		<button class="btn btn-success" ng-click="compile()">Compile</button>
+		<button class="btn btn-success" ng-click="cleanCompile()">Clean Compile</button>
 		<div class="Compilation_Results" >
 			<table>
 				<tr ng-repeat="res in compile_result">
 					<td>
-						<!--
-						
-						-->
 						<pre>{{res.Compile_Message}}</pre>
 						<pre>{{res.Output_Message}}</pre>
 					</td>
@@ -41,14 +39,51 @@
 						</td>
 					</tr>
 				</table>
-			</div>
-			
+			</div>	
 		</div>
+		
 		<h2>Execution Results</h2>
 		<button class="btn" ng-click="run_exe()">Run</button>
 		<div class="Execution_Results">
-			{{run_result[0].result}}
+			<table>
+				<tr ng-repeat="res in run_result">
+					<td>
+						<pre>{{res.Execution_Output}}</pre>
+					</td>
+				</tr>
+			</table>
+			
+			<!-- Compile Error Codes-->
+			<div ng-class="{true:'',false:'disabled'}[run_result[0].Has_Compile_Error==true]">
+				<h3> COMPILE ERROR TABLE</h3>
+				<table>
+					<tr ng-repeat="error in error_list">
+						<td>
+							<pre>Error Code: {{error.Error_Code}}Error: {{error.Error}}What to do: {{error.What_to_do}}Class: {{error.Class}}Feature: {{error.Feature}}{{error.Before_Line}}Line:{{error.Line}}{{error.After_Line}}</pre>
+						</td>
+					</tr>
+				</table>
+			</div>
+			
+			<!-- Runtime Error Codes-->
+			<div ng-class="{true:'',false:'disabled'}[run_result[0].Has_Runtime_Error==true]">
+				<h3> RUNTIME ERROR TABLE</h3>
+				<pre>{{runtime_error_list[0].Dump}}</pre>
+				<table>
+					<th>Class/Object</th>
+					<th>Routine</th>
+					<th>Message</th>
+					<th>Effect</th>
+					<tr ng-repeat="error in runtime_error_list">
+						<td>{{error.Class}}</td>
+						<td>{{error.Feature}} {{error.Routine}}</td>
+						<td>{{error.Message}}</td>
+						<td>{{error.Effect}}</td>
+					</tr>
+				</table>
+			</div>
 		</div>
+		
 		<label> Select Class: </label>
 		<div class="Class_Views">
 			<input type="text" ng-model="file.class"/>

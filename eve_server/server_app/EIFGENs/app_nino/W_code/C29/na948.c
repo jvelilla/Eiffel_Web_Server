@@ -1,5 +1,5 @@
 /*
- * Code for class NATIVE_ARRAY [CHARACTER_32]
+ * Code for class NATIVE_ARRAY [INTEGER_16]
  */
 
 #include "eif_eiffel.h"
@@ -10,7 +10,7 @@
 extern "C" {
 #endif
 
-extern void F948_22636(EIF_REFERENCE, int);
+extern void F948_22729(EIF_REFERENCE, int);
 extern void EIF_Minit948(void);
 
 #ifdef __cplusplus
@@ -33,7 +33,7 @@ extern "C" {
 #endif
 
 /* {NATIVE_ARRAY}._invariant */
-void F948_22636 (EIF_REFERENCE Current, int where)
+void F948_22729 (EIF_REFERENCE Current, int where)
 {
 	GTCX
 	char *l_feature_name = "_invariant";
@@ -46,11 +46,11 @@ void F948_22636 (EIF_REFERENCE Current, int where)
 	RTLR(0,Current);
 	RTLU (SK_VOID, NULL);
 	RTLU (SK_REF, &Current);
-	RTEAINV(l_feature_name, 947, Current, 0, 22635);
+	RTEAINV(l_feature_name, 947, Current, 0, 22728);
 	RTSA(Dtype(Current));
 	RTME(Dtype(Current), 0);
 	RTIT("is_dotnet", Current);
-	tb1 = (((FUNCTION_CAST(EIF_TYPED_VALUE, (EIF_REFERENCE)) RTWF(10560, 254))(Current)).it_b);
+	tb1 = (((FUNCTION_CAST(EIF_TYPED_VALUE, (EIF_REFERENCE)) RTWF(10653, 259))(Current)).it_b);
 	if (tb1) {
 		RTCK;
 	} else {

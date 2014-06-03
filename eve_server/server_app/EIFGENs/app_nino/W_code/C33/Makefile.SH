@@ -55,14 +55,15 @@ $spitshell >>Makefile <<'!NO!SUBS!'
 
 OBJECTS = big_file_C33_c.obj 
 
-OLDOBJECTS =  fu1061.o fu1061d.o fu1073.o fu1073d.o ty1071.o ty1071d.o ty1072.o \
-	ty1072d.o li1057.o li1057d.o ha1066.o ha1066d.o ta1068.o ta1068d.o \
-	st1074.o st1074d.o ta1067.o ta1067d.o li1060.o li1060d.o li1059.o \
-	li1059d.o li1058.o li1058d.o ha1070.o ha1070d.o ta1069.o ta1069d.o \
-	se1062.o se1062d.o co1063.o co1063d.o co1064.o co1064d.o rt1075.o \
-	rt1075d.o rt1076.o rt1076d.o rt1077.o rt1077d.o rt1079.o rt1079d.o \
-	rt1056.o rt1056d.o rt1078.o rt1078d.o rt1080.o rt1080d.o in1065.o \
-	in1065d.o 
+OLDOBJECTS =  fu1070.o fu1070d.o fu1074.o fu1074d.o fu1077.o fu1077d.o ty1069.o \
+	ty1069d.o ty1076.o ty1076d.o li1060.o li1060d.o ce1063.o ce1063d.o \
+	st1079.o st1079d.o li1064.o li1064d.o li1061.o li1061d.o li1062.o \
+	li1062d.o un1057.o un1057d.o se1075.o se1075d.o co1059.o co1059d.o \
+	dy1056.o dy1056d.o co1065.o co1065d.o rt1058.o rt1058d.o rt1067.o \
+	rt1067d.o rt1071.o rt1071d.o rt1072.o rt1072d.o rt1080.o rt1080d.o \
+	rt1084.o rt1084d.o rt1068.o rt1068d.o rt1073.o rt1073d.o rt1081.o \
+	rt1081d.o rt1085.o rt1085d.o rt1078.o rt1078d.o rt1082.o rt1082d.o \
+	rt1083.o rt1083d.o in1066.o in1066d.o 
 
 all: Cobj33.o
 
