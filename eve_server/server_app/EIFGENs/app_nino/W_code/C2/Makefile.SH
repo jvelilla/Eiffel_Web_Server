@@ -55,14 +55,14 @@ $spitshell >>Makefile <<'!NO!SUBS!'
 
 OBJECTS = big_file_C2_c.obj 
 
-OLDOBJECTS =  eq41.o eq41d.o it40.o it40d.o is39.o is39d.o st38.o st38d.o op37.o \
-	op37d.o rt36.o rt36d.o sy35.o sy35d.o ut33.o ut33d.o ut34.o ut34d.o \
-	ws63.o ws63d.o js65.o js65d.o js64.o js64d.o wg62.o wg62d.o ht57.o \
-	ht57d.o ht61.o ht61d.o wg55.o wg55d.o ws60.o ws60d.o ws46.o ws46d.o \
-	so59.o so59d.o gr58.o gr58d.o eq50.o eq50d.o ht56.o ht56d.o wg54.o \
-	wg54d.o wg53.o wg53d.o ht52.o ht52d.o ws45.o ws45d.o ba51.o ba51d.o \
-	eq49.o eq49d.o we48.o we48d.o we47.o we47d.o ws44.o ws44d.o da43.o \
-	da43d.o da42.o da42d.o 
+OLDOBJECTS =  eq42.o eq42d.o it41.o it41d.o is40.o is40d.o st39.o st39d.o op38.o \
+	op38d.o rt37.o rt37d.o sy36.o sy36d.o ut34.o ut34d.o ut35.o ut35d.o \
+	ei33.o ei33d.o ws63.o ws63d.o ht65.o ht65d.o pr64.o pr64d.o wg62.o \
+	wg62d.o ht58.o ht58d.o wg54.o wg54d.o ws61.o ws61d.o ws47.o ws47d.o \
+	so60.o so60d.o gr59.o gr59d.o eq51.o eq51d.o ht57.o ht57d.o ht56.o \
+	ht56d.o wg55.o wg55d.o wg53.o wg53d.o ws46.o ws46d.o ba52.o ba52d.o \
+	eq50.o eq50d.o we49.o we49d.o we48.o we48d.o ws45.o ws45d.o da44.o \
+	da44d.o da43.o da43d.o 
 
 all: Cobj2.o
 

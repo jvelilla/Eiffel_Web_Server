@@ -153,6 +153,7 @@ feature --Execution
 			line_string:INTEGER
 			before_line_string: STRING
 			after_line_string: STRING
+			dump_string:STRING
 
 			i:INTEGER
 			error_index:INTEGER
@@ -353,6 +354,9 @@ feature --Execution
 				--The dump of the message is here
 				after_line_string:=error_message.substring (dump_index, message_end)
 
+				--The main dump
+				dump_string:=error_message.substring(error_index,message_end)
+
 				--Create the parsed error
 				json_object.put_string (error_code_string,"Error_Code")
 				json_object.put_string (error_string,"Error")
@@ -362,6 +366,7 @@ feature --Execution
 				json_object.put_integer (line_string, "Line")
 				json_object.put_string (before_line_string, "Before_Line")
 				json_object.put_string (after_line_string, "After_Line")
+				json_object.put_string (dump_string, "Dump")
 
 				--json_object.put_string ("True","Has_Error")
 				json_array.add (json_object)
@@ -388,6 +393,7 @@ feature --Execution
 				json_object.put_string ("", "Before_Line")
 				after_line_string:=error_message
 				json_object.put_string (after_line_string, "After_Line")
+				json_object.put_string (after_line_string, "Dump")
 				json_array.add (json_object)
 				error_count:=1
 			end

@@ -24,7 +24,7 @@ body {
 .Interface_View {
   padding:20px;
   width: 600px;
-  height: 150px;
+  height: 10px;
   border: 10px;
   border-color: #E6E6FA;
   background-color:#E6E6FA;
@@ -32,7 +32,7 @@ body {
 .Flat_View {
   padding:20px;
   width: 600px;
-  height: 150px;
+  height: 600px;
   border: 10px;
   border-color: #E6E6FA;
   background-color:#E6E6FA;
@@ -40,7 +40,7 @@ body {
 .Contract_View {
   padding:20px;
   width: 600px;
-  height: 150px;
+  height: 600px;
   border: 10px;
   border-color: #E6E6FA;
   background-color:#E6E6FA;
@@ -48,7 +48,7 @@ body {
 .Class_Descendants {
   padding:20px;
   width: 600px;
-  height: 150px;
+  height: 600px;
   border: 10px;
   border-color: #E6E6FA;
   background-color:#E6E6FA;

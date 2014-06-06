@@ -1,5 +1,5 @@
 /*
- * Code for class WSF_URI_TEMPLATE_HANDLER
+ * Code for class WSF_STARTS_WITH_HANDLER
  */
 
 #include "eif_eiffel.h"
@@ -10,7 +10,7 @@
 extern "C" {
 #endif
 
-extern EIF_TYPED_VALUE F244_11119(EIF_REFERENCE, EIF_TYPED_VALUE);
+extern EIF_TYPED_VALUE F244_11062(EIF_REFERENCE, EIF_TYPED_VALUE);
 extern void EIF_Minit244(void);
 
 #ifdef __cplusplus
@@ -32,8 +32,8 @@ extern "C" {
 extern "C" {
 #endif
 
-/* {WSF_URI_TEMPLATE_HANDLER}.new_mapping */
-EIF_TYPED_VALUE F244_11119 (EIF_REFERENCE Current, EIF_TYPED_VALUE arg1x)
+/* {WSF_STARTS_WITH_HANDLER}.new_mapping */
+EIF_TYPED_VALUE F244_11062 (EIF_REFERENCE Current, EIF_TYPED_VALUE arg1x)
 {
 	GTCX
 	char *l_feature_name = "new_mapping";
@@ -63,14 +63,14 @@ EIF_TYPED_VALUE F244_11119 (EIF_REFERENCE Current, EIF_TYPED_VALUE arg1x)
 	RTLU(SK_REF,&arg1);
 	RTLU (SK_REF, &Current);
 	
-	RTEAA(l_feature_name, 243, Current, 0, 1, 4028);
+	RTEAA(l_feature_name, 243, Current, 0, 1, 3974);
 	RTSA(dtype);
 	RTSC;
 	RTME(dtype, 0);
 	RTGC;
-	RTDBGEAA(243, Current, 4028);
+	RTDBGEAA(243, Current, 3974);
 	if (arg1) {
-		RTCC(arg1, 243, l_feature_name, 1, 342);
+		RTCC(arg1, 243, l_feature_name, 1, 346);
 	}
 	RTIV(Current, RTAL);
 	if ((RTAL & CK_REQUIRE) || RTAC) {
@@ -84,12 +84,12 @@ label_1:
 	}
 body:;
 	RTHOOK(2);
-	RTDBGAL(Current, 0, 0xF800016B, 0,0); /* Result */
+	RTDBGAL(Current, 0, 0xF800016F, 0,0); /* Result */
 	
-	tr1 = RTLN(366);
+	tr1 = RTLN(374);
 	ur1 = RTCCL(arg1);
 	ur2 = RTCCL(Current);
-	(FUNCTION_CAST(void, (EIF_REFERENCE, EIF_TYPED_VALUE, EIF_TYPED_VALUE)) RTWC(16529, Dtype(tr1)))(tr1, ur1x, ur2x);
+	(FUNCTION_CAST(void, (EIF_REFERENCE, EIF_TYPED_VALUE, EIF_TYPED_VALUE)) RTWC(16587, Dtype(tr1)))(tr1, ur1x, ur2x);
 	RTNHOOK(2,1);
 	Result = (EIF_REFERENCE) RTCCL(tr1);
 	if (RTAL & CK_ENSURE) {

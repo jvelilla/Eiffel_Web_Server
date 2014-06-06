@@ -41,15 +41,15 @@ SYSTEM_IN_DYNAMIC_LIB = app.dll
 
 OBJECTS = big_file_C22_c.obj 
 
-OLDOBJECTS =  ar722.obj ar722d.obj ty715.obj ty715d.obj ty716.obj ty716d.obj ty717.obj ty717d.obj \
-	ty723.obj ty723d.obj ar702.obj ar702d.obj ha718.obj ha718d.obj na724.obj na724d.obj \
-	re725.obj re725d.obj in708.obj in708d.obj to701.obj to701d.obj ta720.obj ta720d.obj \
-	ta719.obj ta719d.obj li706.obj li706d.obj se703.obj se703d.obj dy705.obj dy705d.obj \
-	ha721.obj ha721d.obj un711.obj un711d.obj ta709.obj ta709d.obj tr697.obj tr697d.obj \
-	bo698.obj bo698d.obj ch707.obj ch707d.obj ac693.obj ac693d.obj bi704.obj bi704d.obj \
-	fi699.obj fi699d.obj dy710.obj dy710d.obj ba694.obj ba694d.obj co695.obj co695d.obj \
-	co696.obj co696d.obj rt714.obj rt714d.obj bo700.obj bo700d.obj st713.obj st713d.obj \
-	ar712.obj ar712d.obj 
+OLDOBJECTS =  sp699.obj sp699d.obj sp718.obj sp718d.obj ar725.obj ar725d.obj fu714.obj fu714d.obj \
+	ty715.obj ty715d.obj ty716.obj ty716d.obj ty717.obj ty717d.obj ty719.obj ty719d.obj \
+	ar704.obj ar704d.obj na720.obj na720d.obj re700.obj re700d.obj re721.obj re721d.obj \
+	in710.obj in710d.obj to698.obj to698d.obj it701.obj it701d.obj it722.obj it722d.obj \
+	it702.obj it702d.obj it723.obj it723d.obj li708.obj li708d.obj se705.obj se705d.obj \
+	dy707.obj dy707d.obj un713.obj un713d.obj ta711.obj ta711d.obj in703.obj in703d.obj \
+	in724.obj in724d.obj tr694.obj tr694d.obj bo695.obj bo695d.obj ch709.obj ch709d.obj \
+	bi706.obj bi706d.obj fi696.obj fi696d.obj dy712.obj dy712d.obj co693.obj co693d.obj \
+	bo697.obj bo697d.obj 
 
 all::  Cobj22.lib
 

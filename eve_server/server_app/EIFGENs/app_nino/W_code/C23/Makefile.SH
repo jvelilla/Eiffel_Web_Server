@@ -55,15 +55,15 @@ $spitshell >>Makefile <<'!NO!SUBS!'
 
 OBJECTS = big_file_C23_c.obj 
 
-OLDOBJECTS =  sp737.o sp737d.o sp755.o sp755d.o ty753.o ty753d.o ty754.o ty754d.o \
-	ar742.o ar742d.o na756.o na756d.o re738.o re738d.o re757.o re757d.o \
-	li726.o li726d.o in748.o in748d.o to736.o to736d.o it740.o it740d.o \
-	it741.o it741d.o li746.o li746d.o se743.o se743d.o dy745.o dy745d.o \
-	un751.o un751d.o ta749.o ta749d.o ta752.o ta752d.o in739.o in739d.o \
-	in758.o in758d.o cu727.o cu727d.o tr732.o tr732d.o bo733.o bo733d.o \
-	ch747.o ch747d.o ac728.o ac728d.o bi744.o bi744d.o fi734.o fi734d.o \
-	dy750.o dy750d.o ba729.o ba729d.o co730.o co730d.o co731.o co731d.o \
-	bo735.o bo735d.o 
+OLDOBJECTS =  ty748.o ty748d.o ty749.o ty749d.o ty750.o ty750d.o ar738.o ar738d.o \
+	li727.o li727d.o li755.o li755d.o re726.o re726d.o in744.o in744d.o \
+	to737.o to737d.o li742.o li742d.o se739.o se739d.o dy741.o dy741d.o \
+	un747.o un747d.o ta745.o ta745d.o cu728.o cu728d.o cu756.o cu756d.o \
+	tr733.o tr733d.o bo734.o bo734d.o ch743.o ch743d.o ac729.o ac729d.o \
+	ac757.o ac757d.o bi740.o bi740d.o fi735.o fi735d.o dy746.o dy746d.o \
+	ba730.o ba730d.o ba758.o ba758d.o co731.o co731d.o co732.o co732d.o \
+	rt751.o rt751d.o rt752.o rt752d.o rt753.o rt753d.o li754.o li754d.o \
+	bo736.o bo736d.o 
 
 all: Cobj23.o
 

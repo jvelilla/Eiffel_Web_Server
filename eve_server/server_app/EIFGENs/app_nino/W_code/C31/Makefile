@@ -41,16 +41,16 @@ SYSTEM_IN_DYNAMIC_LIB = app.dll
 
 OBJECTS = big_file_C31_c.obj 
 
-OLDOBJECTS =  ar993.obj ar993d.obj fu1020.obj fu1020d.obj ty1017.obj ty1017d.obj ty1018.obj \
-	ty1018d.obj ty1022.obj ty1022d.obj ty1016.obj ty1016d.obj ty1019.obj ty1019d.obj \
-	ar1006.obj ar1006d.obj li995.obj li995d.obj re994.obj re994d.obj in1012.obj \
-	in1012d.obj to1005.obj to1005d.obj it991.obj it991d.obj it992.obj it992d.obj \
-	li1010.obj li1010d.obj se1007.obj se1007d.obj dy1009.obj dy1009d.obj un1015.obj \
-	un1015d.obj ta1013.obj ta1013d.obj in990.obj in990d.obj cu996.obj cu996d.obj \
-	tr1001.obj tr1001d.obj bo1002.obj bo1002d.obj ch1011.obj ch1011d.obj ac997.obj \
-	ac997d.obj bi1008.obj bi1008d.obj fi1003.obj fi1003d.obj dy1014.obj dy1014d.obj \
-	ba998.obj ba998d.obj co999.obj co999d.obj co1000.obj co1000d.obj rt1021.obj \
-	rt1021d.obj bo1004.obj bo1004d.obj 
+OLDOBJECTS =  sp1018.obj sp1018d.obj ar993.obj ar993d.obj ty1016.obj ty1016d.obj ty1017.obj \
+	ty1017d.obj ar1006.obj ar1006d.obj na1019.obj na1019d.obj re1020.obj re1020d.obj \
+	li995.obj li995d.obj re994.obj re994d.obj in1012.obj in1012d.obj to1005.obj \
+	to1005d.obj it990.obj it990d.obj it1021.obj it1021d.obj it991.obj it991d.obj \
+	it1022.obj it1022d.obj li1010.obj li1010d.obj se1007.obj se1007d.obj dy1009.obj \
+	dy1009d.obj un1015.obj un1015d.obj ta1013.obj ta1013d.obj in992.obj in992d.obj \
+	cu996.obj cu996d.obj tr1001.obj tr1001d.obj bo1002.obj bo1002d.obj ch1011.obj \
+	ch1011d.obj ac997.obj ac997d.obj bi1008.obj bi1008d.obj fi1003.obj fi1003d.obj \
+	dy1014.obj dy1014d.obj ba998.obj ba998d.obj co999.obj co999d.obj co1000.obj \
+	co1000d.obj bo1004.obj bo1004d.obj 
 
 all::  Cobj31.lib
 

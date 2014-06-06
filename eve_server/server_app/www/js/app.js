@@ -21,28 +21,9 @@ serverApp.config(['$routeProvider','$locationProvider',
       $locationProvider.html5Mode(true);
   }]);
 
-serverApp.factory('FileService', function($resource) {
-  return $resource('/updateFile',{}, {query: {method:'GET', isArray:true}, 'save':   {method:'POST'}});
-});
 
 serverApp.factory('CompileService', function($resource) {
-  return $resource('/compile',{}, {query: {method:'GET', isArray:true}, 'save':   {method:'POST'}});
-});
-
-serverApp.factory('CleanCompileService', function($resource) {
-  return $resource('/cleanCompile',{}, {query: {method:'GET', isArray:true}, 'save':   {method:'POST'}});
-});
-
-serverApp.factory('ErrorService', function($resource) {
-  return $resource('/errorList',{}, {query: {method:'GET', isArray:true}, 'save':   {method:'POST'}});
-});
-
-serverApp.factory('WarningService', function($resource) {
-  return $resource('/warningList',{}, {query: {method:'GET', isArray:true}, 'save':   {method:'POST'}});
-});
-
-serverApp.factory('RuntimeService', function($resource) {
-  return $resource('/runtimeErrorList',{}, {query: {method:'GET', isArray:true}, 'save':   {method:'POST'}});
+  return $resource('/compile',{}, {query: {method:'GET',  isArray:true}, 'save':   {method:'POST'}});
 });
 
 serverApp.factory('RunService', function($resource) {
@@ -50,17 +31,17 @@ serverApp.factory('RunService', function($resource) {
 });
 
 serverApp.factory('InterfaceViewService', function($resource) {
-  return $resource('/interfaceView',{}, {query: {method:'GET', isArray:true}, 'save':   {method:'POST'}});
+  return $resource('/interfaceView',{}, {query: {method:'GET',  isArray:true}, 'save':   {method:'POST'}});
 });
 
 serverApp.factory('FlatViewService', function($resource) {
-  return $resource('/flatView',{}, {query: {method:'GET', isArray:true}, 'save':   {method:'POST'}});
+  return $resource('/flatView',{}, {query: {method:'GET',  isArray:true}, 'save':   {method:'POST'}});
 });
 
 serverApp.factory('ContractViewService', function($resource) {
-  return $resource('/contractView',{}, {query: {method:'GET', isArray:true}, 'save':   {method:'POST'}});
+  return $resource('/contractView',{}, {query: {method:'GET',  isArray:true}, 'save':   {method:'POST'}});
 });
 
 serverApp.factory('ClassDescendantsService', function($resource) {
-  return $resource('/classDescendants',{}, {query: {method:'GET', isArray:true}, 'save':   {method:'POST'}});
+  return $resource('/classDescendants',{}, {query: {method:'GET',  isArray:true}, 'save':   {method:'POST'}});
 });

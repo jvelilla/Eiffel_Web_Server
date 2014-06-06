@@ -41,15 +41,15 @@ SYSTEM_IN_DYNAMIC_LIB = app.dll
 
 OBJECTS = big_file_C12_c.obj 
 
-OLDOBJECTS =  in394.obj in394d.obj in395.obj in395d.obj in391.obj in391d.obj in392.obj in392d.obj \
-	in388.obj in388d.obj in389.obj in389d.obj in385.obj in385d.obj in386.obj in386d.obj \
-	ab363.obj ab363d.obj in393.obj in393d.obj in390.obj in390d.obj in387.obj in387d.obj \
-	in384.obj in384d.obj js382.obj js382d.obj nu383.obj nu383d.obj ws377.obj ws377d.obj \
-	ws372.obj ws372d.obj ws376.obj ws376d.obj ws375.obj ws375d.obj ws374.obj ws374d.obj \
-	js378.obj js378d.obj js381.obj js381d.obj js380.obj js380d.obj js379.obj js379d.obj \
-	ws364.obj ws364d.obj ws371.obj ws371d.obj ws369.obj ws369d.obj ws367.obj ws367d.obj \
-	ws370.obj ws370d.obj ws365.obj ws365d.obj ws368.obj ws368d.obj ws366.obj ws366d.obj \
-	ws373.obj ws373d.obj 
+OLDOBJECTS =  in395.obj in395d.obj in392.obj in392d.obj in393.obj in393d.obj in389.obj in389d.obj \
+	in390.obj in390d.obj pa364.obj pa364d.obj it363.obj it363d.obj ab367.obj ab367d.obj \
+	in394.obj in394d.obj in391.obj in391d.obj in388.obj in388d.obj js386.obj js386d.obj \
+	ws381.obj ws381d.obj nu387.obj nu387d.obj ws376.obj ws376d.obj ws380.obj ws380d.obj \
+	ws379.obj ws379d.obj ws378.obj ws378d.obj ht366.obj ht366d.obj js382.obj js382d.obj \
+	js385.obj js385d.obj js384.obj js384d.obj js383.obj js383d.obj ws368.obj ws368d.obj \
+	ws375.obj ws375d.obj ws373.obj ws373d.obj ws371.obj ws371d.obj ht365.obj ht365d.obj \
+	ws374.obj ws374d.obj ws369.obj ws369d.obj ws377.obj ws377d.obj ws372.obj ws372d.obj \
+	ws370.obj ws370d.obj 
 
 all::  Cobj12.lib
 

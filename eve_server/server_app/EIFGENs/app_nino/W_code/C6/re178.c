@@ -1,5 +1,5 @@
 /*
- * Code for class RESCUE_FAILURE
+ * Code for class RESUMPTION_FAILURE
  */
 
 #include "eif_eiffel.h"
@@ -10,8 +10,8 @@
 extern "C" {
 #endif
 
-extern EIF_TYPED_VALUE F178_9250(EIF_REFERENCE);
-extern EIF_TYPED_VALUE F178_9251(EIF_REFERENCE);
+extern EIF_TYPED_VALUE F178_9256(EIF_REFERENCE);
+extern EIF_TYPED_VALUE F178_9257(EIF_REFERENCE);
 extern void EIF_Minit178(void);
 
 #ifdef __cplusplus
@@ -33,8 +33,8 @@ extern "C" {
 extern "C" {
 #endif
 
-/* {RESCUE_FAILURE}.code */
-EIF_TYPED_VALUE F178_9250 (EIF_REFERENCE Current)
+/* {RESUMPTION_FAILURE}.code */
+EIF_TYPED_VALUE F178_9256 (EIF_REFERENCE Current)
 {
 	GTCX
 	char *l_feature_name = "code";
@@ -50,17 +50,17 @@ EIF_TYPED_VALUE F178_9250 (EIF_REFERENCE Current)
 	RTLU (SK_INT32, &Result);
 	RTLU (SK_REF, &Current);
 	
-	RTEAA(l_feature_name, 177, Current, 0, 0, 2534);
+	RTEAA(l_feature_name, 177, Current, 0, 0, 2540);
 	RTSA(Dtype(Current));
 	RTSC;
 	RTME(Dtype(Current), 0);
 	RTGC;
-	RTDBGEAA(177, Current, 2534);
+	RTDBGEAA(177, Current, 2540);
 	RTIV(Current, RTAL);
 	RTHOOK(1);
 	RTDBGAL(Current, 0, 0x10000000, 1,0); /* Result */
 	
-	Result = (((FUNCTION_CAST(EIF_TYPED_VALUE, (EIF_REFERENCE)) RTWF(8402, 148))(Current)).it_i4);
+	Result = (((FUNCTION_CAST(EIF_TYPED_VALUE, (EIF_REFERENCE)) RTWF(8412, 149))(Current)).it_i4);
 	Result = (EIF_INTEGER_32) Result;
 	RTVI(Current, RTAL);
 	RTRS;
@@ -73,9 +73,9 @@ EIF_TYPED_VALUE F178_9250 (EIF_REFERENCE Current)
 	{ EIF_TYPED_VALUE r; r.type = SK_INT32; r.it_i4 = Result; return r; }
 }
 
-/* {RESCUE_FAILURE}.tag */
-RTOID (F178_9251)
-EIF_TYPED_VALUE F178_9251 (EIF_REFERENCE Current)
+/* {RESUMPTION_FAILURE}.tag */
+RTOID (F178_9257)
+EIF_TYPED_VALUE F178_9257 (EIF_REFERENCE Current)
 {
 	GTCX
 	char *l_feature_name = "tag";
@@ -89,7 +89,7 @@ EIF_TYPED_VALUE F178_9251 (EIF_REFERENCE Current)
 	RTLD;
 	
 #define Result RTOTRR
-	RTOTDR(F178_9251);
+	RTOTDR(F178_9257);
 
 	RTLI(4);
 	RTLR(0,tr1);
@@ -99,21 +99,21 @@ EIF_TYPED_VALUE F178_9251 (EIF_REFERENCE Current)
 	RTLU (SK_REF, &Result);
 	RTLU (SK_REF, &Current);
 	
-	RTEAA(l_feature_name, 177, Current, 0, 0, 2535);
+	RTEAA(l_feature_name, 177, Current, 0, 0, 2541);
 	RTSA(Dtype(Current));
 	RTSC;
 	RTME(Dtype(Current), 0);
 	RTGC;
-	RTDBGEAA(177, Current, 2535);
+	RTDBGEAA(177, Current, 2541);
 	RTIV(Current, RTAL);
 	RTOTP;
 	RTHOOK(1);
-	RTDBGAL(Current, 0, 0xF8000155, 0,0); /* Result */
+	RTDBGAL(Current, 0, 0xF8000159, 0,0); /* Result */
 	
-	tr1 = RTLN(341);
-	tr2 = RTMS_EX_H("Exception in rescue clause.",27,1724914478);
+	tr1 = RTLN(345);
+	tr2 = RTMS_EX_H("Resumption attempt failed.",26,952477998);
 	ur1 = tr2;
-	(FUNCTION_CAST(void, (EIF_REFERENCE, EIF_TYPED_VALUE)) RTWC(15029, Dtype(tr1)))(tr1, ur1x);
+	(FUNCTION_CAST(void, (EIF_REFERENCE, EIF_TYPED_VALUE)) RTWC(15087, Dtype(tr1)))(tr1, ur1x);
 	RTNHOOK(1,1);
 	Result = (EIF_REFERENCE) tr1;
 	RTVI(Current, RTAL);
@@ -133,7 +133,7 @@ EIF_TYPED_VALUE F178_9251 (EIF_REFERENCE Current)
 void EIF_Minit178 (void)
 {
 	GTCX
-	RTOTS (9251,F178_9251)
+	RTOTS (9257,F178_9257)
 }
 
 

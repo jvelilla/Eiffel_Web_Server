@@ -114,7 +114,7 @@ void F26_3943 (EIF_REFERENCE Current, EIF_TYPED_VALUE arg1x)
 	RTCC(arg1, 25, l_feature_name, 1, RTWCT(3940, dtype, Dftype(Current)));
 	RTIV(Current, RTAL);
 	RTHOOK(1);
-	RTDBGAA(Current, dtype, 3941, 0xF80001B9, 0); /* internal_exception */
+	RTDBGAA(Current, dtype, 3941, 0xF80001BD, 0); /* internal_exception */
 	
 	RTAR(Current, arg1);
 	*(EIF_REFERENCE *)(Current + RTWA(3941, dtype)) = (EIF_REFERENCE) RTCCL(arg1);
@@ -176,7 +176,7 @@ EIF_TYPED_VALUE F26_3944 (EIF_REFERENCE Current)
 	RTDBGEAA(25, Current, 434);
 	RTIV(Current, RTAL);
 	RTHOOK(1);
-	RTDBGAL(Current, 0, 0xF80001B9, 0,0); /* Result */
+	RTDBGAL(Current, 0, 0xF80001BD, 0,0); /* Result */
 	
 	Result = ((up1x = (FUNCTION_CAST(EIF_TYPED_VALUE, (EIF_REFERENCE)) RTWF(3941, Dtype(Current)))(Current)), (((up1x.type & SK_HEAD) == SK_REF)? (EIF_REFERENCE) 0: (up1x.it_r = RTBU(up1x))), (up1x.type = SK_POINTER), up1x.it_r);
 	RTVI(Current, RTAL);

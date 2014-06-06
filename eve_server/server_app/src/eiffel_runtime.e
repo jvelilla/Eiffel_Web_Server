@@ -238,9 +238,9 @@ feature --Execution
 					json_object.put_string (message_string, "Message")
 					json_object.put_string (effect_string, "Effect")
 					if json_array.count=0 then
-						json_object.put_string (dump_string, "Dump")
+						json_object.put_string (dump_string, "Initial_Text")
 					else
-						json_object.put_string ("", "Dump")
+						json_object.put_string ("", "Initial_Text")
 					end
 					json_array.add (json_object)
 
@@ -267,6 +267,7 @@ feature --Execution
 				json_object.put_string ("", "Routine")
 				json_object.put_string ("", "Message")
 				json_object.put_string ("", "Effect")
+				json_object.put_string ("", "Initial_Text")
 				json_object.put_string (error_message, "Dump")
 				json_array.add (json_object)
 				error_count:=error_count+1

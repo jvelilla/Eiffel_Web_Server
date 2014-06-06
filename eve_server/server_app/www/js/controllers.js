@@ -11,58 +11,36 @@ var serverControllers = angular.module('mainControllers', []);
   $scope.compile
 });*/
 
-serverControllers.controller('MainCtrl',['$scope', '$http', 'CompileService','FileService','RunService','InterfaceViewService','FlatViewService','ContractViewService','ClassDescendantsService','ErrorService','WarningService','RuntimeService','CleanCompileService',
-  function($scope,$http,CompileService,FileService,RunService,InterfaceViewService,FlatViewService,ContractViewService,ClassDescendantsService,ErrorService,WarningService,RuntimeService,CleanCompileService){
+serverControllers.controller('MainCtrl',['$scope', '$http', 'CompileService','RunService','InterfaceViewService','FlatViewService','ContractViewService','ClassDescendantsService',
+  function($scope,$http,CompileService,RunService,InterfaceViewService,FlatViewService,ContractViewService,ClassDescendantsService){
     $scope.message='Hi there';
-    $scope.compile=function(){
-      FileService.save($scope.file,function(){
-          $scope.compile_result=CompileService.query(function(){
-            $scope.error_list=ErrorService.query();
-            $scope.warning_list=WarningService.query();
-          });
-      })
+    
+      $scope.compile=function(){
+        $scope.compile_result=CompileService.query({id :"AB01D9AC-018D-4A33-8781-DCC8A097C2B3", clean:false, path:""});
     };
 
     $scope.cleanCompile=function(){
-      FileService.save($scope.file,function(){
-          $scope.compile_result=CleanCompileService.query(function(){
-            $scope.error_list=ErrorService.query();
-            $scope.warning_list=WarningService.query();
-          });
-      })
+        $scope.compile_result=CompileService.query({id :"AB01D9AC-018D-4A33-8781-DCC8A097C2B3", clean:true, path:"C:/Users/Manav/Desktop/eve_server/sample/sample.ecf"});
     };
 
     $scope.run_exe=function(){
-      FileService.save($scope.file,function(){
-          $scope.run_result=RunService.query(function(){
-            $scope.error_list=ErrorService.query();
-            $scope.warning_list=WarningService.query();
-            $scope.runtime_error_list=RuntimeService.query();
-          });
-      })
+          $scope.run_result=RunService.query({id :"AB01D9AC-018D-4A33-8781-DCC8A097C2B3"});
     };
 
     $scope.get_interface_view=function(){
-      FileService.save($scope.file,function(){
-          $scope.interface_view_result=InterfaceViewService.query();
-      })
+        $scope.interface_view_result=InterfaceViewService.query({id :"AB01D9AC-018D-4A33-8781-DCC8A097C2B3", class:"APPLICATION"});
     };
 
      $scope.get_flat_view=function(){
-      FileService.save($scope.file,function(){
-          $scope.flat_view_result=FlatViewService.query();
-      })
+        $scope.flat_view_result=FlatViewService.query({id :"AB01D9AC-018D-4A33-8781-DCC8A097C2B3", class:"APPLICATION"});
     };
 
      $scope.get_contract_view=function(){
-      FileService.save($scope.file,function(){
-          $scope.contract_view_result=ContractViewService.query();
-      })
+        $scope.contract_view_result=ContractViewService.query({id :"AB01D9AC-018D-4A33-8781-DCC8A097C2B3", class:"ACCOUNT"});
     };
 
      $scope.get_class_descendants=function(){
-      FileService.save($scope.file,function(){
-          $scope.class_descendants_result=ClassDescendantsService.query();
-      })
+        $scope.class_descendants_result=ClassDescendantsService.query({id :"AB01D9AC-018D-4A33-8781-DCC8A097C2B3", class:"APPLICATION"});
     };
+
   }]);

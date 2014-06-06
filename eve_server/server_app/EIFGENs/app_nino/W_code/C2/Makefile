@@ -41,14 +41,14 @@ SYSTEM_IN_DYNAMIC_LIB = app.dll
 
 OBJECTS = big_file_C2_c.obj 
 
-OLDOBJECTS =  eq41.obj eq41d.obj it40.obj it40d.obj is39.obj is39d.obj st38.obj st38d.obj op37.obj \
-	op37d.obj rt36.obj rt36d.obj sy35.obj sy35d.obj ut33.obj ut33d.obj ut34.obj ut34d.obj \
-	ws63.obj ws63d.obj js65.obj js65d.obj js64.obj js64d.obj wg62.obj wg62d.obj ht57.obj \
-	ht57d.obj ht61.obj ht61d.obj wg55.obj wg55d.obj ws60.obj ws60d.obj ws46.obj ws46d.obj \
-	so59.obj so59d.obj gr58.obj gr58d.obj eq50.obj eq50d.obj ht56.obj ht56d.obj wg54.obj \
-	wg54d.obj wg53.obj wg53d.obj ht52.obj ht52d.obj ws45.obj ws45d.obj ba51.obj ba51d.obj \
-	eq49.obj eq49d.obj we48.obj we48d.obj we47.obj we47d.obj ws44.obj ws44d.obj da43.obj \
-	da43d.obj da42.obj da42d.obj 
+OLDOBJECTS =  eq42.obj eq42d.obj it41.obj it41d.obj is40.obj is40d.obj st39.obj st39d.obj op38.obj \
+	op38d.obj rt37.obj rt37d.obj sy36.obj sy36d.obj ut34.obj ut34d.obj ut35.obj ut35d.obj \
+	ei33.obj ei33d.obj ws63.obj ws63d.obj ht65.obj ht65d.obj pr64.obj pr64d.obj wg62.obj \
+	wg62d.obj ht58.obj ht58d.obj wg54.obj wg54d.obj ws61.obj ws61d.obj ws47.obj ws47d.obj \
+	so60.obj so60d.obj gr59.obj gr59d.obj eq51.obj eq51d.obj ht57.obj ht57d.obj ht56.obj \
+	ht56d.obj wg55.obj wg55d.obj wg53.obj wg53d.obj ws46.obj ws46d.obj ba52.obj ba52d.obj \
+	eq50.obj eq50d.obj we49.obj we49d.obj we48.obj we48d.obj ws45.obj ws45d.obj da44.obj \
+	da44d.obj da43.obj da43d.obj 
 
 all::  Cobj2.lib
 

@@ -60,6 +60,7 @@ feature --Execution
 			class_string:STRING
 			feature_string: STRING
 			after_feature_string: STRING
+			dump_string:STRING
 
 			i:INTEGER
 			warning_index:INTEGER
@@ -226,6 +227,9 @@ feature --Execution
 				--The dump of the message is here
 				after_feature_string:=warning_message.substring (dump_index, message_end)
 
+				--The main dump of the warning messages
+				dump_string:=warning_message.substring (warning_index, message_end)
+
 				--Create the parsed warning
 				json_object.put_string (warning_code_string,"Warning_Code")
 				json_object.put_string (warning_string,"Warning")
@@ -233,17 +237,33 @@ feature --Execution
 				json_object.put_string (class_string,"Class")
 				json_object.put_string (feature_string,"Feature")
 				json_object.put_string (after_feature_string, "After_Feature")
+				json_object.put_string (dump_string, "Dump")
 
 				--json_object.put_string ("True","Has_warning")
 				json_array.add (json_object)
 
 				--Updating the loop variable
-				warning_index:=warning_message.substring_index ("Warning code",feature_last_index)
+				warning_index:=warning_message.substring_index ("Warning code",message_end)
 				warning_count:=warning_count+1
 
 				--Checking the parsed warning
 --				io.put_string (json_array.i_th (warning_count).representation)
 --				io.put_new_line
+			end
+			if json_array.count=0 then
+				create json_object.make
+
+				--Create the parsed warning
+				json_object.put_string ("","Warning_Code")
+				json_object.put_string ("","Warning")
+				json_object.put_string ("","What_to_do")
+				json_object.put_string ("","Class")
+				json_object.put_string ("","Feature")
+				after_feature_string:=warning_message
+				json_object.put_string (after_feature_string, "After_Feature")
+				json_object.put_string (after_feature_string, "Dump")
+				json_array.add (json_object)
+				warning_count:=1
 			end
 		end
 end

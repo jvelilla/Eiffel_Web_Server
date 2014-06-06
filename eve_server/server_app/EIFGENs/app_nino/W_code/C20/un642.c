@@ -1,5 +1,5 @@
 /*
- * Code for class UNBOUNDED [BOOLEAN]
+ * Code for class UNBOUNDED [INTEGER_64]
  */
 
 #include "eif_eiffel.h"

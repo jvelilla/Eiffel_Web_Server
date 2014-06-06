@@ -39,7 +39,7 @@ SYSTEM_IN_DYNAMIC_LIB = app.dll
 .cpp.obj:
 	$(CPP) $(CPPFLAGS) -c $<
 
-SUBDIRS = C1 C2 C3 C4 C5 C6 C7 C8 C9 C10 C11 C12 C13 C14 C15 C16 C17 C18 C19 C20 C21 C22 C23 C24 C25 C26 C27 C28 C29 C30 C31 C32 C33 E1
+SUBDIRS = C1 C2 C3 C4 C5 C6 C7 C8 C9 C10 C11 C12 C13 C14 C15 C16 C17 C18 C19 C20 C21 C22 C23 C24 C25 C26 C27 C28 C29 C30 C31 C32 C33 C34 E1
 
 EXTERNALS =  \
 	"C:\Python27\eve\library\wel\spec\msc\win64\lib\mtwel.lib" \
@@ -213,6 +213,11 @@ C33\Cobj33.lib: Makefile E1\estructure.h
 	$(START_TEST) $(MAKE) Cobj33.lib $(END_TEST)
 	cd ..
 
+C34\Cobj34.lib: Makefile E1\estructure.h
+	cd C34
+	$(START_TEST) $(MAKE) Cobj34.lib $(END_TEST)
+	cd ..
+
 E1\emain.obj:  Makefile E1\Makefile
 	$(CP) "$(EIFTEMPLATES)\emain.template" "E1\emain.c"
 	cd E1
@@ -274,9 +279,9 @@ E1\eparents.obj : Makefile E1\Makefile E1\estructure.h
 	$(START_TEST) $(MAKE) eparents.obj  $(END_TEST)
 	cd ..
 
-OBJECTS = E1\eparents.obj  E1\einit.obj  E1\ececil.obj  E1\evisib.obj  E1\enames.obj  E1\eskelet.obj  E1\eplug.obj  E1\ecall.obj  E1\efrozen.obj  E1\epattern.obj  E1\eoption.obj  C33\Cobj33.lib C32\Cobj32.lib C31\Cobj31.lib C30\Cobj30.lib C29\Cobj29.lib C28\Cobj28.lib C27\Cobj27.lib C26\Cobj26.lib C25\Cobj25.lib C24\Cobj24.lib C23\Cobj23.lib C22\Cobj22.lib C21\Cobj21.lib C20\Cobj20.lib C19\Cobj19.lib C18\Cobj18.lib C17\Cobj17.lib C16\Cobj16.lib C15\Cobj15.lib C14\Cobj14.lib C13\Cobj13.lib C12\Cobj12.lib C11\Cobj11.lib C10\Cobj10.lib C9\Cobj9.lib C8\Cobj8.lib C7\Cobj7.lib C6\Cobj6.lib C5\Cobj5.lib C4\Cobj4.lib C3\Cobj3.lib C2\Cobj2.lib C1\Cobj1.lib 
+OBJECTS = E1\eparents.obj  E1\einit.obj  E1\ececil.obj  E1\evisib.obj  E1\enames.obj  E1\eskelet.obj  E1\eplug.obj  E1\ecall.obj  E1\efrozen.obj  E1\epattern.obj  E1\eoption.obj  C34\Cobj34.lib C33\Cobj33.lib C32\Cobj32.lib C31\Cobj31.lib C30\Cobj30.lib C29\Cobj29.lib C28\Cobj28.lib C27\Cobj27.lib C26\Cobj26.lib C25\Cobj25.lib C24\Cobj24.lib C23\Cobj23.lib C22\Cobj22.lib C21\Cobj21.lib C20\Cobj20.lib C19\Cobj19.lib C18\Cobj18.lib C17\Cobj17.lib C16\Cobj16.lib C15\Cobj15.lib C14\Cobj14.lib C13\Cobj13.lib C12\Cobj12.lib C11\Cobj11.lib C10\Cobj10.lib C9\Cobj9.lib C8\Cobj8.lib C7\Cobj7.lib C6\Cobj6.lib C5\Cobj5.lib C4\Cobj4.lib C3\Cobj3.lib C2\Cobj2.lib C1\Cobj1.lib 
 
-C_OBJECTS = C33\Cobj33.lib C32\Cobj32.lib C31\Cobj31.lib C30\Cobj30.lib C29\Cobj29.lib C28\Cobj28.lib C27\Cobj27.lib C26\Cobj26.lib C25\Cobj25.lib C24\Cobj24.lib C23\Cobj23.lib C22\Cobj22.lib C21\Cobj21.lib C20\Cobj20.lib C19\Cobj19.lib C18\Cobj18.lib C17\Cobj17.lib C16\Cobj16.lib C15\Cobj15.lib C14\Cobj14.lib C13\Cobj13.lib C12\Cobj12.lib C11\Cobj11.lib C10\Cobj10.lib C9\Cobj9.lib C8\Cobj8.lib C7\Cobj7.lib C6\Cobj6.lib C5\Cobj5.lib C4\Cobj4.lib C3\Cobj3.lib C2\Cobj2.lib C1\Cobj1.lib 
+C_OBJECTS = C34\Cobj34.lib C33\Cobj33.lib C32\Cobj32.lib C31\Cobj31.lib C30\Cobj30.lib C29\Cobj29.lib C28\Cobj28.lib C27\Cobj27.lib C26\Cobj26.lib C25\Cobj25.lib C24\Cobj24.lib C23\Cobj23.lib C22\Cobj22.lib C21\Cobj21.lib C20\Cobj20.lib C19\Cobj19.lib C18\Cobj18.lib C17\Cobj17.lib C16\Cobj16.lib C15\Cobj15.lib C14\Cobj14.lib C13\Cobj13.lib C12\Cobj12.lib C11\Cobj11.lib C10\Cobj10.lib C9\Cobj9.lib C8\Cobj8.lib C7\Cobj7.lib C6\Cobj6.lib C5\Cobj5.lib C4\Cobj4.lib C3\Cobj3.lib C2\Cobj2.lib C1\Cobj1.lib 
 
 EOBJECTS = E1\eparents.obj  E1\einit.obj  E1\ececil.obj  E1\evisib.obj  E1\enames.obj  E1\eskelet.obj  E1\eplug.obj  E1\ecall.obj  E1\efrozen.obj  E1\epattern.obj  E1\eoption.obj  
 
@@ -303,13 +308,13 @@ app.lnk: $(OBJECTS) e1\emain.obj app.res Makefile
 	@echo app.res >> $@
 	echo E1\eparents.obj  E1\einit.obj  E1\ececil.obj  E1\evisib.obj  E1\enames.obj   >> $@ 
 	echo E1\eskelet.obj  E1\eplug.obj  E1\ecall.obj  E1\efrozen.obj  E1\epattern.obj   >> $@ 
-	echo E1\eoption.obj  C33\Cobj33.lib C32\Cobj32.lib C31\Cobj31.lib C30\Cobj30.lib  >> $@ 
-	echo C29\Cobj29.lib C28\Cobj28.lib C27\Cobj27.lib C26\Cobj26.lib C25\Cobj25.lib  >> $@ 
-	echo C24\Cobj24.lib C23\Cobj23.lib C22\Cobj22.lib C21\Cobj21.lib C20\Cobj20.lib  >> $@ 
-	echo C19\Cobj19.lib C18\Cobj18.lib C17\Cobj17.lib C16\Cobj16.lib C15\Cobj15.lib  >> $@ 
-	echo C14\Cobj14.lib C13\Cobj13.lib C12\Cobj12.lib C11\Cobj11.lib C10\Cobj10.lib  >> $@ 
-	echo C9\Cobj9.lib C8\Cobj8.lib C7\Cobj7.lib C6\Cobj6.lib C5\Cobj5.lib  >> $@ 
-	echo C4\Cobj4.lib C3\Cobj3.lib C2\Cobj2.lib C1\Cobj1.lib  >> $@ 
+	echo E1\eoption.obj  C34\Cobj34.lib C33\Cobj33.lib C32\Cobj32.lib C31\Cobj31.lib  >> $@ 
+	echo C30\Cobj30.lib C29\Cobj29.lib C28\Cobj28.lib C27\Cobj27.lib C26\Cobj26.lib  >> $@ 
+	echo C25\Cobj25.lib C24\Cobj24.lib C23\Cobj23.lib C22\Cobj22.lib C21\Cobj21.lib  >> $@ 
+	echo C20\Cobj20.lib C19\Cobj19.lib C18\Cobj18.lib C17\Cobj17.lib C16\Cobj16.lib  >> $@ 
+	echo C15\Cobj15.lib C14\Cobj14.lib C13\Cobj13.lib C12\Cobj12.lib C11\Cobj11.lib  >> $@ 
+	echo C10\Cobj10.lib C9\Cobj9.lib C8\Cobj8.lib C7\Cobj7.lib C6\Cobj6.lib  >> $@ 
+	echo C5\Cobj5.lib C4\Cobj4.lib C3\Cobj3.lib C2\Cobj2.lib C1\Cobj1.lib  >> $@ 
 
 
 RCECIL = MTwmalloc.obj MTwgarcol.obj MTwlocal.obj MTwexcept.obj MTwstore.obj \

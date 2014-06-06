@@ -1,5 +1,5 @@
 /*
- * Code for class THREAD_CONTROL
+ * Code for class THREAD_ENVIRONMENT
  */
 
 #include "eif_eiffel.h"
@@ -10,20 +10,28 @@
 extern "C" {
 #endif
 
-extern void F98_7913(EIF_REFERENCE);
-extern void F98_7914(EIF_REFERENCE);
+extern EIF_TYPED_VALUE F98_7919(EIF_REFERENCE);
+extern EIF_TYPED_VALUE F98_7920(EIF_REFERENCE);
 extern void EIF_Minit98(void);
 
 #ifdef __cplusplus
 }
 #endif
 
-#include "eif_threads.h"
+#include <eif_threads.h>
 
 #ifdef __cplusplus
 extern "C" {
 #endif
 
+#ifndef INLINE_F98_7919
+static EIF_POINTER inline_F98_7919 (void)
+{
+	return eif_thr_thread_id();
+	;
+}
+#define INLINE_F98_7919
+#endif
 
 #ifdef __cplusplus
 }
@@ -34,31 +42,30 @@ extern "C" {
 extern "C" {
 #endif
 
-/* {THREAD_CONTROL}.join_all */
-void F98_7913 (EIF_REFERENCE Current)
+/* {THREAD_ENVIRONMENT}.current_thread_id */
+EIF_TYPED_VALUE F98_7919 (EIF_REFERENCE Current)
 {
 	GTCX
-	char *l_feature_name = "join_all";
+	char *l_feature_name = "current_thread_id";
 	RTEX;
+	EIF_POINTER Result = ((EIF_POINTER) 0);
+	
 	RTSN;
 	RTDA;
 	RTLD;
 	
 	RTLI(1);
 	RTLR(0,Current);
-	RTLU (SK_VOID, NULL);
+	RTLU (SK_POINTER, &Result);
 	RTLU (SK_REF, &Current);
 	
-	RTEAA(l_feature_name, 97, Current, 0, 0, 1611);
+	RTEAA(l_feature_name, 97, Current, 0, 0, 1617);
 	RTSA(Dtype(Current));
 	RTSC;
 	RTME(Dtype(Current), 1);
-	RTDBGEAA(97, Current, 1611);
+	RTDBGEAA(97, Current, 1617);
 	RTIV(Current, RTAL);
-	EIF_ENTER_C;eif_thr_join_all();
-	
-	EIF_EXIT_C;
-	RTGC;
+	Result = inline_F98_7919 ();
 	RTVI(Current, RTAL);
 	RTRS;
 	RTHOOK(1);
@@ -67,38 +74,46 @@ void F98_7913 (EIF_REFERENCE Current)
 	RTLE;
 	RTLO(2);
 	RTEE;
+	{ EIF_TYPED_VALUE r; r.type = SK_POINTER; r.it_p = Result; return r; }
 }
 
-/* {THREAD_CONTROL}.yield */
-void F98_7914 (EIF_REFERENCE Current)
+/* {THREAD_ENVIRONMENT}.get_current_id */
+EIF_TYPED_VALUE F98_7920 (EIF_REFERENCE Current)
 {
 	GTCX
-	char *l_feature_name = "yield";
+	char *l_feature_name = "get_current_id";
 	RTEX;
+	EIF_POINTER Result = ((EIF_POINTER) 0);
+	
 	RTSN;
 	RTDA;
 	RTLD;
 	
 	RTLI(1);
 	RTLR(0,Current);
-	RTLU (SK_VOID, NULL);
+	RTLU (SK_POINTER, &Result);
 	RTLU (SK_REF, &Current);
 	
-	RTEAA(l_feature_name, 97, Current, 0, 0, 1612);
+	RTEAA(l_feature_name, 97, Current, 0, 0, 1618);
 	RTSA(Dtype(Current));
 	RTSC;
-	RTME(Dtype(Current), 1);
-	RTDBGEAA(97, Current, 1612);
-	RTIV(Current, RTAL);eif_thr_yield();
+	RTME(Dtype(Current), 0);
+	RTGC;
+	RTDBGEAA(97, Current, 1618);
+	RTIV(Current, RTAL);
+	RTHOOK(1);
+	RTDBGAL(Current, 0, 0x40000000, 1,0); /* Result */
 	
+	Result = (((FUNCTION_CAST(EIF_TYPED_VALUE, (EIF_REFERENCE)) RTWF(7758, Dtype(Current)))(Current)).it_p);
 	RTVI(Current, RTAL);
 	RTRS;
-	RTHOOK(1);
+	RTHOOK(2);
 	RTDBGLE;
-	RTMD(1);
+	RTMD(0);
 	RTLE;
 	RTLO(2);
 	RTEE;
+	{ EIF_TYPED_VALUE r; r.type = SK_POINTER; r.it_p = Result; return r; }
 }
 
 void EIF_Minit98 (void)

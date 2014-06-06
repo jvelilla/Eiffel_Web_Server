@@ -55,15 +55,15 @@ $spitshell >>Makefile <<'!NO!SUBS!'
 
 OBJECTS = big_file_C6_c.obj 
 
-OLDOBJECTS =  ex166.o ex166d.o vo194.o vo194d.o no185.o no185d.o fl170.o fl170d.o \
-	ro193.o ro193d.o ba192.o ba192d.o op174.o op174d.o ei181.o ei181d.o \
-	re178.o re178d.o re177.o re177d.o cr197.o cr197d.o ex184.o ex184d.o \
-	vo191.o vo191d.o ex176.o ex176d.o io189.o io189d.o op173.o op173d.o \
-	mi188.o mi188d.o de167.o de167d.o ad196.o ad196d.o co172.o co172d.o \
-	ol180.o ol180d.o se187.o se187d.o ex165.o ex165d.o la190.o la190d.o \
-	ei183.o ei183d.o ha169.o ha169d.o op171.o op171d.o sy179.o sy179d.o \
-	ob175.o ob175d.o ei195.o ei195d.o da186.o da186d.o ei182.o ei182d.o \
-	ma168.o ma168d.o 
+OLDOBJECTS =  ex167.o ex167d.o vo195.o vo195d.o no186.o no186d.o fl171.o fl171d.o \
+	ro194.o ro194d.o ba193.o ba193d.o op175.o op175d.o ei182.o ei182d.o \
+	re179.o re179d.o re178.o re178d.o ex185.o ex185d.o vo192.o vo192d.o \
+	ex177.o ex177d.o io190.o io190d.o op174.o op174d.o mi189.o mi189d.o \
+	de168.o de168d.o ad197.o ad197d.o co173.o co173d.o ol181.o ol181d.o \
+	se188.o se188d.o ex166.o ex166d.o la191.o la191d.o ei184.o ei184d.o \
+	ha170.o ha170d.o op172.o op172d.o sy180.o sy180d.o ob176.o ob176d.o \
+	ei196.o ei196d.o da187.o da187d.o ne165.o ne165d.o ei183.o ei183d.o \
+	ma169.o ma169d.o 
 
 all: Cobj6.o
 
