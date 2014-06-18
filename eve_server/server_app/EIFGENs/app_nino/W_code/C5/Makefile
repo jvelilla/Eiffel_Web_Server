@@ -41,15 +41,15 @@ SYSTEM_IN_DYNAMIC_LIB = app.dll
 
 OBJECTS = big_file_C5_c.obj 
 
-OLDOBJECTS =  is148.obj is148d.obj in143.obj in143d.obj in164.obj in164d.obj eq154.obj eq154d.obj \
-	in151.obj in151d.obj ex150.obj ex150d.obj eq149.obj eq149d.obj ex147.obj ex147d.obj \
-	ws146.obj ws146d.obj ws145.obj ws145d.obj ws144.obj ws144d.obj in153.obj in153d.obj \
-	in141.obj in141d.obj in152.obj in152d.obj in142.obj in142d.obj in140.obj in140d.obj \
-	so163.obj so163d.obj st139.obj st139d.obj st136.obj st136d.obj nu134.obj nu134d.obj \
-	it133.obj it133d.obj re132.obj re132d.obj st138.obj st138d.obj he137.obj he137d.obj \
-	sh162.obj sh162d.obj ws160.obj ws160d.obj ws161.obj ws161d.obj in135.obj in135d.obj \
-	ws158.obj ws158d.obj ws157.obj ws157d.obj ws159.obj ws159d.obj we156.obj we156d.obj \
-	me155.obj me155d.obj 
+OLDOBJECTS =  is150.obj is150d.obj in145.obj in145d.obj eq156.obj eq156d.obj in153.obj in153d.obj \
+	ex152.obj ex152d.obj eq151.obj eq151d.obj ex149.obj ex149d.obj ws148.obj ws148d.obj \
+	ws147.obj ws147d.obj ws146.obj ws146d.obj in155.obj in155d.obj in143.obj in143d.obj \
+	in154.obj in154d.obj in144.obj in144d.obj in142.obj in142d.obj st141.obj st141d.obj \
+	st138.obj st138d.obj nu136.obj nu136d.obj it135.obj it135d.obj re134.obj re134d.obj \
+	st140.obj st140d.obj st133.obj st133d.obj st132.obj st132d.obj he139.obj he139d.obj \
+	sh164.obj sh164d.obj ws162.obj ws162d.obj ws163.obj ws163d.obj in137.obj in137d.obj \
+	ws160.obj ws160d.obj ws159.obj ws159d.obj ws161.obj ws161d.obj we158.obj we158d.obj \
+	me157.obj me157d.obj 
 
 all::  Cobj5.lib
 

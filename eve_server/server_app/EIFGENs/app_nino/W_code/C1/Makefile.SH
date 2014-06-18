@@ -55,12 +55,12 @@ $spitshell >>Makefile <<'!NO!SUBS!'
 
 OBJECTS = big_file_C1_c.obj 
 
-OLDOBJECTS =  an1.o an1d.o uu32.o uu32d.o pr31.o pr31d.o ei30.o ei30d.o ei29.o \
-	ei29d.o ei28.o ei28d.o eq27.o eq27d.o eq26.o eq26d.o eq25.o eq25d.o \
-	it24.o it24d.o ch23.o ch23d.o sy22.o sy22d.o ht21.o ht21d.o c_20.o \
-	c_20d.o js19.o js19d.o ws18.o ws18d.o pr17.o pr17d.o ws16.o ws16d.o \
-	eq15.o eq15d.o ve14.o ve14d.o fi12.o fi12d.o fi13.o fi13d.o er11.o \
-	er11d.o ht10.o ht10d.o ht9.o ht9d.o we8.o we8d.o fi7.o fi7d.o pa6.o \
+OLDOBJECTS =  an1.o an1d.o ei32.o ei32d.o ei31.o ei31d.o ei30.o ei30d.o uu29.o \
+	uu29d.o ei28.o ei28d.o eq27.o eq27d.o eq26.o eq26d.o eq25.o eq25d.o \
+	it24.o it24d.o ch23.o ch23d.o sy22.o sy22d.o ht21.o ht21d.o js20.o \
+	js20d.o pr19.o pr19d.o c_18.o c_18d.o ws17.o ws17d.o ws16.o ws16d.o \
+	eq15.o eq15d.o ve14.o ve14d.o er13.o er13d.o fi11.o fi11d.o fi12.o \
+	fi12d.o ht10.o ht10d.o ht9.o ht9d.o we8.o we8d.o fi7.o fi7d.o pa6.o \
 	pa6d.o we5.o we5d.o ur4.o ur4d.o eq3.o eq3d.o eq2.o eq2d.o 
 
 all: Cobj1.o

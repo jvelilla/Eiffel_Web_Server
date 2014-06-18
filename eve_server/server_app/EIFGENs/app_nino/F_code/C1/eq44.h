@@ -1,0 +1,24 @@
+
+#ifndef _C1_eq44_
+#define _C1_eq44_
+
+#ifdef __cplusplus
+extern "C" {
+#endif
+
+extern EIF_REFERENCE F61_4294(EIF_REFERENCE, EIF_REFERENCE);
+static EIF_REFERENCE F61_4300_body(EIF_REFERENCE);
+extern EIF_REFERENCE F61_4300(EIF_REFERENCE);
+extern void F61_4301(EIF_REFERENCE, EIF_REFERENCE, EIF_REFERENCE);
+extern void EIF_Minit44(void);
+extern void F697_13040(EIF_REFERENCE, EIF_REFERENCE);
+extern void F697_13000(EIF_REFERENCE, EIF_INTEGER_32);
+extern void F888_17140(EIF_REFERENCE, EIF_REFERENCE);
+extern EIF_BOOLEAN F697_13030(EIF_REFERENCE);
+extern void F697_13045(EIF_REFERENCE, EIF_REFERENCE, EIF_REFERENCE);
+
+#ifdef __cplusplus
+}
+#endif
+
+#endif

@@ -1,0 +1,21 @@
+
+#ifndef _C9_er433_
+#define _C9_er433_
+
+#ifdef __cplusplus
+extern "C" {
+#endif
+
+extern void F1030_20351(EIF_REFERENCE, EIF_INTEGER_32, EIF_REFERENCE, EIF_REFERENCE);
+extern EIF_INTEGER_32 F1030_20352(EIF_REFERENCE);
+extern EIF_REFERENCE F1030_20353(EIF_REFERENCE);
+extern EIF_REFERENCE F1030_20354(EIF_REFERENCE);
+extern void EIF_Minit433(void);
+extern EIF_REFERENCE F885_17052(EIF_REFERENCE);
+extern EIF_REFERENCE F893_17379(EIF_REFERENCE, EIF_REFERENCE);
+
+#ifdef __cplusplus
+}
+#endif
+
+#endif

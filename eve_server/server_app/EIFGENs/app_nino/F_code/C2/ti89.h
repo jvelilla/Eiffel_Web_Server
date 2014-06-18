@@ -1,0 +1,21 @@
+
+#ifndef _C2_ti89_
+#define _C2_ti89_
+
+#ifdef __cplusplus
+extern "C" {
+#endif
+
+extern EIF_INTEGER_32 F134_7782(EIF_REFERENCE, EIF_INTEGER_32, EIF_INTEGER_32);
+extern EIF_INTEGER_32 F134_7783(EIF_REFERENCE, EIF_INTEGER_32, EIF_INTEGER_32);
+static EIF_REFERENCE F134_7784_body(EIF_REFERENCE);
+extern EIF_REFERENCE F134_7784(EIF_REFERENCE);
+extern EIF_REFERENCE F134_7785(EIF_REFERENCE);
+extern void EIF_Minit89(void);
+extern EIF_REFERENCE F63_6468(EIF_REFERENCE);
+
+#ifdef __cplusplus
+}
+#endif
+
+#endif

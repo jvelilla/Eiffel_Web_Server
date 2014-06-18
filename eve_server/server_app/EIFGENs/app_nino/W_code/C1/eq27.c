@@ -10,11 +10,11 @@
 extern "C" {
 #endif
 
-extern void F27_3947(EIF_REFERENCE, EIF_TYPED_VALUE, EIF_TYPED_VALUE);
-extern void F27_3948(EIF_REFERENCE, EIF_TYPED_VALUE, EIF_TYPED_VALUE);
-extern void F27_3949(EIF_REFERENCE, EIF_TYPED_VALUE);
-extern void F27_3950(EIF_REFERENCE, EIF_TYPED_VALUE);
-extern EIF_TYPED_VALUE F27_3951(EIF_REFERENCE);
+extern void F27_3957(EIF_REFERENCE, EIF_TYPED_VALUE, EIF_TYPED_VALUE);
+extern void F27_3958(EIF_REFERENCE, EIF_TYPED_VALUE, EIF_TYPED_VALUE);
+extern void F27_3959(EIF_REFERENCE, EIF_TYPED_VALUE);
+extern void F27_3960(EIF_REFERENCE, EIF_TYPED_VALUE);
+extern EIF_TYPED_VALUE F27_3961(EIF_REFERENCE);
 extern void EIF_Minit27(void);
 
 #ifdef __cplusplus
@@ -37,7 +37,7 @@ extern "C" {
 #endif
 
 /* {EQA_ASSERTIONS}.assert */
-void F27_3947 (EIF_REFERENCE Current, EIF_TYPED_VALUE arg1x, EIF_TYPED_VALUE arg2x)
+void F27_3957 (EIF_REFERENCE Current, EIF_TYPED_VALUE arg1x, EIF_TYPED_VALUE arg2x)
 {
 	GTCX
 	char *l_feature_name = "assert";
@@ -75,7 +75,7 @@ void F27_3947 (EIF_REFERENCE Current, EIF_TYPED_VALUE arg1x, EIF_TYPED_VALUE arg
 	RTGC;
 	RTDBGEAA(26, Current, 437);
 	if (arg1) {
-		RTCC(arg1, 26, l_feature_name, 1, 342);
+		RTCC(arg1, 26, l_feature_name, 1, 346);
 	}
 	RTIV(Current, RTAL);
 	if ((RTAL & CK_REQUIRE) || RTAC) {
@@ -89,31 +89,31 @@ label_1:
 	}
 body:;
 	RTHOOK(2);
-	RTDBGAA(Current, dtype, 3947, 0x04000000, 1); /* last_assertion_failed */
+	RTDBGAA(Current, dtype, 3957, 0x04000000, 1); /* last_assertion_failed */
 	
-	*(EIF_BOOLEAN *)(Current + RTWA(3947, dtype)) = (EIF_BOOLEAN) (EIF_BOOLEAN) !arg2;
+	*(EIF_BOOLEAN *)(Current + RTWA(3957, dtype)) = (EIF_BOOLEAN) (EIF_BOOLEAN) !arg2;
 	RTHOOK(3);
-	tb1 = *(EIF_BOOLEAN *)(Current + RTWA(3947, dtype));
+	tb1 = *(EIF_BOOLEAN *)(Current + RTWA(3957, dtype));
 	if (tb1) {
 		RTHOOK(4);
 		ur1 = RTCCL(arg1);
-		(FUNCTION_CAST(void, (EIF_REFERENCE, EIF_TYPED_VALUE)) RTWF(3945, dtype))(Current, ur1x);
+		(FUNCTION_CAST(void, (EIF_REFERENCE, EIF_TYPED_VALUE)) RTWF(3955, dtype))(Current, ur1x);
 		RTHOOK(5);
-		RTDBGAL(Current, 1, 0xF80000A7, 0, 0); /* loc1 */
+		RTDBGAL(Current, 1, 0xF80000A9, 0, 0); /* loc1 */
 		
-		tr1 = RTLN(167);
+		tr1 = RTLN(169);
 		(FUNCTION_CAST(void, (EIF_REFERENCE)) RTWC(32, Dtype(tr1)))(tr1);
 		RTNHOOK(5,1);
 		loc1 = (EIF_REFERENCE) RTCCL(tr1);
 		RTHOOK(6);
 		ur1 = RTCCL(arg1);
-		(FUNCTION_CAST(void, (EIF_REFERENCE, EIF_TYPED_VALUE)) RTVF(8881, "set_description", loc1))(loc1, ur1x);
+		(FUNCTION_CAST(void, (EIF_REFERENCE, EIF_TYPED_VALUE)) RTVF(8910, "set_description", loc1))(loc1, ur1x);
 		RTHOOK(7);
-		(FUNCTION_CAST(void, (EIF_REFERENCE)) RTVF(8866, "raise", loc1))(loc1);
+		(FUNCTION_CAST(void, (EIF_REFERENCE)) RTVF(8895, "raise", loc1))(loc1);
 	} else {
 		RTHOOK(8);
 		ur1 = RTCCL(arg1);
-		(FUNCTION_CAST(void, (EIF_REFERENCE, EIF_TYPED_VALUE)) RTWF(3946, dtype))(Current, ur1x);
+		(FUNCTION_CAST(void, (EIF_REFERENCE, EIF_TYPED_VALUE)) RTWF(3956, dtype))(Current, ur1x);
 	}
 	RTVI(Current, RTAL);
 	RTRS;
@@ -129,7 +129,7 @@ body:;
 }
 
 /* {EQA_ASSERTIONS}.disassert */
-void F27_3948 (EIF_REFERENCE Current, EIF_TYPED_VALUE arg1x, EIF_TYPED_VALUE arg2x)
+void F27_3958 (EIF_REFERENCE Current, EIF_TYPED_VALUE arg1x, EIF_TYPED_VALUE arg2x)
 {
 	GTCX
 	char *l_feature_name = "disassert";
@@ -163,7 +163,7 @@ void F27_3948 (EIF_REFERENCE Current, EIF_TYPED_VALUE arg1x, EIF_TYPED_VALUE arg
 	RTGC;
 	RTDBGEAA(26, Current, 438);
 	if (arg1) {
-		RTCC(arg1, 26, l_feature_name, 1, 342);
+		RTCC(arg1, 26, l_feature_name, 1, 346);
 	}
 	RTIV(Current, RTAL);
 	if ((RTAL & CK_REQUIRE) || RTAC) {
@@ -179,7 +179,7 @@ body:;
 	RTHOOK(2);
 	ur1 = RTCCL(arg1);
 	ub1 = (EIF_BOOLEAN) !arg2;
-	(FUNCTION_CAST(void, (EIF_REFERENCE, EIF_TYPED_VALUE, EIF_TYPED_VALUE)) RTWF(3943, dtype))(Current, ur1x, ub1x);
+	(FUNCTION_CAST(void, (EIF_REFERENCE, EIF_TYPED_VALUE, EIF_TYPED_VALUE)) RTWF(3953, dtype))(Current, ur1x, ub1x);
 	RTVI(Current, RTAL);
 	RTRS;
 	RTHOOK(3);
@@ -195,7 +195,7 @@ body:;
 }
 
 /* {EQA_ASSERTIONS}.on_violation */
-void F27_3949 (EIF_REFERENCE Current, EIF_TYPED_VALUE arg1x)
+void F27_3959 (EIF_REFERENCE Current, EIF_TYPED_VALUE arg1x)
 {
 	GTCX
 	char *l_feature_name = "on_violation";
@@ -222,13 +222,13 @@ void F27_3949 (EIF_REFERENCE Current, EIF_TYPED_VALUE arg1x)
 	RTGC;
 	RTDBGEAA(26, Current, 439);
 	if (arg1) {
-		RTCC(arg1, 26, l_feature_name, 1, 342);
+		RTCC(arg1, 26, l_feature_name, 1, 346);
 	}
 	RTIV(Current, RTAL);
 	if ((RTAL & CK_REQUIRE) || RTAC) {
 		RTHOOK(1);
 		RTCT("last_assertion_failed", EX_PRE);
-		tb1 = *(EIF_BOOLEAN *)(Current + RTWA(3947, dtype));
+		tb1 = *(EIF_BOOLEAN *)(Current + RTWA(3957, dtype));
 		RTTE(tb1, label_1);
 		RTCK;
 		RTHOOK(2);
@@ -252,7 +252,7 @@ body:;
 }
 
 /* {EQA_ASSERTIONS}.on_satisfaction */
-void F27_3950 (EIF_REFERENCE Current, EIF_TYPED_VALUE arg1x)
+void F27_3960 (EIF_REFERENCE Current, EIF_TYPED_VALUE arg1x)
 {
 	GTCX
 	char *l_feature_name = "on_satisfaction";
@@ -279,13 +279,13 @@ void F27_3950 (EIF_REFERENCE Current, EIF_TYPED_VALUE arg1x)
 	RTGC;
 	RTDBGEAA(26, Current, 440);
 	if (arg1) {
-		RTCC(arg1, 26, l_feature_name, 1, 342);
+		RTCC(arg1, 26, l_feature_name, 1, 346);
 	}
 	RTIV(Current, RTAL);
 	if ((RTAL & CK_REQUIRE) || RTAC) {
 		RTHOOK(1);
 		RTCT("last_assertion_succeeded", EX_PRE);
-		tb1 = *(EIF_BOOLEAN *)(Current + RTWA(3947, dtype));
+		tb1 = *(EIF_BOOLEAN *)(Current + RTWA(3957, dtype));
 		RTTE((EIF_BOOLEAN) !tb1, label_1);
 		RTCK;
 		RTHOOK(2);
@@ -309,11 +309,11 @@ body:;
 }
 
 /* {EQA_ASSERTIONS}.last_assertion_failed */
-EIF_TYPED_VALUE F27_3951 (EIF_REFERENCE Current)
+EIF_TYPED_VALUE F27_3961 (EIF_REFERENCE Current)
 {
 	EIF_TYPED_VALUE r;
 	r.type = SK_BOOL;
-	r.it_b = *(EIF_BOOLEAN *)(Current + RTWA(3947,Dtype(Current)));
+	r.it_b = *(EIF_BOOLEAN *)(Current + RTWA(3957,Dtype(Current)));
 	return r;
 }
 

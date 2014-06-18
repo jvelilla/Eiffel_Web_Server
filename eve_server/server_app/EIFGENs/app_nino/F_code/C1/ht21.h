@@ -1,0 +1,23 @@
+
+#ifndef _C1_ht21_
+#define _C1_ht21_
+
+#ifdef __cplusplus
+extern "C" {
+#endif
+
+extern EIF_REFERENCE F23_3841(EIF_REFERENCE);
+static EIF_REFERENCE F23_3842_body(EIF_REFERENCE);
+extern EIF_REFERENCE F23_3842(EIF_REFERENCE);
+extern EIF_INTEGER_64 F23_3843(EIF_REFERENCE, EIF_REFERENCE);
+extern void EIF_Minit21(void);
+extern EIF_REFERENCE F1091_21078(EIF_REFERENCE, EIF_REFERENCE);
+extern void F1091_21056(EIF_REFERENCE);
+extern void F1091_21061(EIF_REFERENCE, EIF_INTEGER_32);
+extern EIF_INTEGER_64 F533_10512(EIF_REFERENCE);
+
+#ifdef __cplusplus
+}
+#endif
+
+#endif

@@ -41,15 +41,15 @@ SYSTEM_IN_DYNAMIC_LIB = app.dll
 
 OBJECTS = big_file_C14_c.obj 
 
-OLDOBJECTS =  it449.obj it449d.obj sp452.obj sp452d.obj ro454.obj ro454d.obj pr453.obj pr453d.obj \
-	ty455.obj ty455d.obj ty456.obj ty456d.obj ty451.obj ty451d.obj ty457.obj ty457d.obj \
-	na458.obj na458d.obj re459.obj re459d.obj it460.obj it460d.obj it461.obj it461d.obj \
-	rt434.obj rt434d.obj ce450.obj ce450d.obj da445.obj da445d.obj eq446.obj eq446d.obj \
-	rt435.obj rt435d.obj rt433.obj rt433d.obj rt432.obj rt432d.obj ws431.obj ws431d.obj \
-	da442.obj da442d.obj da440.obj da440d.obj ti438.obj ti438d.obj da443.obj da443d.obj \
-	er430.obj er430d.obj er429.obj er429d.obj we448.obj we448d.obj da444.obj da444d.obj \
-	fi441.obj fi441d.obj da439.obj da439d.obj ti437.obj ti437d.obj we447.obj we447d.obj \
-	ur436.obj ur436d.obj 
+OLDOBJECTS =  it453.obj it453d.obj sp456.obj sp456d.obj ty455.obj ty455d.obj na457.obj na457d.obj \
+	re458.obj re458d.obj it460.obj it460d.obj it461.obj it461d.obj rt438.obj rt438d.obj \
+	ce454.obj ce454d.obj eq450.obj eq450d.obj da449.obj da449d.obj in459.obj in459d.obj \
+	rt439.obj rt439d.obj rt437.obj rt437d.obj rt436.obj rt436d.obj ws435.obj ws435d.obj \
+	da446.obj da446d.obj da444.obj da444d.obj ti442.obj ti442d.obj da447.obj da447d.obj \
+	er432.obj er432d.obj er434.obj er434d.obj er433.obj er433d.obj ht429.obj ht429d.obj \
+	wg431.obj wg431d.obj we452.obj we452d.obj da448.obj da448d.obj fi445.obj fi445d.obj \
+	da443.obj da443d.obj ti441.obj ti441d.obj ht430.obj ht430d.obj we451.obj we451d.obj \
+	ur440.obj ur440d.obj 
 
 all::  Cobj14.lib
 

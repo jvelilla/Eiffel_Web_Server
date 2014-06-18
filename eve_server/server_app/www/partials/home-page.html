@@ -1,216 +1,95 @@
  <div>
 	<!--Body content-->
 	<h1>{{message}}</h1>
-	<div>
-		<label> Upload File: </label>
-		<input type="text" ng-model="file.location"/>
-		<button class="btn">Browse</button>
-		<h2>Compilation Results</h2>
-		<button class="btn btn-success" ng-click="compile()">Compile</button>
-		<button class="btn btn-success" ng-click="cleanCompile()">Clean Compile</button>
-		<div class="Compilation_Results" >
-			<pre>{{compile_result[0].Compile_Message}}</pre>
-			<pre>{{compile_result[0].Output_Message}}</pre>
-			<!-- Error Codes-->
-			<div ng-class="{true:'disabled',false:''}[compile_result[0].Error==null]">
-				<h3> ERROR TABLE</h3>
-				<table>
-					<tr ng-repeat="error in compile_result[0].Error">
-						<td>
-							<pre>Error Code: {{error.Error_Code}}Error: {{error.Error}}What to do: {{error.What_to_do}}Class: {{error.Class}}Feature: {{error.Feature}}{{error.Before_Line}}Line:{{error.Line}}{{error.After_Line}}</pre>
-							<!--<pre>Dump: {{error.Dump}}</pre>-->
-						</td>
-					</tr>
-				</table>
-				<!--<pre>Dump: {{compile_result[0].Error_Message}}</pre>-->
-			</div>
-			
-			<!--Warning Codes-->
-			<div ng-class="{true:'disabled',false:''}[compile_result[0].Warning==null]">
-				<h3> WARNING TABLE </h3>
-				<table>
-					<tr ng-repeat="warning in compile_result[0].Warning">
-						<td>
-							<pre>Warning Code: {{warning.Warning_Code}}Warning: {{warning.Warning}}What to do: {{warning.What_to_do}}Class: {{warning.Class}}Feature: {{warning.Feature}}{{warning.After_Feature}}</pre>
-							<!--<pre>Dump: {{warning.Dump}}</pre>-->
-						</td>
-					</tr>
-				</table>
-				<!--<pre>Dump: {{compile_result[0].Warning_Message}}</pre>-->
-			</div>	
+	<h2>Status Code {{status_code}}</h2>
+	<div class="main_div">
+		<div class="form_elements">
+			<label> Enter Id: </label>
+			<input type="text" ng-model="project.id" value="90799D1A-C197-4822-BEE9-C0D076CA8562">90799D1A-C197-4822-BEE9-C0D076CA8562</input>
+			<label> Enter Path: </label>
+			<input type="text" ng-model="project.path" value="C:/Users/Manav/Desktop/eve_server/sample/sample.ecf">C:/Users/Manav/Desktop/eve_server/sample/sample.ecf</input>
+			<label> Enter Class: </label>
+			<input type="text" ng-model="project.class" value="APPLICATION">APPLICATION</input>
+			<label> Enter Feature: </label>
+			<input type="text" ng-model="project.feature" value="make">balance</input>
+			<label> Enter Target: </label>
+			<input type="text" ng-model="project.target" value="make">sample</input>
+			<label> Response Id: {{id}}</label>
 		</div>
-		
-		<h2>Execution Results</h2>
-		<button class="btn" ng-click="run_exe()">Run</button>
-		<div class="Execution_Results">
-			<table>
-				<tr ng-repeat="res in run_result">
-					<td>
-						<pre>{{res.Execution_Output}}</pre>
-					</td>
-				</tr>
-			</table>
-			
-			<!-- Error Codes-->
-			<div ng-class="{true:'disabled',false:''}[run_result[0].Compile_Errors==null]">
-				<h3> ERROR TABLE</h3>
-				<table>
-					<tr ng-repeat="error in run_result[0].Compile_Errors">
-						<td>
-							<pre>Error Code: {{error.Error_Code}}Error: {{error.Error}}What to do: {{error.What_to_do}}Class: {{error.Class}}Feature: {{error.Feature}}{{error.Before_Line}}Line:{{error.Line}}{{error.After_Line}}</pre>
-							<!--<pre>Dump: {{error.Dump}}</pre>-->
-						</td>
-					</tr>
-				</table>
-			</div>
-			
-			<!--Warning Codes-->
-			<div ng-class="{true:'disabled',false:''}[run_result[0].Warnings==null]">
-				<h3> WARNING TABLE </h3>
-				<table>
-					<tr ng-repeat="warning in run_result[0].Warnings">
-						<td>
-							<pre>Warning Code: {{warning.Warning_Code}}Warning: {{warning.Warning}}What to do: {{warning.What_to_do}}Class: {{warning.Class}}Feature: {{warning.Feature}}{{warning.After_Feature}}</pre>
-							<!--<pre>Dump: {{warning.Dump}}</pre>-->
-						</td>
-					</tr>
-				</table>
-			</div>	
-			
-			<!-- Runtime Error Codes-->
-			<div ng-class="{true:'disabled',false:''}[run_result[0].Runtime_Errors==null]">
-				<h3> RUNTIME ERROR TABLE</h3>
-				<pre>{{run_result[0].Runtime_Errors[0].Initial_Text}}</pre>
-				<table>
-					<th>Class/Object</th>
-					<th>Routine</th>
-					<th>Message</th>
-					<th>Effect</th>
-					<tr ng-repeat="error in run_result[0].Runtime_Errors">
-						<td>{{error.Class}}</td>
-						<td>{{error.Feature}} {{error.Routine}}</td>
-						<td>{{error.Message}}</td>
-						<td>{{error.Effect}}</td>
-					</tr>
-				</table>
-				<!--<pre>
-					Dump: {{run_result[0].Error_Message}}
-				</pre>-->
-			</div>
-		</div>
-		
-		<label> Select Class: </label>
-		<div class="Class_Views">
-			<input type="text" ng-model="file.class"/>
-			<h2>Class View (Interface)</h2>
+
+		<div class="div_buttons">
+			<button class="btn" ng-click="compile()">Compile</button>
+			<button class="btn" ng-click="cleanCompile()">Clean Compile</button>
+			<button class="btn" ng-click="run_exe()">Run</button>
 			<button class="btn" ng-click="get_interface_view()">Get Interface View</button>
-			<div class="Interface_View">
-				{{interface_view_result[0].result}}
-			</div>
-		</div>
-		
-		<div class="Class_Views">
-			<h2>Class View (Flat)</h2>
 			<button class="btn" ng-click="get_flat_view()">Get Flat View</button>
-			<div class="Flat_View">
-				<!-- Error Codes-->
-				<pre>{{flat_view_result[0].Error_Message}}</pre>
-				<div ng-class="{true:'disabled',false:''}[flat_view_result[0].Errors==null]">
-					<h3> ERROR TABLE</h3>
-					<table>
-						<tr ng-repeat="error in flat_view_result[0].Errors">
-							<td>
-								<pre>Error Code: {{error.Error_Code}}Error: {{error.Error}}What to do: {{error.What_to_do}}Class: {{error.Class}}Feature: {{error.Feature}}{{error.Before_Line}}Line:{{error.Line}}{{error.After_Line}}</pre>
-								<!--<pre>Dump: {{error.Dump}}</pre>-->
-							</td>
-						</tr>
-					</table>
-					<!--<pre>Dump: {{compile_result[0].Error_Message}}</pre>-->
-				</div>
-				
-				<!--Warning Codes-->
-				<div ng-class="{true:'disabled',false:''}[flat_view_result[0].Warnings==null]">
-					<h3> WARNING TABLE </h3>
-					<table>
-						<tr ng-repeat="warning in flat_view_result[0].Warnings">
-							<td>
-								<pre>Warning Code: {{warning.Warning_Code}}Warning: {{warning.Warning}}What to do: {{warning.What_to_do}}Class: {{warning.Class}}Feature: {{warning.Feature}}{{warning.After_Feature}}</pre>
-								<!--<pre>Dump: {{warning.Dump}}</pre>-->
-							</td>
-						</tr>
-					</table>
-					<!--<pre>Dump: {{compile_result[0].Warning_Message}}</pre>-->
-				</div>
-				<pre>{{flat_view_result[0].Flat_View}}</pre>
-			</div>
-		</div>
-		
-		<div class="Class_Views">
-			<h2>Class View (Contract)</h2>
 			<button class="btn" ng-click="get_contract_view()">Get Contract View</button>
-			<div class="Contract_View">
-				<!-- Error Codes-->
-				<div ng-class="{true:'disabled',false:''}[contract_view_result[0].Errors==null]">
-					<h3> ERROR TABLE</h3>
-					<table>
-						<tr ng-repeat="error in contract_view_result[0].Errors">
-							<td>
-								<pre>Error Code: {{error.Error_Code}}Error: {{error.Error}}What to do: {{error.What_to_do}}Class: {{error.Class}}Feature: {{error.Feature}}{{error.Before_Line}}Line:{{error.Line}}{{error.After_Line}}</pre>
-								<!--<pre>Dump: {{error.Dump}}</pre>-->
-							</td>
-						</tr>
-					</table>
-					<!--<pre>Dump: {{compile_result[0].Error_Message}}</pre>-->
-				</div>
-				
-				<!--Warning Codes-->
-				<div ng-class="{true:'disabled',false:''}[contract_view_result[0].Warnings==null]">
-					<h3> WARNING TABLE </h3>
-					<table>
-						<tr ng-repeat="warning in contract_view_result[0].Warnings">
-							<td>
-								<pre>Warning Code: {{warning.Warning_Code}}Warning: {{warning.Warning}}What to do: {{warning.What_to_do}}Class: {{warning.Class}}Feature: {{warning.Feature}}{{warning.After_Feature}}</pre>
-								<!--<pre>Dump: {{warning.Dump}}</pre>-->
-							</td>
-						</tr>
-					</table>
-					<!--<pre>Dump: {{compile_result[0].Warning_Message}}</pre>-->
-				</div>
-				<pre>{{contract_view_result[0].Contract_View}}</pre>
-			</div>
+			<button class="btn" ng-click="get_class_descendants()">Get Class Descendants</button>
+			<button class="btn" ng-click="get_class_ancestors()">Get Class Ancestors</button>
+			<button class="btn" ng-click="get_class_clients()">Get Class Clients</button>	
+			<button class="btn" ng-click="get_class_suppliers()">Get Class Suppliers</button>	
+			<button class="btn" ng-click="get_feature_callers()">Get Feature Callers</button>	
 		</div>
-		
-		<h2>Class Descendants</h2>
-		<button class="btn" ng-click="get_class_descendants()">Get Class Descendants</button>
-		<div class="Class_Descendants">
+	
+		<div class="results">
+			<textarea class="my_textarea">{{result[0].Compile_Message}}{{result[0].Output_Message}}{{result[0].Execution_Output}}{{result[0].result}}{{result[0].Flat_View}}{{result[0].Contract_View}}{{result[0].Class_Descendants_Dump}}{{result[0].Class_Ancestors_Dump}}{{result[0].Class_Clients_Dump}}{{result[0].Class_Suppliers_Dump}}{{result[0].Feature_Callers_Dump}}{{result[0].Error_Message}}{{dump.data[0].Execution_Output}}
+			</textarea>
+			
 			<!-- Error Codes-->
-				<div ng-class="{true:'disabled',false:''}[class_descendants_result[0].Errors==null]">
+			<div ng-class="{true:'disabled',false:''}[result[0].Has_Compilation_Error==null]">
+				<div ng-class="{true:'disabled',false:''}[result[0].Has_Compilation_Error==false]">
 					<h3> ERROR TABLE</h3>
 					<table>
-						<tr ng-repeat="error in class_descendants_result[0].Errors">
+						<tr ng-repeat="error in result[0].Errors">
 							<td>
 								<pre>Error Code: {{error.Error_Code}}Error: {{error.Error}}What to do: {{error.What_to_do}}Class: {{error.Class}}Feature: {{error.Feature}}{{error.Before_Line}}Line:{{error.Line}}{{error.After_Line}}</pre>
 								<!--<pre>Dump: {{error.Dump}}</pre>-->
 							</td>
 						</tr>
 					</table>
-					<!--<pre>Dump: {{compile_result[0].Error_Message}}</pre>-->
 				</div>
-				
-				<!--Warning Codes-->
-				<div ng-class="{true:'disabled',false:''}[class_descendants_result[0].Warnings==null]">
+			</div>
+			
+			<!--Warning Codes-->
+			<div ng-class="{true:'disabled',false:''}[result[0].Has_Warning==null]">
+				<div ng-class="{true:'disabled',false:''}[result[0].Has_Warning==false]">
 					<h3> WARNING TABLE </h3>
 					<table>
-						<tr ng-repeat="warning in class_descendants_result[0].Warnings">
+						<tr ng-repeat="warning in result[0].Warnings">
 							<td>
 								<pre>Warning Code: {{warning.Warning_Code}}Warning: {{warning.Warning}}What to do: {{warning.What_to_do}}Class: {{warning.Class}}Feature: {{warning.Feature}}{{warning.After_Feature}}</pre>
 								<!--<pre>Dump: {{warning.Dump}}</pre>-->
 							</td>
 						</tr>
 					</table>
-					<!--<pre>Dump: {{compile_result[0].Warning_Message}}</pre>-->
 				</div>
-				<pre>{{class_descendants_result[0].Class_Descendants_Dump}}</pre>
+			</div>
+			
+			<div ng-class="{true:'disabled',false:''}[result[0].Has_Runtime_Error==null]">
+				<div ng-class="{true:'disabled',false:''}[result[0].Has_Runtime_Error==false]">
+					<!--Runtime Error Codes-->
+					<h3> RUNTIME ERROR TABLE</h3>
+					{{result[0].Runtime_Text}}
+					<table>
+						<th>Class/Object</th>
+						<th>Routine</th>
+						<th>Message</th>
+						<th>Effect</th>
+						<tr ng-repeat="error in result[0].Runtime_Errors">
+							<td>{{error.Class}}</td>
+							<td>{{error.Feature}} {{error.Routine}}</td>
+							<td>{{error.Message}}</td>
+							<td>{{error.Effect}}</td>
+						</tr>
+					</table>
+				</div>
+			</div>
+			
+		</div>
+		<h2 class="response_dump_text"> Response Dump</h2>
+		<div class="response_dump">
+			<textarea class="response_textarea">{{dump}}
+			</textarea>
 		</div>
 		
 	</div>

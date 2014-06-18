@@ -1,0 +1,17 @@
+
+#ifndef _C13_fi636_
+#define _C13_fi636_
+
+#ifdef __cplusplus
+extern "C" {
+#endif
+
+extern EIF_BOOLEAN F320_9603(EIF_REFERENCE);
+extern void EIF_Minit636(void);
+extern char *(*R9217[])();
+
+#ifdef __cplusplus
+}
+#endif
+
+#endif

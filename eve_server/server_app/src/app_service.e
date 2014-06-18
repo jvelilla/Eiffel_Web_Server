@@ -18,13 +18,10 @@ inherit
 
 	WSF_URI_TEMPLATE_HELPER_FOR_ROUTED_SERVICE
 
---	SHARED_EXECUTION_ENVIRONMENT
---		export
---			{NONE} all
---		end
-
---create
---	make_and_launch
+	ARGUMENTS
+		rename
+			command_line as cmd_line
+		end
 
 feature {NONE} -- Initialization
 
@@ -45,6 +42,12 @@ feature {NONE} -- Initialization
 			create warning_message.make_empty
 			create syntax_message.make_empty
 			create dump_message.make_empty
+
+			--Initialize the timeouts from file
+			initialize_timeouts_from_file
+
+			--initialize timeout from arguments
+			--initialize_timeouts_from_arguments
 		end
 
 	setup_router
@@ -57,17 +60,16 @@ feature {NONE} -- Initialization
 			router.handle_with_request_methods ("/api/doc", doc, router.methods_GET)
 
 			--Mapping my URI's for functions			
-			--map_uri_template_agent_with_request_methods ("/updateFile", agent put_file_location, router.methods_POST)
-			--map_uri_template_agent_with_request_methods ("/cleanCompile", agent get_clean_compilation_result, router.methods_GET)
-			--map_uri_template_agent_with_request_methods ("/errorList", agent get_error_list, router.methods_GET)
-			--map_uri_template_agent_with_request_methods ("/warningList", agent get_warning_list, router.methods_GET)
-			--map_uri_template_agent_with_request_methods ("/runtimeErrorList", agent get_runtime_error_list, router.methods_GET)
 			map_uri_template_agent_with_request_methods ("/compile", agent get_compilation_result, router.methods_GET)
 			map_uri_template_agent_with_request_methods ("/run", agent get_execution_result, router.methods_GET)
 			map_uri_template_agent_with_request_methods ("/interfaceView", agent get_interface_view, router.methods_GET)
 			map_uri_template_agent_with_request_methods ("/flatView", agent get_flat_view, router.methods_GET)
 			map_uri_template_agent_with_request_methods ("/contractView", agent get_contract_view, router.methods_GET)
 			map_uri_template_agent_with_request_methods ("/classDescendants", agent get_class_descendants, router.methods_GET)
+			map_uri_template_agent_with_request_methods ("/classAncestors", agent get_class_ancestors, router.methods_GET)
+			map_uri_template_agent_with_request_methods ("/classClients", agent get_class_clients, router.methods_GET)
+			map_uri_template_agent_with_request_methods ("/classSuppliers", agent get_class_suppliers, router.methods_GET)
+			map_uri_template_agent_with_request_methods ("/featureCallers", agent get_feature_callers, router.methods_GET)
 
 			--Setting the home page
 			create fhdl.make_hidden ("www")
@@ -76,12 +78,15 @@ feature {NONE} -- Initialization
 		end
 
 feature --Access
+	execution_timeout:INTEGER
+	compilation_timeout:INTEGER
 	file_location: STRING
 	class_name: STRING
 	p_factory: PROCESS_FACTORY
 	command_line: STRING
 	project_name:STRING
 	project_path:STRING
+	runtime_text:STRING
 	compile_message: STRING
 	output_message: STRING
 	error_message: STRING
@@ -92,7 +97,11 @@ feature --Access
 	has_warning: BOOLEAN
 	has_syntax_error:BOOLEAN
 	has_runtime_error:BOOLEAN
-	has_classview_error:BOOLEAN
+	has_class_error:BOOLEAN
+	has_feature_error:BOOLEAN
+	needs_target:BOOLEAN
+	target:STRING
+	--Change this address
 	fixed_project_path:STRING = "C:/Users/Manav/Desktop/eve_server/projects/"
 
 feature -- Execution
@@ -108,6 +117,8 @@ feature -- Execution
 			path:STRING
 			id:STRING
 			clean_compile_path:STRING
+			compile_timeout:BOOLEAN
+			compilation_succeeded: BOOLEAN
 		do
 			--Initializing variables
 			create header.make
@@ -120,14 +131,18 @@ feature -- Execution
 			create output_message.make_empty
 			create syntax_message.make_empty
 			create dump_message.make_empty
+			create target.make_empty
 
 			--Settting errors and warnings to false
 			has_error:=false
 			has_warning:=false
 			has_syntax_error:=false
+			compile_timeout:=false
+			needs_target:=false
+			compilation_succeeded:=true
 
 			path:=extract_req_parameter(req,"path")
-			clean_compile:=check_req_parameter(req,"clean")
+			clean_compile:=extract_boolean_req_parameter(req,"clean")
 			id:=extract_req_parameter(req,"id")
 
 			--User is using a new project, so change the path setting accordingly
@@ -148,33 +163,72 @@ feature -- Execution
 				end
 			end
 
-			--If target is to also to be provided, then deal with it here
+			--Extract the target here
+			if attached {STRING} extract_req_parameter(req,"target") as str then
+				target:=str
+			end
+
 			if clean_compile then
 				command_line:="ec -clean -config "+ project_name
 			else
-				command_line:="ec -config "+ project_name+ " -c_compile -batch"
+				command_line:="ec -config "+ project_name+ " -c_compile"
+			end
+
+			--If target is to also to be provided, then Specifying the target here
+			if not target.is_empty then
+				command_line.append (" -target "+target)
 			end
 
 			--Gives the main option to clean compile a proect
-			compile_helper(project_path)
+			compile_timeout:=compile_helper(project_path)
 
 			--Now do finish_freezing with it if it does not have errors and if the clean_compile option is true
 			if has_error=false and has_syntax_error=false and clean_compile then
 				command_line:="finish_freezing"
 				clean_compile_path:=project_path+"/EIFGENs/"+project_name+"/W_code"
 				clean_compile_path.replace_substring_all (".ecf", "")
-				compile_helper (clean_compile_path)
+				if needs_target=false then
+					compile_timeout:=compile_helper (clean_compile_path)
+				end
 			end
 
 			--Setting the compile result,output message,error list and warning list
 			json_object.put_string (compile_message, "Compile_Message")
 			json_object.put_string (output_message, "Output_Message")
+			if not syntax_message.is_empty then
+				error_message:=syntax_message
+			end
 			json_object.put_string (error_message, "Error_Message")
-			json_object.put_string (syntax_message, "Syntax_Message")
+			if not error_message.is_empty then
+				json_object.put_boolean (true, "Has_Compilation_Error")
+				compilation_succeeded:=false
+			else
+				json_object.put_boolean (false, "Has_Compilation_Error")
+			end
+			--json_object.put_string (syntax_message, "Syntax_Message")
 			json_object.put_string (warning_message, "Warning_Message")
-			json_object.put_string (dump_message, "Dump_Message")
-			json_object.put (get_error_list, "Error")
-			json_object.put (get_warning_list, "Warning")
+			if not warning_message.is_empty then
+				json_object.put_boolean (true, "Has_Warning")
+			else
+				json_object.put_boolean (false, "Has_Warning")
+			end
+			json_object.put_boolean (needs_target, "Needs_Target")
+			json_object.put_string (dump_message, "Dump")
+			json_object.put (get_error_list, "Errors")
+			json_object.put (get_warning_list, "Warnings")
+			json_object.put (get_target_list, "Targets")
+
+			if compile_timeout=false then
+				res.set_status_code ({HTTP_STATUS_CODE}.ok)
+				if needs_target then
+					compilation_succeeded:=false
+				end
+			else
+				compilation_succeeded:=false
+				res.set_status_code ({HTTP_STATUS_CODE}.gateway_timeout)
+			end
+
+			json_object.put_boolean (compilation_succeeded, "Compilation_Succeeded")
 
 			--Add to JSON array
 			json_array.add (json_object)
@@ -192,12 +246,18 @@ feature -- Execution
 		require
 			project_path_empty: project_path /= Void and not project_path.is_empty
 			project_name_empty: project_path /= Void and not project_name.is_empty
+			target_set: needs_target=false
 		local
 			res_string:STRING
 			json_object:JSON_OBJECT
 			json_array:JSON_ARRAY
+			compile_array:JSON_ARRAY
+			runtime_array:JSON_ARRAY
 			header:HTTP_HEADER
 			id:STRING
+			run_timeout:BOOLEAN
+			compile_timeout:BOOLEAN
+			execution_succeeded: BOOLEAN
 		do
 			--Prepare the response object
 			create res_string.make_empty
@@ -210,12 +270,16 @@ feature -- Execution
 			create output_message.make_empty
 			create syntax_message.make_empty
 			create dump_message.make_empty
+			create runtime_text.make_empty
 
 			--Settting errors and warnings to false
 			has_error:=false
 			has_warning:=false
 			has_syntax_error:=false
 			has_runtime_error:=false
+			run_timeout:=false
+			compile_timeout:=false
+			execution_succeeded:=true
 
 			--Extract the unique user id
 			id:=extract_req_parameter(req,"id")
@@ -229,25 +293,70 @@ feature -- Execution
 
 			--Do compilation here and see the compile results and then send for run
 			--If the project has not been compiled till now compile it or else don't compile it
-			command_line:="ec -config "+ project_name+ " -c_compile -batch"
-			compile_helper(project_path)
+			command_line:="ec -config "+ project_name+ " -c_compile"
+
+			--If target is to also to be provided, then specify it here
+			if not target.is_empty then
+				command_line.append (" -target "+target)
+			end
+
+			compile_timeout:=compile_helper(project_path)
 
 			--Setting the JSON resposne object
 			if has_error=false and has_syntax_error=false then
 				--Run the project
-				execution_helper
+				run_timeout:=execution_helper
 			end
+
 			json_object.put_string (output_message, "Execution_Output")
+			if not syntax_message.is_empty then
+				error_message:=syntax_message
+			end
 			json_object.put_string (error_message, "Error_Message")
-			json_object.put_string (syntax_message, "Syntax_Message")
+
 			json_object.put_string (warning_message, "Warning_Message")
-			json_object.put (get_error_list, "Compile_Errors")
+			if not warning_message.is_empty then
+				json_object.put_boolean (true, "Has_Warning")
+			else
+				json_object.put_boolean (false, "Has_Warning")
+			end
+
+			compile_array:=get_error_list
+			json_object.put (compile_array, "Compile_Errors")
+			if compile_array/=Void then
+				json_object.put_boolean (true, "Has_Compilation_Error")
+				execution_succeeded:=false
+			else
+				json_object.put_boolean (false, "Has_Compilation_Error")
+			end
+
 			json_object.put (get_warning_list, "Warnings")
-			json_object.put (get_runtime_error_list, "Runtime_Errors")
+
+
+			runtime_array:=get_runtime_error_list
+			json_object.put_string (runtime_text, "Runtime_Text")
+
+			json_object.put (runtime_array, "Runtime_Errors")
+			if runtime_array/=Void then
+				json_object.put_boolean (true, "Has_Runtime_Error")
+				execution_succeeded:=false
+			else
+				json_object.put_boolean (false, "Has_Runtime_Error")
+			end
+
+			if run_timeout=false and compile_timeout=false then
+				res.set_status_code ({HTTP_STATUS_CODE}.ok)
+			else
+				res.set_status_code ({HTTP_STATUS_CODE}.gateway_timeout)
+				execution_succeeded:=false
+			end
+
+			json_object.put_boolean (execution_succeeded, "Execution_Succeeded")
 
 			json_array.add (json_object)
 			res_string.append (json_array.representation)
 			res_string.replace_substring_all ("<br>", "\n")
+
 			--Set the response header with the id value
 			header.add_header_key_value ("id", id)
 			res.put_header_text (header.string)
@@ -259,6 +368,7 @@ feature -- Execution
 		require
 			project_path_empty: project_path /= Void and not project_path.is_empty
 			project_name_empty: project_path /= Void and not project_name.is_empty
+			target_set: needs_target=false
 		local
 			input_string: STRING
 			res_string:STRING
@@ -298,6 +408,7 @@ feature -- Execution
 		require
 			project_path_empty: project_path /= Void and not project_path.is_empty
 			project_name_empty: project_path /= Void and not project_name.is_empty
+			target_set: needs_target=false
 		local
 			res_string:STRING
 			json_object:JSON_OBJECT
@@ -305,6 +416,7 @@ feature -- Execution
 			id:STRING
 			class_string:STRING
 			json_array:JSON_ARRAY
+			timeout: BOOLEAN
 		do
 			--find flat_view for class_name
 			create header.make
@@ -319,10 +431,11 @@ feature -- Execution
 			create compile_message.make_empty
 
 			--Setting values
-			has_classview_error:=false
+			has_class_error:=false
 			has_error:=false
 			has_syntax_error:=false
 			has_warning:=false
+			timeout:=false
 
 			--Extract the unique user id
 			id:=extract_req_parameter(req,"id")
@@ -342,15 +455,45 @@ feature -- Execution
 
 			--Setting the command line for the flat view
 			command_line:="ec -flat "+class_string+" -config "+ project_name
-			view_helper (class_string)
+
+			--If target is to also to be provided, then specifying the target here
+			if not target.is_empty then
+				command_line.append (" -target "+target)
+			end
+
+			timeout:=class_functions_helper (class_string)
 
 			json_object.put_string (output_message, "Flat_View")
+			if not syntax_message.is_empty then
+				error_message:=syntax_message
+			end
 			json_object.put_string (error_message, "Error_Message")
+			if not error_message.is_empty and has_class_error=false then
+				json_object.put_boolean (true, "Has_Compilation_Error")
+				json_object.put_boolean (false, "Has_Flat_View")
+			else
+				json_object.put_boolean (false, "Has_Compilation_Error")
+				json_object.put_boolean (not has_class_error, "Has_Flat_View")
+			end
+			--json_object.put_string (syntax_message, "Syntax_Message")
 			json_object.put_string (warning_message, "Warning_Message")
-			json_object.put_string (syntax_message, "Syntax_Message")
+
+			if not warning_message.is_empty then
+				json_object.put_boolean (true, "Has_Warning")
+			else
+				json_object.put_boolean (false, "Has_Warning")
+			end
 			json_object.put_string (dump_message, "Dump")
 			json_object.put (get_error_list, "Errors")
 			json_object.put (get_warning_list, "Warnings")
+
+			if timeout=false then
+				res.set_status_code ({HTTP_STATUS_CODE}.ok)
+			else
+				res.set_status_code ({HTTP_STATUS_CODE}.gateway_timeout)
+				json_object.replace_with_boolean (false, "Has_Flat_View")
+			end
+
 			json_array.add (json_object)
 
 			--Prepare the response string
@@ -368,6 +511,7 @@ feature -- Execution
 		require
 			project_path_empty: project_path /= Void and not project_path.is_empty
 			project_name_empty: project_path /= Void and not project_name.is_empty
+			target_set: needs_target=false
 		local
 			res_string:STRING
 			json_object:JSON_OBJECT
@@ -375,6 +519,7 @@ feature -- Execution
 			id:STRING
 			class_string:STRING
 			json_array:JSON_ARRAY
+			timeout:BOOLEAN
 		do
 			--Find contract view for class_name here
 			create header.make
@@ -389,10 +534,11 @@ feature -- Execution
 			create compile_message.make_empty
 
 			--Setting values
-			has_classview_error:=false
+			has_class_error:=false
 			has_error:=false
 			has_syntax_error:=false
 			has_warning:=false
+			timeout:=false
 
 			--Extract the unique user id
 			id:=extract_req_parameter(req,"id")
@@ -412,15 +558,44 @@ feature -- Execution
 
 			--Setting the command line for the contract view
 			command_line:="ec -short "+class_string+" -config "+ project_name
-			view_helper (class_string)
 
+			--If target is to also to be provided, then Specifying the target here
+			if not target.is_empty then
+				command_line.append (" -target "+target)
+			end
+
+			timeout:=class_functions_helper (class_string)
 			json_object.put_string (output_message, "Contract_View")
+			if not syntax_message.is_empty then
+				error_message:=syntax_message
+			end
 			json_object.put_string (error_message, "Error_Message")
+			if not error_message.is_empty and has_class_error=false then
+				json_object.put_boolean (true, "Has_Compilation_Error")
+				json_object.put_boolean (false, "Has_Contract_View")
+			else
+				json_object.put_boolean (false, "Has_Compilation_Error")
+				json_object.put_boolean (not has_class_error, "Has_Contract_View")
+			end
+			--json_object.put_string (syntax_message, "Syntax_Message")
 			json_object.put_string (warning_message, "Warning_Message")
-			json_object.put_string (syntax_message, "Syntax_Message")
+
+			if not warning_message.is_empty then
+				json_object.put_boolean (true, "Has_Warning")
+			else
+				json_object.put_boolean (false, "Has_Warning")
+			end
 			json_object.put_string (dump_message, "Dump")
 			json_object.put (get_error_list, "Errors")
 			json_object.put (get_warning_list, "Warnings")
+
+			if timeout=false then
+				res.set_status_code ({HTTP_STATUS_CODE}.ok)
+			else
+				res.set_status_code ({HTTP_STATUS_CODE}.gateway_timeout)
+				json_object.replace_with_boolean (false, "Has_Contract_View")
+			end
+
 			json_array.add (json_object)
 
 			--Prepare the response string
@@ -438,6 +613,7 @@ feature -- Execution
 		require
 			project_path_empty: project_path /= Void and not project_path.is_empty
 			project_name_empty: project_path /= Void and not project_name.is_empty
+			target_set: needs_target=false
 		local
 			input_string: STRING
 			res_string:STRING
@@ -447,6 +623,7 @@ feature -- Execution
 			id:STRING
 			class_string:STRING
 			json_array:JSON_ARRAY
+			timeout:BOOLEAN
 		do
 			--Find class descendants for class_name here
 			create header.make
@@ -461,10 +638,11 @@ feature -- Execution
 			create compile_message.make_empty
 
 			--Setting values
-			has_classview_error:=false
+			has_class_error:=false
 			has_error:=false
 			has_syntax_error:=false
 			has_warning:=false
+			timeout:=false
 
 			--Extract the unique user id
 			id:=extract_req_parameter(req,"id")
@@ -484,25 +662,55 @@ feature -- Execution
 
 			--Setting the command line for the class descendants
 			command_line:="ec -descendants "+class_string+" -config "+ project_name
-			view_helper (class_string)
 
+			--If target is to also to be provided, then Specifying the target here
+			if not target.is_empty then
+				command_line.append (" -target "+target)
+			end
+
+			timeout:=class_functions_helper (class_string)
 
 			json_object.put_string (output_message, "Class_Descendants_Dump")
+			if not syntax_message.is_empty then
+				error_message:=syntax_message
+			end
 			json_object.put_string (error_message, "Error_Message")
+			if not error_message.is_empty and has_class_error=false then
+				json_object.put_boolean (true, "Has_Compilation_Error")
+				json_object.put_boolean (false, "Has_Descendants")
+			else
+				json_object.put_boolean (false, "Has_Compilation_Error")
+				json_object.put_boolean (not has_class_error, "Has_Descendants")
+			end
+			--json_object.put_string (syntax_message, "Syntax_Message")
 			json_object.put_string (warning_message, "Warning_Message")
-			json_object.put_string (syntax_message, "Syntax_Message")
+
+			if not warning_message.is_empty then
+				json_object.put_boolean (true, "Has_Warning")
+			else
+				json_object.put_boolean (false, "Has_Warning")
+			end
 			json_object.put_string (dump_message, "Dump")
 			json_object.put (get_error_list, "Errors")
 			json_object.put (get_warning_list, "Warnings")
-			--json_object.put (null, "Descendants")
 
 			--Parse the descendants
 			if not has_error and not has_syntax_error then
 				class_string.to_upper
-				if not output_message.has_substring (class_string+ " is not in the universe") then
+				if not error_message.has_substring (class_string+ " is not in the universe") then
 					--Parse the descendants here
-					json_object.put (get_descendants_list(class_string), "Descendants")
+					--The 1 in the argument indicates we are parsing descendants
+					json_object.put (get_archi_list(class_string,1), "Descendants")
+				else
+					json_object.put (create {JSON_ARRAY}.make_array, "Descendants")
 				end
+			end
+
+			if timeout=false then
+				res.set_status_code ({HTTP_STATUS_CODE}.ok)
+			else
+				res.set_status_code ({HTTP_STATUS_CODE}.gateway_timeout)
+				json_object.replace_with_boolean (false, "Has_Descendants")
 			end
 
 			json_array.add (json_object)
@@ -511,10 +719,583 @@ feature -- Execution
 			res_string.append (json_array.representation)
 			res_string.replace_substring_all ("<br>", "\n")
 
+
 			--Set the response header with the id value
 			header.add_header_key_value ("id", id)
 			res.put_header_text (header.string)
 			res.put_string (res_string)
+		end
+
+	--Function that returns the class Ancestors of a class
+	get_class_ancestors (req: WSF_REQUEST; res: WSF_RESPONSE)
+		require
+			project_path_empty: project_path /= Void and not project_path.is_empty
+			project_name_empty: project_path /= Void and not project_name.is_empty
+			target_set: needs_target=false
+		local
+			input_string: STRING
+			res_string:STRING
+			parser: JSON_PARSER
+			json_object:JSON_OBJECT
+			header:HTTP_HEADER
+			id:STRING
+			class_string:STRING
+			json_array:JSON_ARRAY
+			timeout:BOOLEAN
+		do
+			--Find class ancestors for class_name here
+			create header.make
+			create res_string.make_empty
+			create json_array.make_array
+			create json_object.make
+			create error_message.make_empty
+			create output_message.make_empty
+			create warning_message.make_empty
+			create dump_message.make_empty
+			create syntax_message.make_empty
+			create compile_message.make_empty
+
+			--Setting values
+			has_class_error:=false
+			has_error:=false
+			has_syntax_error:=false
+			has_warning:=false
+			timeout:=false
+
+			--Extract the unique user id
+			id:=extract_req_parameter(req,"id")
+			if id.is_empty then
+				--Give error, as it should not be empty
+			else
+				if not project_path.has_substring (id)then
+					--Give error
+				end
+			end
+
+			--Extract the class
+			class_string:=extract_req_parameter(req,"class")
+			if class_string.is_empty then
+				--Give error, as it should not be empty
+			end
+
+			--Setting the command line for the class ancestors
+			command_line:="ec -ancestors "+class_string+" -config "+ project_name
+
+			--If target is to also to be provided, then Specifying the target here
+			if not target.is_empty then
+				command_line.append (" -target "+target)
+			end
+
+			timeout:=class_functions_helper (class_string)
+
+			json_object.put_string (output_message, "Class_Ancestors_Dump")
+			if not syntax_message.is_empty then
+				error_message:=syntax_message
+			end
+			json_object.put_string (error_message, "Error_Message")
+			if not error_message.is_empty and has_class_error=false then
+				json_object.put_boolean (true, "Has_Compilation_Error")
+				json_object.put_boolean (false, "Has_Ancestors")
+			else
+				json_object.put_boolean (false, "Has_Compilation_Error")
+				json_object.put_boolean (not has_class_error, "Has_Ancestors")
+			end
+			--json_object.put_string (syntax_message, "Syntax_Message")
+			json_object.put_string (warning_message, "Warning_Message")
+
+			if not warning_message.is_empty then
+				json_object.put_boolean (true, "Has_Warning")
+			else
+				json_object.put_boolean (false, "Has_Warning")
+			end
+			json_object.put_string (dump_message, "Dump")
+			json_object.put (get_error_list, "Errors")
+			json_object.put (get_warning_list, "Warnings")
+
+			--Parse the ancestors
+			if not has_error and not has_syntax_error then
+				class_string.to_upper
+				if not error_message.has_substring (class_string+ " is not in the universe") then
+					--Parse the ancestors here
+					--The 2 in the argument indicates we are parsing ancestors
+					json_object.put (get_archi_list(class_string,2), "Ancestors")
+				else
+					json_object.put (create {JSON_ARRAY}.make_array, "Ancestors")
+				end
+			end
+
+			if timeout=false then
+				res.set_status_code ({HTTP_STATUS_CODE}.ok)
+			else
+				res.set_status_code ({HTTP_STATUS_CODE}.gateway_timeout)
+				json_object.replace_with_boolean (false, "Has_Ancestors")
+			end
+
+			json_array.add (json_object)
+
+			--Prepare the response string
+			res_string.append (json_array.representation)
+			res_string.replace_substring_all ("<br>", "\n")
+
+
+			--Set the response header with the id value
+			header.add_header_key_value ("id", id)
+			res.put_header_text (header.string)
+			res.put_string (res_string)
+		end
+
+	--Function that returns the clients of a class
+	get_class_clients (req: WSF_REQUEST; res: WSF_RESPONSE)
+		require
+			project_path_empty: project_path /= Void and not project_path.is_empty
+			project_name_empty: project_path /= Void and not project_name.is_empty
+			target_set: needs_target=false
+		local
+			input_string: STRING
+			res_string:STRING
+			parser: JSON_PARSER
+			json_object:JSON_OBJECT
+			header:HTTP_HEADER
+			id:STRING
+			class_string:STRING
+			json_array:JSON_ARRAY
+			timeout: BOOLEAN
+		do
+			--Find clients for class_name here
+			create header.make
+			create res_string.make_empty
+			create json_array.make_array
+			create json_object.make
+			create error_message.make_empty
+			create output_message.make_empty
+			create warning_message.make_empty
+			create dump_message.make_empty
+			create syntax_message.make_empty
+			create compile_message.make_empty
+
+			--Setting values
+			has_class_error:=false
+			has_error:=false
+			has_syntax_error:=false
+			has_warning:=false
+			timeout:=false
+
+			--Extract the unique user id
+			id:=extract_req_parameter(req,"id")
+			if id.is_empty then
+				--Give error, as it should not be empty
+			else
+				if not project_path.has_substring (id)then
+					--Give error
+				end
+			end
+
+			--Extract the class
+			class_string:=extract_req_parameter(req,"class")
+			if class_string.is_empty then
+				--Give error, as it should not be empty
+			end
+
+			--Setting the command line for the class clients
+			command_line:="ec -clients "+class_string+" -config "+ project_name
+
+			--If target is to also to be provided, then Specifying the target here
+			if not target.is_empty then
+				command_line.append (" -target "+target)
+			end
+
+			timeout:=class_functions_helper (class_string)
+
+			json_object.put_string (output_message, "Class_Clients_Dump")
+			if not syntax_message.is_empty then
+				error_message:=syntax_message
+			end
+			json_object.put_string (error_message, "Error_Message")
+			if not error_message.is_empty and has_class_error=false then
+				json_object.put_boolean (true, "Has_Compilation_Error")
+				json_object.put_boolean (false, "Has_Clients")
+			else
+				json_object.put_boolean (false, "Has_Compilation_Error")
+				json_object.put_boolean (not has_class_error, "Has_Clients")
+			end
+			--json_object.put_string (syntax_message, "Syntax_Message")
+			json_object.put_string (warning_message, "Warning_Message")
+
+			if not warning_message.is_empty then
+				json_object.put_boolean (true, "Has_Warning")
+			else
+				json_object.put_boolean (false, "Has_Warning")
+			end
+			json_object.put_string (dump_message, "Dump")
+			json_object.put (get_error_list, "Errors")
+			json_object.put (get_warning_list, "Warnings")
+
+			--Parse the clients
+			if not has_error and not has_syntax_error then
+				class_string.to_upper
+				if not error_message.has_substring (class_string+ " is not in the universe") then
+					--Parse the clients here
+					json_object.put (get_client_supplier_list(class_string), "Clients")
+				else
+					json_object.put (create {JSON_ARRAY}.make_array, "Clients")
+				end
+			end
+
+			if timeout=false then
+				res.set_status_code ({HTTP_STATUS_CODE}.ok)
+			else
+				res.set_status_code ({HTTP_STATUS_CODE}.gateway_timeout)
+				json_object.replace_with_boolean (false, "Has_Clients")
+			end
+
+			json_array.add (json_object)
+
+			--Prepare the response string
+			res_string.append (json_array.representation)
+			res_string.replace_substring_all ("<br>", "\n")
+
+
+			--Set the response header with the id value
+			header.add_header_key_value ("id", id)
+			res.put_header_text (header.string)
+			res.put_string (res_string)
+		end
+
+		--Function that returns the suppliers of a class
+		get_class_suppliers (req: WSF_REQUEST; res: WSF_RESPONSE)
+			require
+				project_path_empty: project_path /= Void and not project_path.is_empty
+				project_name_empty: project_path /= Void and not project_name.is_empty
+				target_set: needs_target=false
+			local
+				input_string: STRING
+				res_string:STRING
+				parser: JSON_PARSER
+				json_object:JSON_OBJECT
+				header:HTTP_HEADER
+				id:STRING
+				class_string:STRING
+				json_array:JSON_ARRAY
+				timeout:BOOLEAN
+			do
+				--Find suppliers for class_name here
+				create header.make
+				create res_string.make_empty
+				create json_array.make_array
+				create json_object.make
+				create error_message.make_empty
+				create output_message.make_empty
+				create warning_message.make_empty
+				create dump_message.make_empty
+				create syntax_message.make_empty
+				create compile_message.make_empty
+
+				--Setting values
+				has_class_error:=false
+				has_error:=false
+				has_syntax_error:=false
+				has_warning:=false
+				timeout:=false
+
+				--Extract the unique user id
+				id:=extract_req_parameter(req,"id")
+				if id.is_empty then
+					--Give error, as it should not be empty
+				else
+					if not project_path.has_substring (id)then
+						--Give error
+					end
+				end
+
+				--Extract the class
+				class_string:=extract_req_parameter(req,"class")
+				if class_string.is_empty then
+					--Give error, as it should not be empty
+				end
+
+				--Setting the command line for the class suppliers
+				command_line:="ec -suppliers "+class_string+" -config "+ project_name
+
+				--If target is to also to be provided, then Specifying the target here
+				if not target.is_empty then
+					command_line.append (" -target "+target)
+				end
+
+				timeout:=class_functions_helper (class_string)
+
+
+				json_object.put_string (output_message, "Class_Suppliers_Dump")
+				if not syntax_message.is_empty then
+					error_message:=syntax_message
+				end
+				json_object.put_string (error_message, "Error_Message")
+				if not error_message.is_empty and has_class_error=false then
+					json_object.put_boolean (true, "Has_Compilation_Error")
+					json_object.put_boolean (false, "Has_Suppliers")
+				else
+					json_object.put_boolean (false, "Has_Compilation_Error")
+					json_object.put_boolean (not has_class_error, "Has_Suppliers")
+				end
+				--json_object.put_string (syntax_message, "Syntax_Message")
+				json_object.put_string (warning_message, "Warning_Message")
+
+				if not warning_message.is_empty then
+					json_object.put_boolean (true, "Has_Warning")
+				else
+					json_object.put_boolean (false, "Has_Warning")
+				end
+				json_object.put_string (dump_message, "Dump")
+				json_object.put (get_error_list, "Errors")
+				json_object.put (get_warning_list, "Warnings")
+
+				--Parse the suppliers
+				if not has_error and not has_syntax_error then
+					class_string.to_upper
+					if not error_message.has_substring (class_string+ " is not in the universe") then
+						--Parse the suppliers here
+						json_object.put (get_client_supplier_list(class_string), "Suppliers")
+					else
+						json_object.put (create {JSON_ARRAY}.make_array, "Suppliers")
+					end
+				end
+
+				if timeout=false then
+					res.set_status_code ({HTTP_STATUS_CODE}.ok)
+				else
+					res.set_status_code ({HTTP_STATUS_CODE}.gateway_timeout)
+					json_object.replace_with_boolean (false, "Has_Suppliers")
+				end
+				json_array.add (json_object)
+
+				--Prepare the response string
+				res_string.append (json_array.representation)
+				res_string.replace_substring_all ("<br>", "\n")
+
+
+				--Set the response header with the id value
+				header.add_header_key_value ("id", id)
+				res.put_header_text (header.string)
+				res.put_string (res_string)
+			end
+
+		--Function that returns the callers of a feature of a class
+		get_feature_callers (req: WSF_REQUEST; res: WSF_RESPONSE)
+			require
+				project_path_empty: project_path /= Void and not project_path.is_empty
+				project_name_empty: project_path /= Void and not project_name.is_empty
+			target_set: needs_target=false
+			local
+				input_string: STRING
+				res_string:STRING
+				parser: JSON_PARSER
+				json_object:JSON_OBJECT
+				header:HTTP_HEADER
+				id:STRING
+				class_string:STRING
+				feature_string:STRING
+				json_array:JSON_ARRAY
+				timeout:BOOLEAN
+			do
+				--Find callers for the feature
+				create header.make
+				create res_string.make_empty
+				create json_array.make_array
+				create json_object.make
+				create error_message.make_empty
+				create output_message.make_empty
+				create warning_message.make_empty
+				create dump_message.make_empty
+				create syntax_message.make_empty
+				create compile_message.make_empty
+
+				--Setting values
+				has_feature_error:=false
+				has_error:=false
+				has_syntax_error:=false
+				has_warning:=false
+				timeout:=false
+
+				--Extract the unique user id
+				id:=extract_req_parameter(req,"id")
+				if id.is_empty then
+					--Give error, as it should not be empty
+				else
+					if not project_path.has_substring (id)then
+						--Give error
+					end
+				end
+
+				--Extract the class
+				class_string:=extract_req_parameter(req,"class")
+				if class_string.is_empty then
+					--Give error, as it should not be empty
+				end
+
+				--Extract the feature
+				feature_string:=extract_req_parameter(req,"feature")
+				if feature_string.is_empty then
+					--Give error, as it should not be empty
+				end
+
+				--Setting the command line for the feature callers
+				command_line:="ec -callers "+class_string+ " " + feature_string + " -config "+ project_name
+
+				--If target is to also to be provided, then Specifying the target here
+				if not target.is_empty then
+					command_line.append (" -target "+target)
+				end
+
+				timeout:=feature_functions_helper (class_string,feature_string)
+
+
+				json_object.put_string (output_message, "Feature_Callers_Dump")
+				if not syntax_message.is_empty then
+					error_message:=syntax_message
+				end
+				json_object.put_string (error_message, "Error_Message")
+				if not error_message.is_empty and has_feature_error=false then
+					json_object.put_boolean (true, "Has_Compilation_Error")
+					json_object.put_boolean (false, "Has_Feature_Callers")
+				else
+					json_object.put_boolean (false, "Has_Compilation_Error")
+					json_object.put_boolean (not has_feature_error, "Has_Feature_Callers")
+				end
+				--json_object.put_string (syntax_message, "Syntax_Message")
+				json_object.put_string (warning_message, "Warning_Message")
+
+				if not warning_message.is_empty then
+					json_object.put_boolean (true, "Has_Warning")
+				else
+					json_object.put_boolean (false, "Has_Warning")
+				end
+				json_object.put_string (dump_message, "Dump")
+				json_object.put (get_error_list, "Errors")
+				json_object.put (get_warning_list, "Warnings")
+
+				--Parse the callers
+				if not has_error and not has_syntax_error then
+					class_string.to_upper
+					feature_string.to_lower
+					if not error_message.has_substring (class_string+ " is not in the universe") and not error_message.has_substring (feature_string+ " is not a feature of "+class_string) then
+						--Parse the callers here
+						json_object.put (get_feature_callers_list(class_string,feature_string), "Callers")
+					else
+						json_object.put (create {JSON_ARRAY}.make_array, "Callers")
+					end
+				end
+
+				json_array.add (json_object)
+
+				--Prepare the response string
+				res_string.append (json_array.representation)
+				res_string.replace_substring_all ("<br>", "\n")
+
+				if timeout=false then
+					res.set_status_code ({HTTP_STATUS_CODE}.ok)
+				else
+					res.set_status_code ({HTTP_STATUS_CODE}.gateway_timeout)
+					json_object.replace_with_boolean (false, "Has_Feature_Callers")
+				end
+
+				--Set the response header with the id value
+				header.add_header_key_value ("id", id)
+				res.put_header_text (header.string)
+				res.put_string (res_string)
+			end
+
+feature --Functions that return the parsed objects
+
+	get_target_list : JSON_ARRAY
+		--Function that returns the list of callers of a feature
+		local
+			target_list: EIFFEL_TARGETS
+			target_array:JSON_ARRAY
+		do
+			if needs_target then
+				--Dump message contains the unparsed list of targets
+				create target_list.make (dump_message)
+				target_array:=target_list.json_array
+			end
+			Result:=target_array
+		end
+
+	get_feature_callers_list(class_string:STRING;feature_string:STRING) : JSON_ARRAY
+		--Function that returns the list of callers of a feature
+		local
+			callers_list: EIFFEL_FEATURE_CALLERS
+			callers_array:JSON_ARRAY
+		do
+			create callers_list.make (output_message,class_string,feature_string)
+			callers_array:=callers_list.json_array
+			Result:=callers_array
+		end
+
+	get_client_supplier_list(class_string:STRING) : JSON_ARRAY
+		--Function that returns the list of class clients and suppliers
+		local
+			cs_list: EIFFEL_CLIENT_SUPPLIER
+			cs_array:JSON_ARRAY
+		do
+			create cs_list.make (output_message,class_string)
+			cs_array:=cs_list.json_array
+			Result:=cs_array
+		end
+
+	get_archi_list(class_string:STRING;a_flag:INTEGER) : JSON_ARRAY
+		--Function that returns the list of class descendants and ancestors
+		--If a_flag=1, we are parsing descendants, if a_flag=2 we are parsing ancestors
+		local
+			archi_list: EIFFEL_ARCHITECTURE
+			archi_array:JSON_ARRAY
+		do
+			create archi_list.make (output_message,class_string,a_flag)
+			archi_array:=archi_list.json_arr
+			Result:=archi_array
+		end
+
+	get_runtime_error_list : JSON_ARRAY
+		--Function that returns the set of runtime errors
+		local
+			error_list:EIFFEL_RUNTIME
+			error_array:JSON_ARRAY
+		do
+			if has_runtime_error=True then
+				create error_list.make (error_message)
+				error_array:=error_list.json_array
+				runtime_text:=error_list.runtime_text
+			end
+			Result:=error_array
+		end
+
+	get_error_list : JSON_ARRAY
+		--Function that returns the set of error_list
+		local
+			error_list:EIFFEL_ERRORS
+			error_array: JSON_ARRAY
+		do
+			--Getting error list
+			if has_error=True then
+				create error_list.make (error_message)
+				error_array:=error_list.json_array
+			end
+			if has_syntax_error then
+				create error_list.make (syntax_message)
+				error_array:=error_list.json_array
+			end
+			Result:=error_array
+		end
+
+	get_warning_list : JSON_ARRAY
+		--Function that returns the set of warnings
+		local
+			warning_list:EIFFEL_WARNINGS
+			warning_array:JSON_ARRAY
+		do
+			if has_warning=True then
+				create warning_list.make (warning_message)
+				warning_array:=warning_list.json_array
+			end
+			Result:=warning_array
 		end
 
 feature --Helper functions
@@ -567,62 +1348,6 @@ feature --Helper functions
 			project_name_empty: project_path /= Void and not project_name.is_empty
 		end
 
-	get_descendants_list(class_string:STRING) : JSON_ARRAY
-		--Function that returns the list of class descendants
-		local
-			descendants_list: EIFFEL_ARCHITECTURE
-			descendants_array:JSON_ARRAY
-		do
-			create descendants_list.make (output_message,class_string)
-			descendants_array:=descendants_list.json_arr
-			Result:=descendants_array
-		end
-
-	get_runtime_error_list : JSON_ARRAY
-		--Function that returns the set of runtime errors
-		local
-			error_list:EIFFEL_RUNTIME
-			error_array:JSON_ARRAY
-		do
-			if has_runtime_error=True then
-				create error_list.make (error_message)
-				error_array:=error_list.json_array
-			end
-			Result:=error_array
-		end
-
-	get_error_list : JSON_ARRAY
-		--Function that returns the set of error_list
-		local
-			error_list:EIFFEL_ERRORS
-			error_array: JSON_ARRAY
-		do
-			--Getting error list
-			if has_error=True then
-				create error_list.make (error_message)
-				error_array:=error_list.json_array
-			end
-			if has_syntax_error then
-				create error_list.make (syntax_message)
-				error_array:=error_list.json_array
-			end
-			Result:=error_array
-		end
-
-	get_warning_list : JSON_ARRAY
-		--Function that returns the set of warnings
-		local
-			warning_list:EIFFEL_WARNINGS
-			warning_array:JSON_ARRAY
-		do
-			if has_warning=True then
-				create warning_list.make (warning_message)
-				warning_array:=warning_list.json_array
-			end
-			Result:=warning_array
-		end
-
-	--Function to get a string from a json_value
 	send_json_value (obj:JSON_OBJECT; key: STRING):STRING
 		--Sends the string representation of the JSON value	
 		do
@@ -630,28 +1355,31 @@ feature --Helper functions
 			if attached {JSON_STRING} obj.item (key) as str then
 				Result:=str.unescaped_string_8
 			end
+			if attached {JSON_NUMBER} obj.item(key) as str then
+				Result:=str.item.out
+			end
+			if attached {JSON_BOOLEAN} obj.item(key) as str then
+				Result:=str.item.out
+			end
 		end
 
 	extract_req_parameter (req:WSF_REQUEST;str:STRING):STRING
 		--Function that extracts the value of str from the request object
 		do
+			Result:=""
 			if attached {WSF_STRING} req.query_parameter (str) as p_str then
 				Result := p_str.value
-			else
-				Result := ""
 			end
 		end
 
-	check_req_parameter (req:WSF_REQUEST; str:STRING):BOOLEAN
-		--Function that extracts the value of str from the request object
+	extract_boolean_req_parameter (req:WSF_REQUEST; str:STRING):BOOLEAN
+		--Function that extracts the boolean value of str from the request object
 		do
+			Result:=false
 			if attached {WSF_STRING} req.query_parameter (str) as p_str then
 				Result := p_str.value.to_boolean
-			else
-				Result := false
 			end
 		end
-
 
 	file_exists (fn: READABLE_STRING_GENERAL): BOOLEAN
 		--Check if file exists or not
@@ -662,8 +1390,8 @@ feature --Helper functions
 			Result := f.exists and then f.is_readable
 		end
 
-	--Generates the unique id
 	uuid_generator: UUID_GENERATOR
+		--Generates the unique id
 		once
 			create Result
 		end
@@ -708,12 +1436,53 @@ feature --Helper functions
 			end
 		end
 
-feature -- Compile commands
+		initialize_timeouts_from_file
+			--This feature initializes the compile and the runtime timeouts
+		local
+			file:PLAIN_TEXT_FILE
+			s:STRING
+			index,i:INTEGER
+			parser:JSON_PARSER
+			json_object:JSON_OBJECT
+		do
+			create file.make_with_path (create {PATH}.make_from_string ("C:\Users\Manav\Desktop\eve_server\server_app\www\config.json"))
+			file.open_read
+			file.read_stream (file.count)
+			s:=file.last_string
 
-	compile_helper(path:STRING)
+			create parser.make_parser (s)
+
+			if attached {JSON_OBJECT} parser.parse as jv and parser.is_parsed then
+				json_object:=jv
+				compilation_timeout:=send_json_value (json_object, "Compilation_Timeout").to_integer
+				execution_timeout:=send_json_value (json_object, "Runtime_Timeout").to_integer
+			end
+		end
+
+		initialize_timeouts_from_arguments
+			--This feature initializes the compile and runtime timeouts from the arguments given at runtime
+			do
+				if argument_count=2 then
+					compilation_timeout:=argument(1).to_integer
+					execution_timeout:=argument(2).to_integer
+				else
+					--Parameters not provided
+					--Give error
+				end
+			end
+
+feature -- Commands to the command line
+
+	compile_helper(path:STRING) :BOOLEAN
 		local
 			ec_process:PROCESS
 			e_parser:EIFFEL_PARSER
+			flag:BOOLEAN
+			start_time:DATE_TIME
+			current_time:DATE_TIME
+			l_duration:DATE_TIME_DURATION
+			duration:INTEGER_64
+			timeout:BOOLEAN
 		do
 			--Compile
 
@@ -729,43 +1498,78 @@ feature -- Compile commands
 
 			--Wait for the compilation to finish.
 			--Do Something to wait till compilation is over
+			flag:=ec_process.is_running
+			timeout:=false
+			create start_time.make_now_utc
 			from
 			until
-				not ec_process.is_running
+				flag=false
 			loop
+				flag:=ec_process.is_running
+
+				--Extract the current time here.
+				--If the difference between current time and start time is more than compilation_timeout, the server returns a timeout message
+				create current_time.make_now_utc
+				l_duration:=current_time.relative_duration (start_time)
+				duration:= l_duration.seconds_count
+
+				if duration>=compilation_timeout then
+					flag:=false
+					timeout:=true
+					ec_process.terminate
+				end
 			end
 
-			compile_message.replace_substring_all ("%R%N", "<br>")
-			output_message.replace_substring_all ("%R%N", "<br>")
+			if timeout=false then
+				compile_message.replace_substring_all ("%R%N", "<br>")
+				output_message.replace_substring_all ("%R%N", "<br>")
 
-			if dump_message.is_empty then
-				dump_message:=compile_message
+				if dump_message.is_empty then
+					dump_message:=compile_message
+				end
+
+				--Check if target is non empty, it must be valid
+				if not target.is_empty and output_message.has_substring ("Choose among the following target(s)") then
+					needs_target:=true
+					create compile_message.make_empty
+					dump_message:=output_message
+					create output_message.make_empty
+				else
+					--The target is valid, so now parse the command line
+					--Parsing the command line string for errors and messages
+					create e_parser.make (compile_message)
+					compile_message:=e_parser.compile_message
+					compile_message:=compile_message.substring (1, compile_message.substring_index ("Recompiled.", 1)+10)
+					--If the project was finish_freezed then the errors, warnings would be lost if they are again allowed to modify.
+					if path.substring_index ("W_code", 1)=0 then
+						error_message:=e_parser.error_message
+						warning_message:=e_parser.warning_message
+						syntax_message:=e_parser.syntax_error
+					end
+					if not error_message.is_empty then
+						has_error:=true
+					end
+					if not warning_message.is_empty then
+						has_warning:=true
+					end
+					if not syntax_message.is_empty then
+						has_syntax_error:=true
+					end
+				end
 			end
 
-			--Parsing the command line string for errors and messages
-			create e_parser.make (compile_message)
-			compile_message:=e_parser.compile_message
-			compile_message:=compile_message.substring (1, compile_message.substring_index ("Recompiled.", 1)+10)
-			--If the project was finish_freezed then the errors, warnings would be lost if they are again allowed to modify.
-			if path.substring_index ("W_code", 1)=0 then
-				error_message:=e_parser.error_message
-				warning_message:=e_parser.warning_message
-				syntax_message:=e_parser.syntax_error
-			end
-			if not error_message.is_empty then
-				has_error:=true
-			end
-			if not warning_message.is_empty then
-				has_warning:=true
-			end
-			if not syntax_message.is_empty then
-				has_syntax_error:=true
-			end
+			Result:=timeout
 		end
 
-	execution_helper
+	execution_helper :BOOLEAN
 		local
 			ec_process:PROCESS
+			flag:BOOLEAN
+			start_time:DATE_TIME
+			current_time:DATE_TIME
+			l_duration:DATE_TIME_DURATION
+			duration:INTEGER_64
+			timeout:BOOLEAN
 		do
 			--Run the project
 			command_line:=project_path+"/EIFGENs/"+project_name+"/W_code/"+project_name+".exe"
@@ -779,69 +1583,203 @@ feature -- Compile commands
 
 			--Wait for the execution to finish.
 			--Do Something to wait till compilation is over
+			flag:=ec_process.is_running
+			timeout:=false
+			create start_time.make_now_utc
 			from
 			until
-				not ec_process.is_running
+				flag=false
 			loop
-			end
+				flag:=ec_process.is_running
 
-			error_message.replace_substring_all ("%R%N", "<br>")
-			output_message.replace_substring_all ("%R%N", "<br>")
+				--Extract the current time here.
+				--If the difference between current time and start time is more than execution_timeout, the server returns a timeout message
+				create current_time.make_now_utc
+				l_duration:=current_time.relative_duration (start_time)
+				duration:= l_duration.seconds_count
+
+				if duration>=execution_timeout then
+					flag:=false
+					timeout:=true
+					ec_process.terminate
+				end
+			end
+			if timeout=false then
+				error_message.replace_substring_all ("%R%N", "<br>")
+				output_message.replace_substring_all ("%R%N", "<br>")
+			end
+			Result:=timeout
 		end
 
-	view_helper (class_string:STRING)
+	class_functions_helper (class_string:STRING) :BOOLEAN
 		local
 			ec_process:PROCESS
 			e_parser:EIFFEL_PARSER
 			output_index:INTEGER
+			flag:BOOLEAN
+			start_time:DATE_TIME
+			current_time:DATE_TIME
+			l_duration:DATE_TIME_DURATION
+			duration:INTEGER_64
+			timeout:BOOLEAN
 		do
 			--Get the class views
 			ec_process:=p_factory.process_launcher_with_command_line (command_line,project_path)
 			ec_process.enable_launch_in_new_process_group
 			ec_process.set_separate_console (true)
-			ec_process.redirect_error_to_agent (agent handle_error_classview)
-			ec_process.redirect_output_to_agent (agent handle_output_classview)
+			ec_process.redirect_error_to_agent (agent handle_error_class)
+			ec_process.redirect_output_to_agent (agent handle_output_class)
 			ec_process.launch
 
 			--Wait for the execution to finish.
 			--Do Something to wait till compilation is over
+			flag:=ec_process.is_running
+			timeout:=false
+			create start_time.make_now_utc
 			from
 			until
-				not ec_process.is_running
+				flag=false
 			loop
-			end
+				flag:=ec_process.is_running
 
-			error_message.replace_substring_all ("%R%N", "<br>")
-			output_message.replace_substring_all ("%R%N", "<br>")
+				--Extract the current time here.
+				--If the difference between current time and start time is more than compilation_timeout, the server returns a timeout message
+				create current_time.make_now_utc
+				l_duration:=current_time.relative_duration (start_time)
+				duration:= l_duration.seconds_count
 
-			if dump_message.is_empty then
-				dump_message:=error_message
-			end
-
-			--Parsing the command line string for errors and messages
-			create e_parser.make (error_message)
-			output_message:=e_parser.output_message
-			error_message:=e_parser.error_message
-			warning_message:=e_parser.warning_message
-			syntax_message:=e_parser.syntax_error
-
-			if not error_message.is_empty then
-				has_error:=true
-			end
-			if not warning_message.is_empty then
-				has_warning:=true
-			end
-			if not syntax_message.is_empty then
-				has_syntax_error:=true
-			end
-
-			if not has_error and not has_syntax_error then
-				class_string.to_upper
-				if output_message.has_substring (class_string+ " is not in the universe") then
-					error_message:=output_message
-					output_message:=""
+				if duration>=compilation_timeout then
+					flag:=false
+					timeout:=true
+					ec_process.terminate
 				end
 			end
+
+			if timeout=false then
+				error_message.replace_substring_all ("%R%N", "<br>")
+				output_message.replace_substring_all ("%R%N", "<br>")
+
+				if dump_message.is_empty then
+					dump_message:=error_message
+				end
+
+				--Parsing the command line string for errors and messages
+				create e_parser.make (error_message)
+				output_message:=e_parser.output_message
+				error_message:=e_parser.error_message
+				warning_message:=e_parser.warning_message
+				syntax_message:=e_parser.syntax_error
+
+				if not error_message.is_empty then
+					has_error:=true
+				end
+				if not warning_message.is_empty then
+					has_warning:=true
+				end
+				if not syntax_message.is_empty then
+					has_syntax_error:=true
+				end
+
+				if not has_error and not has_syntax_error then
+					class_string.to_upper
+					if output_message.has_substring (class_string+ " is not in the universe") then
+						error_message:=output_message
+						output_message:=""
+						has_class_error:=true
+					end
+				end
+			else
+				compile_message:=error_message
+				create error_message.make_empty
+			end
+
+			Result:=timeout
+		end
+
+		feature_functions_helper (class_string:STRING; feature_string: STRING) :BOOLEAN
+		local
+			ec_process:PROCESS
+			e_parser:EIFFEL_PARSER
+			output_index:INTEGER
+			flag:BOOLEAN
+			start_time:DATE_TIME
+			current_time:DATE_TIME
+			l_duration:DATE_TIME_DURATION
+			duration:INTEGER_64
+			timeout:BOOLEAN
+		do
+			--Get the class views
+			ec_process:=p_factory.process_launcher_with_command_line (command_line,project_path)
+			ec_process.enable_launch_in_new_process_group
+			ec_process.set_separate_console (true)
+			ec_process.redirect_error_to_agent (agent handle_error_feature)
+			ec_process.redirect_output_to_agent (agent handle_output_feature)
+			ec_process.launch
+
+			--Wait for the execution to finish.
+			--Do Something to wait till compilation is over
+			flag:=ec_process.is_running
+			timeout:=false
+			create start_time.make_now_utc
+			from
+			until
+				flag=false
+			loop
+				flag:=ec_process.is_running
+
+				--Extract the current time here.
+				--If the difference between current time and start time is more than compilation_timeout, the server returns a timeout message
+				create current_time.make_now_utc
+				l_duration:=current_time.relative_duration (start_time)
+				duration:= l_duration.seconds_count
+
+				if duration>=compilation_timeout then
+					flag:=false
+					timeout:=true
+					ec_process.terminate
+				end
+			end
+
+			if timeout=false then
+				error_message.replace_substring_all ("%R%N", "<br>")
+				output_message.replace_substring_all ("%R%N", "<br>")
+
+				if dump_message.is_empty then
+					dump_message:=error_message
+				end
+
+				--Parsing the command line string for errors and messages
+				create e_parser.make (error_message)
+				output_message:=e_parser.output_message
+				error_message:=e_parser.error_message
+				warning_message:=e_parser.warning_message
+				syntax_message:=e_parser.syntax_error
+
+				if not error_message.is_empty then
+					has_error:=true
+				end
+				if not warning_message.is_empty then
+					has_warning:=true
+				end
+				if not syntax_message.is_empty then
+					has_syntax_error:=true
+				end
+
+				if not has_error and not has_syntax_error then
+					class_string.to_upper
+					feature_string.to_lower
+					if output_message.has_substring (class_string+ " is not in the universe") or output_message.has_substring (feature_string+ " is not a feature of "+class_string) then
+						error_message:=output_message
+						output_message:=""
+						has_feature_error:=true
+					end
+				end
+			else
+				compile_message:=error_message
+				create error_message.make_empty
+			end
+
+			Result:=timeout
 		end
 
 
@@ -851,18 +1789,18 @@ feature --input, output and error agents
 		--Agent that handles the error messages from the compilation
 		do
 			--io.put_string (a_str)
-			if a_str.has_substring ("Error code") then
-				--Error has occured. Deal with it
-				has_error:=True
-			end
-			if a_str.has_substring ("Warning code") then
-				--There is a warning in the project
-				has_warning:=True
-			end
-			if a_str.has_substring ("Syntax error") then
-				--There is a syntax error in the project
-				has_syntax_error:=True
-			end
+--			if a_str.has_substring ("Error code") then
+--				--Error has occured. Deal with it
+--				has_error:=True
+--			end
+--			if a_str.has_substring ("Warning code") then
+--				--There is a warning in the project
+--				has_warning:=True
+--			end
+--			if a_str.has_substring ("Syntax error") then
+--				--There is a syntax error in the project
+--				has_syntax_error:=True
+--			end
 			compile_message.append (a_str)
 		end
 
@@ -894,8 +1832,25 @@ feature --input, output and error agents
 			error_message.append (a_str)
 		end
 
-	handle_output_classview (a_str:STRING)
-		--Agent that handles the output from the execution
+	handle_output_class (a_str:STRING)
+		--Agent that handles the output from the class functions
+		do
+			--io.put_string (a_str)
+			--io.output.flush
+			if not a_str.is_empty and a_str/=Void then
+				output_message.append(a_str)
+			end
+		end
+
+	handle_error_class (a_str:STRING)
+		--Agent that handles the error from the class functions
+		do
+			--io.put_string (a_str)
+			error_message.append (a_str)
+		end
+
+	handle_output_feature (a_str:STRING)
+		--Agent that handles the output from the feature functions
 		do
 			io.put_string (a_str)
 			--io.output.flush
@@ -904,11 +1859,10 @@ feature --input, output and error agents
 			end
 		end
 
-	handle_error_classview (a_str:STRING)
-		--Agent that handles the error from the execution
+	handle_error_feature (a_str:STRING)
+		--Agent that handles the error from the feature functions
 		do
 			io.put_string (a_str)
-			has_classview_error:=true
 			error_message.append (a_str)
 		end
 end

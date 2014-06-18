@@ -1,0 +1,26 @@
+
+#ifndef _C5_se236_
+#define _C5_se236_
+
+#ifdef __cplusplus
+extern "C" {
+#endif
+
+extern void F524_11030(EIF_REFERENCE, EIF_REFERENCE);
+extern EIF_REFERENCE F524_11031(EIF_REFERENCE);
+extern EIF_REFERENCE F524_11032(EIF_REFERENCE);
+extern void F524_11033(EIF_REFERENCE, EIF_REFERENCE);
+extern EIF_REFERENCE F524_11034(EIF_REFERENCE, EIF_REFERENCE, EIF_REFERENCE);
+extern void EIF_Minit236(void);
+extern void F81_6669(EIF_REFERENCE, EIF_REFERENCE);
+extern void F82_6672(EIF_REFERENCE);
+extern EIF_REFERENCE F527_11055(EIF_REFERENCE, EIF_REFERENCE, EIF_REFERENCE);
+extern void F81_6670(EIF_REFERENCE, EIF_BOOLEAN);
+extern void F81_6671(EIF_REFERENCE, EIF_REFERENCE);
+extern char *(*R15044[])();
+
+#ifdef __cplusplus
+}
+#endif
+
+#endif

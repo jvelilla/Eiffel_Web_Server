@@ -1,0 +1,22 @@
+
+#ifndef _C7_po345_
+#define _C7_po345_
+
+#ifdef __cplusplus
+extern "C" {
+#endif
+
+extern EIF_INTEGER_32 F866_16935(EIF_REFERENCE);
+extern EIF_BOOLEAN F866_16936(EIF_REFERENCE);
+extern EIF_POINTER F866_16937(EIF_REFERENCE, EIF_INTEGER_32);
+extern EIF_REFERENCE F866_16939(EIF_REFERENCE);
+extern void EIF_Minit345(void);
+extern EIF_REFERENCE F834_16926(EIF_REFERENCE);
+extern EIF_POINTER F834_16914(EIF_REFERENCE, EIF_INTEGER_32);
+extern EIF_INTEGER_32 F834_16909(EIF_REFERENCE);
+
+#ifdef __cplusplus
+}
+#endif
+
+#endif

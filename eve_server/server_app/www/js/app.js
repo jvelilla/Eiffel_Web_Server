@@ -45,3 +45,19 @@ serverApp.factory('ContractViewService', function($resource) {
 serverApp.factory('ClassDescendantsService', function($resource) {
   return $resource('/classDescendants',{}, {query: {method:'GET',  isArray:true}, 'save':   {method:'POST'}});
 });
+
+serverApp.factory('ClassAncestorsService', function($resource) {
+  return $resource('/classAncestors',{}, {query: {method:'GET',  isArray:true}, 'save':   {method:'POST'}});
+});
+
+serverApp.factory('ClassClientsService', function($resource) {
+  return $resource('/classClients',{}, {query: {method:'GET',  isArray:true}, 'save':   {method:'POST'}});
+});
+
+serverApp.factory('ClassSuppliersService', function($resource) {
+  return $resource('/classSuppliers',{}, {query: {method:'GET',  isArray:true}, 'save':   {method:'POST'}});
+});
+
+serverApp.factory('FeatureCallersService', function($resource) {
+  return $resource('/featureCallers',{}, {query: {method:'GET',  isArray:true}, 'save':   {method:'POST'}});
+});

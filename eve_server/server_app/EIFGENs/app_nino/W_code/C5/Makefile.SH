@@ -55,15 +55,15 @@ $spitshell >>Makefile <<'!NO!SUBS!'
 
 OBJECTS = big_file_C5_c.obj 
 
-OLDOBJECTS =  is148.o is148d.o in143.o in143d.o in164.o in164d.o eq154.o eq154d.o \
-	in151.o in151d.o ex150.o ex150d.o eq149.o eq149d.o ex147.o ex147d.o \
-	ws146.o ws146d.o ws145.o ws145d.o ws144.o ws144d.o in153.o in153d.o \
-	in141.o in141d.o in152.o in152d.o in142.o in142d.o in140.o in140d.o \
-	so163.o so163d.o st139.o st139d.o st136.o st136d.o nu134.o nu134d.o \
-	it133.o it133d.o re132.o re132d.o st138.o st138d.o he137.o he137d.o \
-	sh162.o sh162d.o ws160.o ws160d.o ws161.o ws161d.o in135.o in135d.o \
-	ws158.o ws158d.o ws157.o ws157d.o ws159.o ws159d.o we156.o we156d.o \
-	me155.o me155d.o 
+OLDOBJECTS =  is150.o is150d.o in145.o in145d.o eq156.o eq156d.o in153.o in153d.o \
+	ex152.o ex152d.o eq151.o eq151d.o ex149.o ex149d.o ws148.o ws148d.o \
+	ws147.o ws147d.o ws146.o ws146d.o in155.o in155d.o in143.o in143d.o \
+	in154.o in154d.o in144.o in144d.o in142.o in142d.o st141.o st141d.o \
+	st138.o st138d.o nu136.o nu136d.o it135.o it135d.o re134.o re134d.o \
+	st140.o st140d.o st133.o st133d.o st132.o st132d.o he139.o he139d.o \
+	sh164.o sh164d.o ws162.o ws162d.o ws163.o ws163d.o in137.o in137d.o \
+	ws160.o ws160d.o ws159.o ws159d.o ws161.o ws161d.o we158.o we158d.o \
+	me157.o me157d.o 
 
 all: Cobj5.o
 

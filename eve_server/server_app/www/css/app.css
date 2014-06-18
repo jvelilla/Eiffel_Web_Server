@@ -4,54 +4,59 @@ body {
   padding-top: 20px;
 }
 
-.Compilation_Results {
-  padding:20px;
-  width: 600px;
-  height: 600px;
-  border: 10px;
-  border-color: #E6E6FA;
-  background-color:#E6E6FA;
+.form_elements{
+    margin-left: 50px;
 }
 
-.Execution_Results {
-  padding:20px;
-  width: 600px;
-  height: 400px;
-  border: 10px;
-  border-color: #E6E6FA;
-  background-color:#E6E6FA;
+.div_buttons{
+  width: 1600px;
+  margin-left: auto ;
+  margin-right: auto ;
 }
-.Interface_View {
-  padding:20px;
-  width: 600px;
-  height: 10px;
-  border: 10px;
-  border-color: #E6E6FA;
-  background-color:#E6E6FA;
+
+.main_div{
+  vertical-align: center;
+  background-color:#E6E6FA; 
+  margin-left: auto ;
+  margin-right: auto ;
 }
-.Flat_View {
-  padding:20px;
-  width: 600px;
-  height: 600px;
-  border: 10px;
-  border-color: #E6E6FA;
+
+.results{
+  width: 1600px;
+  height: auto;
   background-color:#E6E6FA;
+  margin-left: auto ;
+  margin-right: auto ;
 }
-.Contract_View {
-  padding:20px;
-  width: 600px;
-  height: 600px;
-  border: 10px;
-  border-color: #E6E6FA;
+
+.response_dump{
+  width: 1600px;
+  height: auto;
   background-color:#E6E6FA;
+  margin-left: auto ;
+  margin-right: auto ;
 }
-.Class_Descendants {
-  padding:20px;
-  width: 600px;
-  height: 600px;
-  border: 10px;
-  border-color: #E6E6FA;
-  background-color:#E6E6FA;
+
+.my_textarea{
+  height:600px;
+  width: 1300px;
+  margin-left: auto ;
+  margin-right: auto ;
+  resize: none;
+  background-color: #FFFFFF;
+}
+
+.response_textarea{
+  height:300px;
+  width: 1300px;
+  resize: none;
+  margin-left: auto ;
+  margin-right: auto ;
+  background-color: #FFFFFF;
+}
+
+.response_dump_text{
+  text-align: center;
 }
 
 .disabled{

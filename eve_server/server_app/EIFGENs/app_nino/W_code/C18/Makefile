@@ -41,15 +41,15 @@ SYSTEM_IN_DYNAMIC_LIB = app.dll
 
 OBJECTS = big_file_C18_c.obj 
 
-OLDOBJECTS =  sp583.obj sp583d.obj ar590.obj ar590d.obj ty580.obj ty580d.obj ty581.obj ty581d.obj \
-	ty578.obj ty578d.obj ty579.obj ty579d.obj ty582.obj ty582d.obj ty584.obj ty584d.obj \
-	ar563.obj ar563d.obj ha574.obj ha574d.obj na585.obj na585d.obj re586.obj re586d.obj \
-	li592.obj li592d.obj re591.obj re591d.obj in569.obj in569d.obj to562.obj to562d.obj \
-	it587.obj it587d.obj it588.obj it588d.obj ta576.obj ta576d.obj ta575.obj ta575d.obj \
-	li567.obj li567d.obj se564.obj se564d.obj dy566.obj dy566d.obj ha577.obj ha577d.obj \
-	un572.obj un572d.obj ta570.obj ta570d.obj in589.obj in589d.obj cu593.obj cu593d.obj \
-	ch568.obj ch568d.obj bi565.obj bi565d.obj dy571.obj dy571d.obj in573.obj in573d.obj \
-	bo561.obj bo561d.obj 
+OLDOBJECTS =  ty584.obj ty584d.obj ty585.obj ty585d.obj ty586.obj ty586d.obj ar569.obj ar569d.obj \
+	ha580.obj ha580d.obj li591.obj li591d.obj in575.obj in575d.obj to568.obj to568d.obj \
+	ce589.obj ce589d.obj ta582.obj ta582d.obj ta581.obj ta581d.obj li573.obj li573d.obj \
+	se570.obj se570d.obj dy572.obj dy572d.obj li590.obj li590d.obj li588.obj li588d.obj \
+	ha583.obj ha583d.obj un578.obj un578d.obj ta576.obj ta576d.obj cu561.obj cu561d.obj \
+	cu592.obj cu592d.obj tr566.obj tr566d.obj ch574.obj ch574d.obj ac563.obj ac563d.obj \
+	bi571.obj bi571d.obj dy577.obj dy577d.obj ba564.obj ba564d.obj co565.obj co565d.obj \
+	co562.obj co562d.obj co593.obj co593d.obj li587.obj li587d.obj in579.obj in579d.obj \
+	bo567.obj bo567d.obj 
 
 all::  Cobj18.lib
 

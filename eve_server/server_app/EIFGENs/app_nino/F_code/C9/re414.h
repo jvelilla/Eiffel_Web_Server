@@ -1,0 +1,21 @@
+
+#ifndef _C9_re414_
+#define _C9_re414_
+
+#ifdef __cplusplus
+extern "C" {
+#endif
+
+extern EIF_BOOLEAN F1012_19762(EIF_REFERENCE, EIF_REAL_32);
+extern EIF_INTEGER_32 F1012_19766(EIF_REFERENCE);
+extern EIF_REFERENCE F1012_19778(EIF_REFERENCE);
+extern void EIF_Minit414(void);
+extern EIF_INTEGER_32 F1010_19743(EIF_REFERENCE);
+extern EIF_REFERENCE F1010_19760(EIF_REFERENCE);
+extern EIF_BOOLEAN F1010_19732(EIF_REFERENCE, EIF_REFERENCE);
+
+#ifdef __cplusplus
+}
+#endif
+
+#endif

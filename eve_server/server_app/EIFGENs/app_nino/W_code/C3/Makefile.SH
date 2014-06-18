@@ -55,14 +55,14 @@ $spitshell >>Makefile <<'!NO!SUBS!'
 
 OBJECTS = big_file_C3_c.obj 
 
-OLDOBJECTS =  ws79.o ws79d.o ws81.o ws81d.o wg82.o wg82d.o ws78.o ws78d.o ws80.o \
-	ws80d.o wg77.o wg77d.o js68.o js68d.o pr76.o pr76d.o ad75.o ad75d.o \
-	ob74.o ob74d.o it73.o it73d.o wg71.o wg71d.o ws69.o ws69d.o wg83.o \
-	wg83d.o js67.o js67d.o js66.o js66d.o pr97.o pr97d.o da93.o da93d.o \
-	da92.o da92d.o wg72.o wg72d.o pr96.o pr96d.o da90.o da90d.o ti89.o \
-	ti89d.o ti88.o ti88d.o da91.o da91d.o ti87.o ti87d.o th98.o th98d.o \
-	we95.o we95d.o ws70.o ws70d.o co94.o co94d.o ti86.o ti86d.o we85.o \
-	we85d.o ur84.o ur84d.o 
+OLDOBJECTS =  ws81.o ws81d.o ws83.o ws83d.o wg84.o wg84d.o ws80.o ws80d.o ws82.o \
+	ws82d.o wg79.o wg79d.o js70.o js70d.o pr78.o pr78d.o ad77.o ad77d.o \
+	ob76.o ob76d.o it75.o it75d.o ws73.o ws73d.o wg71.o wg71d.o wg85.o \
+	wg85d.o js69.o js69d.o js68.o js68d.o pr67.o pr67d.o ht66.o ht66d.o \
+	da96.o da96d.o da95.o da95d.o wg72.o wg72d.o pr98.o pr98d.o da93.o \
+	da93d.o ti91.o ti91d.o ti92.o ti92d.o da94.o da94d.o ti90.o ti90d.o \
+	we97.o we97d.o ws74.o ws74d.o ti89.o ti89d.o co88.o co88d.o we87.o \
+	we87d.o ur86.o ur86d.o 
 
 all: Cobj3.o
 

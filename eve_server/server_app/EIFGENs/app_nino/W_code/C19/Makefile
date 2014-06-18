@@ -41,15 +41,15 @@ SYSTEM_IN_DYNAMIC_LIB = app.dll
 
 OBJECTS = big_file_C19_c.obj 
 
-OLDOBJECTS =  sp613.obj sp613d.obj ar620.obj ar620d.obj ty614.obj ty614d.obj ar603.obj ar603d.obj \
-	na615.obj na615d.obj re616.obj re616d.obj li622.obj li622d.obj re621.obj re621d.obj \
-	in609.obj in609d.obj to602.obj to602d.obj it617.obj it617d.obj it618.obj it618d.obj \
-	li607.obj li607d.obj se604.obj se604d.obj dy606.obj dy606d.obj un612.obj un612d.obj \
-	ta610.obj ta610d.obj in619.obj in619d.obj cu623.obj cu623d.obj tr598.obj tr598d.obj \
-	bo599.obj bo599d.obj ch608.obj ch608d.obj ac594.obj ac594d.obj ac624.obj ac624d.obj \
-	bi605.obj bi605d.obj fi600.obj fi600d.obj dy611.obj dy611d.obj ba595.obj ba595d.obj \
-	ba625.obj ba625d.obj co596.obj co596d.obj co626.obj co626d.obj co597.obj co597d.obj \
-	bo601.obj bo601d.obj 
+OLDOBJECTS =  sp605.obj sp605d.obj sp626.obj sp626d.obj ar611.obj ar611d.obj ty599.obj ty599d.obj \
+	ar598.obj ar598d.obj li621.obj li621d.obj na606.obj na606d.obj re607.obj re607d.obj \
+	re600.obj re600d.obj in612.obj in612d.obj to604.obj to604d.obj it609.obj it609d.obj \
+	it610.obj it610d.obj li617.obj li617d.obj se614.obj se614d.obj dy616.obj dy616d.obj \
+	li622.obj li622d.obj un620.obj un620d.obj ta613.obj ta613d.obj in608.obj in608d.obj \
+	tr597.obj tr597d.obj bo601.obj bo601d.obj ch618.obj ch618d.obj ac594.obj ac594d.obj \
+	bi615.obj bi615d.obj fi602.obj fi602d.obj dy619.obj dy619d.obj ba595.obj ba595d.obj \
+	co596.obj co596d.obj di624.obj di624d.obj bo603.obj bo603d.obj st623.obj st623d.obj \
+	ar625.obj ar625d.obj 
 
 all::  Cobj19.lib
 

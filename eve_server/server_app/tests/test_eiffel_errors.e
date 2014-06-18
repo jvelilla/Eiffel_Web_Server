@@ -215,7 +215,7 @@ feature -- Test routines
 			assert ("After_Line", after_line.is_equal ("Feature: extra_feature Version from: APPLICATION"))
 		end
 
-	task_error_multiple_errors
+	test_error_multiple_errors
 			-- New test routine (Multiple errors)
 		note
 			testing:  "covers/{EIFFEL_ERRORS}"
@@ -256,7 +256,7 @@ feature -- Test routines
 
 		end
 
-	task_error_unknown_error
+	test_error_unknown_error
 			-- New test routine (Unknown errors)
 		note
 			testing:  "covers/{EIFFEL_ERRORS}"

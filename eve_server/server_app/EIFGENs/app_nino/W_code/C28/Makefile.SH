@@ -55,15 +55,15 @@ $spitshell >>Makefile <<'!NO!SUBS!'
 
 OBJECTS = big_file_C28_c.obj 
 
-OLDOBJECTS =  sp895.o sp895d.o ar901.o ar901d.o ty892.o ty892d.o ty893.o ty893d.o \
-	ty894.o ty894d.o ar914.o ar914d.o na896.o na896d.o re897.o re897d.o \
-	li903.o li903d.o re902.o re902d.o in920.o in920d.o to913.o to913d.o \
-	it898.o it898d.o it899.o it899d.o li918.o li918d.o se915.o se915d.o \
-	dy917.o dy917d.o un923.o un923d.o ta921.o ta921d.o in900.o in900d.o \
-	cu904.o cu904d.o tr909.o tr909d.o bo910.o bo910d.o ch919.o ch919d.o \
-	ac905.o ac905d.o bi916.o bi916d.o fi911.o fi911d.o dy922.o dy922d.o \
-	ba906.o ba906d.o co907.o co907d.o co908.o co908d.o rt891.o rt891d.o \
-	bo912.o bo912d.o 
+OLDOBJECTS =  sp918.o sp918d.o fu908.o fu908d.o fu910.o fu910d.o ty898.o ty898d.o \
+	ty899.o ty899d.o ty900.o ty900d.o ty902.o ty902d.o ty903.o ty903d.o \
+	ty911.o ty911d.o ty912.o ty912d.o li913.o li913d.o na919.o na919d.o \
+	re920.o re920d.o in891.o in891d.o it922.o it922d.o it923.o it923d.o \
+	ce896.o ce896d.o ce915.o ce915d.o li917.o li917d.o li916.o li916d.o \
+	li914.o li914d.o un894.o un894d.o ta892.o ta892d.o in921.o in921d.o \
+	dy893.o dy893d.o rt901.o rt901d.o rt904.o rt904d.o rt909.o rt909d.o \
+	rt905.o rt905d.o rt895.o rt895d.o rt906.o rt906d.o rt907.o rt907d.o \
+	en897.o en897d.o 
 
 all: Cobj28.o
 

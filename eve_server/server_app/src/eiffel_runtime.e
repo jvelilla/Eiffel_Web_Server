@@ -21,6 +21,7 @@ feature --Access
 	stack_count:INTEGER
 	json_array:JSON_ARRAY
 	json_object:JSON_OBJECT
+	runtime_text:STRING
 
 feature --Execution
 	initialize(a_str:STRING)
@@ -47,9 +48,7 @@ feature --Execution
 			routine_string: STRING
 			message_string:STRING
 			effect_string:STRING
-			--This is the dump string, it has the part of the text before the stack traces, and is only available in the first json object of the array
-			dump_string:STRING
-
+			
 			i:INTEGER
 			error_index:INTEGER
 			error_count:INTEGER
@@ -61,11 +60,11 @@ feature --Execution
 			create routine_string.make_empty
 			create message_string.make_empty
 			create effect_string.make_empty
-			create dump_string.make_empty
+			create runtime_text.make_empty
 			create json_object.make
 
 			error_count:=-1
-			dump_string:=error_message.substring (1, error_message.substring_index ("------", 1)-5)
+			runtime_text:=error_message.substring (1, error_message.substring_index ("------", 1)-5)
 			error_index:=error_message.substring_index ("Effect<br>",1)+10
 			--If the message has an extra blank line in the middle of 2 lines, this skips the blank line
 			if space_checker(error_index) then
@@ -237,11 +236,6 @@ feature --Execution
 					json_object.put_string (routine_string, "Routine")
 					json_object.put_string (message_string, "Message")
 					json_object.put_string (effect_string, "Effect")
-					if json_array.count=0 then
-						json_object.put_string (dump_string, "Initial_Text")
-					else
-						json_object.put_string ("", "Initial_Text")
-					end
 					json_array.add (json_object)
 
 					--Updating the error count
@@ -267,8 +261,6 @@ feature --Execution
 				json_object.put_string ("", "Routine")
 				json_object.put_string ("", "Message")
 				json_object.put_string ("", "Effect")
-				json_object.put_string ("", "Initial_Text")
-				json_object.put_string (error_message, "Dump")
 				json_array.add (json_object)
 				error_count:=error_count+1
 			end

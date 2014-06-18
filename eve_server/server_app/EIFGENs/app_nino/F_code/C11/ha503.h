@@ -1,0 +1,158 @@
+
+#ifndef _C11_ha503_
+#define _C11_ha503_
+
+#ifdef __cplusplus
+extern "C" {
+#endif
+
+extern void F697_13000(EIF_REFERENCE, EIF_INTEGER_32);
+extern void F697_13001(EIF_REFERENCE, EIF_INTEGER_32);
+extern void F697_13002(EIF_REFERENCE, EIF_INTEGER_32);
+extern EIF_REFERENCE F697_13003(EIF_REFERENCE);
+extern EIF_REFERENCE F697_13004(EIF_REFERENCE, EIF_REFERENCE);
+extern EIF_BOOLEAN F697_13006(EIF_REFERENCE, EIF_REFERENCE);
+extern EIF_BOOLEAN F697_13007(EIF_REFERENCE, EIF_REFERENCE);
+extern EIF_BOOLEAN F697_13008(EIF_REFERENCE, EIF_REFERENCE);
+extern EIF_REFERENCE F697_13010(EIF_REFERENCE);
+extern EIF_REFERENCE F697_13011(EIF_REFERENCE);
+extern EIF_REFERENCE F697_13013(EIF_REFERENCE);
+extern EIF_REFERENCE F697_13014(EIF_REFERENCE, EIF_INTEGER_32);
+extern EIF_INTEGER_32 F697_13015(EIF_REFERENCE, EIF_REFERENCE);
+extern EIF_INTEGER_32 F697_13016(EIF_REFERENCE);
+extern EIF_REFERENCE F697_13019(EIF_REFERENCE);
+extern EIF_BOOLEAN F697_13020(EIF_REFERENCE, EIF_REFERENCE);
+extern EIF_BOOLEAN F697_13021(EIF_REFERENCE, EIF_REFERENCE, EIF_REFERENCE);
+extern EIF_BOOLEAN F697_13024(EIF_REFERENCE);
+extern EIF_BOOLEAN F697_13030(EIF_REFERENCE);
+extern EIF_BOOLEAN F697_13031(EIF_REFERENCE);
+extern EIF_BOOLEAN F697_13032(EIF_REFERENCE);
+extern EIF_BOOLEAN F697_13033(EIF_REFERENCE);
+extern EIF_BOOLEAN F697_13036(EIF_REFERENCE, EIF_INTEGER_32);
+extern void F697_13037(EIF_REFERENCE);
+extern void F697_13038(EIF_REFERENCE);
+extern void F697_13040(EIF_REFERENCE, EIF_REFERENCE);
+extern EIF_INTEGER_32 F697_13042(EIF_REFERENCE, EIF_INTEGER_32);
+extern EIF_INTEGER_32 F697_13043(EIF_REFERENCE, EIF_INTEGER_32);
+extern void F697_13044(EIF_REFERENCE, EIF_REFERENCE, EIF_REFERENCE);
+extern void F697_13045(EIF_REFERENCE, EIF_REFERENCE, EIF_REFERENCE);
+extern void F697_13046(EIF_REFERENCE, EIF_REFERENCE, EIF_REFERENCE);
+extern void F697_13050(EIF_REFERENCE, EIF_REFERENCE);
+extern void F697_13052(EIF_REFERENCE);
+extern void F697_13053(EIF_REFERENCE);
+extern EIF_REFERENCE F697_13054(EIF_REFERENCE);
+extern void F697_13055(EIF_REFERENCE, EIF_REFERENCE);
+extern EIF_REFERENCE F697_13056(EIF_REFERENCE, EIF_INTEGER_32);
+extern void F697_13057(EIF_REFERENCE);
+extern EIF_REFERENCE F697_13059(EIF_REFERENCE);
+extern EIF_REFERENCE F697_13060(EIF_REFERENCE);
+extern EIF_REFERENCE F697_13061(EIF_REFERENCE);
+extern EIF_REFERENCE F697_13062(EIF_REFERENCE);
+extern EIF_INTEGER_32 F697_13066(EIF_REFERENCE);
+extern EIF_BOOLEAN F697_13067(EIF_REFERENCE);
+extern EIF_REFERENCE F697_13074(EIF_REFERENCE);
+extern EIF_REFERENCE F697_13075(EIF_REFERENCE);
+extern EIF_INTEGER_32 F697_13076(EIF_REFERENCE, EIF_INTEGER_32);
+extern EIF_BOOLEAN F697_13077(EIF_REFERENCE, EIF_INTEGER_32);
+extern EIF_BOOLEAN F697_13078(EIF_REFERENCE, EIF_INTEGER_32);
+extern EIF_BOOLEAN F697_13079(EIF_REFERENCE, EIF_INTEGER_32);
+extern void F697_13080(EIF_REFERENCE, EIF_REFERENCE);
+extern void F697_13082(EIF_REFERENCE, EIF_REFERENCE);
+extern void F697_13083(EIF_REFERENCE, EIF_REFERENCE);
+extern void F697_13084(EIF_REFERENCE, EIF_REFERENCE);
+extern void F697_13088(EIF_REFERENCE, EIF_REFERENCE);
+extern void F697_13089(EIF_REFERENCE, EIF_REFERENCE);
+extern void F697_13094(EIF_REFERENCE);
+extern void F697_13107(EIF_REFERENCE);
+extern void F697_13109(EIF_REFERENCE, EIF_REFERENCE);
+extern void EIF_Minit503(void);
+extern void F721_12254(EIF_REFERENCE, EIF_INTEGER_32, EIF_INTEGER_32);
+extern EIF_INTEGER_32 F462_9997(EIF_REFERENCE, EIF_INTEGER_32);
+extern EIF_REFERENCE F625_11836(EIF_REFERENCE);
+extern void F955_18842(EIF_REFERENCE, EIF_INTEGER_32, EIF_INTEGER_32, EIF_INTEGER_32);
+extern void F957_18821(EIF_REFERENCE, EIF_BOOLEAN, EIF_INTEGER_32);
+extern void F957_18842(EIF_REFERENCE, EIF_BOOLEAN, EIF_INTEGER_32, EIF_INTEGER_32);
+extern EIF_INTEGER_32 F957_18832(EIF_REFERENCE);
+extern void F955_18821(EIF_REFERENCE, EIF_INTEGER_32, EIF_INTEGER_32);
+extern void F957_18839(EIF_REFERENCE, EIF_BOOLEAN, EIF_INTEGER_32);
+extern void F625_11835(EIF_REFERENCE);
+extern char *(*R11683[])();
+extern char *(*R9239[])();
+extern char *(*R11685[])();
+extern char *(*R11686[])();
+extern char *(*R11687[])();
+extern char *(*R11645[])();
+extern char *(*R11626[])();
+extern char *(*R11647[])();
+extern char *(*R11648[])();
+extern char *(*R16640[])();
+extern char *(*R16604[])();
+extern char *(*R11691[])();
+extern char *(*R11692[])();
+extern char *(*R11650[])();
+extern char *(*R11679[])();
+extern char *(*R11652[])();
+extern char *(*R11653[])();
+extern char *(*R9798[])();
+extern char *(*R9799[])();
+extern char *(*R9800[])();
+extern char *(*R11343[])();
+extern char *(*R11074[])();
+extern char *(*R16621[])();
+extern char *(*R9211[])();
+extern char *(*R11309[])();
+extern char *(*R11660[])();
+extern char *(*R11697[])();
+extern char *(*R14689[])();
+extern char *(*R11507[])();
+extern char *(*R11624[])();
+extern char *(*R11669[])();
+extern char *(*R11627[])();
+extern char *(*R16620[])();
+extern char *(*R9804[])();
+extern char *(*R16605[])();
+extern char *(*R11631[])();
+extern char *(*R11670[])();
+extern char *(*R11642[])();
+extern char *(*R11643[])();
+extern char *(*R11634[])();
+extern char *(*R11636[])();
+extern char *(*R11710[])();
+extern char *(*R11326[])();
+extern char *(*R9230[])();
+extern char *(*R16634[])();
+extern char *(*R9234[])();
+extern char *(*R11680[])();
+extern char *(*R11681[])();
+extern char *(*R11682[])();
+extern long O11662[];
+extern long O11663[];
+extern long O11664[];
+extern long O11665[];
+extern long O11666[];
+extern long O11667[];
+extern long O11668[];
+extern long O11627[];
+extern long O11671[];
+extern long O11672[];
+extern long O11676[];
+extern long O11677[];
+extern long O11635[];
+extern long O11712[];
+extern long O9209[];
+extern long O11678[];
+extern long O10387[];
+extern EIF_TYPE_INDEX Y11662[];
+extern EIF_TYPE_INDEX *Y11662_gen_type [];
+extern EIF_TYPE_INDEX Y11663[];
+extern EIF_TYPE_INDEX *Y11663_gen_type [];
+extern EIF_TYPE_INDEX Y9241[];
+extern EIF_TYPE_INDEX *Y9241_gen_type [];
+extern EIF_TYPE_INDEX Y9214[];
+extern EIF_TYPE_INDEX *Y9214_gen_type [];
+
+#ifdef __cplusplus
+}
+#endif
+
+#endif

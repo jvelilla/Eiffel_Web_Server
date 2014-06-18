@@ -1,0 +1,6 @@
+sample	ACCOUNT	make	F861_6959	C1\ac861.c
+sample	ACCOUNT	balance	F861_6960	C1\ac861.c
+sample	ACCOUNT	withdraw	F861_6961	C1\ac861.c
+sample	ACCOUNT	deposit	F861_6962	C1\ac861.c
+sample	APPLICATION	make	F862_6963	C1\ap862.c
+sample	APPLICATION	extra_feature	F862_6964	C1\ap862.c

@@ -1,0 +1,185 @@
+/*
+ * Code for class WGI_META_NAMES
+ */
+
+#include "eif_eiffel.h"
+#include "../E1/estructure.h"
+#include "../E1/eoffsets.h"
+
+#include "wg64.h"
+
+#ifdef __cplusplus
+extern "C" {
+#endif
+
+
+#ifdef __cplusplus
+}
+#endif
+
+
+#ifdef __cplusplus
+extern "C" {
+#endif
+
+/* {WGI_META_NAMES}.request_uri */
+
+EIF_REFERENCE F86_6690 (EIF_REFERENCE Current)
+{
+	GTCX
+	RTOUC (187,RTMS_EX_H("REQUEST_URI",11,1391326793));
+}
+
+/* {WGI_META_NAMES}.request_method */
+
+EIF_REFERENCE F86_6691 (EIF_REFERENCE Current)
+{
+	GTCX
+	RTOUC (188,RTMS_EX_H("REQUEST_METHOD",14,188401988));
+}
+
+/* {WGI_META_NAMES}.query_string */
+
+EIF_REFERENCE F86_6692 (EIF_REFERENCE Current)
+{
+	GTCX
+	RTOUC (189,RTMS_EX_H("QUERY_STRING",12,900510023));
+}
+
+/* {WGI_META_NAMES}.content_type */
+
+EIF_REFERENCE F86_6693 (EIF_REFERENCE Current)
+{
+	GTCX
+	RTOUC (190,RTMS_EX_H("CONTENT_TYPE",12,496479557));
+}
+
+/* {WGI_META_NAMES}.content_length */
+
+EIF_REFERENCE F86_6694 (EIF_REFERENCE Current)
+{
+	GTCX
+	RTOUC (191,RTMS_EX_H("CONTENT_LENGTH",14,768392520));
+}
+
+/* {WGI_META_NAMES}.path_info */
+
+EIF_REFERENCE F86_6695 (EIF_REFERENCE Current)
+{
+	GTCX
+	RTOUC (192,RTMS_EX_H("PATH_INFO",9,1139750479));
+}
+
+/* {WGI_META_NAMES}.path_translated */
+
+EIF_REFERENCE F86_6696 (EIF_REFERENCE Current)
+{
+	GTCX
+	RTOUC (193,RTMS_EX_H("PATH_TRANSLATED",15,2117141572));
+}
+
+/* {WGI_META_NAMES}.http_host */
+
+EIF_REFERENCE F86_6699 (EIF_REFERENCE Current)
+{
+	GTCX
+	RTOUC (194,RTMS_EX_H("HTTP_HOST",9,671289172));
+}
+
+/* {WGI_META_NAMES}.http_cookie */
+
+EIF_REFERENCE F86_6700 (EIF_REFERENCE Current)
+{
+	GTCX
+	RTOUC (41,RTMS_EX_H("HTTP_COOKIE",11,258319173));
+}
+
+/* {WGI_META_NAMES}.http_accept */
+
+EIF_REFERENCE F86_6702 (EIF_REFERENCE Current)
+{
+	GTCX
+	RTOUC (195,RTMS_EX_H("HTTP_ACCEPT",11,52576852));
+}
+
+/* {WGI_META_NAMES}.http_transfer_encoding */
+
+EIF_REFERENCE F86_6709 (EIF_REFERENCE Current)
+{
+	GTCX
+	RTOUC (196,RTMS_EX_H("HTTP_TRANSFER_ENCODING",22,1343538247));
+}
+
+/* {WGI_META_NAMES}.http_if_match */
+
+EIF_REFERENCE F86_6711 (EIF_REFERENCE Current)
+{
+	GTCX
+	RTOUC (197,RTMS_EX_H("HTTP_IF_MATCH",13,286744136));
+}
+
+/* {WGI_META_NAMES}.remote_host */
+
+EIF_REFERENCE F86_6720 (EIF_REFERENCE Current)
+{
+	GTCX
+	RTOUC (198,RTMS_EX_H("REMOTE_HOST",11,1847613012));
+}
+
+/* {WGI_META_NAMES}.remote_addr */
+
+EIF_REFERENCE F86_6721 (EIF_REFERENCE Current)
+{
+	GTCX
+	RTOUC (199,RTMS_EX_H("REMOTE_ADDR",11,1729447762));
+}
+
+/* {WGI_META_NAMES}.script_name */
+
+EIF_REFERENCE F86_6724 (EIF_REFERENCE Current)
+{
+	GTCX
+	RTOUC (200,RTMS_EX_H("SCRIPT_NAME",11,129752645));
+}
+
+/* {WGI_META_NAMES}.server_name */
+
+EIF_REFERENCE F86_6725 (EIF_REFERENCE Current)
+{
+	GTCX
+	RTOUC (201,RTMS_EX_H("SERVER_NAME",11,1169045317));
+}
+
+/* {WGI_META_NAMES}.server_port */
+
+EIF_REFERENCE F86_6726 (EIF_REFERENCE Current)
+{
+	GTCX
+	RTOUC (202,RTMS_EX_H("SERVER_PORT",11,1203518548));
+}
+
+/* {WGI_META_NAMES}.request_time */
+
+EIF_REFERENCE F86_6729 (EIF_REFERENCE Current)
+{
+	GTCX
+	RTOUC (37,RTMS_EX_H("REQUEST_TIME",12,1828124741));
+}
+
+/* {WGI_META_NAMES}.orig_path_info */
+
+EIF_REFERENCE F86_6731 (EIF_REFERENCE Current)
+{
+	GTCX
+	RTOUC (203,RTMS_EX_H("ORIG_PATH_INFO",14,888212815));
+}
+
+void EIF_Minit64 (void)
+{
+	GTCX
+}
+
+
+#ifdef __cplusplus
+}
+#endif

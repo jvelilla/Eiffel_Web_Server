@@ -1,5 +1,5 @@
 /*
- * Code for class WSF_URI_TEMPLATE_HANDLER
+ * Code for class WSF_HANDLER
  */
 
 #include "eif_eiffel.h"
@@ -10,7 +10,8 @@
 extern "C" {
 #endif
 
-extern EIF_TYPED_VALUE F240_11037(EIF_REFERENCE, EIF_TYPED_VALUE);
+extern EIF_TYPED_VALUE F240_11058(EIF_REFERENCE, EIF_TYPED_VALUE);
+extern void F240_11059(EIF_REFERENCE, EIF_TYPED_VALUE, EIF_TYPED_VALUE);
 extern void EIF_Minit240(void);
 
 #ifdef __cplusplus
@@ -32,50 +33,40 @@ extern "C" {
 extern "C" {
 #endif
 
-/* {WSF_URI_TEMPLATE_HANDLER}.new_mapping */
-EIF_TYPED_VALUE F240_11037 (EIF_REFERENCE Current, EIF_TYPED_VALUE arg1x)
+/* {WSF_HANDLER}.is_valid_context */
+EIF_TYPED_VALUE F240_11058 (EIF_REFERENCE Current, EIF_TYPED_VALUE arg1x)
 {
 	GTCX
-	char *l_feature_name = "new_mapping";
+	char *l_feature_name = "is_valid_context";
 	RTEX;
 #define arg1 arg1x.it_r
-	EIF_TYPED_VALUE ur1x = {{0}, SK_REF};
-#define ur1 ur1x.it_r
-	EIF_TYPED_VALUE ur2x = {{0}, SK_REF};
-#define ur2 ur2x.it_r
-	EIF_REFERENCE tr1 = NULL;
-	EIF_REFERENCE Result = ((EIF_REFERENCE) 0);
+	EIF_BOOLEAN Result = ((EIF_BOOLEAN) 0);
 	
-	RTCDT;
 	RTSN;
 	RTDA;
 	RTLD;
 	
 	
-	RTLI(6);
+	RTLI(2);
 	RTLR(0,arg1);
-	RTLR(1,tr1);
-	RTLR(2,ur1);
-	RTLR(3,Current);
-	RTLR(4,ur2);
-	RTLR(5,Result);
-	RTLU (SK_REF, &Result);
+	RTLR(1,Current);
+	RTLU (SK_BOOL, &Result);
 	RTLU(SK_REF,&arg1);
 	RTLU (SK_REF, &Current);
 	
-	RTEAA(l_feature_name, 239, Current, 0, 1, 3966);
-	RTSA(dtype);
+	RTEAA(l_feature_name, 239, Current, 0, 1, 3983);
+	RTSA(Dtype(Current));
 	RTSC;
-	RTME(dtype, 0);
+	RTME(Dtype(Current), 0);
 	RTGC;
-	RTDBGEAA(239, Current, 3966);
+	RTDBGEAA(239, Current, 3983);
 	if (arg1) {
-		RTCC(arg1, 239, l_feature_name, 1, 346);
+		RTCC(arg1, 239, l_feature_name, 1, 365);
 	}
 	RTIV(Current, RTAL);
 	if ((RTAL & CK_REQUIRE) || RTAC) {
 		RTHOOK(1);
-		RTCT("a_uri_attached", EX_PRE);
+		RTCT("req_attached", EX_PRE);
 		RTTE((EIF_BOOLEAN)(arg1 != NULL), label_1);
 		RTCK;
 		RTJB;
@@ -84,34 +75,75 @@ label_1:
 	}
 body:;
 	RTHOOK(2);
-	RTDBGAL(Current, 0, 0xF800016F, 0,0); /* Result */
+	RTDBGAL(Current, 0, 0x04000000, 1,0); /* Result */
 	
-	tr1 = RTLN(370);
-	ur1 = RTCCL(arg1);
-	ur2 = RTCCL(Current);
-	(FUNCTION_CAST(void, (EIF_REFERENCE, EIF_TYPED_VALUE, EIF_TYPED_VALUE)) RTWC(16587, Dtype(tr1)))(tr1, ur1x, ur2x);
-	RTNHOOK(2,1);
-	Result = (EIF_REFERENCE) RTCCL(tr1);
-	if (RTAL & CK_ENSURE) {
-		RTHOOK(3);
-		RTCT("result_attached", EX_POST);
-		if ((EIF_BOOLEAN)(Result != NULL)) {
-			RTCK;
-		} else {
-			RTCF;
-		}
-	}
+	Result = (EIF_BOOLEAN) (EIF_BOOLEAN) 1;
 	RTVI(Current, RTAL);
 	RTRS;
-	RTHOOK(4);
+	RTHOOK(3);
 	RTDBGLE;
 	RTMD(0);
 	RTLE;
 	RTLO(3);
 	RTEE;
-	{ EIF_TYPED_VALUE r; r.type = SK_REF; r.it_r = Result; return r; }
-#undef ur1
-#undef ur2
+	{ EIF_TYPED_VALUE r; r.type = SK_BOOL; r.it_b = Result; return r; }
+#undef arg1
+}
+
+/* {WSF_HANDLER}.on_mapped */
+void F240_11059 (EIF_REFERENCE Current, EIF_TYPED_VALUE arg1x, EIF_TYPED_VALUE arg2x)
+{
+	GTCX
+	char *l_feature_name = "on_mapped";
+	RTEX;
+#define arg1 arg1x.it_r
+#define arg2 arg2x.it_r
+	RTSN;
+	RTDA;
+	RTLD;
+	
+	
+	RTLI(3);
+	RTLR(0,arg1);
+	RTLR(1,arg2);
+	RTLR(2,Current);
+	RTLU (SK_VOID, NULL);
+	RTLU(SK_REF,&arg1);
+	RTLU(SK_REF,&arg2);
+	RTLU (SK_REF, &Current);
+	
+	RTEAA(l_feature_name, 239, Current, 0, 2, 3984);
+	RTSA(Dtype(Current));
+	RTSC;
+	RTME(Dtype(Current), 0);
+	RTGC;
+	RTDBGEAA(239, Current, 3984);
+	if (arg1) {
+		RTCC(arg1, 239, l_feature_name, 1, 371);
+	}
+	if (arg2) {
+		RTCC(arg2, 239, l_feature_name, 2, 290);
+	}
+	RTIV(Current, RTAL);
+	if ((RTAL & CK_REQUIRE) || RTAC) {
+		RTHOOK(1);
+		RTCT("a_mapping_attached", EX_PRE);
+		RTTE((EIF_BOOLEAN)(arg1 != NULL), label_1);
+		RTCK;
+		RTJB;
+label_1:
+		RTCF;
+	}
+body:;
+	RTVI(Current, RTAL);
+	RTRS;
+	RTHOOK(2);
+	RTDBGLE;
+	RTMD(0);
+	RTLE;
+	RTLO(4);
+	RTEE;
+#undef arg2
 #undef arg1
 }
 

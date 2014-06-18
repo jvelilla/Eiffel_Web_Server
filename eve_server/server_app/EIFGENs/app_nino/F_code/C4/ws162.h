@@ -1,0 +1,30 @@
+
+#ifndef _C4_ws162_
+#define _C4_ws162_
+
+#ifdef __cplusplus
+extern "C" {
+#endif
+
+extern void F158_9068(EIF_REFERENCE, EIF_REFERENCE, EIF_REFERENCE);
+extern void F158_9069(EIF_REFERENCE, EIF_REFERENCE);
+extern EIF_REFERENCE F158_9070(EIF_REFERENCE);
+extern void F158_9071(EIF_REFERENCE);
+extern void F158_9072(EIF_REFERENCE);
+extern void F158_9076(EIF_REFERENCE, EIF_REFERENCE);
+extern void F158_9078(EIF_REFERENCE);
+extern void EIF_Minit162(void);
+extern EIF_BOOLEAN F157_8215(EIF_REFERENCE);
+extern void F157_8226(EIF_REFERENCE);
+extern void F154_8176(EIF_REFERENCE, EIF_REFERENCE);
+extern void F157_8224(EIF_REFERENCE, EIF_REFERENCE);
+extern void F157_8210(EIF_REFERENCE, EIF_REFERENCE);
+extern void F116_8568(EIF_REFERENCE);
+extern void F157_8213(EIF_REFERENCE);
+extern void F116_8558(EIF_REFERENCE, EIF_REFERENCE);
+
+#ifdef __cplusplus
+}
+#endif
+
+#endif

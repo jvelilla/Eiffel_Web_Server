@@ -1,5 +1,5 @@
 /*
- * Code for class WSF_URI_MAPPING
+ * Code for class WSF_SELF_DOCUMENTED_ROUTER_MAPPING
  */
 
 #include "eif_eiffel.h"
@@ -10,9 +10,7 @@
 extern "C" {
 #endif
 
-extern EIF_TYPED_VALUE F373_18839(EIF_REFERENCE);
-extern void F373_18840(EIF_REFERENCE, EIF_TYPED_VALUE);
-extern void F373_18841(EIF_REFERENCE, EIF_TYPED_VALUE, EIF_TYPED_VALUE, EIF_TYPED_VALUE);
+extern EIF_TYPED_VALUE F373_18877(EIF_REFERENCE, EIF_TYPED_VALUE);
 extern void EIF_Minit373(void);
 
 #ifdef __cplusplus
@@ -34,120 +32,85 @@ extern "C" {
 extern "C" {
 #endif
 
-/* {WSF_URI_MAPPING}.handler */
-EIF_TYPED_VALUE F373_18839 (EIF_REFERENCE Current)
-{
-	EIF_TYPED_VALUE r;
-	r.type = SK_REF;
-	r.it_r = *(EIF_REFERENCE *)(Current + RTWA(16607,Dtype(Current)));
-	return r;
-}
-
-
-/* {WSF_URI_MAPPING}.set_handler */
-void F373_18840 (EIF_REFERENCE Current, EIF_TYPED_VALUE arg1x)
+/* {WSF_SELF_DOCUMENTED_ROUTER_MAPPING}.documentation */
+EIF_TYPED_VALUE F373_18877 (EIF_REFERENCE Current, EIF_TYPED_VALUE arg1x)
 {
 	GTCX
-	char *l_feature_name = "set_handler";
+	char *l_feature_name = "documentation";
 	RTEX;
+	EIF_REFERENCE loc1 = (EIF_REFERENCE) 0;
 #define arg1 arg1x.it_r
-	RTSN;
-	RTDA;
-	RTLD;
-	
-	
-	RTLI(2);
-	RTLR(0,arg1);
-	RTLR(1,Current);
-	RTLU (SK_VOID, NULL);
-	RTLU(SK_REF,&arg1);
-	RTLU (SK_REF, &Current);
-	
-	RTEAA(l_feature_name, 372, Current, 0, 1, 13114);
-	RTSA(Dtype(Current));
-	RTSC;
-	RTME(Dtype(Current), 0);
-	RTGC;
-	RTDBGEAA(372, Current, 13114);
-	RTCC(arg1, 372, l_feature_name, 1, RTWCT(16607, Dtype(Current), Dftype(Current)));
-	RTIV(Current, RTAL);
-	RTHOOK(1);
-	RTDBGAA(Current, Dtype(Current), 16607, 0xF80000F1, 0); /* handler */
-	
-	RTAR(Current, arg1);
-	*(EIF_REFERENCE *)(Current + RTWA(16607, Dtype(Current))) = (EIF_REFERENCE) RTCCL(arg1);
-	RTVI(Current, RTAL);
-	RTRS;
-	RTHOOK(2);
-	RTDBGLE;
-	RTMD(0);
-	RTLE;
-	RTLO(3);
-	RTEE;
-#undef arg1
-}
-
-/* {WSF_URI_MAPPING}.execute_handler */
-void F373_18841 (EIF_REFERENCE Current, EIF_TYPED_VALUE arg1x, EIF_TYPED_VALUE arg2x, EIF_TYPED_VALUE arg3x)
-{
-	GTCX
-	char *l_feature_name = "execute_handler";
-	RTEX;
-#define arg1 arg1x.it_r
-#define arg2 arg2x.it_r
-#define arg3 arg3x.it_r
+	EIF_TYPED_VALUE up1x = {{0}, SK_POINTER};
+#define up1 up1x.it_p
 	EIF_TYPED_VALUE ur1x = {{0}, SK_REF};
 #define ur1 ur1x.it_r
 	EIF_TYPED_VALUE ur2x = {{0}, SK_REF};
 #define ur2 ur2x.it_r
+	EIF_REFERENCE tr1 = NULL;
+	EIF_REFERENCE Result = ((EIF_REFERENCE) 0);
+	
 	RTSN;
 	RTDA;
 	RTLD;
 	
 	
-	RTLI(6);
+	RTLI(7);
 	RTLR(0,arg1);
-	RTLR(1,arg2);
-	RTLR(2,arg3);
-	RTLR(3,ur1);
-	RTLR(4,ur2);
-	RTLR(5,Current);
-	RTLU (SK_VOID, NULL);
+	RTLR(1,loc1);
+	RTLR(2,Current);
+	RTLR(3,tr1);
+	RTLR(4,ur1);
+	RTLR(5,ur2);
+	RTLR(6,Result);
+	RTLU (SK_REF, &Result);
 	RTLU(SK_REF,&arg1);
-	RTLU(SK_REF,&arg2);
-	RTLU(SK_REF,&arg3);
 	RTLU (SK_REF, &Current);
+	RTLU(SK_REF, &loc1);
 	
-	RTEAA(l_feature_name, 372, Current, 0, 3, 13115);
+	RTEAA(l_feature_name, 372, Current, 1, 1, 13144);
 	RTSA(Dtype(Current));
 	RTSC;
 	RTME(Dtype(Current), 0);
 	RTGC;
-	RTDBGEAA(372, Current, 13115);
-	RTCC(arg1, 372, l_feature_name, 1, RTWCT(16607, Dtype(Current), Dftype(Current)));
-	if (arg2) {
-		RTCC(arg2, 372, l_feature_name, 2, 361);
-	}
-	if (arg3) {
-		RTCC(arg3, 372, l_feature_name, 3, 145);
+	RTDBGEAA(372, Current, 13144);
+	if (arg1) {
+		RTCC(arg1, 372, l_feature_name, 1, 290);
 	}
 	RTIV(Current, RTAL);
 	RTHOOK(1);
-	ur1 = RTCCL(arg2);
-	ur2 = RTCCL(arg3);
-	(FUNCTION_CAST(void, (EIF_REFERENCE, EIF_TYPED_VALUE, EIF_TYPED_VALUE)) RTVF(10292, "execute", arg1))(arg1, ur1x, ur2x);
+	tr1 = ((up1x = (FUNCTION_CAST(EIF_TYPED_VALUE, (EIF_REFERENCE)) RTWF(16652, Dtype(Current)))(Current)), (((up1x.type & SK_HEAD) == SK_REF)? (EIF_REFERENCE) 0: (up1x.it_r = RTBU(up1x))), (up1x.type = SK_POINTER), up1x.it_r);
+	loc1 = RTCCL(tr1);
+	loc1 = RTRV(eif_non_attached_type(162),loc1);
+	if (EIF_TEST(loc1)) {
+		RTHOOK(2);
+		RTDBGAL(Current, 0, 0xF8000010, 0,0); /* Result */
+		
+		ur1 = RTCCL(Current);
+		ur2 = RTCCL(arg1);
+		tr1 = ((up1x = (FUNCTION_CAST(EIF_TYPED_VALUE, (EIF_REFERENCE, EIF_TYPED_VALUE, EIF_TYPED_VALUE)) RTVF(8757, "mapping_documentation", loc1))(loc1, ur1x, ur2x)), (((up1x.type & SK_HEAD) == SK_REF)? (EIF_REFERENCE) 0: (up1x.it_r = RTBU(up1x))), (up1x.type = SK_POINTER), up1x.it_r);
+		Result = (EIF_REFERENCE) RTCCL(tr1);
+	} else {
+		RTHOOK(3);
+		RTDBGAL(Current, 0, 0xF8000010, 0,0); /* Result */
+		
+		tr1 = RTLN(16);
+		ur1 = RTCCL(Current);
+		(FUNCTION_CAST(void, (EIF_REFERENCE, EIF_TYPED_VALUE)) RTWC(3793, Dtype(tr1)))(tr1, ur1x);
+		RTNHOOK(3,1);
+		Result = (EIF_REFERENCE) RTCCL(tr1);
+	}
 	RTVI(Current, RTAL);
 	RTRS;
-	RTHOOK(2);
+	RTHOOK(4);
 	RTDBGLE;
 	RTMD(0);
 	RTLE;
-	RTLO(5);
+	RTLO(4);
 	RTEE;
+	{ EIF_TYPED_VALUE r; r.type = SK_REF; r.it_r = Result; return r; }
+#undef up1
 #undef ur1
 #undef ur2
-#undef arg3
-#undef arg2
 #undef arg1
 }
 

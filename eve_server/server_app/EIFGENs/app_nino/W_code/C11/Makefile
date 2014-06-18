@@ -41,15 +41,15 @@ SYSTEM_IN_DYNAMIC_LIB = app.dll
 
 OBJECTS = big_file_C11_c.obj 
 
-OLDOBJECTS =  po341.obj po341d.obj po342.obj po342d.obj tu330.obj tu330d.obj st351.obj st351d.obj \
-	st350.obj st350d.obj ch335.obj ch335d.obj ch336.obj ch336d.obj ch332.obj ch332d.obj \
-	ch333.obj ch333d.obj bo338.obj bo338d.obj bo339.obj bo339d.obj im346.obj im346d.obj \
-	fi353.obj fi353d.obj po340.obj po340d.obj bo337.obj bo337d.obj ch334.obj ch334d.obj \
-	ch331.obj ch331d.obj st349.obj st349d.obj re343.obj re343d.obj re347.obj re347d.obj \
-	re345.obj re345d.obj im348.obj im348d.obj de356.obj de356d.obj ws362.obj ws362d.obj \
-	im344.obj im344d.obj pa352.obj pa352d.obj ht361.obj ht361d.obj ws360.obj ws360d.obj \
-	da359.obj da359d.obj fi358.obj fi358d.obj we355.obj we355d.obj ur357.obj ur357d.obj \
-	we354.obj we354d.obj 
+OLDOBJECTS =  po345.obj po345d.obj po346.obj po346d.obj tu334.obj tu334d.obj st355.obj st355d.obj \
+	st354.obj st354d.obj ch339.obj ch339d.obj ch340.obj ch340d.obj ch336.obj ch336d.obj \
+	ch337.obj ch337d.obj bo342.obj bo342d.obj bo343.obj bo343d.obj im350.obj im350d.obj \
+	fi357.obj fi357d.obj po344.obj po344d.obj ha332.obj ha332d.obj bo341.obj bo341d.obj \
+	ch338.obj ch338d.obj ch335.obj ch335d.obj st353.obj st353d.obj re347.obj re347d.obj \
+	re351.obj re351d.obj re349.obj re349d.obj im352.obj im352d.obj de360.obj de360d.obj \
+	im348.obj im348d.obj pa356.obj pa356d.obj uu333.obj uu333d.obj fi362.obj fi362d.obj \
+	we331.obj we331d.obj we359.obj we359d.obj ur361.obj ur361d.obj we358.obj we358d.obj \
+	we330.obj we330d.obj 
 
 all::  Cobj11.lib
 

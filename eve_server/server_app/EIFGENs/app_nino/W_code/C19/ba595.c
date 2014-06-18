@@ -1,5 +1,5 @@
 /*
- * Code for class BAG [NATURAL_64]
+ * Code for class BAG [BOOLEAN]
  */
 
 #include "eif_eiffel.h"

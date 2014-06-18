@@ -1,0 +1,520 @@
+/*
+ * Code for class CODE_VALIDITY_CHECKER
+ */
+
+#include "eif_eiffel.h"
+#include "../E1/estructure.h"
+#include "../E1/eoffsets.h"
+
+#include "co88.h"
+
+#ifdef __cplusplus
+extern "C" {
+#endif
+
+
+#ifdef __cplusplus
+}
+#endif
+
+
+#ifdef __cplusplus
+extern "C" {
+#endif
+
+/* {CODE_VALIDITY_CHECKER}.is_day */
+EIF_BOOLEAN F133_7757 (EIF_REFERENCE Current, EIF_REFERENCE arg1)
+{
+	GTCX
+	EIF_REFERENCE tr1 = NULL;
+	EIF_BOOLEAN Result = ((EIF_BOOLEAN) 0);
+	
+	RTLD;
+	
+	RTLI(2);
+	RTLR(0,arg1);
+	RTLR(1,tr1);
+	
+	RTGC;
+	tr1 = RTMS_EX_H("dd",2,25700);
+	Result = (FUNCTION_CAST(EIF_BOOLEAN, (EIF_REFERENCE, EIF_REFERENCE)) R11[Dtype(arg1)-0])(RTCV(arg1), tr1);
+	RTLE;
+	return Result;
+}
+
+/* {CODE_VALIDITY_CHECKER}.is_day0 */
+EIF_BOOLEAN F133_7758 (EIF_REFERENCE Current, EIF_REFERENCE arg1)
+{
+	GTCX
+	EIF_REFERENCE tr1 = NULL;
+	EIF_BOOLEAN Result = ((EIF_BOOLEAN) 0);
+	
+	RTLD;
+	
+	RTLI(2);
+	RTLR(0,arg1);
+	RTLR(1,tr1);
+	
+	RTGC;
+	tr1 = RTMS_EX_H("[0]dd",5,812125796);
+	Result = (FUNCTION_CAST(EIF_BOOLEAN, (EIF_REFERENCE, EIF_REFERENCE)) R11[Dtype(arg1)-0])(RTCV(arg1), tr1);
+	RTLE;
+	return Result;
+}
+
+/* {CODE_VALIDITY_CHECKER}.is_day_text */
+EIF_BOOLEAN F133_7759 (EIF_REFERENCE Current, EIF_REFERENCE arg1)
+{
+	GTCX
+	EIF_REFERENCE tr1 = NULL;
+	EIF_BOOLEAN Result = ((EIF_BOOLEAN) 0);
+	
+	RTLD;
+	
+	RTLI(2);
+	RTLR(0,arg1);
+	RTLR(1,tr1);
+	
+	RTGC;
+	tr1 = RTMS_EX_H("ddd",3,6579300);
+	Result = (FUNCTION_CAST(EIF_BOOLEAN, (EIF_REFERENCE, EIF_REFERENCE)) R11[Dtype(arg1)-0])(RTCV(arg1), tr1);
+	RTLE;
+	return Result;
+}
+
+/* {CODE_VALIDITY_CHECKER}.is_year4 */
+EIF_BOOLEAN F133_7760 (EIF_REFERENCE Current, EIF_REFERENCE arg1)
+{
+	GTCX
+	EIF_REFERENCE tr1 = NULL;
+	EIF_BOOLEAN Result = ((EIF_BOOLEAN) 0);
+	
+	RTLD;
+	
+	RTLI(2);
+	RTLR(0,arg1);
+	RTLR(1,tr1);
+	
+	RTGC;
+	tr1 = RTMS_EX_H("yyyy",4,2038004089);
+	Result = (FUNCTION_CAST(EIF_BOOLEAN, (EIF_REFERENCE, EIF_REFERENCE)) R11[Dtype(arg1)-0])(RTCV(arg1), tr1);
+	RTLE;
+	return Result;
+}
+
+/* {CODE_VALIDITY_CHECKER}.is_year2 */
+EIF_BOOLEAN F133_7761 (EIF_REFERENCE Current, EIF_REFERENCE arg1)
+{
+	GTCX
+	EIF_REFERENCE tr1 = NULL;
+	EIF_BOOLEAN Result = ((EIF_BOOLEAN) 0);
+	
+	RTLD;
+	
+	RTLI(2);
+	RTLR(0,arg1);
+	RTLR(1,tr1);
+	
+	RTGC;
+	tr1 = RTMS_EX_H("yy",2,31097);
+	Result = (FUNCTION_CAST(EIF_BOOLEAN, (EIF_REFERENCE, EIF_REFERENCE)) R11[Dtype(arg1)-0])(RTCV(arg1), tr1);
+	RTLE;
+	return Result;
+}
+
+/* {CODE_VALIDITY_CHECKER}.is_month */
+EIF_BOOLEAN F133_7762 (EIF_REFERENCE Current, EIF_REFERENCE arg1)
+{
+	GTCX
+	EIF_REFERENCE tr1 = NULL;
+	EIF_BOOLEAN Result = ((EIF_BOOLEAN) 0);
+	
+	RTLD;
+	
+	RTLI(2);
+	RTLR(0,arg1);
+	RTLR(1,tr1);
+	
+	RTGC;
+	tr1 = RTMS_EX_H("mm",2,28013);
+	Result = (FUNCTION_CAST(EIF_BOOLEAN, (EIF_REFERENCE, EIF_REFERENCE)) R11[Dtype(arg1)-0])(RTCV(arg1), tr1);
+	RTLE;
+	return Result;
+}
+
+/* {CODE_VALIDITY_CHECKER}.is_month0 */
+EIF_BOOLEAN F133_7763 (EIF_REFERENCE Current, EIF_REFERENCE arg1)
+{
+	GTCX
+	EIF_REFERENCE tr1 = NULL;
+	EIF_BOOLEAN Result = ((EIF_BOOLEAN) 0);
+	
+	RTLD;
+	
+	RTLI(2);
+	RTLR(0,arg1);
+	RTLR(1,tr1);
+	
+	RTGC;
+	tr1 = RTMS_EX_H("[0]mm",5,812128109);
+	Result = (FUNCTION_CAST(EIF_BOOLEAN, (EIF_REFERENCE, EIF_REFERENCE)) R11[Dtype(arg1)-0])(RTCV(arg1), tr1);
+	RTLE;
+	return Result;
+}
+
+/* {CODE_VALIDITY_CHECKER}.is_month_text */
+EIF_BOOLEAN F133_7764 (EIF_REFERENCE Current, EIF_REFERENCE arg1)
+{
+	GTCX
+	EIF_REFERENCE tr1 = NULL;
+	EIF_BOOLEAN Result = ((EIF_BOOLEAN) 0);
+	
+	RTLD;
+	
+	RTLI(2);
+	RTLR(0,arg1);
+	RTLR(1,tr1);
+	
+	RTGC;
+	tr1 = RTMS_EX_H("mmm",3,7171437);
+	Result = (FUNCTION_CAST(EIF_BOOLEAN, (EIF_REFERENCE, EIF_REFERENCE)) R11[Dtype(arg1)-0])(RTCV(arg1), tr1);
+	RTLE;
+	return Result;
+}
+
+/* {CODE_VALIDITY_CHECKER}.is_hour */
+EIF_BOOLEAN F133_7765 (EIF_REFERENCE Current, EIF_REFERENCE arg1)
+{
+	GTCX
+	EIF_REFERENCE tr1 = NULL;
+	EIF_BOOLEAN Result = ((EIF_BOOLEAN) 0);
+	
+	RTLD;
+	
+	RTLI(2);
+	RTLR(0,arg1);
+	RTLR(1,tr1);
+	
+	RTGC;
+	tr1 = RTMS_EX_H("hh",2,26728);
+	Result = (FUNCTION_CAST(EIF_BOOLEAN, (EIF_REFERENCE, EIF_REFERENCE)) R11[Dtype(arg1)-0])(RTCV(arg1), tr1);
+	RTLE;
+	return Result;
+}
+
+/* {CODE_VALIDITY_CHECKER}.is_hour0 */
+EIF_BOOLEAN F133_7766 (EIF_REFERENCE Current, EIF_REFERENCE arg1)
+{
+	GTCX
+	EIF_REFERENCE tr1 = NULL;
+	EIF_BOOLEAN Result = ((EIF_BOOLEAN) 0);
+	
+	RTLD;
+	
+	RTLI(2);
+	RTLR(0,arg1);
+	RTLR(1,tr1);
+	
+	RTGC;
+	tr1 = RTMS_EX_H("[0]hh",5,812126824);
+	Result = (FUNCTION_CAST(EIF_BOOLEAN, (EIF_REFERENCE, EIF_REFERENCE)) R11[Dtype(arg1)-0])(RTCV(arg1), tr1);
+	RTLE;
+	return Result;
+}
+
+/* {CODE_VALIDITY_CHECKER}.is_hour12 */
+EIF_BOOLEAN F133_7767 (EIF_REFERENCE Current, EIF_REFERENCE arg1)
+{
+	GTCX
+	EIF_REFERENCE tr1 = NULL;
+	EIF_BOOLEAN Result = ((EIF_BOOLEAN) 0);
+	
+	RTLD;
+	
+	RTLI(2);
+	RTLR(0,arg1);
+	RTLR(1,tr1);
+	
+	RTGC;
+	tr1 = RTMS_EX_H("hh12",4,1751658802);
+	Result = (FUNCTION_CAST(EIF_BOOLEAN, (EIF_REFERENCE, EIF_REFERENCE)) R11[Dtype(arg1)-0])(RTCV(arg1), tr1);
+	RTLE;
+	return Result;
+}
+
+/* {CODE_VALIDITY_CHECKER}.is_minute */
+EIF_BOOLEAN F133_7769 (EIF_REFERENCE Current, EIF_REFERENCE arg1)
+{
+	GTCX
+	EIF_REFERENCE tr1 = NULL;
+	EIF_BOOLEAN Result = ((EIF_BOOLEAN) 0);
+	
+	RTLD;
+	
+	RTLI(2);
+	RTLR(0,arg1);
+	RTLR(1,tr1);
+	
+	RTGC;
+	tr1 = RTMS_EX_H("mi",2,28009);
+	Result = (FUNCTION_CAST(EIF_BOOLEAN, (EIF_REFERENCE, EIF_REFERENCE)) R11[Dtype(arg1)-0])(RTCV(arg1), tr1);
+	RTLE;
+	return Result;
+}
+
+/* {CODE_VALIDITY_CHECKER}.is_minute0 */
+EIF_BOOLEAN F133_7770 (EIF_REFERENCE Current, EIF_REFERENCE arg1)
+{
+	GTCX
+	EIF_REFERENCE tr1 = NULL;
+	EIF_BOOLEAN Result = ((EIF_BOOLEAN) 0);
+	
+	RTLD;
+	
+	RTLI(2);
+	RTLR(0,arg1);
+	RTLR(1,tr1);
+	
+	RTGC;
+	tr1 = RTMS_EX_H("[0]mi",5,812128105);
+	Result = (FUNCTION_CAST(EIF_BOOLEAN, (EIF_REFERENCE, EIF_REFERENCE)) R11[Dtype(arg1)-0])(RTCV(arg1), tr1);
+	RTLE;
+	return Result;
+}
+
+/* {CODE_VALIDITY_CHECKER}.is_second */
+EIF_BOOLEAN F133_7771 (EIF_REFERENCE Current, EIF_REFERENCE arg1)
+{
+	GTCX
+	EIF_REFERENCE tr1 = NULL;
+	EIF_BOOLEAN Result = ((EIF_BOOLEAN) 0);
+	
+	RTLD;
+	
+	RTLI(2);
+	RTLR(0,arg1);
+	RTLR(1,tr1);
+	
+	RTGC;
+	tr1 = RTMS_EX_H("ss",2,29555);
+	Result = (FUNCTION_CAST(EIF_BOOLEAN, (EIF_REFERENCE, EIF_REFERENCE)) R11[Dtype(arg1)-0])(RTCV(arg1), tr1);
+	RTLE;
+	return Result;
+}
+
+/* {CODE_VALIDITY_CHECKER}.is_second0 */
+EIF_BOOLEAN F133_7772 (EIF_REFERENCE Current, EIF_REFERENCE arg1)
+{
+	GTCX
+	EIF_REFERENCE tr1 = NULL;
+	EIF_BOOLEAN Result = ((EIF_BOOLEAN) 0);
+	
+	RTLD;
+	
+	RTLI(2);
+	RTLR(0,arg1);
+	RTLR(1,tr1);
+	
+	RTGC;
+	tr1 = RTMS_EX_H("[0]ss",5,812129651);
+	Result = (FUNCTION_CAST(EIF_BOOLEAN, (EIF_REFERENCE, EIF_REFERENCE)) R11[Dtype(arg1)-0])(RTCV(arg1), tr1);
+	RTLE;
+	return Result;
+}
+
+/* {CODE_VALIDITY_CHECKER}.is_fractional_second */
+EIF_BOOLEAN F133_7773 (EIF_REFERENCE Current, EIF_REFERENCE arg1)
+{
+	GTCX
+	EIF_REFERENCE loc1 = (EIF_REFERENCE) 0;
+	EIF_REFERENCE loc2 = (EIF_REFERENCE) 0;
+	EIF_REFERENCE tr1 = NULL;
+	EIF_INTEGER_32 ti4_1;
+	EIF_BOOLEAN tb1;
+	EIF_BOOLEAN Result = ((EIF_BOOLEAN) 0);
+	
+	RTLD;
+	
+	RTLI(4);
+	RTLR(0,arg1);
+	RTLR(1,loc1);
+	RTLR(2,loc2);
+	RTLR(3,tr1);
+	
+	RTGC;
+	ti4_1 = *(EIF_INTEGER_32 *)(RTCV(arg1)+ _LNGOFF_1_1_0_2_);
+	if ((EIF_BOOLEAN) (ti4_1 > ((EIF_INTEGER_32) 2L))) {
+		loc1 = F893_17423(RTCV(arg1), ((EIF_INTEGER_32) 1L), ((EIF_INTEGER_32) 2L));
+		ti4_1 = *(EIF_INTEGER_32 *)(RTCV(arg1)+ _LNGOFF_1_1_0_2_);
+		loc2 = F893_17423(RTCV(arg1), ((EIF_INTEGER_32) 3L), ti4_1);
+		Result = '\0';
+		tr1 = RTMS_EX_H("ff",2,26214);
+		tb1 = (FUNCTION_CAST(EIF_BOOLEAN, (EIF_REFERENCE, EIF_REFERENCE)) R11[Dtype(loc1)-0])(RTCV(loc1), tr1);
+		if (tb1) {
+			tb1 = F885_17024(RTCV(loc2));
+			Result = tb1;
+		}
+	}
+	RTLE;
+	return Result;
+}
+
+/* {CODE_VALIDITY_CHECKER}.is_colon */
+EIF_BOOLEAN F133_7774 (EIF_REFERENCE Current, EIF_REFERENCE arg1)
+{
+	GTCX
+	EIF_REFERENCE tr1 = NULL;
+	EIF_BOOLEAN Result = ((EIF_BOOLEAN) 0);
+	
+	RTLD;
+	
+	RTLI(2);
+	RTLR(0,arg1);
+	RTLR(1,tr1);
+	
+	RTGC;
+	tr1 = RTMS_EX_H(":",1,58);
+	Result = (FUNCTION_CAST(EIF_BOOLEAN, (EIF_REFERENCE, EIF_REFERENCE)) R11[Dtype(arg1)-0])(RTCV(arg1), tr1);
+	RTLE;
+	return Result;
+}
+
+/* {CODE_VALIDITY_CHECKER}.is_slash */
+EIF_BOOLEAN F133_7775 (EIF_REFERENCE Current, EIF_REFERENCE arg1)
+{
+	GTCX
+	EIF_REFERENCE tr1 = NULL;
+	EIF_BOOLEAN Result = ((EIF_BOOLEAN) 0);
+	
+	RTLD;
+	
+	RTLI(2);
+	RTLR(0,arg1);
+	RTLR(1,tr1);
+	
+	RTGC;
+	tr1 = RTMS_EX_H("/",1,47);
+	Result = (FUNCTION_CAST(EIF_BOOLEAN, (EIF_REFERENCE, EIF_REFERENCE)) R11[Dtype(arg1)-0])(RTCV(arg1), tr1);
+	RTLE;
+	return Result;
+}
+
+/* {CODE_VALIDITY_CHECKER}.is_minus */
+EIF_BOOLEAN F133_7776 (EIF_REFERENCE Current, EIF_REFERENCE arg1)
+{
+	GTCX
+	EIF_REFERENCE tr1 = NULL;
+	EIF_BOOLEAN Result = ((EIF_BOOLEAN) 0);
+	
+	RTLD;
+	
+	RTLI(2);
+	RTLR(0,arg1);
+	RTLR(1,tr1);
+	
+	RTGC;
+	tr1 = RTMS_EX_H("-",1,45);
+	Result = (FUNCTION_CAST(EIF_BOOLEAN, (EIF_REFERENCE, EIF_REFERENCE)) R11[Dtype(arg1)-0])(RTCV(arg1), tr1);
+	RTLE;
+	return Result;
+}
+
+/* {CODE_VALIDITY_CHECKER}.is_comma */
+EIF_BOOLEAN F133_7777 (EIF_REFERENCE Current, EIF_REFERENCE arg1)
+{
+	GTCX
+	EIF_REFERENCE tr1 = NULL;
+	EIF_BOOLEAN Result = ((EIF_BOOLEAN) 0);
+	
+	RTLD;
+	
+	RTLI(2);
+	RTLR(0,arg1);
+	RTLR(1,tr1);
+	
+	RTGC;
+	tr1 = RTMS_EX_H(",",1,44);
+	Result = (FUNCTION_CAST(EIF_BOOLEAN, (EIF_REFERENCE, EIF_REFERENCE)) R11[Dtype(arg1)-0])(RTCV(arg1), tr1);
+	RTLE;
+	return Result;
+}
+
+/* {CODE_VALIDITY_CHECKER}.is_space */
+EIF_BOOLEAN F133_7778 (EIF_REFERENCE Current, EIF_REFERENCE arg1)
+{
+	GTCX
+	EIF_REFERENCE tr1 = NULL;
+	EIF_BOOLEAN Result = ((EIF_BOOLEAN) 0);
+	
+	RTLD;
+	
+	RTLI(2);
+	RTLR(0,arg1);
+	RTLR(1,tr1);
+	
+	RTGC;
+	tr1 = RTMS_EX_H(" ",1,32);
+	Result = (FUNCTION_CAST(EIF_BOOLEAN, (EIF_REFERENCE, EIF_REFERENCE)) R11[Dtype(arg1)-0])(RTCV(arg1), tr1);
+	RTLE;
+	return Result;
+}
+
+/* {CODE_VALIDITY_CHECKER}.is_dot */
+EIF_BOOLEAN F133_7779 (EIF_REFERENCE Current, EIF_REFERENCE arg1)
+{
+	GTCX
+	EIF_REFERENCE tr1 = NULL;
+	EIF_BOOLEAN Result = ((EIF_BOOLEAN) 0);
+	
+	RTLD;
+	
+	RTLI(2);
+	RTLR(0,arg1);
+	RTLR(1,tr1);
+	
+	RTGC;
+	tr1 = RTMS_EX_H(".",1,46);
+	Result = (FUNCTION_CAST(EIF_BOOLEAN, (EIF_REFERENCE, EIF_REFERENCE)) R11[Dtype(arg1)-0])(RTCV(arg1), tr1);
+	RTLE;
+	return Result;
+}
+
+/* {CODE_VALIDITY_CHECKER}.is_meridiem */
+EIF_BOOLEAN F133_7781 (EIF_REFERENCE Current, EIF_REFERENCE arg1)
+{
+	GTCX
+	EIF_REFERENCE loc1 = (EIF_REFERENCE) 0;
+	EIF_REFERENCE tr1 = NULL;
+	EIF_BOOLEAN tb1;
+	EIF_BOOLEAN Result = ((EIF_BOOLEAN) 0);
+	
+	RTLD;
+	
+	RTLI(3);
+	RTLR(0,loc1);
+	RTLR(1,arg1);
+	RTLR(2,tr1);
+	
+	RTGC;
+	loc1 = F893_17412(RTCV(arg1));
+	Result = '\01';
+	tr1 = RTMS_EX_H("AM",2,16717);
+	tb1 = (FUNCTION_CAST(EIF_BOOLEAN, (EIF_REFERENCE, EIF_REFERENCE)) R11[Dtype(loc1)-0])(RTCV(loc1), tr1);
+	if (!tb1) {
+		tr1 = RTMS_EX_H("PM",2,20557);
+		tb1 = (FUNCTION_CAST(EIF_BOOLEAN, (EIF_REFERENCE, EIF_REFERENCE)) R11[Dtype(loc1)-0])(RTCV(loc1), tr1);
+		Result = tb1;
+	}
+	RTLE;
+	return Result;
+}
+
+void EIF_Minit88 (void)
+{
+	GTCX
+}
+
+
+#ifdef __cplusplus
+}
+#endif

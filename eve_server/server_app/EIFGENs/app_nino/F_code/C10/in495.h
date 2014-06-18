@@ -1,0 +1,53 @@
+
+#ifndef _C10_in495_
+#define _C10_in495_
+
+#ifdef __cplusplus
+extern "C" {
+#endif
+
+extern void F820_12722(EIF_REFERENCE);
+extern void F820_12724(EIF_REFERENCE, EIF_REFERENCE, EIF_INTEGER_32);
+extern void F820_12725(EIF_REFERENCE, EIF_REFERENCE, EIF_INTEGER_32);
+extern void F820_12727(EIF_REFERENCE, EIF_REFERENCE);
+extern void F820_12728(EIF_REFERENCE, EIF_REFERENCE);
+extern void F820_12731(EIF_REFERENCE, EIF_REFERENCE, EIF_INTEGER_32);
+extern void F820_12732(EIF_REFERENCE, EIF_REFERENCE);
+extern void F820_12733(EIF_REFERENCE);
+extern void F820_12737(EIF_REFERENCE, EIF_REFERENCE);
+extern void F820_12739(EIF_REFERENCE);
+extern void F820_12742(EIF_REFERENCE, EIF_REFERENCE, EIF_INTEGER_32);
+extern void F820_12743(EIF_REFERENCE, EIF_REFERENCE, EIF_INTEGER_32);
+extern void EIF_Minit495(void);
+extern void F803_12675(EIF_REFERENCE, EIF_REFERENCE);
+extern void F803_12679(EIF_REFERENCE, EIF_INTEGER_32);
+extern EIF_REFERENCE F803_12636(EIF_REFERENCE);
+extern void F803_12670(EIF_REFERENCE, EIF_REFERENCE, EIF_INTEGER_32);
+extern EIF_REFERENCE F803_12635(EIF_REFERENCE);
+extern void F803_12632(EIF_REFERENCE, EIF_INTEGER_32);
+extern EIF_REFERENCE F803_12637(EIF_REFERENCE, EIF_INTEGER_32);
+extern void F803_12688(EIF_REFERENCE);
+extern EIF_INTEGER_32 F803_12654(EIF_REFERENCE);
+extern EIF_INTEGER_32 F803_12653(EIF_REFERENCE);
+extern void F803_12684(EIF_REFERENCE);
+extern void F803_12672(EIF_REFERENCE, EIF_REFERENCE);
+extern char *(*R11529[])();
+extern char *(*R9242[])();
+extern char *(*R11530[])();
+extern char *(*R9288[])();
+extern char *(*R11343[])();
+extern char *(*R16610[])();
+extern char *(*R9217[])();
+extern char *(*R16620[])();
+extern char *(*R9302[])();
+extern char *(*R9304[])();
+extern char *(*R16634[])();
+extern long O9209[];
+extern long O11521[];
+extern long O11533[];
+
+#ifdef __cplusplus
+}
+#endif
+
+#endif
