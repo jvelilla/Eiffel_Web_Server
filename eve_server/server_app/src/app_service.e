@@ -48,6 +48,11 @@ feature {NONE} -- Initialization
 
 			--initialize timeout from arguments
 			--initialize_timeouts_from_arguments
+
+			--Remove the existing EIFGEN's if they are older than 90 days
+			create my_thread
+			io.put_boolean (my_thread.is_launchable)
+			--my_thread.launch
 		end
 
 	setup_router
@@ -70,6 +75,7 @@ feature {NONE} -- Initialization
 			map_uri_template_agent_with_request_methods ("/classClients", agent get_class_clients, router.methods_GET)
 			map_uri_template_agent_with_request_methods ("/classSuppliers", agent get_class_suppliers, router.methods_GET)
 			map_uri_template_agent_with_request_methods ("/featureCallers", agent get_feature_callers, router.methods_GET)
+			map_uri_template_agent_with_request_methods ("/commandLine", agent get_user_command_line, router.methods_GET)
 
 			--Setting the home page
 			create fhdl.make_hidden ("www")
@@ -101,6 +107,7 @@ feature --Access
 	has_feature_error:BOOLEAN
 	needs_target:BOOLEAN
 	target:STRING
+	my_thread: MY_THREAD
 	--Change this address
 	fixed_project_path:STRING = "C:/Users/Manav/Desktop/eve_server/projects/"
 
@@ -370,9 +377,7 @@ feature -- Execution
 			project_name_empty: project_path /= Void and not project_name.is_empty
 			target_set: needs_target=false
 		local
-			input_string: STRING
 			res_string:STRING
-			parser: JSON_PARSER
 			json_object:JSON_OBJECT
 			header:HTTP_HEADER
 			id:STRING
@@ -615,9 +620,7 @@ feature -- Execution
 			project_name_empty: project_path /= Void and not project_name.is_empty
 			target_set: needs_target=false
 		local
-			input_string: STRING
 			res_string:STRING
-			parser: JSON_PARSER
 			json_object:JSON_OBJECT
 			header:HTTP_HEADER
 			id:STRING
@@ -733,9 +736,7 @@ feature -- Execution
 			project_name_empty: project_path /= Void and not project_name.is_empty
 			target_set: needs_target=false
 		local
-			input_string: STRING
 			res_string:STRING
-			parser: JSON_PARSER
 			json_object:JSON_OBJECT
 			header:HTTP_HEADER
 			id:STRING
@@ -851,9 +852,7 @@ feature -- Execution
 			project_name_empty: project_path /= Void and not project_name.is_empty
 			target_set: needs_target=false
 		local
-			input_string: STRING
 			res_string:STRING
-			parser: JSON_PARSER
 			json_object:JSON_OBJECT
 			header:HTTP_HEADER
 			id:STRING
@@ -968,9 +967,7 @@ feature -- Execution
 				project_name_empty: project_path /= Void and not project_name.is_empty
 				target_set: needs_target=false
 			local
-				input_string: STRING
 				res_string:STRING
-				parser: JSON_PARSER
 				json_object:JSON_OBJECT
 				header:HTTP_HEADER
 				id:STRING
@@ -1085,9 +1082,7 @@ feature -- Execution
 				project_name_empty: project_path /= Void and not project_name.is_empty
 			target_set: needs_target=false
 			local
-				input_string: STRING
 				res_string:STRING
-				parser: JSON_PARSER
 				json_object:JSON_OBJECT
 				header:HTTP_HEADER
 				id:STRING
@@ -1184,6 +1179,68 @@ feature -- Execution
 					end
 				end
 
+				if timeout=false then
+					res.set_status_code ({HTTP_STATUS_CODE}.ok)
+				else
+					res.set_status_code ({HTTP_STATUS_CODE}.gateway_timeout)
+					json_object.replace_with_boolean (false, "Has_Feature_Callers")
+				end
+
+				json_array.add (json_object)
+
+				--Prepare the response string
+				res_string.append (json_array.representation)
+				res_string.replace_substring_all ("<br>", "\n")
+
+				--Set the response header with the id value
+				header.add_header_key_value ("id", id)
+				res.put_header_text (header.string)
+				res.put_string (res_string)
+			end
+
+		--Function that returns the dump of the command line given by the user
+		get_user_command_line (req: WSF_REQUEST; res: WSF_RESPONSE)
+			require
+				project_path_empty: project_path /= Void and not project_path.is_empty
+				project_name_empty: project_path /= Void and not project_name.is_empty
+				--target_set: needs_target=false
+			local
+				res_string:STRING
+				json_object:JSON_OBJECT
+				header:HTTP_HEADER
+				id:STRING
+				json_array:JSON_ARRAY
+				timeout:BOOLEAN
+			do
+				--Find callers for the feature
+				create header.make
+				create res_string.make_empty
+				create json_array.make_array
+				create json_object.make
+				create output_message.make_empty
+
+				--Setting values
+				timeout:=false
+
+				--Extract the unique user id
+				id:=extract_req_parameter(req,"id")
+				if id.is_empty then
+					--Give error, as it should not be empty
+				else
+					if not project_path.has_substring (id)then
+						--Give error
+					end
+				end
+
+				--Extract the command line
+				command_line:=extract_req_parameter(req,"command_line")
+				if command_line.is_empty then
+					--Give error, as it should not be empty
+				end
+
+				timeout:=user_command_line_helper
+
+				json_object.put_string (output_message, "Command_Line_Dump")
 				json_array.add (json_object)
 
 				--Prepare the response string
@@ -1194,7 +1251,6 @@ feature -- Execution
 					res.set_status_code ({HTTP_STATUS_CODE}.ok)
 				else
 					res.set_status_code ({HTTP_STATUS_CODE}.gateway_timeout)
-					json_object.replace_with_boolean (false, "Has_Feature_Callers")
 				end
 
 				--Set the response header with the id value
@@ -1441,7 +1497,6 @@ feature --Helper functions
 		local
 			file:PLAIN_TEXT_FILE
 			s:STRING
-			index,i:INTEGER
 			parser:JSON_PARSER
 			json_object:JSON_OBJECT
 		do
@@ -1473,6 +1528,7 @@ feature --Helper functions
 
 feature -- Commands to the command line
 
+	--This feature is used to start compilation
 	compile_helper(path:STRING) :BOOLEAN
 		local
 			ec_process:PROCESS
@@ -1561,6 +1617,7 @@ feature -- Commands to the command line
 			Result:=timeout
 		end
 
+	--This feature is used to start execution
 	execution_helper :BOOLEAN
 		local
 			ec_process:PROCESS
@@ -1611,11 +1668,11 @@ feature -- Commands to the command line
 			Result:=timeout
 		end
 
+	--This feature is used to start a process when a class related function is called
 	class_functions_helper (class_string:STRING) :BOOLEAN
 		local
 			ec_process:PROCESS
 			e_parser:EIFFEL_PARSER
-			output_index:INTEGER
 			flag:BOOLEAN
 			start_time:DATE_TIME
 			current_time:DATE_TIME
@@ -1696,11 +1753,11 @@ feature -- Commands to the command line
 			Result:=timeout
 		end
 
+		--This feature is used to start a process when a feature related function is called
 		feature_functions_helper (class_string:STRING; feature_string: STRING) :BOOLEAN
 		local
 			ec_process:PROCESS
 			e_parser:EIFFEL_PARSER
-			output_index:INTEGER
 			flag:BOOLEAN
 			start_time:DATE_TIME
 			current_time:DATE_TIME
@@ -1782,13 +1839,61 @@ feature -- Commands to the command line
 			Result:=timeout
 		end
 
+		--This feature is used to start the process when the user supplies the command line
+		user_command_line_helper :BOOLEAN
+		local
+			ec_process:PROCESS
+			flag:BOOLEAN
+			start_time:DATE_TIME
+			current_time:DATE_TIME
+			l_duration:DATE_TIME_DURATION
+			duration:INTEGER_64
+			timeout:BOOLEAN
+		do
+			--Get the command line output
+			ec_process:=p_factory.process_launcher_with_command_line (command_line,project_path)
+			ec_process.enable_launch_in_new_process_group
+			ec_process.set_separate_console (true)
+			ec_process.redirect_error_to_agent (agent handle_error_user_command_line)
+			ec_process.redirect_output_to_agent (agent handle_output_user_command_line)
+			ec_process.launch
+
+			--Wait for the execution to finish.
+			--Do Something to wait till compilation is over
+			flag:=ec_process.is_running
+			timeout:=false
+			create start_time.make_now_utc
+			from
+			until
+				flag=false
+			loop
+				flag:=ec_process.is_running
+
+				--Extract the current time here.
+				--If the difference between current time and start time is more than execution_timeout, the server returns a timeout message
+				create current_time.make_now_utc
+				l_duration:=current_time.relative_duration (start_time)
+				duration:= l_duration.seconds_count
+
+				if duration>=execution_timeout then
+					flag:=false
+					timeout:=true
+					ec_process.terminate
+				end
+			end
+			if timeout=false then
+				output_message.replace_substring_all ("%R%N", "<br>")
+			end
+			Result:=timeout
+		end
+
 
 feature --input, output and error agents
 
 	handle_error_compilation (a_str:STRING)
 		--Agent that handles the error messages from the compilation
 		do
-			--io.put_string (a_str)
+			io.put_string (a_str)
 --			if a_str.has_substring ("Error code") then
 --				--Error has occured. Deal with it
 --				has_error:=True
@@ -1807,7 +1912,7 @@ feature --input, output and error agents
 	handle_output_compilation (a_str:STRING)
 		--Agent that handles the output from the compilation
 		do
-			--io.put_string (a_str)
+			io.put_string (a_str)
 			--io.output.flush
 			if not a_str.is_empty and a_str/=Void then
 				output_message.append(a_str)
@@ -1817,7 +1922,7 @@ feature --input, output and error agents
 	handle_output_execution (a_str:STRING)
 		--Agent that handles the output from the execution
 		do
-			--io.put_string (a_str)
+			io.put_string (a_str)
 			--io.output.flush
 			if not a_str.is_empty and a_str/=Void then
 				output_message.append(a_str)
@@ -1827,7 +1932,7 @@ feature --input, output and error agents
 	handle_error_execution (a_str:STRING)
 		--Agent that handles the error from the execution
 		do
-			--io.put_string (a_str)
+			io.put_string (a_str)
 			has_runtime_error:=true
 			error_message.append (a_str)
 		end
@@ -1835,7 +1940,7 @@ feature --input, output and error agents
 	handle_output_class (a_str:STRING)
 		--Agent that handles the output from the class functions
 		do
-			--io.put_string (a_str)
+			io.put_string (a_str)
 			--io.output.flush
 			if not a_str.is_empty and a_str/=Void then
 				output_message.append(a_str)
@@ -1845,7 +1950,7 @@ feature --input, output and error agents
 	handle_error_class (a_str:STRING)
 		--Agent that handles the error from the class functions
 		do
-			--io.put_string (a_str)
+			io.put_string (a_str)
 			error_message.append (a_str)
 		end
 
@@ -1864,5 +1969,21 @@ feature --input, output and error agents
 		do
 			io.put_string (a_str)
 			error_message.append (a_str)
+		end
+
+	handle_output_user_command_line (a_str:STRING)
+		--Agent that handles the output from the command line that the user entered
+		do
+			io.put_string (a_str)
+			if not a_str.is_empty and a_str/=Void then
+				output_message.append(a_str)
+			end
+		end
+
+	handle_error_user_command_line (a_str:STRING)
+		--Agent that handles the error from the command line that the user entered
+		do
+			io.put_string (a_str)
+			output_message.append (a_str)
 		end
 end

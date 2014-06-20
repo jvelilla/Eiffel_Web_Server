@@ -41,15 +41,15 @@ SYSTEM_IN_DYNAMIC_LIB = app.dll
 
 OBJECTS = big_file_C7_c.obj 
 
-OLDOBJECTS =  ap220.obj ap220d.obj ws213.obj ws213d.obj ap219.obj ap219d.obj it212.obj it212d.obj \
-	it211.obj it211d.obj ex208.obj ex208d.obj er209.obj er209d.obj pr217.obj pr217d.obj \
-	pa221.obj pa221d.obj pr207.obj pr207d.obj po206.obj po206d.obj in205.obj in205d.obj \
-	ch204.obj ch204d.obj va203.obj va203d.obj lo202.obj lo202d.obj cr200.obj cr200d.obj \
-	ad199.obj ad199d.obj ws214.obj ws214d.obj ws215.obj ws215d.obj ws218.obj ws218d.obj \
-	co226.obj co226d.obj da225.obj da225d.obj it210.obj it210d.obj as201.obj as201d.obj \
-	re229.obj re229d.obj re230.obj re230d.obj ei198.obj ei198d.obj ra216.obj ra216d.obj \
-	sh228.obj sh228d.obj ti224.obj ti224d.obj da223.obj da223d.obj ab227.obj ab227d.obj \
-	du222.obj du222d.obj 
+OLDOBJECTS =  ws216.obj ws216d.obj it215.obj it215d.obj it214.obj it214d.obj ex211.obj ex211d.obj \
+	er212.obj er212d.obj pr220.obj pr220d.obj pa222.obj pa222d.obj vo200.obj vo200d.obj \
+	pr210.obj pr210d.obj po209.obj po209d.obj in208.obj in208d.obj ch207.obj ch207d.obj \
+	ro199.obj ro199d.obj ba198.obj ba198d.obj va206.obj va206d.obj lo205.obj lo205d.obj \
+	cr203.obj cr203d.obj ad202.obj ad202d.obj ws217.obj ws217d.obj da226.obj da226d.obj \
+	ws218.obj ws218d.obj ws221.obj ws221d.obj co227.obj co227d.obj it213.obj it213d.obj \
+	as204.obj as204d.obj re230.obj re230d.obj ei201.obj ei201d.obj ra219.obj ra219d.obj \
+	sh229.obj sh229d.obj da225.obj da225d.obj ti224.obj ti224d.obj ab228.obj ab228d.obj \
+	du223.obj du223d.obj 
 
 all::  Cobj7.lib
 

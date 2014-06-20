@@ -5,8 +5,8 @@
 var serverControllers = angular.module('mainControllers', []);
 
 
-serverControllers.controller('MainCtrl',['$scope', '$http', 'CompileService','RunService','InterfaceViewService','FlatViewService','ContractViewService','ClassDescendantsService','ClassAncestorsService','ClassClientsService','ClassSuppliersService','FeatureCallersService',
-  function($scope,$http,CompileService,RunService,InterfaceViewService,FlatViewService,ContractViewService,ClassDescendantsService,ClassAncestorsService,ClassSuppliersService,ClassClientsService,FeatureCallersService){
+serverControllers.controller('MainCtrl',['$scope', '$http', 'CompileService','RunService','InterfaceViewService','FlatViewService','ContractViewService','ClassDescendantsService','ClassAncestorsService','ClassClientsService','ClassSuppliersService','FeatureCallersService','CommandLineService',
+  function($scope,$http,CompileService,RunService,InterfaceViewService,FlatViewService,ContractViewService,ClassDescendantsService,ClassAncestorsService,ClassSuppliersService,ClassClientsService,FeatureCallersService,CommandLineService){
     $scope.message='Hi there';
     $scope.status_code=200;
     $scope.compile=function(){
@@ -133,6 +133,18 @@ serverControllers.controller('MainCtrl',['$scope', '$http', 'CompileService','Ru
 
     $scope.get_feature_callers=function(){
         $scope.result=FeatureCallersService.query({id :$scope.project.id, class: $scope.project.class, feature: $scope.project.feature}, function(response,headers){
+            $scope.id=headers('id');
+            $scope.status_code=200;
+            $scope.dump=response;
+        },function(response,headers){
+            $scope.status_code=response.status;
+            alert("The process timed out!");
+            $scope.dump=response;
+        });
+    };
+
+    $scope.get_user_command_line=function(){
+        $scope.result=CommandLineService.query({id :$scope.project.id, command_line :$scope.project.command_line}, function(response,headers){
             $scope.id=headers('id');
             $scope.status_code=200;
             $scope.dump=response;

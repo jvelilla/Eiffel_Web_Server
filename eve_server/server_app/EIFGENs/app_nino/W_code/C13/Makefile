@@ -41,15 +41,15 @@ SYSTEM_IN_DYNAMIC_LIB = app.dll
 
 OBJECTS = big_file_C13_c.obj 
 
-OLDOBJECTS =  re417.obj re417d.obj re418.obj re418d.obj re414.obj re414d.obj re415.obj re415d.obj \
-	na420.obj na420d.obj na421.obj na421d.obj na411.obj na411d.obj na412.obj na412d.obj \
-	na408.obj na408d.obj na409.obj na409d.obj na405.obj na405d.obj na406.obj na406d.obj \
-	in402.obj in402d.obj in403.obj in403d.obj in399.obj in399d.obj in400.obj in400d.obj \
-	in396.obj in396d.obj in397.obj in397d.obj na419.obj na419d.obj re416.obj re416d.obj \
-	re413.obj re413d.obj na410.obj na410d.obj na407.obj na407d.obj na404.obj na404d.obj \
-	in401.obj in401d.obj in398.obj in398d.obj js423.obj js423d.obj js422.obj js422d.obj \
-	co428.obj co428d.obj er427.obj er427d.obj ht426.obj ht426d.obj th425.obj th425d.obj \
-	ur424.obj ur424d.obj 
+OLDOBJECTS =  re422.obj re422d.obj re423.obj re423d.obj re419.obj re419d.obj re420.obj re420d.obj \
+	na425.obj na425d.obj na426.obj na426d.obj na416.obj na416d.obj na417.obj na417d.obj \
+	na413.obj na413d.obj na414.obj na414d.obj na410.obj na410d.obj na411.obj na411d.obj \
+	in407.obj in407d.obj in408.obj in408d.obj in404.obj in404d.obj in405.obj in405d.obj \
+	in401.obj in401d.obj in402.obj in402d.obj in398.obj in398d.obj in399.obj in399d.obj \
+	na424.obj na424d.obj re421.obj re421d.obj re418.obj re418d.obj na415.obj na415d.obj \
+	na412.obj na412d.obj na409.obj na409d.obj in406.obj in406d.obj in403.obj in403d.obj \
+	in400.obj in400d.obj in397.obj in397d.obj js428.obj js428d.obj js427.obj js427d.obj \
+	nu396.obj nu396d.obj 
 
 all::  Cobj13.lib
 

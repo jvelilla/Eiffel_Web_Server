@@ -61,3 +61,7 @@ serverApp.factory('ClassSuppliersService', function($resource) {
 serverApp.factory('FeatureCallersService', function($resource) {
   return $resource('/featureCallers',{}, {query: {method:'GET',  isArray:true}, 'save':   {method:'POST'}});
 });
+
+serverApp.factory('CommandLineService', function($resource) {
+  return $resource('/commandLine',{}, {query: {method:'GET',  isArray:true}, 'save':   {method:'POST'}});
+});

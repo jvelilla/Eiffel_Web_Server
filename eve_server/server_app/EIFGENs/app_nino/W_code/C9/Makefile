@@ -41,15 +41,15 @@ SYSTEM_IN_DYNAMIC_LIB = app.dll
 
 OBJECTS = big_file_C9_c.obj 
 
-OLDOBJECTS =  eq281.obj eq281d.obj ws295.obj ws295d.obj eq285.obj eq285d.obj ex276.obj ex276d.obj \
-	ar294.obj ar294d.obj mi284.obj mi284d.obj in296.obj in296d.obj ht292.obj ht292d.obj \
-	eq286.obj eq286d.obj na274.obj na274d.obj na271.obj na271d.obj fi272.obj fi272d.obj \
-	ar290.obj ar290d.obj st289.obj st289d.obj ws293.obj ws293d.obj pr282.obj pr282d.obj \
-	pr283.obj pr283d.obj pr280.obj pr280d.obj ws291.obj ws291d.obj ws288.obj ws288d.obj \
-	eq270.obj eq270d.obj un273.obj un273d.obj pr279.obj pr279d.obj pr278.obj pr278d.obj \
-	pr277.obj pr277d.obj da287.obj da287d.obj we275.obj we275d.obj te269.obj te269d.obj \
-	te268.obj te268d.obj te267.obj te267d.obj te266.obj te266d.obj te265.obj te265d.obj \
-	te264.obj te264d.obj 
+OLDOBJECTS =  ap296.obj ap296d.obj eq273.obj eq273d.obj ap295.obj ap295d.obj eq288.obj eq288d.obj \
+	eq276.obj eq276d.obj ex268.obj ex268d.obj mi287.obj mi287d.obj ar294.obj ar294d.obj \
+	eq289.obj eq289d.obj na266.obj na266d.obj fi264.obj fi264d.obj st292.obj st292d.obj \
+	pr272.obj pr272d.obj ws293.obj ws293d.obj ws291.obj ws291d.obj pr275.obj pr275d.obj \
+	pr274.obj pr274d.obj eq286.obj eq286d.obj un265.obj un265d.obj da290.obj da290d.obj \
+	pr271.obj pr271d.obj pr270.obj pr270d.obj pr269.obj pr269d.obj we267.obj we267d.obj \
+	te285.obj te285d.obj te284.obj te284d.obj te283.obj te283d.obj te282.obj te282d.obj \
+	te281.obj te281d.obj te280.obj te280d.obj te279.obj te279d.obj te278.obj te278d.obj \
+	te277.obj te277d.obj 
 
 all::  Cobj9.lib
 

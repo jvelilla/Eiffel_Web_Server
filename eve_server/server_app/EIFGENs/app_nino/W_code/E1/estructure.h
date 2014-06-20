@@ -7,37 +7,37 @@
 extern "C" {
 #endif
 
-struct eif_ex_10 {union overhead overhead; char data [1];};
-struct eif_ex_35 {union overhead overhead; char data [1];};
-struct eif_ex_335 {union overhead overhead; char data [8];};
-struct eif_ex_338 {union overhead overhead; char data [8];};
-struct eif_ex_341 {union overhead overhead; char data [8];};
-struct eif_ex_344 {union overhead overhead; char data [8];};
-struct eif_ex_392 {union overhead overhead; char data [8];};
-struct eif_ex_395 {union overhead overhead; char data [8];};
-struct eif_ex_398 {union overhead overhead; char data [8];};
-struct eif_ex_401 {union overhead overhead; char data [8];};
-struct eif_ex_404 {union overhead overhead; char data [8];};
-struct eif_ex_407 {union overhead overhead; char data [8];};
-struct eif_ex_410 {union overhead overhead; char data [8];};
-struct eif_ex_413 {union overhead overhead; char data [8];};
-struct eif_ex_416 {union overhead overhead; char data [8];};
-struct eif_ex_419 {union overhead overhead; char data [8];};
-struct eif_ex_461 {union overhead overhead; char data [8];};
-struct eif_ex_507 {union overhead overhead; char data [8];};
-struct eif_ex_583 {union overhead overhead; char data [8];};
-struct eif_ex_687 {union overhead overhead; char data [8];};
-struct eif_ex_695 {union overhead overhead; char data [8];};
-struct eif_ex_764 {union overhead overhead; char data [8];};
-struct eif_ex_798 {union overhead overhead; char data [8];};
-struct eif_ex_802 {union overhead overhead; char data [8];};
-struct eif_ex_811 {union overhead overhead; char data [8];};
-struct eif_ex_820 {union overhead overhead; char data [8];};
-struct eif_ex_824 {union overhead overhead; char data [8];};
-struct eif_ex_828 {union overhead overhead; char data [8];};
-struct eif_ex_897 {union overhead overhead; char data [8];};
-struct eif_ex_1026 {union overhead overhead; char data [8];};
-struct eif_ex_1061 {union overhead overhead; char data [8];};
+struct eif_ex_11 {union overhead overhead; char data [1];};
+struct eif_ex_37 {union overhead overhead; char data [1];};
+struct eif_ex_340 {union overhead overhead; char data [8];};
+struct eif_ex_343 {union overhead overhead; char data [8];};
+struct eif_ex_346 {union overhead overhead; char data [8];};
+struct eif_ex_349 {union overhead overhead; char data [8];};
+struct eif_ex_397 {union overhead overhead; char data [8];};
+struct eif_ex_400 {union overhead overhead; char data [8];};
+struct eif_ex_403 {union overhead overhead; char data [8];};
+struct eif_ex_406 {union overhead overhead; char data [8];};
+struct eif_ex_409 {union overhead overhead; char data [8];};
+struct eif_ex_412 {union overhead overhead; char data [8];};
+struct eif_ex_415 {union overhead overhead; char data [8];};
+struct eif_ex_418 {union overhead overhead; char data [8];};
+struct eif_ex_421 {union overhead overhead; char data [8];};
+struct eif_ex_424 {union overhead overhead; char data [8];};
+struct eif_ex_468 {union overhead overhead; char data [8];};
+struct eif_ex_511 {union overhead overhead; char data [8];};
+struct eif_ex_726 {union overhead overhead; char data [8];};
+struct eif_ex_805 {union overhead overhead; char data [8];};
+struct eif_ex_809 {union overhead overhead; char data [8];};
+struct eif_ex_813 {union overhead overhead; char data [8];};
+struct eif_ex_839 {union overhead overhead; char data [8];};
+struct eif_ex_843 {union overhead overhead; char data [8];};
+struct eif_ex_851 {union overhead overhead; char data [8];};
+struct eif_ex_860 {union overhead overhead; char data [8];};
+struct eif_ex_863 {union overhead overhead; char data [8];};
+struct eif_ex_867 {union overhead overhead; char data [8];};
+struct eif_ex_935 {union overhead overhead; char data [8];};
+struct eif_ex_980 {union overhead overhead; char data [8];};
+struct eif_ex_1059 {union overhead overhead; char data [8];};
 
 #ifdef __cplusplus
 }

@@ -1118,6 +1118,11 @@ extern void Init1090(void);
 extern void Init1091(void);
 extern void Init1092(void);
 extern void Init1093(void);
+extern void Init1094(void);
+extern void Init1095(void);
+extern void Init1096(void);
+extern void Init1097(void);
+extern void Init1098(void);
 
 void egc_tabinit_init(void)
 {
@@ -2214,14 +2219,19 @@ void egc_tabinit_init(void)
 	Init1091();
 	Init1092();
 	Init1093();
+	Init1094();
+	Init1095();
+	Init1096();
+	Init1097();
+	Init1098();
 }
 
 extern void egc_einit_init(void);
 void egc_einit_init (void)
 {
-	ccount = 1248;
-	eif_nb_org_routines = 22960;
-	eif_nb_features = 15987;
+	ccount = 1252;
+	eif_nb_org_routines = 23016;
+	eif_nb_features = 16053;
 }
 
 extern void EIF_Minit1(void);
@@ -3317,6 +3327,11 @@ extern void EIF_Minit1090(void);
 extern void EIF_Minit1091(void);
 extern void EIF_Minit1092(void);
 extern void EIF_Minit1093(void);
+extern void EIF_Minit1094(void);
+extern void EIF_Minit1095(void);
+extern void EIF_Minit1096(void);
+extern void EIF_Minit1097(void);
+extern void EIF_Minit1098(void);
 
 extern void egc_system_mod_init_init(void);
 void egc_system_mod_init_init (void)
@@ -4415,6 +4430,11 @@ void egc_system_mod_init_init (void)
 	EIF_Minit1091();
 	EIF_Minit1092();
 	EIF_Minit1093();
+	EIF_Minit1094();
+	EIF_Minit1095();
+	EIF_Minit1096();
+	EIF_Minit1097();
+	EIF_Minit1098();
 }
 
 #ifdef __cplusplus

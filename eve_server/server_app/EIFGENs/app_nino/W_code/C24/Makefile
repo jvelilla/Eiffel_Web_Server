@@ -41,15 +41,15 @@ SYSTEM_IN_DYNAMIC_LIB = app.dll
 
 OBJECTS = big_file_C24_c.obj 
 
-OLDOBJECTS =  sp770.obj sp770d.obj ar776.obj ar776d.obj ty765.obj ty765d.obj ty766.obj ty766d.obj \
-	ty767.obj ty767d.obj ty768.obj ty768d.obj ty769.obj ty769d.obj ar789.obj ar789d.obj \
-	na771.obj na771d.obj re772.obj re772d.obj li780.obj li780d.obj re777.obj re777d.obj \
-	in759.obj in759d.obj to788.obj to788d.obj it774.obj it774d.obj it775.obj it775d.obj \
-	se790.obj se790d.obj un762.obj un762d.obj ta760.obj ta760d.obj ta763.obj ta763d.obj \
-	in773.obj in773d.obj cu781.obj cu781d.obj tr786.obj tr786d.obj bo778.obj bo778d.obj \
-	ac783.obj ac783d.obj bi791.obj bi791d.obj fi779.obj fi779d.obj dy761.obj dy761d.obj \
-	ba784.obj ba784d.obj co785.obj co785d.obj co782.obj co782d.obj rt764.obj rt764d.obj \
-	bo787.obj bo787d.obj 
+OLDOBJECTS =  sp785.obj sp785d.obj ar767.obj ar767d.obj ty768.obj ty768d.obj eq762.obj eq762d.obj \
+	ar787.obj ar787d.obj ha763.obj ha763d.obj na786.obj na786d.obj re772.obj re772d.obj \
+	li774.obj li774d.obj re780.obj re780d.obj to784.obj to784d.obj it770.obj it770d.obj \
+	it771.obj it771d.obj ta765.obj ta765d.obj ta764.obj ta764d.obj li789.obj li789d.obj \
+	se790.obj se790d.obj dy788.obj dy788d.obj ha766.obj ha766d.obj un759.obj un759d.obj \
+	in769.obj in769d.obj cu776.obj cu776d.obj tr775.obj tr775d.obj bo781.obj bo781d.obj \
+	ac777.obj ac777d.obj bi791.obj bi791d.obj fi782.obj fi782d.obj ba778.obj ba778d.obj \
+	co779.obj co779d.obj co773.obj co773d.obj bo783.obj bo783d.obj st761.obj st761d.obj \
+	ar760.obj ar760d.obj 
 
 all::  Cobj24.lib
 

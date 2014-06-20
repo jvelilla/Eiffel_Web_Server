@@ -41,15 +41,15 @@ SYSTEM_IN_DYNAMIC_LIB = app.dll
 
 OBJECTS = big_file_C15_c.obj 
 
-OLDOBJECTS =  ar468.obj ar468d.obj ro466.obj ro466d.obj pr467.obj pr467d.obj fu465.obj fu465d.obj \
-	fu493.obj fu493d.obj pr491.obj pr491d.obj ty462.obj ty462d.obj ty463.obj ty463d.obj \
-	ty464.obj ty464d.obj eq492.obj eq492d.obj ar481.obj ar481d.obj li472.obj li472d.obj \
-	re469.obj re469d.obj in487.obj in487d.obj to480.obj to480d.obj li485.obj li485d.obj \
-	se482.obj se482d.obj dy484.obj dy484d.obj un490.obj un490d.obj ta488.obj ta488d.obj \
-	cu473.obj cu473d.obj tr478.obj tr478d.obj bo470.obj bo470d.obj ac494.obj ac494d.obj \
-	ch486.obj ch486d.obj ac475.obj ac475d.obj bi483.obj bi483d.obj fi471.obj fi471d.obj \
-	dy489.obj dy489d.obj ba476.obj ba476d.obj co477.obj co477d.obj co474.obj co474d.obj \
-	bo479.obj bo479d.obj 
+OLDOBJECTS =  ar473.obj ar473d.obj ro468.obj ro468d.obj pr472.obj pr472d.obj fu467.obj fu467d.obj \
+	ty469.obj ty469d.obj ty470.obj ty470d.obj ty471.obj ty471d.obj ar486.obj ar486d.obj \
+	na462.obj na462d.obj re463.obj re463d.obj li475.obj li475d.obj re481.obj re481d.obj \
+	in492.obj in492d.obj to485.obj to485d.obj it465.obj it465d.obj it466.obj it466d.obj \
+	li488.obj li488d.obj se489.obj se489d.obj dy487.obj dy487d.obj ta493.obj ta493d.obj \
+	in464.obj in464d.obj cu477.obj cu477d.obj tr476.obj tr476d.obj bo482.obj bo482d.obj \
+	ch491.obj ch491d.obj ac478.obj ac478d.obj bi490.obj bi490d.obj fi483.obj fi483d.obj \
+	dy494.obj dy494d.obj ba479.obj ba479d.obj co480.obj co480d.obj co474.obj co474d.obj \
+	bo484.obj bo484d.obj 
 
 all::  Cobj15.lib
 

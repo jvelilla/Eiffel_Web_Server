@@ -1,5 +1,5 @@
 /*
- * Code for class VOID_TARGET
+ * Code for class VOID_ASSIGNED_TO_EXPANDED
  */
 
 #include "eif_eiffel.h"
@@ -10,8 +10,8 @@
 extern "C" {
 #endif
 
-extern EIF_TYPED_VALUE F197_9321(EIF_REFERENCE);
 extern EIF_TYPED_VALUE F197_9322(EIF_REFERENCE);
+extern EIF_TYPED_VALUE F197_9323(EIF_REFERENCE);
 extern void EIF_Minit197(void);
 
 #ifdef __cplusplus
@@ -33,8 +33,8 @@ extern "C" {
 extern "C" {
 #endif
 
-/* {VOID_TARGET}.code */
-EIF_TYPED_VALUE F197_9321 (EIF_REFERENCE Current)
+/* {VOID_ASSIGNED_TO_EXPANDED}.code */
+EIF_TYPED_VALUE F197_9322 (EIF_REFERENCE Current)
 {
 	GTCX
 	char *l_feature_name = "code";
@@ -50,17 +50,17 @@ EIF_TYPED_VALUE F197_9321 (EIF_REFERENCE Current)
 	RTLU (SK_INT32, &Result);
 	RTLU (SK_REF, &Current);
 	
-	RTEAA(l_feature_name, 196, Current, 0, 0, 2595);
+	RTEAA(l_feature_name, 196, Current, 0, 0, 2606);
 	RTSA(Dtype(Current));
 	RTSC;
 	RTME(Dtype(Current), 0);
 	RTGC;
-	RTDBGEAA(196, Current, 2595);
+	RTDBGEAA(196, Current, 2606);
 	RTIV(Current, RTAL);
 	RTHOOK(1);
 	RTDBGAL(Current, 0, 0x10000000, 1,0); /* Result */
 	
-	Result = (((FUNCTION_CAST(EIF_TYPED_VALUE, (EIF_REFERENCE)) RTWF(8426, 151))(Current)).it_i4);
+	Result = (((FUNCTION_CAST(EIF_TYPED_VALUE, (EIF_REFERENCE)) RTWF(8454, 154))(Current)).it_i4);
 	Result = (EIF_INTEGER_32) Result;
 	RTVI(Current, RTAL);
 	RTRS;
@@ -73,9 +73,9 @@ EIF_TYPED_VALUE F197_9321 (EIF_REFERENCE Current)
 	{ EIF_TYPED_VALUE r; r.type = SK_INT32; r.it_i4 = Result; return r; }
 }
 
-/* {VOID_TARGET}.tag */
-RTOID (F197_9322)
-EIF_TYPED_VALUE F197_9322 (EIF_REFERENCE Current)
+/* {VOID_ASSIGNED_TO_EXPANDED}.tag */
+RTOID (F197_9323)
+EIF_TYPED_VALUE F197_9323 (EIF_REFERENCE Current)
 {
 	GTCX
 	char *l_feature_name = "tag";
@@ -89,7 +89,7 @@ EIF_TYPED_VALUE F197_9322 (EIF_REFERENCE Current)
 	RTLD;
 	
 #define Result RTOTRR
-	RTOTDR(F197_9322);
+	RTOTDR(F197_9323);
 
 	RTLI(4);
 	RTLR(0,tr1);
@@ -99,21 +99,21 @@ EIF_TYPED_VALUE F197_9322 (EIF_REFERENCE Current)
 	RTLU (SK_REF, &Result);
 	RTLU (SK_REF, &Current);
 	
-	RTEAA(l_feature_name, 196, Current, 0, 0, 2596);
+	RTEAA(l_feature_name, 196, Current, 0, 0, 2607);
 	RTSA(Dtype(Current));
 	RTSC;
 	RTME(Dtype(Current), 0);
 	RTGC;
-	RTDBGEAA(196, Current, 2596);
+	RTDBGEAA(196, Current, 2607);
 	RTIV(Current, RTAL);
 	RTOTP;
 	RTHOOK(1);
-	RTDBGAL(Current, 0, 0xF800015D, 0,0); /* Result */
+	RTDBGAL(Current, 0, 0xF8000162, 0,0); /* Result */
 	
-	tr1 = RTLN(349);
-	tr2 = RTMS_EX_H("Feature call on void target.",28,484619566);
+	tr1 = RTLN(354);
+	tr2 = RTMS_EX_H("Void assigned to expanded.",26,184388398);
 	ur1 = tr2;
-	(FUNCTION_CAST(void, (EIF_REFERENCE, EIF_TYPED_VALUE)) RTWC(15150, Dtype(tr1)))(tr1, ur1x);
+	(FUNCTION_CAST(void, (EIF_REFERENCE, EIF_TYPED_VALUE)) RTWC(15205, Dtype(tr1)))(tr1, ur1x);
 	RTNHOOK(1,1);
 	Result = (EIF_REFERENCE) tr1;
 	RTVI(Current, RTAL);
@@ -133,7 +133,7 @@ EIF_TYPED_VALUE F197_9322 (EIF_REFERENCE Current)
 void EIF_Minit197 (void)
 {
 	GTCX
-	RTOTS (9322,F197_9322)
+	RTOTS (9323,F197_9323)
 }
 
 

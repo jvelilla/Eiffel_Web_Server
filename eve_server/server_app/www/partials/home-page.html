@@ -13,7 +13,9 @@
 			<label> Enter Feature: </label>
 			<input type="text" ng-model="project.feature" value="make">balance</input>
 			<label> Enter Target: </label>
-			<input type="text" ng-model="project.target" value="make">sample</input>
+			<input type="text" ng-model="project.target" value="sample">sample</input>
+			<label> Enter Command Line: </label>
+			<input type="text" ng-model="project.command_line">ec -config sample.ecf -short APPLICATION</input>
 			<label> Response Id: {{id}}</label>
 		</div>
 
@@ -29,10 +31,11 @@
 			<button class="btn" ng-click="get_class_clients()">Get Class Clients</button>	
 			<button class="btn" ng-click="get_class_suppliers()">Get Class Suppliers</button>	
 			<button class="btn" ng-click="get_feature_callers()">Get Feature Callers</button>	
+			<button class="btn" ng-click="get_user_command_line()">Get Command Line Output</button>	
 		</div>
 	
 		<div class="results">
-			<textarea class="my_textarea">{{result[0].Compile_Message}}{{result[0].Output_Message}}{{result[0].Execution_Output}}{{result[0].result}}{{result[0].Flat_View}}{{result[0].Contract_View}}{{result[0].Class_Descendants_Dump}}{{result[0].Class_Ancestors_Dump}}{{result[0].Class_Clients_Dump}}{{result[0].Class_Suppliers_Dump}}{{result[0].Feature_Callers_Dump}}{{result[0].Error_Message}}{{result[0].Targets}}
+			<textarea class="my_textarea">{{result[0].Compile_Message}}{{result[0].Output_Message}}{{result[0].Execution_Output}}{{result[0].result}}{{result[0].Flat_View}}{{result[0].Contract_View}}{{result[0].Class_Descendants_Dump}}{{result[0].Class_Ancestors_Dump}}{{result[0].Class_Clients_Dump}}{{result[0].Class_Suppliers_Dump}}{{result[0].Feature_Callers_Dump}}{{result[0].Error_Message}}{{result[0].Targets}}{{result[0].Command_Line_Dump}}
 			</textarea>
 			
 			<!-- Error Codes-->

@@ -1,5 +1,5 @@
 /*
- * Code for class WSF_SELF_DOCUMENTED_HANDLER
+ * Code for class WSF_RESPONSE_EXPORTER
  */
 
 #include "eif_eiffel.h"

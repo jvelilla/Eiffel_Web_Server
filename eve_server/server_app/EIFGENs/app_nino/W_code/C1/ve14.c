@@ -10,10 +10,10 @@
 extern "C" {
 #endif
 
-static EIF_TYPED_VALUE F14_3776_body(EIF_REFERENCE);
-extern EIF_TYPED_VALUE F14_3776(EIF_REFERENCE);
-extern void F14_3777(EIF_REFERENCE, EIF_TYPED_VALUE);
-extern void F14_3778(EIF_REFERENCE);
+static EIF_TYPED_VALUE F14_3766_body(EIF_REFERENCE);
+extern EIF_TYPED_VALUE F14_3766(EIF_REFERENCE);
+extern void F14_3767(EIF_REFERENCE, EIF_TYPED_VALUE);
+extern void F14_3768(EIF_REFERENCE);
 extern void EIF_Minit14(void);
 
 #ifdef __cplusplus
@@ -36,7 +36,7 @@ extern "C" {
 #endif
 
 /* {VERSIONABLE}.version */
-static EIF_TYPED_VALUE F14_3776_body (EIF_REFERENCE Current)
+static EIF_TYPED_VALUE F14_3766_body (EIF_REFERENCE Current)
 {
 	GTCX
 	char *l_feature_name = "version";
@@ -70,17 +70,17 @@ static EIF_TYPED_VALUE F14_3776_body (EIF_REFERENCE Current)
 	{ EIF_TYPED_VALUE r; r.type = SK_UINT32; r.it_n4 = Result; return r; }
 }
 
-EIF_TYPED_VALUE F14_3776 (EIF_REFERENCE Current)
+EIF_TYPED_VALUE F14_3766 (EIF_REFERENCE Current)
 {
 	EIF_TYPED_VALUE r;
 	r.type = SK_UINT32;
-	r.it_n4 = *(EIF_NATURAL_32 *)(Current + RTWA(3774,Dtype(Current)));
+	r.it_n4 = *(EIF_NATURAL_32 *)(Current + RTWA(3764,Dtype(Current)));
 	return r;
 }
 
 
 /* {VERSIONABLE}.set_version */
-void F14_3777 (EIF_REFERENCE Current, EIF_TYPED_VALUE arg1x)
+void F14_3767 (EIF_REFERENCE Current, EIF_TYPED_VALUE arg1x)
 {
 	GTCX
 	char *l_feature_name = "set_version";
@@ -108,13 +108,13 @@ void F14_3777 (EIF_REFERENCE Current, EIF_TYPED_VALUE arg1x)
 	RTDBGEAA(13, Current, 265);
 	RTIV(Current, RTAL);
 	RTHOOK(1);
-	RTDBGAA(Current, dtype, 3774, 0x38000000, 1); /* version */
+	RTDBGAA(Current, dtype, 3764, 0x38000000, 1); /* version */
 	
-	*(EIF_NATURAL_32 *)(Current + RTWA(3774, dtype)) = (EIF_NATURAL_32) arg1;
+	*(EIF_NATURAL_32 *)(Current + RTWA(3764, dtype)) = (EIF_NATURAL_32) arg1;
 	if (RTAL & CK_ENSURE) {
 		RTHOOK(2);
 		RTCT("version_set", EX_POST);
-		tu4_1 = *(EIF_NATURAL_32 *)(Current + RTWA(3774, dtype));
+		tu4_1 = *(EIF_NATURAL_32 *)(Current + RTWA(3764, dtype));
 		if ((EIF_BOOLEAN)(tu4_1 == arg1)) {
 			RTCK;
 		} else {
@@ -133,7 +133,7 @@ void F14_3777 (EIF_REFERENCE Current, EIF_TYPED_VALUE arg1x)
 }
 
 /* {VERSIONABLE}.increment_version */
-void F14_3778 (EIF_REFERENCE Current)
+void F14_3768 (EIF_REFERENCE Current)
 {
 	GTCX
 	char *l_feature_name = "increment_version";
@@ -163,7 +163,7 @@ void F14_3778 (EIF_REFERENCE Current)
 	if (RTAL & CK_ENSURE) {
 		in_assertion = ~0;
 		RTE_OT
-		tu4_2 = *(EIF_NATURAL_32 *)(Current + RTWA(3774, dtype));
+		tu4_2 = *(EIF_NATURAL_32 *)(Current + RTWA(3764, dtype));
 		tu4_1 = tu4_2;
 		tr1 = NULL;
 		RTE_O
@@ -172,14 +172,14 @@ void F14_3778 (EIF_REFERENCE Current)
 		in_assertion = 0;
 	}
 	RTHOOK(1);
-	RTDBGAA(Current, dtype, 3774, 0x38000000, 1); /* version */
+	RTDBGAA(Current, dtype, 3764, 0x38000000, 1); /* version */
 	
 	tu4_3 = (EIF_NATURAL_32) ((EIF_INTEGER_32) 1L);
-	(*(EIF_NATURAL_32 *)(Current + RTWA(3774, dtype))) += tu4_3;
+	(*(EIF_NATURAL_32 *)(Current + RTWA(3764, dtype))) += tu4_3;
 	if (RTAL & CK_ENSURE) {
 		RTHOOK(2);
 		RTCT("version_incremented", EX_POST);
-		tu4_2 = *(EIF_NATURAL_32 *)(Current + RTWA(3774, dtype));
+		tu4_2 = *(EIF_NATURAL_32 *)(Current + RTWA(3764, dtype));
 		RTCO(tr1);
 		tu4_3 = (EIF_NATURAL_32) ((EIF_INTEGER_32) 1L);
 		if ((EIF_BOOLEAN)(tu4_2 == (EIF_NATURAL_32) (tu4_1 + tu4_3))) {

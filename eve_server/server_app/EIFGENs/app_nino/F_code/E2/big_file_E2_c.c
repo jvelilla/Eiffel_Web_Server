@@ -1,6 +1,0 @@
-#include "epoly1.c"
-#include "epoly2.c"
-#include "epoly3.c"
-#include "epoly4.c"
-#include "epoly5.c"
-#include "epoly6.c"

@@ -55,8 +55,9 @@ $spitshell >>Makefile <<'!NO!SUBS!'
 
 OBJECTS = big_file_C34_c.obj 
 
-OLDOBJECTS =  fu1092.o fu1092d.o rt1089.o rt1089d.o rt1093.o rt1093d.o rt1090.o \
-	rt1090d.o rt1091.o rt1091d.o 
+OLDOBJECTS =  fu1091.o fu1091d.o fu1092.o fu1092d.o ty1089.o ty1089d.o ty1090.o \
+	ty1090d.o st1093.o st1093d.o rt1098.o rt1098d.o rt1094.o rt1094d.o \
+	rt1097.o rt1097d.o rt1095.o rt1095d.o rt1096.o rt1096d.o 
 
 all: Cobj34.o
 
