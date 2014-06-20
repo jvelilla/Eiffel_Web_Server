@@ -10,7 +10,7 @@
 extern "C" {
 #endif
 
-extern void F64_22911(EIF_REFERENCE, int);
+extern void F64_22918(EIF_REFERENCE, int);
 extern void EIF_Minit64(void);
 
 #ifdef __cplusplus
@@ -33,7 +33,7 @@ extern "C" {
 #endif
 
 /* {GROUP_ELEMENT}._invariant */
-void F64_22911 (EIF_REFERENCE Current, int where)
+void F64_22918 (EIF_REFERENCE Current, int where)
 {
 	GTCX
 	char *l_feature_name = "_invariant";
@@ -58,7 +58,7 @@ void F64_22911 (EIF_REFERENCE Current, int where)
 	RTLR(3,tr2);
 	RTLU (SK_VOID, NULL);
 	RTLU (SK_REF, &Current);
-	RTEAINV(l_feature_name, 63, Current, 0, 22910);
+	RTEAINV(l_feature_name, 63, Current, 0, 22917);
 	RTSA(dtype);
 	RTME(dtype, 0);
 	RTIT("neutral_addition", Current);

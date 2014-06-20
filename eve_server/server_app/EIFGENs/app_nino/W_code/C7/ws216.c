@@ -10,7 +10,7 @@
 extern "C" {
 #endif
 
-extern EIF_TYPED_VALUE F216_9456(EIF_REFERENCE);
+extern EIF_TYPED_VALUE F216_9460(EIF_REFERENCE);
 extern void EIF_Minit216(void);
 
 #ifdef __cplusplus
@@ -33,7 +33,7 @@ extern "C" {
 #endif
 
 /* {WSF_SERVICE}.to_wgi_service */
-EIF_TYPED_VALUE F216_9456 (EIF_REFERENCE Current)
+EIF_TYPED_VALUE F216_9460 (EIF_REFERENCE Current)
 {
 	GTCX
 	char *l_feature_name = "to_wgi_service";
@@ -55,12 +55,12 @@ EIF_TYPED_VALUE F216_9456 (EIF_REFERENCE Current)
 	RTLU (SK_REF, &Result);
 	RTLU (SK_REF, &Current);
 	
-	RTEAA(l_feature_name, 215, Current, 0, 0, 2731);
+	RTEAA(l_feature_name, 215, Current, 0, 0, 2735);
 	RTSA(Dtype(Current));
 	RTSC;
 	RTME(Dtype(Current), 0);
 	RTGC;
-	RTDBGEAA(215, Current, 2731);
+	RTDBGEAA(215, Current, 2735);
 	RTIV(Current, RTAL);
 	RTHOOK(1);
 	RTDBGAL(Current, 0, 0xF8000050, 0,0); /* Result */

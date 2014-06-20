@@ -50,10 +50,10 @@ static struct desc_info desc_305[] = {
 	{30, (BODY_INDEX)-1, 304, NULL},
 	{31, (BODY_INDEX)-1, (EIF_TYPE_INDEX)-1, NULL},
 	{32, (BODY_INDEX)-1, (EIF_TYPE_INDEX)-1, NULL},
-	{8884, (BODY_INDEX)-1, (EIF_TYPE_INDEX)-1, NULL},
-	{8885, 0, 296, NULL},
-	{8886, 8, 370, NULL},
-	{8887, (BODY_INDEX)-1, (EIF_TYPE_INDEX)-1, NULL},
+	{8891, (BODY_INDEX)-1, (EIF_TYPE_INDEX)-1, NULL},
+	{8892, 0, 296, NULL},
+	{8893, 8, 370, NULL},
+	{8894, (BODY_INDEX)-1, (EIF_TYPE_INDEX)-1, NULL},
 };
 
 extern void Init305(void);

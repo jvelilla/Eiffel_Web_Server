@@ -10,7 +10,7 @@
 extern "C" {
 #endif
 
-extern void F546_9642(EIF_REFERENCE, EIF_TYPED_VALUE);
+extern void F546_9646(EIF_REFERENCE, EIF_TYPED_VALUE);
 extern void EIF_Minit546(void);
 
 #ifdef __cplusplus
@@ -33,7 +33,7 @@ extern "C" {
 #endif
 
 /* {TABLE}.bag_put */
-void F546_9642 (EIF_REFERENCE Current, EIF_TYPED_VALUE arg1x)
+void F546_9646 (EIF_REFERENCE Current, EIF_TYPED_VALUE arg1x)
 {
 	GTCX
 	char *l_feature_name = "bag_put";
@@ -55,17 +55,17 @@ void F546_9642 (EIF_REFERENCE Current, EIF_TYPED_VALUE arg1x)
 	RTLU(SK_INT32,&arg1);
 	RTLU (SK_REF, &Current);
 	
-	RTEAA(l_feature_name, 545, Current, 0, 1, 3015);
+	RTEAA(l_feature_name, 545, Current, 0, 1, 3019);
 	RTSA(dtype);
 	RTSC;
 	RTME(dtype, 0);
 	RTGC;
-	RTDBGEAA(545, Current, 3015);
+	RTDBGEAA(545, Current, 3019);
 	RTIV(Current, RTAL);
 	if ((RTAL & CK_REQUIRE) || RTAC) {
 		RTHOOK(1);
 		RTCT("extendible", EX_PRE);
-		tb1 = (((FUNCTION_CAST(EIF_TYPED_VALUE, (EIF_REFERENCE)) RTWF(9236, dtype))(Current)).it_b);
+		tb1 = (((FUNCTION_CAST(EIF_TYPED_VALUE, (EIF_REFERENCE)) RTWF(9240, dtype))(Current)).it_b);
 		RTTE(tb1, label_1);
 		RTCK;
 		RTJB;
@@ -77,7 +77,7 @@ body:;
 		RTHOOK(2);
 		RTCT("item_inserted", EX_POST);
 		ui4_1 = arg1;
-		tb1 = (((FUNCTION_CAST(EIF_TYPED_VALUE, (EIF_REFERENCE, EIF_TYPED_VALUE)) RTWF(9238, dtype))(Current, ui4_1x)).it_b);
+		tb1 = (((FUNCTION_CAST(EIF_TYPED_VALUE, (EIF_REFERENCE, EIF_TYPED_VALUE)) RTWF(9242, dtype))(Current, ui4_1x)).it_b);
 		if (tb1) {
 			RTCK;
 		} else {

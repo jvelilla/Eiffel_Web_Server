@@ -59,10 +59,10 @@ OLDOBJECTS =  in233.o in233d.o c_252.o c_252d.o it238.o it238d.o pl259.o pl259d.
 	re232.o re232d.o re235.o re235d.o ws249.o ws249d.o ws248.o ws248d.o \
 	na263.o na263d.o cu256.o cu256d.o st250.o st250d.o ar258.o ar258d.o \
 	re236.o re236d.o ha257.o ha257d.o re234.o re234d.o re231.o re231d.o \
-	wg253.o wg253d.o se237.o se237d.o ws247.o ws247d.o ws246.o ws246d.o \
-	ws245.o ws245d.o ws244.o ws244d.o ws243.o ws243d.o ht240.o ht240d.o \
+	wg253.o wg253d.o se237.o se237d.o ws247.o ws247d.o ws245.o ws245d.o \
+	ws246.o ws246d.o ws244.o ws244d.o ws243.o ws243d.o ht240.o ht240d.o \
 	wg255.o wg255d.o ws241.o ws241d.o ht260.o ht260d.o ws242.o ws242d.o \
-	ur261.o ur261d.o ut262.o ut262d.o ht239.o ht239d.o wg254.o wg254d.o \
+	ur261.o ur261d.o ht239.o ht239d.o ut262.o ut262d.o wg254.o wg254d.o \
 	we251.o we251d.o 
 
 all: Cobj8.o

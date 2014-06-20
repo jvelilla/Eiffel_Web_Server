@@ -21,7 +21,7 @@ static struct desc_info desc_372[] = {
 	{1, (BODY_INDEX)-1, 459, gen_type0_372},
 	{2, (BODY_INDEX)-1, 346, NULL},
 	{3, (BODY_INDEX)-1, 346, NULL},
-	{11172, (BODY_INDEX)-1, 346, NULL},
+	{11179, (BODY_INDEX)-1, 346, NULL},
 	{5, (BODY_INDEX)-1, 346, NULL},
 	{6, (BODY_INDEX)-1, 346, NULL},
 	{7, (BODY_INDEX)-1, 346, NULL},
@@ -50,13 +50,13 @@ static struct desc_info desc_372[] = {
 	{30, (BODY_INDEX)-1, 371, NULL},
 	{31, (BODY_INDEX)-1, (EIF_TYPE_INDEX)-1, NULL},
 	{32, (BODY_INDEX)-1, (EIF_TYPE_INDEX)-1, NULL},
-	{11171, (BODY_INDEX)-1, 400, NULL},
-	{9893, (BODY_INDEX)-1, 346, NULL},
-	{11169, (BODY_INDEX)-1, (EIF_TYPE_INDEX)-1, NULL},
-	{11170, (BODY_INDEX)-1, 359, NULL},
-	{11173, 0, 400, NULL},
-	{11174, (BODY_INDEX)-1, 359, NULL},
-	{11175, (BODY_INDEX)-1, (EIF_TYPE_INDEX)-1, NULL},
+	{11178, (BODY_INDEX)-1, 400, NULL},
+	{9900, (BODY_INDEX)-1, 346, NULL},
+	{11176, (BODY_INDEX)-1, (EIF_TYPE_INDEX)-1, NULL},
+	{11177, (BODY_INDEX)-1, 359, NULL},
+	{11180, 0, 400, NULL},
+	{11181, (BODY_INDEX)-1, 359, NULL},
+	{11182, (BODY_INDEX)-1, (EIF_TYPE_INDEX)-1, NULL},
 };
 
 extern void Init372(void);
@@ -67,7 +67,7 @@ void Init372(void)
 	IDSC(desc_372 + 34, 85, 371);
 	IDSC(desc_372 + 36, 62, 371);
 	IDSC(desc_372 + 39, 106, 371);
-	IDSC(desc_372 + 40, 219, 371);
+	IDSC(desc_372 + 40, 220, 371);
 }
 
 

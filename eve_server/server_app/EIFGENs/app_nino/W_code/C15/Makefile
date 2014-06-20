@@ -45,9 +45,9 @@ OLDOBJECTS =  ar473.obj ar473d.obj ro468.obj ro468d.obj pr472.obj pr472d.obj fu4
 	ty469.obj ty469d.obj ty470.obj ty470d.obj ty471.obj ty471d.obj ar486.obj ar486d.obj \
 	na462.obj na462d.obj re463.obj re463d.obj li475.obj li475d.obj re481.obj re481d.obj \
 	in492.obj in492d.obj to485.obj to485d.obj it465.obj it465d.obj it466.obj it466d.obj \
-	li488.obj li488d.obj se489.obj se489d.obj dy487.obj dy487d.obj ta493.obj ta493d.obj \
+	li490.obj li490d.obj se488.obj se488d.obj dy487.obj dy487d.obj ta493.obj ta493d.obj \
 	in464.obj in464d.obj cu477.obj cu477d.obj tr476.obj tr476d.obj bo482.obj bo482d.obj \
-	ch491.obj ch491d.obj ac478.obj ac478d.obj bi490.obj bi490d.obj fi483.obj fi483d.obj \
+	ch491.obj ch491d.obj ac478.obj ac478d.obj bi489.obj bi489d.obj fi483.obj fi483d.obj \
 	dy494.obj dy494d.obj ba479.obj ba479d.obj co480.obj co480d.obj co474.obj co474d.obj \
 	bo484.obj bo484d.obj 
 

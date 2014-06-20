@@ -50,13 +50,13 @@ static struct desc_info desc_308[] = {
 	{30, (BODY_INDEX)-1, 307, NULL},
 	{31, (BODY_INDEX)-1, (EIF_TYPE_INDEX)-1, NULL},
 	{32, (BODY_INDEX)-1, (EIF_TYPE_INDEX)-1, NULL},
-	{3714, (BODY_INDEX)-1, 259, NULL},
-	{8913, (BODY_INDEX)-1, (EIF_TYPE_INDEX)-1, NULL},
-	{8914, 0, 296, NULL},
-	{8915, 8, 370, NULL},
-	{8916, 16, 355, NULL},
-	{8917, (BODY_INDEX)-1, (EIF_TYPE_INDEX)-1, NULL},
-	{8918, (BODY_INDEX)-1, (EIF_TYPE_INDEX)-1, NULL},
+	{3718, (BODY_INDEX)-1, 259, NULL},
+	{8920, (BODY_INDEX)-1, (EIF_TYPE_INDEX)-1, NULL},
+	{8921, 0, 296, NULL},
+	{8922, 8, 370, NULL},
+	{8923, 16, 355, NULL},
+	{8924, (BODY_INDEX)-1, (EIF_TYPE_INDEX)-1, NULL},
+	{8925, (BODY_INDEX)-1, (EIF_TYPE_INDEX)-1, NULL},
 };
 
 extern void Init308(void);
@@ -64,8 +64,8 @@ void Init308(void)
 {
 	IDSC(desc_308, 0, 307);
 	IDSC(desc_308 + 1, 4, 307);
-	IDSC(desc_308 + 34, 321, 307);
-	IDSC(desc_308 + 35, 433, 307);
+	IDSC(desc_308 + 34, 324, 307);
+	IDSC(desc_308 + 35, 432, 307);
 	IDSC(desc_308 + 40, 288, 307);
 }
 

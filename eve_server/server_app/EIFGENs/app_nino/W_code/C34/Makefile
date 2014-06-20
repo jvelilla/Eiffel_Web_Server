@@ -41,9 +41,9 @@ SYSTEM_IN_DYNAMIC_LIB = app.dll
 
 OBJECTS = big_file_C34_c.obj 
 
-OLDOBJECTS =  fu1091.obj fu1091d.obj fu1092.obj fu1092d.obj ty1089.obj ty1089d.obj ty1090.obj \
-	ty1090d.obj st1093.obj st1093d.obj rt1098.obj rt1098d.obj rt1094.obj rt1094d.obj \
-	rt1097.obj rt1097d.obj rt1095.obj rt1095d.obj rt1096.obj rt1096d.obj 
+OLDOBJECTS =  fu1090.obj fu1090d.obj fu1091.obj fu1091d.obj ty1089.obj ty1089d.obj st1092.obj \
+	st1092d.obj rt1098.obj rt1098d.obj rt1094.obj rt1094d.obj rt1097.obj rt1097d.obj \
+	rt1093.obj rt1093d.obj rt1095.obj rt1095d.obj rt1096.obj rt1096d.obj 
 
 all::  Cobj34.lib
 

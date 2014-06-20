@@ -62,7 +62,7 @@ void Init26(void)
 {
 	IDSC(desc_26, 0, 25);
 	IDSC(desc_26 + 1, 4, 25);
-	IDSC(desc_26 + 34, 191, 25);
+	IDSC(desc_26 + 34, 194, 25);
 }
 
 

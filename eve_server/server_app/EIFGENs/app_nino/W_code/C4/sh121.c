@@ -10,7 +10,7 @@
 extern "C" {
 #endif
 
-extern EIF_TYPED_VALUE F121_8249(EIF_REFERENCE);
+extern EIF_TYPED_VALUE F121_8253(EIF_REFERENCE);
 extern void EIF_Minit121(void);
 
 #ifdef __cplusplus
@@ -33,8 +33,8 @@ extern "C" {
 #endif
 
 /* {SHARED_EXECUTION_ENVIRONMENT}.execution_environment */
-RTOID (F121_8249)
-EIF_TYPED_VALUE F121_8249 (EIF_REFERENCE Current)
+RTOID (F121_8253)
+EIF_TYPED_VALUE F121_8253 (EIF_REFERENCE Current)
 {
 	GTCX
 	char *l_feature_name = "execution_environment";
@@ -45,7 +45,7 @@ EIF_TYPED_VALUE F121_8249 (EIF_REFERENCE Current)
 	RTLD;
 	
 #define Result RTOTRR
-	RTOTDR(F121_8249);
+	RTOTDR(F121_8253);
 
 	RTLI(2);
 	RTLR(0,tr1);
@@ -53,12 +53,12 @@ EIF_TYPED_VALUE F121_8249 (EIF_REFERENCE Current)
 	RTLU (SK_REF, &Result);
 	RTLU (SK_REF, &Current);
 	
-	RTEAA(l_feature_name, 120, Current, 0, 0, 1862);
+	RTEAA(l_feature_name, 120, Current, 0, 0, 1866);
 	RTSA(Dtype(Current));
 	RTSC;
 	RTME(Dtype(Current), 0);
 	RTGC;
-	RTDBGEAA(120, Current, 1862);
+	RTDBGEAA(120, Current, 1866);
 	RTIV(Current, RTAL);
 	RTOTP;
 	RTHOOK(1);
@@ -84,7 +84,7 @@ EIF_TYPED_VALUE F121_8249 (EIF_REFERENCE Current)
 void EIF_Minit121 (void)
 {
 	GTCX
-	RTOTS (8249,F121_8249)
+	RTOTS (8253,F121_8253)
 }
 
 

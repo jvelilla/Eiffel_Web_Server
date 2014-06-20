@@ -66,7 +66,7 @@ void Init17(void)
 {
 	IDSC(desc_17, 0, 16);
 	IDSC(desc_17 + 1, 4, 16);
-	IDSC(desc_17 + 34, 318, 16);
+	IDSC(desc_17 + 34, 319, 16);
 }
 
 

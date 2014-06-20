@@ -10,8 +10,8 @@
 extern "C" {
 #endif
 
-extern EIF_TYPED_VALUE F194_9314(EIF_REFERENCE);
-extern EIF_TYPED_VALUE F194_9315(EIF_REFERENCE);
+extern EIF_TYPED_VALUE F194_9318(EIF_REFERENCE);
+extern EIF_TYPED_VALUE F194_9319(EIF_REFERENCE);
 extern void EIF_Minit194(void);
 
 #ifdef __cplusplus
@@ -34,7 +34,7 @@ extern "C" {
 #endif
 
 /* {MISMATCH_FAILURE}.code */
-EIF_TYPED_VALUE F194_9314 (EIF_REFERENCE Current)
+EIF_TYPED_VALUE F194_9318 (EIF_REFERENCE Current)
 {
 	GTCX
 	char *l_feature_name = "code";
@@ -50,17 +50,17 @@ EIF_TYPED_VALUE F194_9314 (EIF_REFERENCE Current)
 	RTLU (SK_INT32, &Result);
 	RTLU (SK_REF, &Current);
 	
-	RTEAA(l_feature_name, 193, Current, 0, 0, 2598);
+	RTEAA(l_feature_name, 193, Current, 0, 0, 2602);
 	RTSA(Dtype(Current));
 	RTSC;
 	RTME(Dtype(Current), 0);
 	RTGC;
-	RTDBGEAA(193, Current, 2598);
+	RTDBGEAA(193, Current, 2602);
 	RTIV(Current, RTAL);
 	RTHOOK(1);
 	RTDBGAL(Current, 0, 0x10000000, 1,0); /* Result */
 	
-	Result = (((FUNCTION_CAST(EIF_TYPED_VALUE, (EIF_REFERENCE)) RTWF(8458, 154))(Current)).it_i4);
+	Result = (((FUNCTION_CAST(EIF_TYPED_VALUE, (EIF_REFERENCE)) RTWF(8462, 154))(Current)).it_i4);
 	Result = (EIF_INTEGER_32) Result;
 	RTVI(Current, RTAL);
 	RTRS;
@@ -74,8 +74,8 @@ EIF_TYPED_VALUE F194_9314 (EIF_REFERENCE Current)
 }
 
 /* {MISMATCH_FAILURE}.tag */
-RTOID (F194_9315)
-EIF_TYPED_VALUE F194_9315 (EIF_REFERENCE Current)
+RTOID (F194_9319)
+EIF_TYPED_VALUE F194_9319 (EIF_REFERENCE Current)
 {
 	GTCX
 	char *l_feature_name = "tag";
@@ -89,7 +89,7 @@ EIF_TYPED_VALUE F194_9315 (EIF_REFERENCE Current)
 	RTLD;
 	
 #define Result RTOTRR
-	RTOTDR(F194_9315);
+	RTOTDR(F194_9319);
 
 	RTLI(4);
 	RTLR(0,tr1);
@@ -99,12 +99,12 @@ EIF_TYPED_VALUE F194_9315 (EIF_REFERENCE Current)
 	RTLU (SK_REF, &Result);
 	RTLU (SK_REF, &Current);
 	
-	RTEAA(l_feature_name, 193, Current, 0, 0, 2599);
+	RTEAA(l_feature_name, 193, Current, 0, 0, 2603);
 	RTSA(Dtype(Current));
 	RTSC;
 	RTME(Dtype(Current), 0);
 	RTGC;
-	RTDBGEAA(193, Current, 2599);
+	RTDBGEAA(193, Current, 2603);
 	RTIV(Current, RTAL);
 	RTOTP;
 	RTHOOK(1);
@@ -113,7 +113,7 @@ EIF_TYPED_VALUE F194_9315 (EIF_REFERENCE Current)
 	tr1 = RTLN(354);
 	tr2 = RTMS_EX_H("Mismatch failed.",16,966757678);
 	ur1 = tr2;
-	(FUNCTION_CAST(void, (EIF_REFERENCE, EIF_TYPED_VALUE)) RTWC(15205, Dtype(tr1)))(tr1, ur1x);
+	(FUNCTION_CAST(void, (EIF_REFERENCE, EIF_TYPED_VALUE)) RTWC(15212, Dtype(tr1)))(tr1, ur1x);
 	RTNHOOK(1,1);
 	Result = (EIF_REFERENCE) tr1;
 	RTVI(Current, RTAL);
@@ -133,7 +133,7 @@ EIF_TYPED_VALUE F194_9315 (EIF_REFERENCE Current)
 void EIF_Minit194 (void)
 {
 	GTCX
-	RTOTS (9315,F194_9315)
+	RTOTS (9319,F194_9319)
 }
 
 

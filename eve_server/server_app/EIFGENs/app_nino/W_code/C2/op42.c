@@ -23,8 +23,8 @@ extern void EIF_Minit42(void);
 }
 #endif
 
-#include "eif_path_name.h"
 #include "eif_dir.h"
+#include "eif_path_name.h"
 
 #ifdef __cplusplus
 extern "C" {

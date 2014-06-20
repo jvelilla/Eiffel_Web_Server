@@ -56,8 +56,8 @@ static struct desc_info desc_377[] = {
 	{(BODY_INDEX)-1, (BODY_INDEX)-1, 353, NULL},
 	{(BODY_INDEX)-1, (BODY_INDEX)-1, 346, NULL},
 	{(BODY_INDEX)-1, (BODY_INDEX)-1, (EIF_TYPE_INDEX)-1, NULL},
-	{13209, (BODY_INDEX)-1, 355, NULL},
-	{13208, (BODY_INDEX)-1, 359, NULL},
+	{13216, (BODY_INDEX)-1, 355, NULL},
+	{13215, (BODY_INDEX)-1, 359, NULL},
 };
 
 extern void Init377(void);
@@ -65,7 +65,7 @@ void Init377(void)
 {
 	IDSC(desc_377, 0, 376);
 	IDSC(desc_377 + 1, 4, 376);
-	IDSC(desc_377 + 34, 316, 376);
+	IDSC(desc_377 + 34, 321, 376);
 	IDSC(desc_377 + 41, 106, 376);
 }
 

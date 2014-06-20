@@ -17,7 +17,7 @@ extern void F83_7103(EIF_REFERENCE, EIF_TYPED_VALUE, EIF_TYPED_VALUE);
 extern EIF_TYPED_VALUE F83_7105(EIF_REFERENCE);
 extern EIF_TYPED_VALUE F83_7107(EIF_REFERENCE);
 extern EIF_TYPED_VALUE F83_7109(EIF_REFERENCE);
-extern void F83_22916(EIF_REFERENCE, int);
+extern void F83_22923(EIF_REFERENCE, int);
 extern void EIF_Minit83(void);
 
 #ifdef __cplusplus
@@ -238,7 +238,7 @@ void F83_7102 (EIF_REFERENCE Current, EIF_TYPED_VALUE arg1x, EIF_TYPED_VALUE arg
 	RTHOOK(1);
 	tr1 = RTLN(216);
 	ur1 = RTCCL(arg1);
-	(FUNCTION_CAST(void, (EIF_REFERENCE, EIF_TYPED_VALUE)) RTWC(9075, Dtype(tr1)))(tr1, ur1x);
+	(FUNCTION_CAST(void, (EIF_REFERENCE, EIF_TYPED_VALUE)) RTWC(9079, Dtype(tr1)))(tr1, ur1x);
 	RTNHOOK(1,1);
 	ur1 = RTCCL(tr1);
 	ur2 = RTCCL(arg2);
@@ -308,7 +308,7 @@ void F83_7103 (EIF_REFERENCE Current, EIF_TYPED_VALUE arg1x, EIF_TYPED_VALUE arg
 	RTHOOK(1);
 	tr1 = RTLN(216);
 	ur1 = RTCCL(arg1);
-	(FUNCTION_CAST(void, (EIF_REFERENCE, EIF_TYPED_VALUE)) RTWC(9075, Dtype(tr1)))(tr1, ur1x);
+	(FUNCTION_CAST(void, (EIF_REFERENCE, EIF_TYPED_VALUE)) RTWC(9079, Dtype(tr1)))(tr1, ur1x);
 	RTNHOOK(1,1);
 	ur1 = RTCCL(tr1);
 	ur2 = RTCCL(arg2);
@@ -398,12 +398,12 @@ EIF_TYPED_VALUE F83_7107 (EIF_REFERENCE Current)
 	RTLU (SK_REF, &Current);
 	RTLU(SK_REF, &loc1);
 	
-	RTEAA(l_feature_name, 82, Current, 1, 0, 1450);
+	RTEAA(l_feature_name, 82, Current, 1, 0, 1449);
 	RTSA(dtype);
 	RTSC;
 	RTME(dtype, 0);
 	RTGC;
-	RTDBGEAA(82, Current, 1450);
+	RTDBGEAA(82, Current, 1449);
 	RTIV(Current, RTAL);
 	RTHOOK(1);
 	tr1 = ((up1x = (FUNCTION_CAST(EIF_TYPED_VALUE, (EIF_REFERENCE)) RTWF(6977, dtype))(Current)), (((up1x.type & SK_HEAD) == SK_REF)? (EIF_REFERENCE) 0: (up1x.it_r = RTBU(up1x))), (up1x.type = SK_POINTER), up1x.it_r);
@@ -448,7 +448,7 @@ EIF_TYPED_VALUE F83_7109 (EIF_REFERENCE Current)
 
 
 /* {WSF_SERVICE_LAUNCHER}._invariant */
-void F83_22916 (EIF_REFERENCE Current, int where)
+void F83_22923 (EIF_REFERENCE Current, int where)
 {
 	GTCX
 	char *l_feature_name = "_invariant";
@@ -465,7 +465,7 @@ void F83_22916 (EIF_REFERENCE Current, int where)
 	RTLR(1,tr1);
 	RTLU (SK_VOID, NULL);
 	RTLU (SK_REF, &Current);
-	RTEAINV(l_feature_name, 82, Current, 0, 22915);
+	RTEAINV(l_feature_name, 82, Current, 0, 22922);
 	RTSA(dtype);
 	RTME(dtype, 0);
 	RTIT("connector_attached", Current);

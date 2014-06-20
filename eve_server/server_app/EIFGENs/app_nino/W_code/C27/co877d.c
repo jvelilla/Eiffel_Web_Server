@@ -1,5 +1,5 @@
 /*
- * Class CONTAINER [NATURAL_16]
+ * Class COLLECTION [NATURAL_16]
  */
 
 #include "eif_macros.h"
@@ -18,7 +18,7 @@ static EIF_TYPE_INDEX gen_type5_877 [] = {876,415,0xFFFF};
 static EIF_TYPE_INDEX gen_type6_877 [] = {0,0xFFFF};
 static EIF_TYPE_INDEX gen_type7_877 [] = {876,415,0xFFFF};
 static EIF_TYPE_INDEX gen_type8_877 [] = {876,415,0xFFFF};
-static EIF_TYPE_INDEX gen_type9_877 [] = {877,0xFFF8,1,0xFFFF};
+static EIF_TYPE_INDEX gen_type9_877 [] = {871,0xFFF8,1,0xFFFF};
 static EIF_TYPE_INDEX gen_type10_877 [] = {0xFFF8,1,0xFFFF};
 
 
@@ -59,13 +59,22 @@ static struct desc_info desc_877[] = {
 	{32, (BODY_INDEX)-1, (EIF_TYPE_INDEX)-1, NULL},
 	{(BODY_INDEX)-1, (BODY_INDEX)-1, 346, NULL},
 	{(BODY_INDEX)-1, (BODY_INDEX)-1, 346, NULL},
-	{2795, (BODY_INDEX)-1, 346, NULL},
-	{2796, 0, 346, NULL},
-	{2797, (BODY_INDEX)-1, 346, NULL},
-	{2798, (BODY_INDEX)-1, (EIF_TYPE_INDEX)-1, NULL},
+	{2801, (BODY_INDEX)-1, 346, NULL},
+	{2802, 0, 346, NULL},
+	{2803, (BODY_INDEX)-1, 346, NULL},
 	{2799, (BODY_INDEX)-1, (EIF_TYPE_INDEX)-1, NULL},
-	{(BODY_INDEX)-1, (BODY_INDEX)-1, 877, gen_type9_877},
+	{2800, (BODY_INDEX)-1, (EIF_TYPE_INDEX)-1, NULL},
+	{(BODY_INDEX)-1, (BODY_INDEX)-1, 871, gen_type9_877},
 	{(BODY_INDEX)-1, (BODY_INDEX)-1, (EIF_TYPE_INDEX)-1, gen_type10_877},
+	{(BODY_INDEX)-1, (BODY_INDEX)-1, 346, NULL},
+	{(BODY_INDEX)-1, (BODY_INDEX)-1, 346, NULL},
+	{3005, (BODY_INDEX)-1, 346, NULL},
+	{(BODY_INDEX)-1, (BODY_INDEX)-1, (EIF_TYPE_INDEX)-1, NULL},
+	{(BODY_INDEX)-1, (BODY_INDEX)-1, (EIF_TYPE_INDEX)-1, NULL},
+	{3006, (BODY_INDEX)-1, (EIF_TYPE_INDEX)-1, NULL},
+	{(BODY_INDEX)-1, (BODY_INDEX)-1, (EIF_TYPE_INDEX)-1, NULL},
+	{3007, (BODY_INDEX)-1, (EIF_TYPE_INDEX)-1, NULL},
+	{(BODY_INDEX)-1, (BODY_INDEX)-1, (EIF_TYPE_INDEX)-1, NULL},
 };
 
 extern void Init877(void);
@@ -74,6 +83,7 @@ void Init877(void)
 	IDSC(desc_877, 0, 876);
 	IDSC(desc_877 + 1, 4, 876);
 	IDSC(desc_877 + 34, 364, 876);
+	IDSC(desc_877 + 43, 362, 876);
 }
 
 

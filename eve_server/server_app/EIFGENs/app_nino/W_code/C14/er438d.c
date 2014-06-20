@@ -13,7 +13,7 @@ static EIF_TYPE_INDEX gen_type0_438 [] = {459,437,0xFFFF};
 static EIF_TYPE_INDEX gen_type1_438 [] = {0,0xFFFF};
 static EIF_TYPE_INDEX gen_type2_438 [] = {0,0xFFFF};
 static EIF_TYPE_INDEX gen_type3_438 [] = {0,0xFFFF};
-static EIF_TYPE_INDEX gen_type4_438 [] = {487,436,0xFFFF};
+static EIF_TYPE_INDEX gen_type4_438 [] = {489,436,0xFFFF};
 
 
 static struct desc_info desc_438[] = {
@@ -51,17 +51,17 @@ static struct desc_info desc_438[] = {
 	{30, (BODY_INDEX)-1, 437, NULL},
 	{31, (BODY_INDEX)-1, (EIF_TYPE_INDEX)-1, NULL},
 	{32, (BODY_INDEX)-1, (EIF_TYPE_INDEX)-1, NULL},
-	{14725, (BODY_INDEX)-1, 359, NULL},
-	{14728, (BODY_INDEX)-1, 400, NULL},
-	{14729, 16, 359, NULL},
+	{14731, (BODY_INDEX)-1, 359, NULL},
+	{14735, (BODY_INDEX)-1, 400, NULL},
+	{14736, 16, 359, NULL},
+	{14737, (BODY_INDEX)-1, 358, NULL},
+	{14729, 0, 436, NULL},
 	{14730, (BODY_INDEX)-1, 358, NULL},
-	{14723, 0, 436, NULL},
-	{14724, (BODY_INDEX)-1, 358, NULL},
-	{14726, (BODY_INDEX)-1, (EIF_TYPE_INDEX)-1, NULL},
 	{14732, (BODY_INDEX)-1, (EIF_TYPE_INDEX)-1, NULL},
-	{14727, (BODY_INDEX)-1, (EIF_TYPE_INDEX)-1, NULL},
-	{14731, 8, 487, gen_type4_438},
-	{14729, 16, 359, NULL},
+	{14739, (BODY_INDEX)-1, (EIF_TYPE_INDEX)-1, NULL},
+	{14734, (BODY_INDEX)-1, (EIF_TYPE_INDEX)-1, NULL},
+	{14738, 8, 489, gen_type4_438},
+	{14736, 16, 359, NULL},
 };
 
 extern void Init438(void);
@@ -70,8 +70,8 @@ void Init438(void)
 	IDSC(desc_438, 0, 437);
 	IDSC(desc_438 + 1, 4, 437);
 	IDSC(desc_438 + 34, 106, 437);
-	IDSC(desc_438 + 35, 376, 437);
-	IDSC(desc_438 + 42, 375, 437);
+	IDSC(desc_438 + 35, 375, 437);
+	IDSC(desc_438 + 42, 376, 437);
 }
 
 

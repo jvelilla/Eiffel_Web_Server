@@ -10,7 +10,7 @@
 extern "C" {
 #endif
 
-extern EIF_TYPED_VALUE F167_9097(EIF_REFERENCE);
+extern EIF_TYPED_VALUE F167_9101(EIF_REFERENCE);
 extern void EIF_Minit167(void);
 
 #ifdef __cplusplus
@@ -33,8 +33,8 @@ extern "C" {
 #endif
 
 /* {SHARED_WSF_PERCENT_ENCODER}.percent_encoder */
-RTOID (F167_9097)
-EIF_TYPED_VALUE F167_9097 (EIF_REFERENCE Current)
+RTOID (F167_9101)
+EIF_TYPED_VALUE F167_9101 (EIF_REFERENCE Current)
 {
 	GTCX
 	char *l_feature_name = "percent_encoder";
@@ -45,7 +45,7 @@ EIF_TYPED_VALUE F167_9097 (EIF_REFERENCE Current)
 	RTLD;
 	
 #define Result RTOTRR
-	RTOTDR(F167_9097);
+	RTOTDR(F167_9101);
 
 	RTLI(2);
 	RTLR(0,tr1);
@@ -53,12 +53,12 @@ EIF_TYPED_VALUE F167_9097 (EIF_REFERENCE Current)
 	RTLU (SK_REF, &Result);
 	RTLU (SK_REF, &Current);
 	
-	RTEAA(l_feature_name, 166, Current, 0, 0, 2381);
+	RTEAA(l_feature_name, 166, Current, 0, 0, 2385);
 	RTSA(Dtype(Current));
 	RTSC;
 	RTME(Dtype(Current), 0);
 	RTGC;
-	RTDBGEAA(166, Current, 2381);
+	RTDBGEAA(166, Current, 2385);
 	RTIV(Current, RTAL);
 	RTOTP;
 	RTHOOK(1);
@@ -84,7 +84,7 @@ EIF_TYPED_VALUE F167_9097 (EIF_REFERENCE Current)
 void EIF_Minit167 (void)
 {
 	GTCX
-	RTOTS (9097,F167_9097)
+	RTOTS (9101,F167_9101)
 }
 
 

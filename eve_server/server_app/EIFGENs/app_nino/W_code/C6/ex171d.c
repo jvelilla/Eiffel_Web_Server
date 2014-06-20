@@ -50,7 +50,7 @@ static struct desc_info desc_171[] = {
 	{30, (BODY_INDEX)-1, 170, NULL},
 	{31, (BODY_INDEX)-1, (EIF_TYPE_INDEX)-1, NULL},
 	{32, (BODY_INDEX)-1, (EIF_TYPE_INDEX)-1, NULL},
-	{2514, (BODY_INDEX)-1, 151, NULL},
+	{2518, (BODY_INDEX)-1, 151, NULL},
 };
 
 extern void Init171(void);

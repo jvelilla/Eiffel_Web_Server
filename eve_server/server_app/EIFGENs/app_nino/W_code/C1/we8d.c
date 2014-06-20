@@ -132,7 +132,7 @@ void Init8(void)
 {
 	IDSC(desc_8, 0, 7);
 	IDSC(desc_8 + 1, 4, 7);
-	IDSC(desc_8 + 34, 426, 7);
+	IDSC(desc_8 + 34, 401, 7);
 }
 
 

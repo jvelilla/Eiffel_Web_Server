@@ -61,7 +61,7 @@ static struct desc_info desc_463[] = {
 	{(BODY_INDEX)-1, (BODY_INDEX)-1, (EIF_TYPE_INDEX)-1, gen_type9_463},
 	{(BODY_INDEX)-1, (BODY_INDEX)-1, 300, NULL},
 	{(BODY_INDEX)-1, (BODY_INDEX)-1, 346, NULL},
-	{5524, (BODY_INDEX)-1, 463, gen_type10_463},
+	{5531, (BODY_INDEX)-1, 463, gen_type10_463},
 	{(BODY_INDEX)-1, (BODY_INDEX)-1, (EIF_TYPE_INDEX)-1, gen_type11_463},
 };
 

@@ -10,7 +10,7 @@
 extern "C" {
 #endif
 
-extern EIF_TYPED_VALUE F229_10775(EIF_REFERENCE);
+extern EIF_TYPED_VALUE F229_10779(EIF_REFERENCE);
 extern void EIF_Minit229(void);
 
 #ifdef __cplusplus
@@ -33,8 +33,8 @@ extern "C" {
 #endif
 
 /* {SHARED_HTML_ENCODER}.html_encoder */
-RTOID (F229_10775)
-EIF_TYPED_VALUE F229_10775 (EIF_REFERENCE Current)
+RTOID (F229_10779)
+EIF_TYPED_VALUE F229_10779 (EIF_REFERENCE Current)
 {
 	GTCX
 	char *l_feature_name = "html_encoder";
@@ -45,7 +45,7 @@ EIF_TYPED_VALUE F229_10775 (EIF_REFERENCE Current)
 	RTLD;
 	
 #define Result RTOTRR
-	RTOTDR(F229_10775);
+	RTOTDR(F229_10779);
 
 	RTLI(2);
 	RTLR(0,tr1);
@@ -53,12 +53,12 @@ EIF_TYPED_VALUE F229_10775 (EIF_REFERENCE Current)
 	RTLU (SK_REF, &Result);
 	RTLU (SK_REF, &Current);
 	
-	RTEAA(l_feature_name, 228, Current, 0, 0, 3714);
+	RTEAA(l_feature_name, 228, Current, 0, 0, 3718);
 	RTSA(Dtype(Current));
 	RTSC;
 	RTME(Dtype(Current), 0);
 	RTGC;
-	RTDBGEAA(228, Current, 3714);
+	RTDBGEAA(228, Current, 3718);
 	RTIV(Current, RTAL);
 	RTOTP;
 	RTHOOK(1);
@@ -84,7 +84,7 @@ EIF_TYPED_VALUE F229_10775 (EIF_REFERENCE Current)
 void EIF_Minit229 (void)
 {
 	GTCX
-	RTOTS (10775,F229_10775)
+	RTOTS (10779,F229_10779)
 }
 
 

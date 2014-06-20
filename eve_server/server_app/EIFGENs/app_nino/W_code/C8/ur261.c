@@ -10,9 +10,9 @@
 extern "C" {
 #endif
 
-extern EIF_TYPED_VALUE F261_11459(EIF_REFERENCE);
-extern EIF_TYPED_VALUE F261_11460(EIF_REFERENCE, EIF_TYPED_VALUE);
-extern EIF_TYPED_VALUE F261_11461(EIF_REFERENCE, EIF_TYPED_VALUE);
+extern EIF_TYPED_VALUE F261_11463(EIF_REFERENCE);
+extern EIF_TYPED_VALUE F261_11464(EIF_REFERENCE, EIF_TYPED_VALUE);
+extern EIF_TYPED_VALUE F261_11465(EIF_REFERENCE, EIF_TYPED_VALUE);
 extern void EIF_Minit261(void);
 
 #ifdef __cplusplus
@@ -35,7 +35,7 @@ extern "C" {
 #endif
 
 /* {URL_ENCODER}.name */
-EIF_TYPED_VALUE F261_11459 (EIF_REFERENCE Current)
+EIF_TYPED_VALUE F261_11463 (EIF_REFERENCE Current)
 {
 	GTCX
 	char *l_feature_name = "name";
@@ -59,12 +59,12 @@ EIF_TYPED_VALUE F261_11459 (EIF_REFERENCE Current)
 	RTLU (SK_REF, &Result);
 	RTLU (SK_REF, &Current);
 	
-	RTEAA(l_feature_name, 260, Current, 0, 0, 4330);
+	RTEAA(l_feature_name, 260, Current, 0, 0, 4334);
 	RTSA(Dtype(Current));
 	RTSC;
 	RTME(Dtype(Current), 0);
 	RTGC;
-	RTDBGEAA(260, Current, 4330);
+	RTDBGEAA(260, Current, 4334);
 	RTIV(Current, RTAL);
 	RTHOOK(1);
 	RTDBGAL(Current, 0, 0xF8000163, 0,0); /* Result */
@@ -72,7 +72,7 @@ EIF_TYPED_VALUE F261_11459 (EIF_REFERENCE Current)
 	tr1 = RTLN(356);
 	tr2 = RTMS_EX_H("URL-encoded",11,1229611108);
 	ur1 = tr2;
-	(FUNCTION_CAST(void, (EIF_REFERENCE, EIF_TYPED_VALUE)) RTWC(15213, Dtype(tr1)))(tr1, ur1x);
+	(FUNCTION_CAST(void, (EIF_REFERENCE, EIF_TYPED_VALUE)) RTWC(15220, Dtype(tr1)))(tr1, ur1x);
 	RTNHOOK(1,1);
 	Result = (EIF_REFERENCE) tr1;
 	RTVI(Current, RTAL);
@@ -88,7 +88,7 @@ EIF_TYPED_VALUE F261_11459 (EIF_REFERENCE Current)
 }
 
 /* {URL_ENCODER}.encoded_string */
-EIF_TYPED_VALUE F261_11460 (EIF_REFERENCE Current, EIF_TYPED_VALUE arg1x)
+EIF_TYPED_VALUE F261_11464 (EIF_REFERENCE Current, EIF_TYPED_VALUE arg1x)
 {
 	GTCX
 	char *l_feature_name = "encoded_string";
@@ -120,12 +120,12 @@ EIF_TYPED_VALUE F261_11460 (EIF_REFERENCE Current, EIF_TYPED_VALUE arg1x)
 	RTLU(SK_REF,&arg1);
 	RTLU (SK_REF, &Current);
 	
-	RTEAA(l_feature_name, 260, Current, 0, 1, 4331);
+	RTEAA(l_feature_name, 260, Current, 0, 1, 4335);
 	RTSA(dtype);
 	RTSC;
 	RTME(dtype, 0);
 	RTGC;
-	RTDBGEAA(260, Current, 4331);
+	RTDBGEAA(260, Current, 4335);
 	if (arg1) {
 		RTCC(arg1, 260, l_feature_name, 1, 353);
 	}
@@ -134,7 +134,7 @@ EIF_TYPED_VALUE F261_11460 (EIF_REFERENCE Current, EIF_TYPED_VALUE arg1x)
 		RTHOOK(1);
 		RTCT("valid_unencoded_string", EX_PRE);
 		ur1 = RTCCL(arg1);
-		tb1 = (((FUNCTION_CAST(EIF_TYPED_VALUE, (EIF_REFERENCE, EIF_TYPED_VALUE)) RTWF(7789, dtype))(Current, ur1x)).it_b);
+		tb1 = (((FUNCTION_CAST(EIF_TYPED_VALUE, (EIF_REFERENCE, EIF_TYPED_VALUE)) RTWF(7712, dtype))(Current, ur1x)).it_b);
 		RTTE(tb1, label_1);
 		RTCK;
 		RTJB;
@@ -156,7 +156,7 @@ body:;
 	RTDBGAL(Current, 0, 0xF8000167, 0,0); /* Result */
 	
 	ur1 = RTCCL(arg1);
-	Result = ((up1x = (FUNCTION_CAST(EIF_TYPED_VALUE, (EIF_REFERENCE, EIF_TYPED_VALUE)) RTWF(7831, dtype))(Current, ur1x)), (((up1x.type & SK_HEAD) == SK_REF)? (EIF_REFERENCE) 0: (up1x.it_r = RTBU(up1x))), (up1x.type = SK_POINTER), up1x.it_r);
+	Result = ((up1x = (FUNCTION_CAST(EIF_TYPED_VALUE, (EIF_REFERENCE, EIF_TYPED_VALUE)) RTWF(7835, dtype))(Current, ur1x)), (((up1x.type & SK_HEAD) == SK_REF)? (EIF_REFERENCE) 0: (up1x.it_r = RTBU(up1x))), (up1x.type = SK_POINTER), up1x.it_r);
 	if (RTAL & CK_ENSURE) {
 		RTHOOK(3);
 		RTCT("unchanged", EX_POST);
@@ -169,7 +169,7 @@ body:;
 		RTHOOK(4);
 		RTCT("valid_encoded_string", EX_POST);
 		ur1 = RTCCL(Result);
-		tb1 = (((FUNCTION_CAST(EIF_TYPED_VALUE, (EIF_REFERENCE, EIF_TYPED_VALUE)) RTWF(7790, dtype))(Current, ur1x)).it_b);
+		tb1 = (((FUNCTION_CAST(EIF_TYPED_VALUE, (EIF_REFERENCE, EIF_TYPED_VALUE)) RTWF(7713, dtype))(Current, ur1x)).it_b);
 		if (tb1) {
 			RTCK;
 		} else {
@@ -191,7 +191,7 @@ body:;
 }
 
 /* {URL_ENCODER}.decoded_string */
-EIF_TYPED_VALUE F261_11461 (EIF_REFERENCE Current, EIF_TYPED_VALUE arg1x)
+EIF_TYPED_VALUE F261_11465 (EIF_REFERENCE Current, EIF_TYPED_VALUE arg1x)
 {
 	GTCX
 	char *l_feature_name = "decoded_string";
@@ -223,12 +223,12 @@ EIF_TYPED_VALUE F261_11461 (EIF_REFERENCE Current, EIF_TYPED_VALUE arg1x)
 	RTLU(SK_REF,&arg1);
 	RTLU (SK_REF, &Current);
 	
-	RTEAA(l_feature_name, 260, Current, 0, 1, 4332);
+	RTEAA(l_feature_name, 260, Current, 0, 1, 4336);
 	RTSA(dtype);
 	RTSC;
 	RTME(dtype, 0);
 	RTGC;
-	RTDBGEAA(260, Current, 4332);
+	RTDBGEAA(260, Current, 4336);
 	if (arg1) {
 		RTCC(arg1, 260, l_feature_name, 1, 355);
 	}
@@ -237,7 +237,7 @@ EIF_TYPED_VALUE F261_11461 (EIF_REFERENCE Current, EIF_TYPED_VALUE arg1x)
 		RTHOOK(1);
 		RTCT("valid_encoded_string", EX_PRE);
 		ur1 = RTCCL(arg1);
-		tb1 = (((FUNCTION_CAST(EIF_TYPED_VALUE, (EIF_REFERENCE, EIF_TYPED_VALUE)) RTWF(7790, dtype))(Current, ur1x)).it_b);
+		tb1 = (((FUNCTION_CAST(EIF_TYPED_VALUE, (EIF_REFERENCE, EIF_TYPED_VALUE)) RTWF(7713, dtype))(Current, ur1x)).it_b);
 		RTTE(tb1, label_1);
 		RTCK;
 		RTJB;
@@ -259,7 +259,7 @@ body:;
 	RTDBGAL(Current, 0, 0xF8000166, 0,0); /* Result */
 	
 	ur1 = RTCCL(arg1);
-	Result = ((up1x = (FUNCTION_CAST(EIF_TYPED_VALUE, (EIF_REFERENCE, EIF_TYPED_VALUE)) RTWF(7838, dtype))(Current, ur1x)), (((up1x.type & SK_HEAD) == SK_REF)? (EIF_REFERENCE) 0: (up1x.it_r = RTBU(up1x))), (up1x.type = SK_POINTER), up1x.it_r);
+	Result = ((up1x = (FUNCTION_CAST(EIF_TYPED_VALUE, (EIF_REFERENCE, EIF_TYPED_VALUE)) RTWF(7842, dtype))(Current, ur1x)), (((up1x.type & SK_HEAD) == SK_REF)? (EIF_REFERENCE) 0: (up1x.it_r = RTBU(up1x))), (up1x.type = SK_POINTER), up1x.it_r);
 	if (RTAL & CK_ENSURE) {
 		RTHOOK(3);
 		RTCT("unchanged", EX_POST);
@@ -272,7 +272,7 @@ body:;
 		RTHOOK(4);
 		RTCT("valid_unencoded_string", EX_POST);
 		ur1 = RTCCL(Result);
-		tb1 = (((FUNCTION_CAST(EIF_TYPED_VALUE, (EIF_REFERENCE, EIF_TYPED_VALUE)) RTWF(7789, dtype))(Current, ur1x)).it_b);
+		tb1 = (((FUNCTION_CAST(EIF_TYPED_VALUE, (EIF_REFERENCE, EIF_TYPED_VALUE)) RTWF(7712, dtype))(Current, ur1x)).it_b);
 		if (tb1) {
 			RTCK;
 		} else {

@@ -50,10 +50,10 @@ static struct desc_info desc_243[] = {
 	{30, (BODY_INDEX)-1, 242, NULL},
 	{31, (BODY_INDEX)-1, (EIF_TYPE_INDEX)-1, NULL},
 	{32, (BODY_INDEX)-1, (EIF_TYPE_INDEX)-1, NULL},
-	{3951, (BODY_INDEX)-1, 346, NULL},
-	{3952, (BODY_INDEX)-1, (EIF_TYPE_INDEX)-1, NULL},
+	{3955, (BODY_INDEX)-1, 346, NULL},
+	{3956, (BODY_INDEX)-1, (EIF_TYPE_INDEX)-1, NULL},
 	{(BODY_INDEX)-1, (BODY_INDEX)-1, (EIF_TYPE_INDEX)-1, NULL},
-	{3959, (BODY_INDEX)-1, 376, NULL},
+	{3963, (BODY_INDEX)-1, 376, NULL},
 };
 
 extern void Init243(void);
@@ -61,9 +61,9 @@ void Init243(void)
 {
 	IDSC(desc_243, 0, 242);
 	IDSC(desc_243 + 1, 4, 242);
-	IDSC(desc_243 + 34, 402, 242);
-	IDSC(desc_243 + 36, 344, 242);
-	IDSC(desc_243 + 37, 403, 242);
+	IDSC(desc_243 + 34, 409, 242);
+	IDSC(desc_243 + 36, 345, 242);
+	IDSC(desc_243 + 37, 410, 242);
 }
 
 

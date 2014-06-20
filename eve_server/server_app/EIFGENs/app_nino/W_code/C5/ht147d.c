@@ -50,10 +50,6 @@ static struct desc_info desc_147[] = {
 	{30, (BODY_INDEX)-1, 146, NULL},
 	{31, (BODY_INDEX)-1, (EIF_TYPE_INDEX)-1, NULL},
 	{32, (BODY_INDEX)-1, (EIF_TYPE_INDEX)-1, NULL},
-	{2085, (BODY_INDEX)-1, 400, NULL},
-	{2086, (BODY_INDEX)-1, 400, NULL},
-	{2087, (BODY_INDEX)-1, 400, NULL},
-	{2088, (BODY_INDEX)-1, 400, NULL},
 	{2089, (BODY_INDEX)-1, 400, NULL},
 	{2090, (BODY_INDEX)-1, 400, NULL},
 	{2091, (BODY_INDEX)-1, 400, NULL},
@@ -111,6 +107,10 @@ static struct desc_info desc_147[] = {
 	{2143, (BODY_INDEX)-1, 400, NULL},
 	{2144, (BODY_INDEX)-1, 400, NULL},
 	{2145, (BODY_INDEX)-1, 400, NULL},
+	{2146, (BODY_INDEX)-1, 400, NULL},
+	{2147, (BODY_INDEX)-1, 400, NULL},
+	{2148, (BODY_INDEX)-1, 400, NULL},
+	{2149, (BODY_INDEX)-1, 400, NULL},
 };
 
 extern void Init147(void);
@@ -118,7 +118,7 @@ void Init147(void)
 {
 	IDSC(desc_147, 0, 146);
 	IDSC(desc_147 + 1, 4, 146);
-	IDSC(desc_147 + 34, 164, 146);
+	IDSC(desc_147 + 34, 166, 146);
 }
 
 

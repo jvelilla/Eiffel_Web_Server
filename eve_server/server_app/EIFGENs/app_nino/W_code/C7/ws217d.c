@@ -17,7 +17,7 @@ static EIF_TYPE_INDEX gen_type4_217 [] = {471,0,0xFFF9,2,338,370,150,0xFFFF};
 
 
 static struct desc_info desc_217[] = {
-	{(BODY_INDEX) 2735, (BODY_INDEX) -1, INVALID_DTYPE, NULL},
+	{(BODY_INDEX) 2739, (BODY_INDEX) -1, INVALID_DTYPE, NULL},
 	{0, (BODY_INDEX)-1, 359, NULL},
 	{1, (BODY_INDEX)-1, 459, gen_type0_217},
 	{2, (BODY_INDEX)-1, 346, NULL},
@@ -51,10 +51,10 @@ static struct desc_info desc_217[] = {
 	{30, (BODY_INDEX)-1, 216, NULL},
 	{31, (BODY_INDEX)-1, (EIF_TYPE_INDEX)-1, NULL},
 	{32, (BODY_INDEX)-1, (EIF_TYPE_INDEX)-1, NULL},
-	{2734, (BODY_INDEX)-1, (EIF_TYPE_INDEX)-1, NULL},
-	{2731, (BODY_INDEX)-1, 80, NULL},
-	{2732, (BODY_INDEX)-1, (EIF_TYPE_INDEX)-1, NULL},
-	{2733, 0, 471, gen_type4_217},
+	{2738, (BODY_INDEX)-1, (EIF_TYPE_INDEX)-1, NULL},
+	{2735, (BODY_INDEX)-1, 80, NULL},
+	{2736, (BODY_INDEX)-1, (EIF_TYPE_INDEX)-1, NULL},
+	{2737, 0, 471, gen_type4_217},
 };
 
 extern void Init217(void);

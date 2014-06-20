@@ -13,10 +13,10 @@ static EIF_TYPE_INDEX gen_type0_51 [] = {459,50,0xFFFF};
 static EIF_TYPE_INDEX gen_type1_51 [] = {0,0xFFFF};
 static EIF_TYPE_INDEX gen_type2_51 [] = {0,0xFFFF};
 static EIF_TYPE_INDEX gen_type3_51 [] = {0,0xFFFF};
-static EIF_TYPE_INDEX gen_type4_51 [] = {496,0xFFF9,1,338,290,0xFFFF};
-static EIF_TYPE_INDEX gen_type5_51 [] = {496,0xFFF9,1,338,368,0xFFFF};
-static EIF_TYPE_INDEX gen_type6_51 [] = {496,0xFFF9,1,338,376,0xFFFF};
-static EIF_TYPE_INDEX gen_type7_51 [] = {496,0xFFF9,1,338,240,0xFFFF};
+static EIF_TYPE_INDEX gen_type4_51 [] = {498,0xFFF9,1,338,290,0xFFFF};
+static EIF_TYPE_INDEX gen_type5_51 [] = {498,0xFFF9,1,338,368,0xFFFF};
+static EIF_TYPE_INDEX gen_type6_51 [] = {498,0xFFF9,1,338,376,0xFFFF};
+static EIF_TYPE_INDEX gen_type7_51 [] = {498,0xFFF9,1,338,240,0xFFFF};
 
 
 static struct desc_info desc_51[] = {
@@ -54,10 +54,10 @@ static struct desc_info desc_51[] = {
 	{30, (BODY_INDEX)-1, 50, NULL},
 	{31, (BODY_INDEX)-1, (EIF_TYPE_INDEX)-1, NULL},
 	{32, (BODY_INDEX)-1, (EIF_TYPE_INDEX)-1, NULL},
-	{907, 0, 496, gen_type4_51},
-	{908, 8, 496, gen_type5_51},
-	{909, 16, 496, gen_type6_51},
-	{910, 24, 496, gen_type7_51},
+	{907, 0, 498, gen_type4_51},
+	{908, 8, 498, gen_type5_51},
+	{909, 16, 498, gen_type6_51},
+	{910, 24, 498, gen_type7_51},
 	{911, (BODY_INDEX)-1, (EIF_TYPE_INDEX)-1, NULL},
 	{912, (BODY_INDEX)-1, (EIF_TYPE_INDEX)-1, NULL},
 	{913, (BODY_INDEX)-1, (EIF_TYPE_INDEX)-1, NULL},
@@ -69,7 +69,7 @@ void Init51(void)
 {
 	IDSC(desc_51, 0, 50);
 	IDSC(desc_51 + 1, 4, 50);
-	IDSC(desc_51 + 34, 432, 50);
+	IDSC(desc_51 + 34, 434, 50);
 	IDSC(desc_51 + 38, 489, 50);
 }
 

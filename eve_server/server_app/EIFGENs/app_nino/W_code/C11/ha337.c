@@ -10,7 +10,7 @@
 extern "C" {
 #endif
 
-extern EIF_TYPED_VALUE F337_16666(EIF_REFERENCE);
+extern EIF_TYPED_VALUE F337_16673(EIF_REFERENCE);
 extern void EIF_Minit337(void);
 
 #ifdef __cplusplus
@@ -33,7 +33,7 @@ extern "C" {
 #endif
 
 /* {HASHABLE}.is_hashable */
-EIF_TYPED_VALUE F337_16666 (EIF_REFERENCE Current)
+EIF_TYPED_VALUE F337_16673 (EIF_REFERENCE Current)
 {
 	GTCX
 	char *l_feature_name = "is_hashable";
@@ -49,12 +49,12 @@ EIF_TYPED_VALUE F337_16666 (EIF_REFERENCE Current)
 	RTLU (SK_BOOL, &Result);
 	RTLU (SK_REF, &Current);
 	
-	RTEAA(l_feature_name, 336, Current, 0, 0, 9893);
+	RTEAA(l_feature_name, 336, Current, 0, 0, 9900);
 	RTSA(Dtype(Current));
 	RTSC;
 	RTME(Dtype(Current), 0);
 	RTGC;
-	RTDBGEAA(336, Current, 9893);
+	RTDBGEAA(336, Current, 9900);
 	RTIV(Current, RTAL);
 	RTHOOK(1);
 	RTDBGAL(Current, 0, 0x04000000, 1,0); /* Result */

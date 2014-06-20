@@ -51,9 +51,9 @@ static struct desc_info desc_222[] = {
 	{31, (BODY_INDEX)-1, (EIF_TYPE_INDEX)-1, NULL},
 	{32, (BODY_INDEX)-1, (EIF_TYPE_INDEX)-1, NULL},
 	{(BODY_INDEX)-1, (BODY_INDEX)-1, 346, NULL},
-	{3579, (BODY_INDEX)-1, 346, NULL},
-	{3580, (BODY_INDEX)-1, 346, NULL},
-	{3581, (BODY_INDEX)-1, 346, NULL},
+	{3583, (BODY_INDEX)-1, 346, NULL},
+	{3584, (BODY_INDEX)-1, 346, NULL},
+	{3585, (BODY_INDEX)-1, 346, NULL},
 };
 
 extern void Init222(void);

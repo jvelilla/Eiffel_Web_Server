@@ -1,5 +1,5 @@
 /*
- * Class DATE_CONSTANTS
+ * Class DATE_TIME_VALUE
  */
 
 #include "eif_macros.h"
@@ -55,24 +55,42 @@ static struct desc_info desc_98[] = {
 	{30, (BODY_INDEX)-1, 97, NULL},
 	{31, (BODY_INDEX)-1, (EIF_TYPE_INDEX)-1, NULL},
 	{32, (BODY_INDEX)-1, (EIF_TYPE_INDEX)-1, NULL},
-	{1597, (BODY_INDEX)-1, 400, NULL},
-	{1598, (BODY_INDEX)-1, 400, NULL},
-	{1599, (BODY_INDEX)-1, 47, NULL},
-	{1600, (BODY_INDEX)-1, 359, NULL},
-	{1626, (BODY_INDEX)-1, 400, NULL},
-	{1627, (BODY_INDEX)-1, 400, NULL},
-	{1628, (BODY_INDEX)-1, 400, NULL},
-	{1629, (BODY_INDEX)-1, 400, NULL},
-	{1630, (BODY_INDEX)-1, 400, NULL},
-	{1631, (BODY_INDEX)-1, 400, NULL},
-	{1632, (BODY_INDEX)-1, 359, NULL},
-	{1633, (BODY_INDEX)-1, 472, gen_type4_98},
-	{1634, (BODY_INDEX)-1, 472, gen_type5_98},
-	{1635, (BODY_INDEX)-1, 472, gen_type6_98},
-	{1636, (BODY_INDEX)-1, 472, gen_type7_98},
-	{1637, (BODY_INDEX)-1, 346, NULL},
-	{1638, (BODY_INDEX)-1, 346, NULL},
-	{1639, (BODY_INDEX)-1, 518, gen_type8_98},
+	{1530, (BODY_INDEX)-1, 400, NULL},
+	{1531, (BODY_INDEX)-1, 400, NULL},
+	{1532, (BODY_INDEX)-1, 47, NULL},
+	{1533, (BODY_INDEX)-1, 359, NULL},
+	{1559, (BODY_INDEX)-1, 400, NULL},
+	{1560, (BODY_INDEX)-1, 400, NULL},
+	{1561, (BODY_INDEX)-1, 400, NULL},
+	{1562, (BODY_INDEX)-1, 400, NULL},
+	{1563, (BODY_INDEX)-1, 400, NULL},
+	{1564, (BODY_INDEX)-1, 400, NULL},
+	{1565, (BODY_INDEX)-1, 359, NULL},
+	{1566, (BODY_INDEX)-1, 472, gen_type4_98},
+	{1567, (BODY_INDEX)-1, 472, gen_type5_98},
+	{1568, (BODY_INDEX)-1, 472, gen_type6_98},
+	{1569, (BODY_INDEX)-1, 472, gen_type7_98},
+	{1570, (BODY_INDEX)-1, 346, NULL},
+	{1571, (BODY_INDEX)-1, 346, NULL},
+	{1572, (BODY_INDEX)-1, 518, gen_type8_98},
+	{1534, (BODY_INDEX)-1, 400, NULL},
+	{1535, (BODY_INDEX)-1, 400, NULL},
+	{1536, (BODY_INDEX)-1, 400, NULL},
+	{1537, (BODY_INDEX)-1, 400, NULL},
+	{1538, (BODY_INDEX)-1, 400, NULL},
+	{1539, (BODY_INDEX)-1, 359, NULL},
+	{1582, 8, 289, NULL},
+	{1583, 0, 93, NULL},
+	{1574, (BODY_INDEX)-1, 400, NULL},
+	{1575, (BODY_INDEX)-1, 400, NULL},
+	{1576, (BODY_INDEX)-1, 400, NULL},
+	{1577, (BODY_INDEX)-1, 400, NULL},
+	{1578, (BODY_INDEX)-1, 400, NULL},
+	{1579, (BODY_INDEX)-1, 400, NULL},
+	{1580, (BODY_INDEX)-1, 421, NULL},
+	{1584, (BODY_INDEX)-1, 421, NULL},
+	{1583, 0, 93, NULL},
+	{1582, 8, 289, NULL},
 };
 
 extern void Init98(void);
@@ -80,8 +98,11 @@ void Init98(void)
 {
 	IDSC(desc_98, 0, 97);
 	IDSC(desc_98 + 1, 4, 97);
-	IDSC(desc_98 + 34, 462, 97);
-	IDSC(desc_98 + 38, 412, 97);
+	IDSC(desc_98 + 34, 470, 97);
+	IDSC(desc_98 + 38, 419, 97);
+	IDSC(desc_98 + 52, 423, 97);
+	IDSC(desc_98 + 58, 331, 97);
+	IDSC(desc_98 + 67, 336, 97);
 }
 
 

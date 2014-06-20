@@ -1,5 +1,5 @@
 /*
- * Class EIFFEL_WARNINGS
+ * Class EIFFEL_ERRORS
  */
 
 #include "eif_macros.h"
@@ -50,13 +50,14 @@ static struct desc_info desc_29[] = {
 	{30, (BODY_INDEX)-1, 28, NULL},
 	{31, (BODY_INDEX)-1, (EIF_TYPE_INDEX)-1, NULL},
 	{32, (BODY_INDEX)-1, (EIF_TYPE_INDEX)-1, NULL},
-	{445, (BODY_INDEX)-1, (EIF_TYPE_INDEX)-1, NULL},
-	{446, 0, 359, NULL},
-	{447, 24, 400, NULL},
-	{448, 8, 426, NULL},
-	{449, 16, 427, NULL},
-	{450, (BODY_INDEX)-1, (EIF_TYPE_INDEX)-1, NULL},
-	{451, (BODY_INDEX)-1, (EIF_TYPE_INDEX)-1, NULL},
+	{449, (BODY_INDEX)-1, (EIF_TYPE_INDEX)-1, NULL},
+	{450, 0, 359, NULL},
+	{451, 24, 400, NULL},
+	{452, 8, 426, NULL},
+	{453, 16, 427, NULL},
+	{454, (BODY_INDEX)-1, (EIF_TYPE_INDEX)-1, NULL},
+	{455, (BODY_INDEX)-1, (EIF_TYPE_INDEX)-1, NULL},
+	{456, (BODY_INDEX)-1, (EIF_TYPE_INDEX)-1, NULL},
 };
 
 extern void Init29(void);

@@ -58,7 +58,7 @@ void Init134(void)
 {
 	IDSC(desc_134, 0, 133);
 	IDSC(desc_134 + 1, 4, 133);
-	IDSC(desc_134 + 34, 219, 133);
+	IDSC(desc_134 + 34, 220, 133);
 }
 
 

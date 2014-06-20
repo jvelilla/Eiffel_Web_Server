@@ -41,16 +41,16 @@ SYSTEM_IN_DYNAMIC_LIB = app.dll
 
 OBJECTS = big_file_C33_c.obj 
 
-OLDOBJECTS =  fu1065.obj fu1065d.obj fu1067.obj fu1067d.obj fu1070.obj fu1070d.obj fu1083.obj \
-	fu1083d.obj fu1085.obj fu1085d.obj ty1060.obj ty1060d.obj ty1061.obj ty1061d.obj \
-	ty1057.obj ty1057d.obj ty1062.obj ty1062d.obj ty1066.obj ty1066d.obj ty1071.obj \
-	ty1071d.obj ty1082.obj ty1082d.obj li1073.obj li1073d.obj ce1058.obj ce1058d.obj \
-	li1074.obj li1074d.obj li1076.obj li1076d.obj li1075.obj li1075d.obj se1088.obj \
-	se1088d.obj co1072.obj co1072d.obj co1077.obj co1077d.obj rt1059.obj rt1059d.obj \
-	rt1064.obj rt1064d.obj rt1080.obj rt1080d.obj rt1086.obj rt1086d.obj rt1068.obj \
-	rt1068d.obj rt1079.obj rt1079d.obj rt1081.obj rt1081d.obj rt1084.obj rt1084d.obj \
-	rt1087.obj rt1087d.obj rt1056.obj rt1056d.obj rt1063.obj rt1063d.obj rt1069.obj \
-	rt1069d.obj in1078.obj in1078d.obj 
+OLDOBJECTS =  fu1057.obj fu1057d.obj fu1065.obj fu1065d.obj fu1067.obj fu1067d.obj fu1082.obj \
+	fu1082d.obj fu1084.obj fu1084d.obj ty1061.obj ty1061d.obj ty1062.obj ty1062d.obj \
+	ty1056.obj ty1056d.obj ty1063.obj ty1063d.obj ty1066.obj ty1066d.obj ty1081.obj \
+	ty1081d.obj ty1088.obj ty1088d.obj li1072.obj li1072d.obj ce1059.obj ce1059d.obj \
+	li1073.obj li1073d.obj li1075.obj li1075d.obj li1074.obj li1074d.obj se1087.obj \
+	se1087d.obj co1071.obj co1071d.obj co1076.obj co1076d.obj rt1060.obj rt1060d.obj \
+	rt1070.obj rt1070d.obj rt1079.obj rt1079d.obj rt1085.obj rt1085d.obj rt1068.obj \
+	rt1068d.obj rt1078.obj rt1078d.obj rt1080.obj rt1080d.obj rt1083.obj rt1083d.obj \
+	rt1086.obj rt1086d.obj rt1064.obj rt1064d.obj rt1069.obj rt1069d.obj in1077.obj \
+	in1077d.obj en1058.obj en1058d.obj 
 
 all::  Cobj33.lib
 

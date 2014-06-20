@@ -50,7 +50,7 @@ static struct desc_info desc_115[] = {
 	{30, (BODY_INDEX)-1, 114, NULL},
 	{31, (BODY_INDEX)-1, (EIF_TYPE_INDEX)-1, NULL},
 	{32, (BODY_INDEX)-1, (EIF_TYPE_INDEX)-1, NULL},
-	{1767, (BODY_INDEX)-1, (EIF_TYPE_INDEX)-1, NULL},
+	{1771, (BODY_INDEX)-1, (EIF_TYPE_INDEX)-1, NULL},
 	{(BODY_INDEX)-1, (BODY_INDEX)-1, (EIF_TYPE_INDEX)-1, NULL},
 	{(BODY_INDEX)-1, (BODY_INDEX)-1, (EIF_TYPE_INDEX)-1, NULL},
 	{(BODY_INDEX)-1, (BODY_INDEX)-1, (EIF_TYPE_INDEX)-1, NULL},
@@ -63,7 +63,7 @@ void Init115(void)
 {
 	IDSC(desc_115, 0, 114);
 	IDSC(desc_115 + 1, 4, 114);
-	IDSC(desc_115 + 34, 303, 114);
+	IDSC(desc_115 + 34, 307, 114);
 }
 
 

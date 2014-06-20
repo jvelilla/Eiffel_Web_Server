@@ -53,7 +53,7 @@ static struct desc_info desc_376[] = {
 	{(BODY_INDEX)-1, (BODY_INDEX)-1, 400, NULL},
 	{(BODY_INDEX)-1, (BODY_INDEX)-1, 400, NULL},
 	{(BODY_INDEX)-1, (BODY_INDEX)-1, 346, NULL},
-	{12457, (BODY_INDEX)-1, 359, NULL},
+	{12464, (BODY_INDEX)-1, 359, NULL},
 };
 
 extern void Init376(void);

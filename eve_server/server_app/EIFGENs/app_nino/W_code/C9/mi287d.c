@@ -50,8 +50,8 @@ static struct desc_info desc_287[] = {
 	{30, (BODY_INDEX)-1, 286, NULL},
 	{31, (BODY_INDEX)-1, (EIF_TYPE_INDEX)-1, NULL},
 	{32, (BODY_INDEX)-1, (EIF_TYPE_INDEX)-1, NULL},
-	{4695, (BODY_INDEX)-1, (EIF_TYPE_INDEX)-1, NULL},
-	{4696, (BODY_INDEX)-1, 302, NULL},
+	{4699, (BODY_INDEX)-1, (EIF_TYPE_INDEX)-1, NULL},
+	{4700, (BODY_INDEX)-1, 302, NULL},
 };
 
 extern void Init287(void);

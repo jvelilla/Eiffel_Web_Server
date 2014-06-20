@@ -63,7 +63,7 @@ void Init20(void)
 {
 	IDSC(desc_20, 0, 19);
 	IDSC(desc_20 + 1, 4, 19);
-	IDSC(desc_20 + 34, 300, 19);
+	IDSC(desc_20 + 34, 303, 19);
 }
 
 

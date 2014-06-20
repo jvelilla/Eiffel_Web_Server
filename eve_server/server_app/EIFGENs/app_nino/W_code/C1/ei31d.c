@@ -1,5 +1,5 @@
 /*
- * Class EIFFEL_RUNTIME
+ * Class EIFFEL_CLIENT_SUPPLIER
  */
 
 #include "eif_macros.h"
@@ -50,20 +50,14 @@ static struct desc_info desc_31[] = {
 	{30, (BODY_INDEX)-1, 30, NULL},
 	{31, (BODY_INDEX)-1, (EIF_TYPE_INDEX)-1, NULL},
 	{32, (BODY_INDEX)-1, (EIF_TYPE_INDEX)-1, NULL},
-	{460, (BODY_INDEX)-1, (EIF_TYPE_INDEX)-1, NULL},
-	{461, 0, 359, NULL},
-	{462, 32, 400, NULL},
-	{463, 8, 426, NULL},
-	{464, 16, 427, NULL},
-	{465, 24, 359, NULL},
-	{466, (BODY_INDEX)-1, (EIF_TYPE_INDEX)-1, NULL},
-	{467, (BODY_INDEX)-1, (EIF_TYPE_INDEX)-1, NULL},
-	{468, (BODY_INDEX)-1, 346, NULL},
-	{469, (BODY_INDEX)-1, 400, NULL},
-	{470, (BODY_INDEX)-1, 400, NULL},
-	{471, (BODY_INDEX)-1, 346, NULL},
-	{472, (BODY_INDEX)-1, 346, NULL},
-	{473, (BODY_INDEX)-1, 400, NULL},
+	{471, (BODY_INDEX)-1, (EIF_TYPE_INDEX)-1, NULL},
+	{472, 0, 359, NULL},
+	{473, 8, 359, NULL},
+	{474, 16, 426, NULL},
+	{475, 24, 359, NULL},
+	{476, 32, 400, NULL},
+	{477, (BODY_INDEX)-1, (EIF_TYPE_INDEX)-1, NULL},
+	{478, (BODY_INDEX)-1, (EIF_TYPE_INDEX)-1, NULL},
 };
 
 extern void Init31(void);

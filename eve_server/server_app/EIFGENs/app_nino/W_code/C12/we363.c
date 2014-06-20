@@ -10,9 +10,9 @@
 extern "C" {
 #endif
 
-extern EIF_TYPED_VALUE F363_17550(EIF_REFERENCE, EIF_TYPED_VALUE, EIF_TYPED_VALUE);
-extern EIF_TYPED_VALUE F363_17551(EIF_REFERENCE, EIF_TYPED_VALUE, EIF_TYPED_VALUE);
-extern EIF_TYPED_VALUE F363_17552(EIF_REFERENCE, EIF_TYPED_VALUE, EIF_TYPED_VALUE);
+extern EIF_TYPED_VALUE F363_17557(EIF_REFERENCE, EIF_TYPED_VALUE, EIF_TYPED_VALUE);
+extern EIF_TYPED_VALUE F363_17558(EIF_REFERENCE, EIF_TYPED_VALUE, EIF_TYPED_VALUE);
+extern EIF_TYPED_VALUE F363_17559(EIF_REFERENCE, EIF_TYPED_VALUE, EIF_TYPED_VALUE);
 extern void EIF_Minit363(void);
 
 #ifdef __cplusplus
@@ -36,7 +36,7 @@ extern "C" {
 #endif
 
 /* {WEL_BIT_OPERATIONS}.set_flag */
-EIF_TYPED_VALUE F363_17550 (EIF_REFERENCE Current, EIF_TYPED_VALUE arg1x, EIF_TYPED_VALUE arg2x)
+EIF_TYPED_VALUE F363_17557 (EIF_REFERENCE Current, EIF_TYPED_VALUE arg1x, EIF_TYPED_VALUE arg2x)
 {
 	GTCX
 	char *l_feature_name = "set_flag";
@@ -66,12 +66,12 @@ EIF_TYPED_VALUE F363_17550 (EIF_REFERENCE Current, EIF_TYPED_VALUE arg1x, EIF_TY
 	RTLU(SK_INT32,&arg2);
 	RTLU (SK_REF, &Current);
 	
-	RTEAA(l_feature_name, 362, Current, 0, 2, 10861);
+	RTEAA(l_feature_name, 362, Current, 0, 2, 10868);
 	RTSA(dtype);
 	RTSC;
 	RTME(dtype, 0);
 	RTGC;
-	RTDBGEAA(362, Current, 10861);
+	RTDBGEAA(362, Current, 10868);
 	RTIV(Current, RTAL);
 	RTHOOK(1);
 	RTDBGAL(Current, 0, 0x10000000, 1,0); /* Result */
@@ -84,7 +84,7 @@ EIF_TYPED_VALUE F363_17550 (EIF_REFERENCE Current, EIF_TYPED_VALUE arg1x, EIF_TY
 		RTCT("flag_set", EX_POST);
 		ui4_1 = Result;
 		ui4_2 = arg2;
-		tb1 = (((FUNCTION_CAST(EIF_TYPED_VALUE, (EIF_REFERENCE, EIF_TYPED_VALUE, EIF_TYPED_VALUE)) RTWF(15419, dtype))(Current, ui4_1x, ui4_2x)).it_b);
+		tb1 = (((FUNCTION_CAST(EIF_TYPED_VALUE, (EIF_REFERENCE, EIF_TYPED_VALUE, EIF_TYPED_VALUE)) RTWF(15426, dtype))(Current, ui4_1x, ui4_2x)).it_b);
 		if (tb1) {
 			RTCK;
 		} else {
@@ -107,7 +107,7 @@ EIF_TYPED_VALUE F363_17550 (EIF_REFERENCE Current, EIF_TYPED_VALUE arg1x, EIF_TY
 }
 
 /* {WEL_BIT_OPERATIONS}.clear_flag */
-EIF_TYPED_VALUE F363_17551 (EIF_REFERENCE Current, EIF_TYPED_VALUE arg1x, EIF_TYPED_VALUE arg2x)
+EIF_TYPED_VALUE F363_17558 (EIF_REFERENCE Current, EIF_TYPED_VALUE arg1x, EIF_TYPED_VALUE arg2x)
 {
 	GTCX
 	char *l_feature_name = "clear_flag";
@@ -137,12 +137,12 @@ EIF_TYPED_VALUE F363_17551 (EIF_REFERENCE Current, EIF_TYPED_VALUE arg1x, EIF_TY
 	RTLU(SK_INT32,&arg2);
 	RTLU (SK_REF, &Current);
 	
-	RTEAA(l_feature_name, 362, Current, 0, 2, 10862);
+	RTEAA(l_feature_name, 362, Current, 0, 2, 10869);
 	RTSA(dtype);
 	RTSC;
 	RTME(dtype, 0);
 	RTGC;
-	RTDBGEAA(362, Current, 10862);
+	RTDBGEAA(362, Current, 10869);
 	RTIV(Current, RTAL);
 	RTHOOK(1);
 	RTDBGAL(Current, 0, 0x10000000, 1,0); /* Result */
@@ -156,7 +156,7 @@ EIF_TYPED_VALUE F363_17551 (EIF_REFERENCE Current, EIF_TYPED_VALUE arg1x, EIF_TY
 		RTCT("flag_unset", EX_POST);
 		ui4_1 = Result;
 		ui4_2 = arg2;
-		tb1 = (((FUNCTION_CAST(EIF_TYPED_VALUE, (EIF_REFERENCE, EIF_TYPED_VALUE, EIF_TYPED_VALUE)) RTWF(15419, dtype))(Current, ui4_1x, ui4_2x)).it_b);
+		tb1 = (((FUNCTION_CAST(EIF_TYPED_VALUE, (EIF_REFERENCE, EIF_TYPED_VALUE, EIF_TYPED_VALUE)) RTWF(15426, dtype))(Current, ui4_1x, ui4_2x)).it_b);
 		if ((EIF_BOOLEAN) !tb1) {
 			RTCK;
 		} else {
@@ -179,7 +179,7 @@ EIF_TYPED_VALUE F363_17551 (EIF_REFERENCE Current, EIF_TYPED_VALUE arg1x, EIF_TY
 }
 
 /* {WEL_BIT_OPERATIONS}.flag_set */
-EIF_TYPED_VALUE F363_17552 (EIF_REFERENCE Current, EIF_TYPED_VALUE arg1x, EIF_TYPED_VALUE arg2x)
+EIF_TYPED_VALUE F363_17559 (EIF_REFERENCE Current, EIF_TYPED_VALUE arg1x, EIF_TYPED_VALUE arg2x)
 {
 	GTCX
 	char *l_feature_name = "flag_set";
@@ -205,12 +205,12 @@ EIF_TYPED_VALUE F363_17552 (EIF_REFERENCE Current, EIF_TYPED_VALUE arg1x, EIF_TY
 	RTLU(SK_INT32,&arg2);
 	RTLU (SK_REF, &Current);
 	
-	RTEAA(l_feature_name, 362, Current, 0, 2, 10863);
+	RTEAA(l_feature_name, 362, Current, 0, 2, 10870);
 	RTSA(Dtype(Current));
 	RTSC;
 	RTME(Dtype(Current), 0);
 	RTGC;
-	RTDBGEAA(362, Current, 10863);
+	RTDBGEAA(362, Current, 10870);
 	RTIV(Current, RTAL);
 	RTHOOK(1);
 	RTDBGAL(Current, 0, 0x04000000, 1,0); /* Result */

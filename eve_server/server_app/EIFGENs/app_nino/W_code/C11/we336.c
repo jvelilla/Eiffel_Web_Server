@@ -10,15 +10,15 @@
 extern "C" {
 #endif
 
-extern void F336_16602(EIF_REFERENCE);
-extern EIF_TYPED_VALUE F336_16603(EIF_REFERENCE);
-extern void F336_16604(EIF_REFERENCE, EIF_TYPED_VALUE);
-extern EIF_TYPED_VALUE F336_16605(EIF_REFERENCE);
-extern EIF_TYPED_VALUE F336_16606(EIF_REFERENCE);
-extern void F336_16607(EIF_REFERENCE, EIF_TYPED_VALUE, EIF_TYPED_VALUE);
-extern void F336_16608(EIF_REFERENCE, EIF_TYPED_VALUE, EIF_TYPED_VALUE);
-extern EIF_TYPED_VALUE F336_16609(EIF_REFERENCE, EIF_TYPED_VALUE);
-extern void F336_16610(EIF_REFERENCE, EIF_TYPED_VALUE, EIF_TYPED_VALUE);
+extern void F336_16609(EIF_REFERENCE);
+extern EIF_TYPED_VALUE F336_16610(EIF_REFERENCE);
+extern void F336_16611(EIF_REFERENCE, EIF_TYPED_VALUE);
+extern EIF_TYPED_VALUE F336_16612(EIF_REFERENCE);
+extern EIF_TYPED_VALUE F336_16613(EIF_REFERENCE);
+extern void F336_16614(EIF_REFERENCE, EIF_TYPED_VALUE, EIF_TYPED_VALUE);
+extern void F336_16615(EIF_REFERENCE, EIF_TYPED_VALUE, EIF_TYPED_VALUE);
+extern EIF_TYPED_VALUE F336_16616(EIF_REFERENCE, EIF_TYPED_VALUE);
+extern void F336_16617(EIF_REFERENCE, EIF_TYPED_VALUE, EIF_TYPED_VALUE);
 extern void EIF_Minit336(void);
 
 #ifdef __cplusplus
@@ -42,7 +42,7 @@ extern "C" {
 #endif
 
 /* {WEL_SECURITY_ATTRIBUTES}.make */
-void F336_16602 (EIF_REFERENCE Current)
+void F336_16609 (EIF_REFERENCE Current)
 {
 	GTCX
 	char *l_feature_name = "make";
@@ -67,31 +67,31 @@ void F336_16602 (EIF_REFERENCE Current)
 	RTLU (SK_VOID, NULL);
 	RTLU (SK_REF, &Current);
 	
-	RTEAA(l_feature_name, 335, Current, 0, 0, 9884);
+	RTEAA(l_feature_name, 335, Current, 0, 0, 9893);
 	RTSA(dtype);
 	RTSC;
 	RTME(dtype, 0);
 	RTGC;
-	RTDBGEAA(335, Current, 9884);
+	RTDBGEAA(335, Current, 9893);
 	RTIV(Current, RTAL);
 	RTHOOK(1);
-	(FUNCTION_CAST(void, (EIF_REFERENCE)) RTWF(13043, 333))(Current);
+	(FUNCTION_CAST(void, (EIF_REFERENCE)) RTWF(13050, 333))(Current);
 	RTHOOK(2);
-	tp1 = *(EIF_POINTER *)(Current + RTWA(12693, dtype));
+	tp1 = *(EIF_POINTER *)(Current + RTWA(12700, dtype));
 	up1 = tp1;
-	ti4_1 = (((FUNCTION_CAST(EIF_TYPED_VALUE, (EIF_REFERENCE)) RTWF(13047, dtype))(Current)).it_i4);
+	ti4_1 = (((FUNCTION_CAST(EIF_TYPED_VALUE, (EIF_REFERENCE)) RTWF(13054, dtype))(Current)).it_i4);
 	ui4_1 = ti4_1;
-	(FUNCTION_CAST(void, (EIF_REFERENCE, EIF_TYPED_VALUE, EIF_TYPED_VALUE)) RTWF(14697, dtype))(Current, up1x, ui4_1x);
+	(FUNCTION_CAST(void, (EIF_REFERENCE, EIF_TYPED_VALUE, EIF_TYPED_VALUE)) RTWF(14704, dtype))(Current, up1x, ui4_1x);
 	RTHOOK(3);
-	tp1 = *(EIF_POINTER *)(Current + RTWA(12693, dtype));
+	tp1 = *(EIF_POINTER *)(Current + RTWA(12700, dtype));
 	up1 = tp1;
 	tp2 = (((FUNCTION_CAST(EIF_TYPED_VALUE, (EIF_REFERENCE)) RTWF(36, dtype))(Current)).it_p);
 	up2 = tp2;
-	(FUNCTION_CAST(void, (EIF_REFERENCE, EIF_TYPED_VALUE, EIF_TYPED_VALUE)) RTWF(14698, dtype))(Current, up1x, up2x);
+	(FUNCTION_CAST(void, (EIF_REFERENCE, EIF_TYPED_VALUE, EIF_TYPED_VALUE)) RTWF(14705, dtype))(Current, up1x, up2x);
 	if (RTAL & CK_ENSURE) {
 		RTHOOK(4);
 		RTCT("not_shared", EX_POST);
-		tb1 = *(EIF_BOOLEAN *)(Current + RTWA(12694, dtype));
+		tb1 = *(EIF_BOOLEAN *)(Current + RTWA(12701, dtype));
 		if ((EIF_BOOLEAN) !tb1) {
 			RTCK;
 		} else {
@@ -112,7 +112,7 @@ void F336_16602 (EIF_REFERENCE Current)
 }
 
 /* {WEL_SECURITY_ATTRIBUTES}.is_handle_inherited */
-EIF_TYPED_VALUE F336_16603 (EIF_REFERENCE Current)
+EIF_TYPED_VALUE F336_16610 (EIF_REFERENCE Current)
 {
 	GTCX
 	char *l_feature_name = "is_handle_inherited";
@@ -132,19 +132,19 @@ EIF_TYPED_VALUE F336_16603 (EIF_REFERENCE Current)
 	RTLU (SK_BOOL, &Result);
 	RTLU (SK_REF, &Current);
 	
-	RTEAA(l_feature_name, 335, Current, 0, 0, 9885);
+	RTEAA(l_feature_name, 335, Current, 0, 0, 9894);
 	RTSA(dtype);
 	RTSC;
 	RTME(dtype, 0);
 	RTGC;
-	RTDBGEAA(335, Current, 9885);
+	RTDBGEAA(335, Current, 9894);
 	RTIV(Current, RTAL);
 	RTHOOK(1);
 	RTDBGAL(Current, 0, 0x04000000, 1,0); /* Result */
 	
-	tp1 = *(EIF_POINTER *)(Current + RTWA(12693, dtype));
+	tp1 = *(EIF_POINTER *)(Current + RTWA(12700, dtype));
 	up1 = tp1;
-	Result = (((FUNCTION_CAST(EIF_TYPED_VALUE, (EIF_REFERENCE, EIF_TYPED_VALUE)) RTWF(14699, dtype))(Current, up1x)).it_b);
+	Result = (((FUNCTION_CAST(EIF_TYPED_VALUE, (EIF_REFERENCE, EIF_TYPED_VALUE)) RTWF(14706, dtype))(Current, up1x)).it_b);
 	RTVI(Current, RTAL);
 	RTRS;
 	RTHOOK(2);
@@ -158,7 +158,7 @@ EIF_TYPED_VALUE F336_16603 (EIF_REFERENCE Current)
 }
 
 /* {WEL_SECURITY_ATTRIBUTES}.set_inherit_handle */
-void F336_16604 (EIF_REFERENCE Current, EIF_TYPED_VALUE arg1x)
+void F336_16611 (EIF_REFERENCE Current, EIF_TYPED_VALUE arg1x)
 {
 	GTCX
 	char *l_feature_name = "set_inherit_handle";
@@ -183,22 +183,22 @@ void F336_16604 (EIF_REFERENCE Current, EIF_TYPED_VALUE arg1x)
 	RTLU(SK_BOOL,&arg1);
 	RTLU (SK_REF, &Current);
 	
-	RTEAA(l_feature_name, 335, Current, 0, 1, 9886);
+	RTEAA(l_feature_name, 335, Current, 0, 1, 9895);
 	RTSA(dtype);
 	RTSC;
 	RTME(dtype, 0);
 	RTGC;
-	RTDBGEAA(335, Current, 9886);
+	RTDBGEAA(335, Current, 9895);
 	RTIV(Current, RTAL);
 	RTHOOK(1);
-	tp1 = *(EIF_POINTER *)(Current + RTWA(12693, dtype));
+	tp1 = *(EIF_POINTER *)(Current + RTWA(12700, dtype));
 	up1 = tp1;
 	ub1 = arg1;
-	(FUNCTION_CAST(void, (EIF_REFERENCE, EIF_TYPED_VALUE, EIF_TYPED_VALUE)) RTWF(14700, dtype))(Current, up1x, ub1x);
+	(FUNCTION_CAST(void, (EIF_REFERENCE, EIF_TYPED_VALUE, EIF_TYPED_VALUE)) RTWF(14707, dtype))(Current, up1x, ub1x);
 	if (RTAL & CK_ENSURE) {
 		RTHOOK(2);
 		RTCT("inherit_handle_set", EX_POST);
-		tb1 = (((FUNCTION_CAST(EIF_TYPED_VALUE, (EIF_REFERENCE)) RTWF(14694, dtype))(Current)).it_b);
+		tb1 = (((FUNCTION_CAST(EIF_TYPED_VALUE, (EIF_REFERENCE)) RTWF(14701, dtype))(Current)).it_b);
 		if ((EIF_BOOLEAN)(tb1 == arg1)) {
 			RTCK;
 		} else {
@@ -219,7 +219,7 @@ void F336_16604 (EIF_REFERENCE Current, EIF_TYPED_VALUE arg1x)
 }
 
 /* {WEL_SECURITY_ATTRIBUTES}.structure_size */
-EIF_TYPED_VALUE F336_16605 (EIF_REFERENCE Current)
+EIF_TYPED_VALUE F336_16612 (EIF_REFERENCE Current)
 {
 	GTCX
 	char *l_feature_name = "structure_size";
@@ -236,17 +236,17 @@ EIF_TYPED_VALUE F336_16605 (EIF_REFERENCE Current)
 	RTLU (SK_INT32, &Result);
 	RTLU (SK_REF, &Current);
 	
-	RTEAA(l_feature_name, 335, Current, 0, 0, 9887);
+	RTEAA(l_feature_name, 335, Current, 0, 0, 9896);
 	RTSA(dtype);
 	RTSC;
 	RTME(dtype, 0);
 	RTGC;
-	RTDBGEAA(335, Current, 9887);
+	RTDBGEAA(335, Current, 9896);
 	RTIV(Current, RTAL);
 	RTHOOK(1);
 	RTDBGAL(Current, 0, 0x10000000, 1,0); /* Result */
 	
-	Result = (((FUNCTION_CAST(EIF_TYPED_VALUE, (EIF_REFERENCE)) RTWF(14696, dtype))(Current)).it_i4);
+	Result = (((FUNCTION_CAST(EIF_TYPED_VALUE, (EIF_REFERENCE)) RTWF(14703, dtype))(Current)).it_i4);
 	if (RTAL & CK_ENSURE) {
 		RTHOOK(2);
 		RTCT("positive_result", EX_POST);
@@ -268,7 +268,7 @@ EIF_TYPED_VALUE F336_16605 (EIF_REFERENCE Current)
 }
 
 /* {WEL_SECURITY_ATTRIBUTES}.cwin_size_of_security_attributes */
-EIF_TYPED_VALUE F336_16606 (EIF_REFERENCE Current)
+EIF_TYPED_VALUE F336_16613 (EIF_REFERENCE Current)
 {
 	GTCX
 	char *l_feature_name = "cwin_size_of_security_attributes";
@@ -284,11 +284,11 @@ EIF_TYPED_VALUE F336_16606 (EIF_REFERENCE Current)
 	RTLU (SK_INT32, &Result);
 	RTLU (SK_REF, &Current);
 	
-	RTEAA(l_feature_name, 335, Current, 0, 0, 9888);
+	RTEAA(l_feature_name, 335, Current, 0, 0, 9897);
 	RTSA(Dtype(Current));
 	RTSC;
 	RTME(Dtype(Current), 1);
-	RTDBGEAA(335, Current, 9888);
+	RTDBGEAA(335, Current, 9897);
 	RTIV(Current, RTAL);
 	Result = (EIF_INTEGER_32) sizeof (SECURITY_ATTRIBUTES);
 	RTVI(Current, RTAL);
@@ -303,7 +303,7 @@ EIF_TYPED_VALUE F336_16606 (EIF_REFERENCE Current)
 }
 
 /* {WEL_SECURITY_ATTRIBUTES}.cwel_security_attributes_set_length */
-void F336_16607 (EIF_REFERENCE Current, EIF_TYPED_VALUE arg1x, EIF_TYPED_VALUE arg2x)
+void F336_16614 (EIF_REFERENCE Current, EIF_TYPED_VALUE arg1x, EIF_TYPED_VALUE arg2x)
 {
 	GTCX
 	char *l_feature_name = "cwel_security_attributes_set_length";
@@ -324,11 +324,11 @@ void F336_16607 (EIF_REFERENCE Current, EIF_TYPED_VALUE arg1x, EIF_TYPED_VALUE a
 	RTLU(SK_INT32,&arg2);
 	RTLU (SK_REF, &Current);
 	
-	RTEAA(l_feature_name, 335, Current, 0, 2, 9889);
+	RTEAA(l_feature_name, 335, Current, 0, 2, 9898);
 	RTSA(Dtype(Current));
 	RTSC;
 	RTME(Dtype(Current), 1);
-	RTDBGEAA(335, Current, 9889);
+	RTDBGEAA(335, Current, 9898);
 	RTIV(Current, RTAL);
 	cwel_security_attributes_set_length(((LPSECURITY_ATTRIBUTES) arg1), ((DWORD) arg2));
 	RTVI(Current, RTAL);
@@ -344,7 +344,7 @@ void F336_16607 (EIF_REFERENCE Current, EIF_TYPED_VALUE arg1x, EIF_TYPED_VALUE a
 }
 
 /* {WEL_SECURITY_ATTRIBUTES}.cwel_security_attributes_set_security_descriptor */
-void F336_16608 (EIF_REFERENCE Current, EIF_TYPED_VALUE arg1x, EIF_TYPED_VALUE arg2x)
+void F336_16615 (EIF_REFERENCE Current, EIF_TYPED_VALUE arg1x, EIF_TYPED_VALUE arg2x)
 {
 	GTCX
 	char *l_feature_name = "cwel_security_attributes_set_security_descriptor";
@@ -365,11 +365,11 @@ void F336_16608 (EIF_REFERENCE Current, EIF_TYPED_VALUE arg1x, EIF_TYPED_VALUE a
 	RTLU(SK_POINTER,&arg2);
 	RTLU (SK_REF, &Current);
 	
-	RTEAA(l_feature_name, 335, Current, 0, 2, 9890);
+	RTEAA(l_feature_name, 335, Current, 0, 2, 9899);
 	RTSA(Dtype(Current));
 	RTSC;
 	RTME(Dtype(Current), 1);
-	RTDBGEAA(335, Current, 9890);
+	RTDBGEAA(335, Current, 9899);
 	RTIV(Current, RTAL);
 	cwel_security_attributes_set_security_descriptor(((LPSECURITY_ATTRIBUTES) arg1), ((LPVOID) arg2));
 	RTVI(Current, RTAL);
@@ -385,7 +385,7 @@ void F336_16608 (EIF_REFERENCE Current, EIF_TYPED_VALUE arg1x, EIF_TYPED_VALUE a
 }
 
 /* {WEL_SECURITY_ATTRIBUTES}.cwel_security_attributes_get_inherit_handle */
-EIF_TYPED_VALUE F336_16609 (EIF_REFERENCE Current, EIF_TYPED_VALUE arg1x)
+EIF_TYPED_VALUE F336_16616 (EIF_REFERENCE Current, EIF_TYPED_VALUE arg1x)
 {
 	GTCX
 	char *l_feature_name = "cwel_security_attributes_get_inherit_handle";
@@ -425,7 +425,7 @@ EIF_TYPED_VALUE F336_16609 (EIF_REFERENCE Current, EIF_TYPED_VALUE arg1x)
 }
 
 /* {WEL_SECURITY_ATTRIBUTES}.cwel_security_attributes_set_inherit_handle */
-void F336_16610 (EIF_REFERENCE Current, EIF_TYPED_VALUE arg1x, EIF_TYPED_VALUE arg2x)
+void F336_16617 (EIF_REFERENCE Current, EIF_TYPED_VALUE arg1x, EIF_TYPED_VALUE arg2x)
 {
 	GTCX
 	char *l_feature_name = "cwel_security_attributes_set_inherit_handle";

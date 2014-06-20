@@ -43,13 +43,13 @@ OBJECTS = big_file_C4_c.obj
 
 OLDOBJECTS =  rt128.obj rt128d.obj rt127.obj rt127d.obj my105.obj my105d.obj ob113.obj ob113d.obj \
 	it114.obj it114d.obj do111.obj do111d.obj st130.obj st130d.obj st131.obj st131d.obj \
-	rt129.obj rt129d.obj rt126.obj rt126d.obj ws123.obj ws123d.obj ws125.obj ws125d.obj \
-	ht122.obj ht122d.obj ws124.obj ws124d.obj sh121.obj sh121d.obj wg117.obj wg117d.obj \
-	wg120.obj wg120d.obj th104.obj th104d.obj ht116.obj ht116d.obj ws115.obj ws115d.obj \
-	da101.obj da101d.obj da100.obj da100d.obj ob112.obj ob112d.obj ma110.obj ma110d.obj \
-	ws109.obj ws109d.obj ws108.obj ws108d.obj wg119.obj wg119d.obj th103.obj th103d.obj \
-	da99.obj da99d.obj pe107.obj pe107d.obj wg118.obj wg118d.obj th102.obj th102d.obj \
-	pr106.obj pr106d.obj 
+	rt129.obj rt129d.obj rt126.obj rt126d.obj ws123.obj ws123d.obj ht122.obj ht122d.obj \
+	ws125.obj ws125d.obj ws124.obj ws124d.obj sh121.obj sh121d.obj wg120.obj wg120d.obj \
+	wg117.obj wg117d.obj pr101.obj pr101d.obj th104.obj th104d.obj ht116.obj ht116d.obj \
+	ws115.obj ws115d.obj ob112.obj ob112d.obj ma110.obj ma110d.obj ws109.obj ws109d.obj \
+	ws108.obj ws108d.obj wg119.obj wg119d.obj pr100.obj pr100d.obj th103.obj th103d.obj \
+	pe107.obj pe107d.obj wg118.obj wg118d.obj th102.obj th102d.obj pr106.obj pr106d.obj \
+	we99.obj we99d.obj 
 
 all::  Cobj4.lib
 

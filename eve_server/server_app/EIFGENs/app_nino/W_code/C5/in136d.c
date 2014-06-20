@@ -13,10 +13,10 @@ static EIF_TYPE_INDEX gen_type0_136 [] = {459,135,0xFFFF};
 static EIF_TYPE_INDEX gen_type1_136 [] = {0,0xFFFF};
 static EIF_TYPE_INDEX gen_type2_136 [] = {0,0xFFFF};
 static EIF_TYPE_INDEX gen_type3_136 [] = {0,0xFFFF};
-static EIF_TYPE_INDEX gen_type4_136 [] = {662,409,0xFFFF};
-static EIF_TYPE_INDEX gen_type5_136 [] = {662,409,0xFFFF};
-static EIF_TYPE_INDEX gen_type6_136 [] = {662,409,0xFFFF};
-static EIF_TYPE_INDEX gen_type7_136 [] = {662,409,0xFFFF};
+static EIF_TYPE_INDEX gen_type4_136 [] = {588,409,0xFFFF};
+static EIF_TYPE_INDEX gen_type5_136 [] = {588,409,0xFFFF};
+static EIF_TYPE_INDEX gen_type6_136 [] = {588,409,0xFFFF};
+static EIF_TYPE_INDEX gen_type7_136 [] = {588,409,0xFFFF};
 
 
 static struct desc_info desc_136[] = {
@@ -54,12 +54,8 @@ static struct desc_info desc_136[] = {
 	{30, (BODY_INDEX)-1, 135, NULL},
 	{31, (BODY_INDEX)-1, (EIF_TYPE_INDEX)-1, NULL},
 	{32, (BODY_INDEX)-1, (EIF_TYPE_INDEX)-1, NULL},
-	{1950, 40, 397, NULL},
-	{1951, 32, 409, NULL},
-	{1952, (BODY_INDEX)-1, 400, NULL},
-	{1953, (BODY_INDEX)-1, 400, NULL},
-	{1954, (BODY_INDEX)-1, 400, NULL},
-	{1955, (BODY_INDEX)-1, 400, NULL},
+	{1954, 40, 397, NULL},
+	{1955, 32, 409, NULL},
 	{1956, (BODY_INDEX)-1, 400, NULL},
 	{1957, (BODY_INDEX)-1, 400, NULL},
 	{1958, (BODY_INDEX)-1, 400, NULL},
@@ -71,18 +67,22 @@ static struct desc_info desc_136[] = {
 	{1964, (BODY_INDEX)-1, 400, NULL},
 	{1965, (BODY_INDEX)-1, 400, NULL},
 	{1966, (BODY_INDEX)-1, 400, NULL},
-	{1967, (BODY_INDEX)-1, 346, NULL},
-	{1968, (BODY_INDEX)-1, 346, NULL},
-	{1969, (BODY_INDEX)-1, 346, NULL},
-	{1970, (BODY_INDEX)-1, 346, NULL},
+	{1967, (BODY_INDEX)-1, 400, NULL},
+	{1968, (BODY_INDEX)-1, 400, NULL},
+	{1969, (BODY_INDEX)-1, 400, NULL},
+	{1970, (BODY_INDEX)-1, 400, NULL},
 	{1971, (BODY_INDEX)-1, 346, NULL},
 	{1972, (BODY_INDEX)-1, 346, NULL},
-	{1974, (BODY_INDEX)-1, (EIF_TYPE_INDEX)-1, NULL},
+	{1973, (BODY_INDEX)-1, 346, NULL},
+	{1974, (BODY_INDEX)-1, 346, NULL},
 	{1975, (BODY_INDEX)-1, 346, NULL},
-	{1976, 0, 662, gen_type4_136},
-	{1977, 8, 662, gen_type5_136},
-	{1978, 16, 662, gen_type6_136},
-	{1973, 24, 662, gen_type7_136},
+	{1976, (BODY_INDEX)-1, 346, NULL},
+	{1982, (BODY_INDEX)-1, (EIF_TYPE_INDEX)-1, NULL},
+	{1977, (BODY_INDEX)-1, 346, NULL},
+	{1978, 0, 588, gen_type4_136},
+	{1979, 8, 588, gen_type5_136},
+	{1980, 16, 588, gen_type6_136},
+	{1981, 24, 588, gen_type7_136},
 };
 
 extern void Init136(void);

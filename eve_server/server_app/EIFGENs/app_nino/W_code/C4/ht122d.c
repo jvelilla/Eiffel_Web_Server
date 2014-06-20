@@ -50,16 +50,16 @@ static struct desc_info desc_122[] = {
 	{30, (BODY_INDEX)-1, 121, NULL},
 	{31, (BODY_INDEX)-1, (EIF_TYPE_INDEX)-1, NULL},
 	{32, (BODY_INDEX)-1, (EIF_TYPE_INDEX)-1, NULL},
-	{1863, (BODY_INDEX)-1, 355, NULL},
-	{1864, (BODY_INDEX)-1, 359, NULL},
-	{1865, (BODY_INDEX)-1, 359, NULL},
-	{1866, (BODY_INDEX)-1, 359, NULL},
-	{1867, (BODY_INDEX)-1, 359, NULL},
+	{1867, (BODY_INDEX)-1, 355, NULL},
 	{1868, (BODY_INDEX)-1, 359, NULL},
 	{1869, (BODY_INDEX)-1, 359, NULL},
 	{1870, (BODY_INDEX)-1, 359, NULL},
 	{1871, (BODY_INDEX)-1, 359, NULL},
 	{1872, (BODY_INDEX)-1, 359, NULL},
+	{1873, (BODY_INDEX)-1, 359, NULL},
+	{1874, (BODY_INDEX)-1, 359, NULL},
+	{1875, (BODY_INDEX)-1, 359, NULL},
+	{1876, (BODY_INDEX)-1, 359, NULL},
 };
 
 extern void Init122(void);
@@ -67,7 +67,7 @@ void Init122(void)
 {
 	IDSC(desc_122, 0, 121);
 	IDSC(desc_122 + 1, 4, 121);
-	IDSC(desc_122 + 34, 278, 121);
+	IDSC(desc_122 + 34, 276, 121);
 }
 
 

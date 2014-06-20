@@ -13,7 +13,7 @@ static EIF_TYPE_INDEX gen_type0_80 [] = {459,79,0xFFFF};
 static EIF_TYPE_INDEX gen_type1_80 [] = {0,0xFFFF};
 static EIF_TYPE_INDEX gen_type2_80 [] = {0,0xFFFF};
 static EIF_TYPE_INDEX gen_type3_80 [] = {0,0xFFFF};
-static EIF_TYPE_INDEX gen_type4_80 [] = {506,351,351,0xFFFF};
+static EIF_TYPE_INDEX gen_type4_80 [] = {507,351,351,0xFFFF};
 static EIF_TYPE_INDEX gen_type5_80 [] = {471,0,0xFFF9,1,338,359,0xFFFF};
 static EIF_TYPE_INDEX gen_type6_80 [] = {471,0,0xFFF9,1,338,359,0xFFFF};
 static EIF_TYPE_INDEX gen_type7_80 [] = {467,0,0xFFF9,0,338,0xFFFF};
@@ -21,7 +21,7 @@ static EIF_TYPE_INDEX gen_type8_80 [] = {467,0,0xFFF9,0,338,0xFFFF};
 static EIF_TYPE_INDEX gen_type9_80 [] = {467,0,0xFFF9,0,338,0xFFFF};
 static EIF_TYPE_INDEX gen_type10_80 [] = {467,0,0xFFF9,0,338,0xFFFF};
 static EIF_TYPE_INDEX gen_type11_80 [] = {467,0,0xFFF9,0,338,0xFFFF};
-static EIF_TYPE_INDEX gen_type12_80 [] = {487,351,0xFFFF};
+static EIF_TYPE_INDEX gen_type12_80 [] = {489,351,0xFFFF};
 static EIF_TYPE_INDEX gen_type13_80 [] = {485,358,0xFFFF};
 
 
@@ -113,7 +113,7 @@ static struct desc_info desc_80[] = {
 	{1405, 136, 400, NULL},
 	{1406, 140, 400, NULL},
 	{1407, 144, 400, NULL},
-	{1408, 40, 506, gen_type4_80},
+	{1408, 40, 507, gen_type4_80},
 	{1409, 120, 346, NULL},
 	{1410, (BODY_INDEX)-1, 346, NULL},
 	{(BODY_INDEX)-1, (BODY_INDEX)-1, 346, NULL},
@@ -138,8 +138,8 @@ static struct desc_info desc_80[] = {
 	{1429, 80, 467, gen_type9_80},
 	{1430, 88, 467, gen_type10_80},
 	{1431, 96, 467, gen_type11_80},
-	{1432, 104, 487, gen_type12_80},
-	{1433, 112, 70, NULL},
+	{1432, 104, 489, gen_type12_80},
+	{1433, 112, 67, NULL},
 	{1434, (BODY_INDEX)-1, (EIF_TYPE_INDEX)-1, NULL},
 	{1435, (BODY_INDEX)-1, 400, NULL},
 	{1436, (BODY_INDEX)-1, 400, NULL},
@@ -154,7 +154,7 @@ void Init80(void)
 {
 	IDSC(desc_80, 0, 79);
 	IDSC(desc_80 + 1, 4, 79);
-	IDSC(desc_80 + 34, 165, 79);
+	IDSC(desc_80 + 34, 168, 79);
 }
 
 

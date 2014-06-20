@@ -62,7 +62,7 @@ void Init64(void)
 {
 	IDSC(desc_64, 0, 63);
 	IDSC(desc_64 + 1, 4, 63);
-	IDSC(desc_64 + 34, 423, 63);
+	IDSC(desc_64 + 34, 422, 63);
 }
 
 

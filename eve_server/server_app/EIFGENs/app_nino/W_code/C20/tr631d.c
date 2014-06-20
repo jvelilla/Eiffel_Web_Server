@@ -1,5 +1,5 @@
 /*
- * Class TRAVERSABLE [NATURAL_32]
+ * Class TRAVERSABLE [INTEGER_64]
  */
 
 #include "eif_macros.h"
@@ -9,22 +9,22 @@
 extern "C" {
 #endif
 
-static EIF_TYPE_INDEX gen_type0_631 [] = {459,630,412,0xFFFF};
-static EIF_TYPE_INDEX gen_type1_631 [] = {630,412,0xFFFF};
+static EIF_TYPE_INDEX gen_type0_631 [] = {459,630,397,0xFFFF};
+static EIF_TYPE_INDEX gen_type1_631 [] = {630,397,0xFFFF};
 static EIF_TYPE_INDEX gen_type2_631 [] = {0,0xFFFF};
 static EIF_TYPE_INDEX gen_type3_631 [] = {0,0xFFFF};
-static EIF_TYPE_INDEX gen_type4_631 [] = {630,412,0xFFFF};
-static EIF_TYPE_INDEX gen_type5_631 [] = {630,412,0xFFFF};
+static EIF_TYPE_INDEX gen_type4_631 [] = {630,397,0xFFFF};
+static EIF_TYPE_INDEX gen_type5_631 [] = {630,397,0xFFFF};
 static EIF_TYPE_INDEX gen_type6_631 [] = {0,0xFFFF};
-static EIF_TYPE_INDEX gen_type7_631 [] = {630,412,0xFFFF};
-static EIF_TYPE_INDEX gen_type8_631 [] = {630,412,0xFFFF};
+static EIF_TYPE_INDEX gen_type7_631 [] = {630,397,0xFFFF};
+static EIF_TYPE_INDEX gen_type8_631 [] = {630,397,0xFFFF};
 static EIF_TYPE_INDEX gen_type9_631 [] = {629,0xFFF8,1,0xFFFF};
 static EIF_TYPE_INDEX gen_type10_631 [] = {0xFFF8,1,0xFFFF};
 static EIF_TYPE_INDEX gen_type11_631 [] = {0xFFF8,1,0xFFFF};
 
 
 static struct desc_info desc_631[] = {
-	{(BODY_INDEX) 3097, (BODY_INDEX) -1, INVALID_DTYPE, NULL},
+	{(BODY_INDEX) 3098, (BODY_INDEX) -1, INVALID_DTYPE, NULL},
 	{0, (BODY_INDEX)-1, 359, NULL},
 	{1, (BODY_INDEX)-1, 459, gen_type0_631},
 	{2, (BODY_INDEX)-1, 346, NULL},
@@ -60,20 +60,20 @@ static struct desc_info desc_631[] = {
 	{32, (BODY_INDEX)-1, (EIF_TYPE_INDEX)-1, NULL},
 	{(BODY_INDEX)-1, (BODY_INDEX)-1, 346, NULL},
 	{(BODY_INDEX)-1, (BODY_INDEX)-1, 346, NULL},
-	{2760, (BODY_INDEX)-1, 346, NULL},
-	{2761, 0, 346, NULL},
-	{2762, (BODY_INDEX)-1, 346, NULL},
-	{2763, (BODY_INDEX)-1, (EIF_TYPE_INDEX)-1, NULL},
+	{2766, (BODY_INDEX)-1, 346, NULL},
+	{2767, 0, 346, NULL},
+	{2768, (BODY_INDEX)-1, 346, NULL},
 	{2764, (BODY_INDEX)-1, (EIF_TYPE_INDEX)-1, NULL},
+	{2765, (BODY_INDEX)-1, (EIF_TYPE_INDEX)-1, NULL},
 	{(BODY_INDEX)-1, (BODY_INDEX)-1, 629, gen_type9_631},
 	{(BODY_INDEX)-1, (BODY_INDEX)-1, (EIF_TYPE_INDEX)-1, gen_type10_631},
 	{(BODY_INDEX)-1, (BODY_INDEX)-1, (EIF_TYPE_INDEX)-1, gen_type11_631},
 	{(BODY_INDEX)-1, (BODY_INDEX)-1, 346, NULL},
 	{(BODY_INDEX)-1, (BODY_INDEX)-1, (EIF_TYPE_INDEX)-1, NULL},
-	{3098, (BODY_INDEX)-1, (EIF_TYPE_INDEX)-1, NULL},
-	{3094, (BODY_INDEX)-1, (EIF_TYPE_INDEX)-1, NULL},
-	{3095, (BODY_INDEX)-1, 346, NULL},
-	{3096, (BODY_INDEX)-1, 346, NULL},
+	{3099, (BODY_INDEX)-1, (EIF_TYPE_INDEX)-1, NULL},
+	{3100, (BODY_INDEX)-1, (EIF_TYPE_INDEX)-1, NULL},
+	{3101, (BODY_INDEX)-1, 346, NULL},
+	{3102, (BODY_INDEX)-1, 346, NULL},
 };
 
 extern void Init631(void);

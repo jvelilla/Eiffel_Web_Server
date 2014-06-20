@@ -50,15 +50,15 @@ static struct desc_info desc_378[] = {
 	{30, (BODY_INDEX)-1, 377, NULL},
 	{31, (BODY_INDEX)-1, (EIF_TYPE_INDEX)-1, NULL},
 	{32, (BODY_INDEX)-1, (EIF_TYPE_INDEX)-1, NULL},
-	{13208, (BODY_INDEX)-1, 359, NULL},
+	{13215, (BODY_INDEX)-1, 359, NULL},
 	{(BODY_INDEX)-1, (BODY_INDEX)-1, (EIF_TYPE_INDEX)-1, NULL},
 	{(BODY_INDEX)-1, (BODY_INDEX)-1, 355, NULL},
 	{(BODY_INDEX)-1, (BODY_INDEX)-1, 240, NULL},
 	{(BODY_INDEX)-1, (BODY_INDEX)-1, 353, NULL},
 	{(BODY_INDEX)-1, (BODY_INDEX)-1, 346, NULL},
 	{(BODY_INDEX)-1, (BODY_INDEX)-1, (EIF_TYPE_INDEX)-1, NULL},
-	{13209, (BODY_INDEX)-1, 355, NULL},
-	{13210, (BODY_INDEX)-1, 16, NULL},
+	{13216, (BODY_INDEX)-1, 355, NULL},
+	{13217, (BODY_INDEX)-1, 16, NULL},
 };
 
 extern void Init378(void);
@@ -67,8 +67,8 @@ void Init378(void)
 	IDSC(desc_378, 0, 377);
 	IDSC(desc_378 + 1, 4, 377);
 	IDSC(desc_378 + 34, 106, 377);
-	IDSC(desc_378 + 35, 316, 377);
-	IDSC(desc_378 + 42, 410, 377);
+	IDSC(desc_378 + 35, 321, 377);
+	IDSC(desc_378 + 42, 418, 377);
 }
 
 

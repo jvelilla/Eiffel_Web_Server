@@ -1,5 +1,5 @@
 /*
- * Class ITERATION_CURSOR [REAL_64]
+ * Class ITERABLE [REAL_64]
  */
 
 #include "eif_macros.h"
@@ -18,7 +18,7 @@ static EIF_TYPE_INDEX gen_type5_557 [] = {556,421,0xFFFF};
 static EIF_TYPE_INDEX gen_type6_557 [] = {0,0xFFFF};
 static EIF_TYPE_INDEX gen_type7_557 [] = {556,421,0xFFFF};
 static EIF_TYPE_INDEX gen_type8_557 [] = {556,421,0xFFFF};
-static EIF_TYPE_INDEX gen_type9_557 [] = {0xFFF8,1,0xFFFF};
+static EIF_TYPE_INDEX gen_type9_557 [] = {557,0xFFF8,1,0xFFFF};
 static EIF_TYPE_INDEX gen_type10_557 [] = {0xFFF8,1,0xFFFF};
 
 
@@ -57,9 +57,7 @@ static struct desc_info desc_557[] = {
 	{30, (BODY_INDEX)-1, 556, gen_type8_557},
 	{31, (BODY_INDEX)-1, (EIF_TYPE_INDEX)-1, NULL},
 	{32, (BODY_INDEX)-1, (EIF_TYPE_INDEX)-1, NULL},
-	{(BODY_INDEX)-1, (BODY_INDEX)-1, (EIF_TYPE_INDEX)-1, gen_type9_557},
-	{(BODY_INDEX)-1, (BODY_INDEX)-1, 346, NULL},
-	{(BODY_INDEX)-1, (BODY_INDEX)-1, (EIF_TYPE_INDEX)-1, NULL},
+	{(BODY_INDEX)-1, (BODY_INDEX)-1, 557, gen_type9_557},
 	{(BODY_INDEX)-1, (BODY_INDEX)-1, (EIF_TYPE_INDEX)-1, gen_type10_557},
 };
 
@@ -68,7 +66,7 @@ void Init557(void)
 {
 	IDSC(desc_557, 0, 556);
 	IDSC(desc_557 + 1, 4, 556);
-	IDSC(desc_557 + 34, 84, 556);
+	IDSC(desc_557 + 34, 83, 556);
 }
 
 

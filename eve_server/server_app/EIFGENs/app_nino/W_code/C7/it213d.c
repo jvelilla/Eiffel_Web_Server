@@ -50,11 +50,11 @@ static struct desc_info desc_213[] = {
 	{30, (BODY_INDEX)-1, 212, NULL},
 	{31, (BODY_INDEX)-1, (EIF_TYPE_INDEX)-1, NULL},
 	{32, (BODY_INDEX)-1, (EIF_TYPE_INDEX)-1, NULL},
-	{2661, (BODY_INDEX)-1, 359, NULL},
-	{2662, (BODY_INDEX)-1, (EIF_TYPE_INDEX)-1, NULL},
-	{2663, 0, 0, NULL},
-	{2664, (BODY_INDEX)-1, 359, NULL},
-	{2665, (BODY_INDEX)-1, (EIF_TYPE_INDEX)-1, NULL},
+	{2665, (BODY_INDEX)-1, 359, NULL},
+	{2668, (BODY_INDEX)-1, (EIF_TYPE_INDEX)-1, NULL},
+	{2669, 0, 0, NULL},
+	{2666, (BODY_INDEX)-1, 359, NULL},
+	{2667, (BODY_INDEX)-1, (EIF_TYPE_INDEX)-1, NULL},
 };
 
 extern void Init213(void);
@@ -63,8 +63,8 @@ void Init213(void)
 	IDSC(desc_213, 0, 212);
 	IDSC(desc_213 + 1, 4, 212);
 	IDSC(desc_213 + 34, 67, 212);
-	IDSC(desc_213 + 35, 220, 212);
-	IDSC(desc_213 + 38, 219, 212);
+	IDSC(desc_213 + 35, 219, 212);
+	IDSC(desc_213 + 38, 220, 212);
 }
 
 

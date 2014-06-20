@@ -13,7 +13,7 @@ static EIF_TYPE_INDEX gen_type0_46 [] = {459,45,0xFFFF};
 static EIF_TYPE_INDEX gen_type1_46 [] = {0,0xFFFF};
 static EIF_TYPE_INDEX gen_type2_46 [] = {0,0xFFFF};
 static EIF_TYPE_INDEX gen_type3_46 [] = {0,0xFFFF};
-static EIF_TYPE_INDEX gen_type4_46 [] = {548,354,0xFFFF};
+static EIF_TYPE_INDEX gen_type4_46 [] = {549,354,0xFFFF};
 
 
 static struct desc_info desc_46[] = {
@@ -57,7 +57,7 @@ static struct desc_info desc_46[] = {
 	{890, (BODY_INDEX)-1, 356, NULL},
 	{891, (BODY_INDEX)-1, 356, NULL},
 	{892, (BODY_INDEX)-1, 356, NULL},
-	{893, (BODY_INDEX)-1, 548, gen_type4_46},
+	{893, (BODY_INDEX)-1, 549, gen_type4_46},
 	{878, (BODY_INDEX)-1, (EIF_TYPE_INDEX)-1, NULL},
 	{879, (BODY_INDEX)-1, (EIF_TYPE_INDEX)-1, NULL},
 	{880, (BODY_INDEX)-1, 346, NULL},

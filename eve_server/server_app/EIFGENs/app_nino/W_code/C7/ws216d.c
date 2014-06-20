@@ -51,7 +51,7 @@ static struct desc_info desc_216[] = {
 	{31, (BODY_INDEX)-1, (EIF_TYPE_INDEX)-1, NULL},
 	{32, (BODY_INDEX)-1, (EIF_TYPE_INDEX)-1, NULL},
 	{(BODY_INDEX)-1, (BODY_INDEX)-1, (EIF_TYPE_INDEX)-1, NULL},
-	{2731, (BODY_INDEX)-1, 80, NULL},
+	{2735, (BODY_INDEX)-1, 80, NULL},
 };
 
 extern void Init216(void);

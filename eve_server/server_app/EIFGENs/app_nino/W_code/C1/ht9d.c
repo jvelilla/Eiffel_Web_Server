@@ -63,7 +63,7 @@ void Init9(void)
 {
 	IDSC(desc_9, 0, 8);
 	IDSC(desc_9 + 1, 4, 8);
-	IDSC(desc_9 + 34, 387, 8);
+	IDSC(desc_9 + 34, 390, 8);
 }
 
 

@@ -13,7 +13,7 @@ static EIF_TYPE_INDEX gen_type0_228 [] = {459,227,0xFFFF};
 static EIF_TYPE_INDEX gen_type1_228 [] = {0,0xFFFF};
 static EIF_TYPE_INDEX gen_type2_228 [] = {0,0xFFFF};
 static EIF_TYPE_INDEX gen_type3_228 [] = {0,0xFFFF};
-static EIF_TYPE_INDEX gen_type4_228 [] = {580,227,0xFFFF};
+static EIF_TYPE_INDEX gen_type4_228 [] = {581,227,0xFFFF};
 
 
 static struct desc_info desc_228[] = {
@@ -22,7 +22,7 @@ static struct desc_info desc_228[] = {
 	{1, (BODY_INDEX)-1, 459, gen_type0_228},
 	{2, (BODY_INDEX)-1, 346, NULL},
 	{3, (BODY_INDEX)-1, 346, NULL},
-	{3708, (BODY_INDEX)-1, 346, NULL},
+	{3712, (BODY_INDEX)-1, 346, NULL},
 	{5, (BODY_INDEX)-1, 346, NULL},
 	{6, (BODY_INDEX)-1, 346, NULL},
 	{7, (BODY_INDEX)-1, 346, NULL},
@@ -51,16 +51,16 @@ static struct desc_info desc_228[] = {
 	{30, (BODY_INDEX)-1, 227, NULL},
 	{31, (BODY_INDEX)-1, (EIF_TYPE_INDEX)-1, NULL},
 	{32, (BODY_INDEX)-1, (EIF_TYPE_INDEX)-1, NULL},
-	{3712, (BODY_INDEX)-1, 346, NULL},
-	{3705, (BODY_INDEX)-1, 346, NULL},
-	{3706, (BODY_INDEX)-1, 346, NULL},
-	{3707, (BODY_INDEX)-1, 346, NULL},
-	{3709, (BODY_INDEX)-1, 400, NULL},
-	{3710, (BODY_INDEX)-1, 227, NULL},
-	{3711, (BODY_INDEX)-1, 227, NULL},
+	{3716, (BODY_INDEX)-1, 346, NULL},
+	{3709, (BODY_INDEX)-1, 346, NULL},
+	{3710, (BODY_INDEX)-1, 346, NULL},
+	{3711, (BODY_INDEX)-1, 346, NULL},
+	{3713, (BODY_INDEX)-1, 400, NULL},
+	{3714, (BODY_INDEX)-1, 227, NULL},
+	{3715, (BODY_INDEX)-1, 227, NULL},
 	{(BODY_INDEX)-1, (BODY_INDEX)-1, 227, NULL},
 	{(BODY_INDEX)-1, (BODY_INDEX)-1, 222, NULL},
-	{3713, (BODY_INDEX)-1, 580, gen_type4_228},
+	{3717, (BODY_INDEX)-1, 581, gen_type4_228},
 	{(BODY_INDEX)-1, (BODY_INDEX)-1, 222, NULL},
 };
 
@@ -71,7 +71,7 @@ void Init228(void)
 	IDSC(desc_228 + 1, 4, 227);
 	IDSC(desc_228 + 34, 105, 227);
 	IDSC(desc_228 + 38, 196, 227);
-	IDSC(desc_228 + 41, 330, 227);
+	IDSC(desc_228 + 41, 335, 227);
 }
 
 

@@ -82,7 +82,7 @@ void Init19(void)
 {
 	IDSC(desc_19, 0, 18);
 	IDSC(desc_19 + 1, 4, 18);
-	IDSC(desc_19 + 34, 306, 18);
+	IDSC(desc_19 + 34, 310, 18);
 }
 
 

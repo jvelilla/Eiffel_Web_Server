@@ -55,16 +55,16 @@ $spitshell >>Makefile <<'!NO!SUBS!'
 
 OBJECTS = big_file_C33_c.obj 
 
-OLDOBJECTS =  fu1065.o fu1065d.o fu1067.o fu1067d.o fu1070.o fu1070d.o fu1083.o \
-	fu1083d.o fu1085.o fu1085d.o ty1060.o ty1060d.o ty1061.o ty1061d.o \
-	ty1057.o ty1057d.o ty1062.o ty1062d.o ty1066.o ty1066d.o ty1071.o \
-	ty1071d.o ty1082.o ty1082d.o li1073.o li1073d.o ce1058.o ce1058d.o \
-	li1074.o li1074d.o li1076.o li1076d.o li1075.o li1075d.o se1088.o \
-	se1088d.o co1072.o co1072d.o co1077.o co1077d.o rt1059.o rt1059d.o \
-	rt1064.o rt1064d.o rt1080.o rt1080d.o rt1086.o rt1086d.o rt1068.o \
-	rt1068d.o rt1079.o rt1079d.o rt1081.o rt1081d.o rt1084.o rt1084d.o \
-	rt1087.o rt1087d.o rt1056.o rt1056d.o rt1063.o rt1063d.o rt1069.o \
-	rt1069d.o in1078.o in1078d.o 
+OLDOBJECTS =  fu1057.o fu1057d.o fu1065.o fu1065d.o fu1067.o fu1067d.o fu1082.o \
+	fu1082d.o fu1084.o fu1084d.o ty1061.o ty1061d.o ty1062.o ty1062d.o \
+	ty1056.o ty1056d.o ty1063.o ty1063d.o ty1066.o ty1066d.o ty1081.o \
+	ty1081d.o ty1088.o ty1088d.o li1072.o li1072d.o ce1059.o ce1059d.o \
+	li1073.o li1073d.o li1075.o li1075d.o li1074.o li1074d.o se1087.o \
+	se1087d.o co1071.o co1071d.o co1076.o co1076d.o rt1060.o rt1060d.o \
+	rt1070.o rt1070d.o rt1079.o rt1079d.o rt1085.o rt1085d.o rt1068.o \
+	rt1068d.o rt1078.o rt1078d.o rt1080.o rt1080d.o rt1083.o rt1083d.o \
+	rt1086.o rt1086d.o rt1064.o rt1064d.o rt1069.o rt1069d.o in1077.o \
+	in1077d.o en1058.o en1058d.o 
 
 all: Cobj33.o
 

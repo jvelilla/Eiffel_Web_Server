@@ -50,8 +50,8 @@ static struct desc_info desc_257[] = {
 	{30, (BODY_INDEX)-1, 256, NULL},
 	{31, (BODY_INDEX)-1, (EIF_TYPE_INDEX)-1, NULL},
 	{32, (BODY_INDEX)-1, (EIF_TYPE_INDEX)-1, NULL},
-	{4245, (BODY_INDEX)-1, (EIF_TYPE_INDEX)-1, NULL},
-	{4246, 0, 400, NULL},
+	{4249, (BODY_INDEX)-1, (EIF_TYPE_INDEX)-1, NULL},
+	{4250, 0, 400, NULL},
 };
 
 extern void Init257(void);
@@ -59,7 +59,7 @@ void Init257(void)
 {
 	IDSC(desc_257, 0, 256);
 	IDSC(desc_257 + 1, 4, 256);
-	IDSC(desc_257 + 34, 229, 256);
+	IDSC(desc_257 + 34, 228, 256);
 }
 
 

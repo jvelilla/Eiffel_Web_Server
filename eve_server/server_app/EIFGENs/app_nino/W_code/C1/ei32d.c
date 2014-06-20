@@ -1,5 +1,5 @@
 /*
- * Class EIFFEL_ARCHITECTURE
+ * Class EIFFEL_TARGETS
  */
 
 #include "eif_macros.h"
@@ -50,16 +50,14 @@ static struct desc_info desc_32[] = {
 	{30, (BODY_INDEX)-1, 31, NULL},
 	{31, (BODY_INDEX)-1, (EIF_TYPE_INDEX)-1, NULL},
 	{32, (BODY_INDEX)-1, (EIF_TYPE_INDEX)-1, NULL},
-	{474, (BODY_INDEX)-1, (EIF_TYPE_INDEX)-1, NULL},
-	{475, 0, 359, NULL},
-	{476, 8, 359, NULL},
-	{477, 16, 426, NULL},
-	{478, 24, 359, NULL},
-	{479, 32, 400, NULL},
-	{480, 36, 400, NULL},
-	{481, (BODY_INDEX)-1, (EIF_TYPE_INDEX)-1, NULL},
-	{482, (BODY_INDEX)-1, 426, NULL},
-	{483, (BODY_INDEX)-1, 400, NULL},
+	{479, (BODY_INDEX)-1, (EIF_TYPE_INDEX)-1, NULL},
+	{480, 0, 359, NULL},
+	{481, 8, 426, NULL},
+	{482, 16, 359, NULL},
+	{483, 24, 400, NULL},
+	{484, 28, 400, NULL},
+	{485, (BODY_INDEX)-1, (EIF_TYPE_INDEX)-1, NULL},
+	{486, (BODY_INDEX)-1, (EIF_TYPE_INDEX)-1, NULL},
 };
 
 extern void Init32(void);

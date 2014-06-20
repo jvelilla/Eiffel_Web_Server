@@ -1,5 +1,5 @@
 /*
- * Class ITERABLE [INTEGER_64]
+ * Class ITERATION_CURSOR [BOOLEAN]
  */
 
 #include "eif_macros.h"
@@ -9,16 +9,16 @@
 extern "C" {
 #endif
 
-static EIF_TYPE_INDEX gen_type0_700 [] = {459,699,397,0xFFFF};
-static EIF_TYPE_INDEX gen_type1_700 [] = {699,397,0xFFFF};
+static EIF_TYPE_INDEX gen_type0_700 [] = {459,699,346,0xFFFF};
+static EIF_TYPE_INDEX gen_type1_700 [] = {699,346,0xFFFF};
 static EIF_TYPE_INDEX gen_type2_700 [] = {0,0xFFFF};
 static EIF_TYPE_INDEX gen_type3_700 [] = {0,0xFFFF};
-static EIF_TYPE_INDEX gen_type4_700 [] = {699,397,0xFFFF};
-static EIF_TYPE_INDEX gen_type5_700 [] = {699,397,0xFFFF};
+static EIF_TYPE_INDEX gen_type4_700 [] = {699,346,0xFFFF};
+static EIF_TYPE_INDEX gen_type5_700 [] = {699,346,0xFFFF};
 static EIF_TYPE_INDEX gen_type6_700 [] = {0,0xFFFF};
-static EIF_TYPE_INDEX gen_type7_700 [] = {699,397,0xFFFF};
-static EIF_TYPE_INDEX gen_type8_700 [] = {699,397,0xFFFF};
-static EIF_TYPE_INDEX gen_type9_700 [] = {700,0xFFF8,1,0xFFFF};
+static EIF_TYPE_INDEX gen_type7_700 [] = {699,346,0xFFFF};
+static EIF_TYPE_INDEX gen_type8_700 [] = {699,346,0xFFFF};
+static EIF_TYPE_INDEX gen_type9_700 [] = {0xFFF8,1,0xFFFF};
 static EIF_TYPE_INDEX gen_type10_700 [] = {0xFFF8,1,0xFFFF};
 
 
@@ -57,7 +57,9 @@ static struct desc_info desc_700[] = {
 	{30, (BODY_INDEX)-1, 699, gen_type8_700},
 	{31, (BODY_INDEX)-1, (EIF_TYPE_INDEX)-1, NULL},
 	{32, (BODY_INDEX)-1, (EIF_TYPE_INDEX)-1, NULL},
-	{(BODY_INDEX)-1, (BODY_INDEX)-1, 700, gen_type9_700},
+	{(BODY_INDEX)-1, (BODY_INDEX)-1, (EIF_TYPE_INDEX)-1, gen_type9_700},
+	{(BODY_INDEX)-1, (BODY_INDEX)-1, 346, NULL},
+	{(BODY_INDEX)-1, (BODY_INDEX)-1, (EIF_TYPE_INDEX)-1, NULL},
 	{(BODY_INDEX)-1, (BODY_INDEX)-1, (EIF_TYPE_INDEX)-1, gen_type10_700},
 };
 
@@ -66,7 +68,7 @@ void Init700(void)
 {
 	IDSC(desc_700, 0, 699);
 	IDSC(desc_700 + 1, 4, 699);
-	IDSC(desc_700 + 34, 83, 699);
+	IDSC(desc_700 + 34, 84, 699);
 }
 
 

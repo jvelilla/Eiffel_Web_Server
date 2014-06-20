@@ -10,10 +10,10 @@
 extern "C" {
 #endif
 
-extern void F146_8484(EIF_REFERENCE, EIF_TYPED_VALUE, EIF_TYPED_VALUE);
-extern void F146_8485(EIF_REFERENCE, EIF_TYPED_VALUE, EIF_TYPED_VALUE, EIF_TYPED_VALUE);
-extern void F146_8486(EIF_REFERENCE, EIF_TYPED_VALUE, EIF_TYPED_VALUE);
-extern void F146_8487(EIF_REFERENCE, EIF_TYPED_VALUE, EIF_TYPED_VALUE, EIF_TYPED_VALUE);
+extern void F146_8488(EIF_REFERENCE, EIF_TYPED_VALUE, EIF_TYPED_VALUE);
+extern void F146_8489(EIF_REFERENCE, EIF_TYPED_VALUE, EIF_TYPED_VALUE, EIF_TYPED_VALUE);
+extern void F146_8490(EIF_REFERENCE, EIF_TYPED_VALUE, EIF_TYPED_VALUE);
+extern void F146_8491(EIF_REFERENCE, EIF_TYPED_VALUE, EIF_TYPED_VALUE, EIF_TYPED_VALUE);
 extern void EIF_Minit146(void);
 
 #ifdef __cplusplus
@@ -36,7 +36,7 @@ extern "C" {
 #endif
 
 /* {WSF_URI_HELPER_FOR_ROUTED_SERVICE}.map_uri */
-void F146_8484 (EIF_REFERENCE Current, EIF_TYPED_VALUE arg1x, EIF_TYPED_VALUE arg2x)
+void F146_8488 (EIF_REFERENCE Current, EIF_TYPED_VALUE arg1x, EIF_TYPED_VALUE arg2x)
 {
 	GTCX
 	char *l_feature_name = "map_uri";
@@ -66,12 +66,12 @@ void F146_8484 (EIF_REFERENCE Current, EIF_TYPED_VALUE arg1x, EIF_TYPED_VALUE ar
 	RTLU(SK_REF,&arg2);
 	RTLU (SK_REF, &Current);
 	
-	RTEAA(l_feature_name, 145, Current, 0, 2, 2081);
+	RTEAA(l_feature_name, 145, Current, 0, 2, 2085);
 	RTSA(Dtype(Current));
 	RTSC;
 	RTME(Dtype(Current), 0);
 	RTGC;
-	RTDBGEAA(145, Current, 2081);
+	RTDBGEAA(145, Current, 2085);
 	if (arg1) {
 		RTCC(arg1, 145, l_feature_name, 1, 355);
 	}
@@ -83,7 +83,7 @@ void F146_8484 (EIF_REFERENCE Current, EIF_TYPED_VALUE arg1x, EIF_TYPED_VALUE ar
 	ur1 = RTCCL(arg1);
 	ur2 = RTCCL(arg2);
 	ur3 = NULL;
-	(FUNCTION_CAST(void, (EIF_REFERENCE, EIF_TYPED_VALUE, EIF_TYPED_VALUE, EIF_TYPED_VALUE)) RTWF(8229, Dtype(Current)))(Current, ur1x, ur2x, ur3x);
+	(FUNCTION_CAST(void, (EIF_REFERENCE, EIF_TYPED_VALUE, EIF_TYPED_VALUE, EIF_TYPED_VALUE)) RTWF(8233, Dtype(Current)))(Current, ur1x, ur2x, ur3x);
 	RTVI(Current, RTAL);
 	RTRS;
 	RTHOOK(2);
@@ -100,7 +100,7 @@ void F146_8484 (EIF_REFERENCE Current, EIF_TYPED_VALUE arg1x, EIF_TYPED_VALUE ar
 }
 
 /* {WSF_URI_HELPER_FOR_ROUTED_SERVICE}.map_uri_with_request_methods */
-void F146_8485 (EIF_REFERENCE Current, EIF_TYPED_VALUE arg1x, EIF_TYPED_VALUE arg2x, EIF_TYPED_VALUE arg3x)
+void F146_8489 (EIF_REFERENCE Current, EIF_TYPED_VALUE arg1x, EIF_TYPED_VALUE arg2x, EIF_TYPED_VALUE arg3x)
 {
 	GTCX
 	char *l_feature_name = "map_uri_with_request_methods";
@@ -136,12 +136,12 @@ void F146_8485 (EIF_REFERENCE Current, EIF_TYPED_VALUE arg1x, EIF_TYPED_VALUE ar
 	RTLU(SK_REF,&arg3);
 	RTLU (SK_REF, &Current);
 	
-	RTEAA(l_feature_name, 145, Current, 0, 3, 2082);
+	RTEAA(l_feature_name, 145, Current, 0, 3, 2086);
 	RTSA(Dtype(Current));
 	RTSC;
 	RTME(Dtype(Current), 0);
 	RTGC;
-	RTDBGEAA(145, Current, 2082);
+	RTDBGEAA(145, Current, 2086);
 	if (arg1) {
 		RTCC(arg1, 145, l_feature_name, 1, 355);
 	}
@@ -153,16 +153,16 @@ void F146_8485 (EIF_REFERENCE Current, EIF_TYPED_VALUE arg1x, EIF_TYPED_VALUE ar
 	}
 	RTIV(Current, RTAL);
 	RTHOOK(1);
-	tr1 = ((up1x = (FUNCTION_CAST(EIF_TYPED_VALUE, (EIF_REFERENCE)) RTWF(8227, Dtype(Current)))(Current)), (((up1x.type & SK_HEAD) == SK_REF)? (EIF_REFERENCE) 0: (up1x.it_r = RTBU(up1x))), (up1x.type = SK_POINTER), up1x.it_r);
+	tr1 = ((up1x = (FUNCTION_CAST(EIF_TYPED_VALUE, (EIF_REFERENCE)) RTWF(8231, Dtype(Current)))(Current)), (((up1x.type & SK_HEAD) == SK_REF)? (EIF_REFERENCE) 0: (up1x.it_r = RTBU(up1x))), (up1x.type = SK_POINTER), up1x.it_r);
 	RTNHOOK(1,1);
 	tr2 = RTLN(381);
 	ur1 = RTCCL(arg1);
 	ur2 = RTCCL(arg2);
-	(FUNCTION_CAST(void, (EIF_REFERENCE, EIF_TYPED_VALUE, EIF_TYPED_VALUE)) RTWC(16705, Dtype(tr2)))(tr2, ur1x, ur2x);
+	(FUNCTION_CAST(void, (EIF_REFERENCE, EIF_TYPED_VALUE, EIF_TYPED_VALUE)) RTWC(16712, Dtype(tr2)))(tr2, ur1x, ur2x);
 	RTNHOOK(1,2);
 	ur1 = RTCCL(tr2);
 	ur2 = RTCCL(arg3);
-	(FUNCTION_CAST(void, (EIF_REFERENCE, EIF_TYPED_VALUE, EIF_TYPED_VALUE)) RTVF(11069, "map_with_request_methods", tr1))(tr1, ur1x, ur2x);
+	(FUNCTION_CAST(void, (EIF_REFERENCE, EIF_TYPED_VALUE, EIF_TYPED_VALUE)) RTVF(11073, "map_with_request_methods", tr1))(tr1, ur1x, ur2x);
 	RTVI(Current, RTAL);
 	RTRS;
 	RTHOOK(2);
@@ -180,7 +180,7 @@ void F146_8485 (EIF_REFERENCE Current, EIF_TYPED_VALUE arg1x, EIF_TYPED_VALUE ar
 }
 
 /* {WSF_URI_HELPER_FOR_ROUTED_SERVICE}.map_uri_agent */
-void F146_8486 (EIF_REFERENCE Current, EIF_TYPED_VALUE arg1x, EIF_TYPED_VALUE arg2x)
+void F146_8490 (EIF_REFERENCE Current, EIF_TYPED_VALUE arg1x, EIF_TYPED_VALUE arg2x)
 {
 	GTCX
 	char *l_feature_name = "map_uri_agent";
@@ -210,12 +210,12 @@ void F146_8486 (EIF_REFERENCE Current, EIF_TYPED_VALUE arg1x, EIF_TYPED_VALUE ar
 	RTLU(SK_REF,&arg2);
 	RTLU (SK_REF, &Current);
 	
-	RTEAA(l_feature_name, 145, Current, 0, 2, 2083);
+	RTEAA(l_feature_name, 145, Current, 0, 2, 2087);
 	RTSA(Dtype(Current));
 	RTSC;
 	RTME(Dtype(Current), 0);
 	RTGC;
-	RTDBGEAA(145, Current, 2083);
+	RTDBGEAA(145, Current, 2087);
 	if (arg1) {
 		RTCC(arg1, 145, l_feature_name, 1, 355);
 	}
@@ -234,7 +234,7 @@ void F146_8486 (EIF_REFERENCE Current, EIF_TYPED_VALUE arg1x, EIF_TYPED_VALUE ar
 	ur1 = RTCCL(arg1);
 	ur2 = RTCCL(arg2);
 	ur3 = NULL;
-	(FUNCTION_CAST(void, (EIF_REFERENCE, EIF_TYPED_VALUE, EIF_TYPED_VALUE, EIF_TYPED_VALUE)) RTWF(8231, Dtype(Current)))(Current, ur1x, ur2x, ur3x);
+	(FUNCTION_CAST(void, (EIF_REFERENCE, EIF_TYPED_VALUE, EIF_TYPED_VALUE, EIF_TYPED_VALUE)) RTWF(8235, Dtype(Current)))(Current, ur1x, ur2x, ur3x);
 	RTVI(Current, RTAL);
 	RTRS;
 	RTHOOK(2);
@@ -251,7 +251,7 @@ void F146_8486 (EIF_REFERENCE Current, EIF_TYPED_VALUE arg1x, EIF_TYPED_VALUE ar
 }
 
 /* {WSF_URI_HELPER_FOR_ROUTED_SERVICE}.map_uri_agent_with_request_methods */
-void F146_8487 (EIF_REFERENCE Current, EIF_TYPED_VALUE arg1x, EIF_TYPED_VALUE arg2x, EIF_TYPED_VALUE arg3x)
+void F146_8491 (EIF_REFERENCE Current, EIF_TYPED_VALUE arg1x, EIF_TYPED_VALUE arg2x, EIF_TYPED_VALUE arg3x)
 {
 	GTCX
 	char *l_feature_name = "map_uri_agent_with_request_methods";
@@ -286,12 +286,12 @@ void F146_8487 (EIF_REFERENCE Current, EIF_TYPED_VALUE arg1x, EIF_TYPED_VALUE ar
 	RTLU(SK_REF,&arg3);
 	RTLU (SK_REF, &Current);
 	
-	RTEAA(l_feature_name, 145, Current, 0, 3, 2084);
+	RTEAA(l_feature_name, 145, Current, 0, 3, 2088);
 	RTSA(Dtype(Current));
 	RTSC;
 	RTME(Dtype(Current), 0);
 	RTGC;
-	RTDBGEAA(145, Current, 2084);
+	RTDBGEAA(145, Current, 2088);
 	if (arg1) {
 		RTCC(arg1, 145, l_feature_name, 1, 355);
 	}
@@ -313,11 +313,11 @@ void F146_8487 (EIF_REFERENCE Current, EIF_TYPED_VALUE arg1x, EIF_TYPED_VALUE ar
 	ur1 = RTCCL(arg1);
 	tr1 = RTLN(245);
 	ur2 = RTCCL(arg2);
-	(FUNCTION_CAST(void, (EIF_REFERENCE, EIF_TYPED_VALUE)) RTWC(10291, Dtype(tr1)))(tr1, ur2x);
+	(FUNCTION_CAST(void, (EIF_REFERENCE, EIF_TYPED_VALUE)) RTWC(10295, Dtype(tr1)))(tr1, ur2x);
 	RTNHOOK(1,1);
 	ur2 = RTCCL(tr1);
 	ur3 = RTCCL(arg3);
-	(FUNCTION_CAST(void, (EIF_REFERENCE, EIF_TYPED_VALUE, EIF_TYPED_VALUE, EIF_TYPED_VALUE)) RTWF(8229, Dtype(Current)))(Current, ur1x, ur2x, ur3x);
+	(FUNCTION_CAST(void, (EIF_REFERENCE, EIF_TYPED_VALUE, EIF_TYPED_VALUE, EIF_TYPED_VALUE)) RTWF(8233, Dtype(Current)))(Current, ur1x, ur2x, ur3x);
 	RTVI(Current, RTAL);
 	RTRS;
 	RTHOOK(2);

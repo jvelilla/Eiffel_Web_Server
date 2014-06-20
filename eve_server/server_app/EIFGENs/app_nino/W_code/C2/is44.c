@@ -117,14 +117,14 @@ extern void EIF_Minit44(void);
 }
 #endif
 
+#include "eif_project.h"
+#include "eif_built_in.h"
 #include "eif_cecil.h"
 #include "eif_traverse.h"
 #include "eif_copy.h"
-#include "eif_project.h"
-#include "eif_built_in.h"
+#include "eif_gen_conf.h"
 #include "eif_eiffel.h"
 #include "eif_memory_analyzer.h"
-#include "eif_gen_conf.h"
 #include "eif_internal.h"
 #include "eif_out.h"
 

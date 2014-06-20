@@ -1,5 +1,5 @@
 /*
- * Class EIFFEL_CLIENT_SUPPLIER
+ * Class EIFFEL_FEATURE_CALLERS
  */
 
 #include "eif_macros.h"
@@ -50,14 +50,16 @@ static struct desc_info desc_33[] = {
 	{30, (BODY_INDEX)-1, 32, NULL},
 	{31, (BODY_INDEX)-1, (EIF_TYPE_INDEX)-1, NULL},
 	{32, (BODY_INDEX)-1, (EIF_TYPE_INDEX)-1, NULL},
-	{487, (BODY_INDEX)-1, (EIF_TYPE_INDEX)-1, NULL},
-	{488, 0, 359, NULL},
-	{489, 8, 359, NULL},
-	{490, 16, 426, NULL},
-	{491, 24, 359, NULL},
-	{484, 32, 400, NULL},
-	{485, (BODY_INDEX)-1, (EIF_TYPE_INDEX)-1, NULL},
-	{486, (BODY_INDEX)-1, (EIF_TYPE_INDEX)-1, NULL},
+	{495, (BODY_INDEX)-1, (EIF_TYPE_INDEX)-1, NULL},
+	{496, 0, 359, NULL},
+	{487, 8, 359, NULL},
+	{488, 16, 359, NULL},
+	{489, 24, 426, NULL},
+	{490, 32, 359, NULL},
+	{491, 40, 400, NULL},
+	{492, (BODY_INDEX)-1, (EIF_TYPE_INDEX)-1, NULL},
+	{493, (BODY_INDEX)-1, (EIF_TYPE_INDEX)-1, NULL},
+	{494, (BODY_INDEX)-1, 400, NULL},
 };
 
 extern void Init33(void);

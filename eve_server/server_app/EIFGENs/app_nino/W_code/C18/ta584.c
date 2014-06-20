@@ -1,5 +1,5 @@
 /*
- * Code for class TABLE_ITERATION_CURSOR [INTEGER_32, INTEGER_32]
+ * Code for class TABLE_ITERABLE [INTEGER_32, INTEGER_32]
  */
 
 #include "eif_eiffel.h"

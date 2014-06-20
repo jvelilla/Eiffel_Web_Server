@@ -93,8 +93,8 @@ extern void EIF_Minit8(void);
 
 #include <winbase.h>
 #include <shellapi.h>
-#include "wel.h"
 #include <windows.h>
+#include "wel.h"
 
 #ifdef __cplusplus
 extern "C" {

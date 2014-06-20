@@ -10,8 +10,8 @@
 extern "C" {
 #endif
 
-extern EIF_TYPED_VALUE F203_9336(EIF_REFERENCE);
-extern EIF_TYPED_VALUE F203_9337(EIF_REFERENCE);
+extern EIF_TYPED_VALUE F203_9340(EIF_REFERENCE);
+extern EIF_TYPED_VALUE F203_9341(EIF_REFERENCE);
 extern void EIF_Minit203(void);
 
 #ifdef __cplusplus
@@ -34,7 +34,7 @@ extern "C" {
 #endif
 
 /* {CREATE_ON_DEFERRED}.code */
-EIF_TYPED_VALUE F203_9336 (EIF_REFERENCE Current)
+EIF_TYPED_VALUE F203_9340 (EIF_REFERENCE Current)
 {
 	GTCX
 	char *l_feature_name = "code";
@@ -50,17 +50,17 @@ EIF_TYPED_VALUE F203_9336 (EIF_REFERENCE Current)
 	RTLU (SK_INT32, &Result);
 	RTLU (SK_REF, &Current);
 	
-	RTEAA(l_feature_name, 202, Current, 0, 0, 2620);
+	RTEAA(l_feature_name, 202, Current, 0, 0, 2624);
 	RTSA(Dtype(Current));
 	RTSC;
 	RTME(Dtype(Current), 0);
 	RTGC;
-	RTDBGEAA(202, Current, 2620);
+	RTDBGEAA(202, Current, 2624);
 	RTIV(Current, RTAL);
 	RTHOOK(1);
 	RTDBGAL(Current, 0, 0x10000000, 1,0); /* Result */
 	
-	Result = (((FUNCTION_CAST(EIF_TYPED_VALUE, (EIF_REFERENCE)) RTWF(8452, 154))(Current)).it_i4);
+	Result = (((FUNCTION_CAST(EIF_TYPED_VALUE, (EIF_REFERENCE)) RTWF(8456, 154))(Current)).it_i4);
 	Result = (EIF_INTEGER_32) Result;
 	RTVI(Current, RTAL);
 	RTRS;
@@ -74,8 +74,8 @@ EIF_TYPED_VALUE F203_9336 (EIF_REFERENCE Current)
 }
 
 /* {CREATE_ON_DEFERRED}.tag */
-RTOID (F203_9337)
-EIF_TYPED_VALUE F203_9337 (EIF_REFERENCE Current)
+RTOID (F203_9341)
+EIF_TYPED_VALUE F203_9341 (EIF_REFERENCE Current)
 {
 	GTCX
 	char *l_feature_name = "tag";
@@ -89,7 +89,7 @@ EIF_TYPED_VALUE F203_9337 (EIF_REFERENCE Current)
 	RTLD;
 	
 #define Result RTOTRR
-	RTOTDR(F203_9337);
+	RTOTDR(F203_9341);
 
 	RTLI(4);
 	RTLR(0,tr1);
@@ -99,12 +99,12 @@ EIF_TYPED_VALUE F203_9337 (EIF_REFERENCE Current)
 	RTLU (SK_REF, &Result);
 	RTLU (SK_REF, &Current);
 	
-	RTEAA(l_feature_name, 202, Current, 0, 0, 2621);
+	RTEAA(l_feature_name, 202, Current, 0, 0, 2625);
 	RTSA(Dtype(Current));
 	RTSC;
 	RTME(Dtype(Current), 0);
 	RTGC;
-	RTDBGEAA(202, Current, 2621);
+	RTDBGEAA(202, Current, 2625);
 	RTIV(Current, RTAL);
 	RTOTP;
 	RTHOOK(1);
@@ -113,7 +113,7 @@ EIF_TYPED_VALUE F203_9337 (EIF_REFERENCE Current)
 	tr1 = RTLN(354);
 	tr2 = RTMS_EX_H("Create on deferred.",19,872737070);
 	ur1 = tr2;
-	(FUNCTION_CAST(void, (EIF_REFERENCE, EIF_TYPED_VALUE)) RTWC(15205, Dtype(tr1)))(tr1, ur1x);
+	(FUNCTION_CAST(void, (EIF_REFERENCE, EIF_TYPED_VALUE)) RTWC(15212, Dtype(tr1)))(tr1, ur1x);
 	RTNHOOK(1,1);
 	Result = (EIF_REFERENCE) tr1;
 	RTVI(Current, RTAL);
@@ -133,7 +133,7 @@ EIF_TYPED_VALUE F203_9337 (EIF_REFERENCE Current)
 void EIF_Minit203 (void)
 {
 	GTCX
-	RTOTS (9337,F203_9337)
+	RTOTS (9341,F203_9341)
 }
 
 

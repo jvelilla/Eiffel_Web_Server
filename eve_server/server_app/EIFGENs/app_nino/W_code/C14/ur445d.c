@@ -13,8 +13,8 @@ static EIF_TYPE_INDEX gen_type0_445 [] = {459,444,0xFFFF};
 static EIF_TYPE_INDEX gen_type1_445 [] = {0,0xFFFF};
 static EIF_TYPE_INDEX gen_type2_445 [] = {0,0xFFFF};
 static EIF_TYPE_INDEX gen_type3_445 [] = {0,0xFFFF};
-static EIF_TYPE_INDEX gen_type4_445 [] = {487,428,0xFFFF};
-static EIF_TYPE_INDEX gen_type5_445 [] = {487,359,0xFFFF};
+static EIF_TYPE_INDEX gen_type4_445 [] = {489,428,0xFFFF};
+static EIF_TYPE_INDEX gen_type5_445 [] = {489,359,0xFFFF};
 
 
 static struct desc_info desc_445[] = {
@@ -64,22 +64,22 @@ static struct desc_info desc_445[] = {
 	{1483, (BODY_INDEX)-1, 343, NULL},
 	{1484, (BODY_INDEX)-1, 343, NULL},
 	{1485, (BODY_INDEX)-1, 343, NULL},
-	{15635, (BODY_INDEX)-1, (EIF_TYPE_INDEX)-1, NULL},
-	{15636, (BODY_INDEX)-1, (EIF_TYPE_INDEX)-1, NULL},
-	{15637, 24, 400, NULL},
-	{15638, (BODY_INDEX)-1, 400, NULL},
-	{15639, 0, 359, NULL},
-	{15640, 19, 346, NULL},
-	{15641, 16, 343, NULL},
-	{15642, 20, 346, NULL},
-	{15643, 17, 343, NULL},
-	{15644, 18, 343, NULL},
-	{15645, 8, 487, gen_type4_445},
-	{15646, (BODY_INDEX)-1, 487, gen_type5_445},
-	{15647, 21, 346, NULL},
-	{15648, (BODY_INDEX)-1, (EIF_TYPE_INDEX)-1, NULL},
-	{15633, (BODY_INDEX)-1, (EIF_TYPE_INDEX)-1, NULL},
-	{15634, (BODY_INDEX)-1, 359, NULL},
+	{15649, (BODY_INDEX)-1, (EIF_TYPE_INDEX)-1, NULL},
+	{15650, (BODY_INDEX)-1, (EIF_TYPE_INDEX)-1, NULL},
+	{15651, 24, 400, NULL},
+	{15652, (BODY_INDEX)-1, 400, NULL},
+	{15653, 0, 359, NULL},
+	{15654, 19, 346, NULL},
+	{15655, 16, 343, NULL},
+	{15640, 20, 346, NULL},
+	{15641, 17, 343, NULL},
+	{15642, 18, 343, NULL},
+	{15643, 8, 489, gen_type4_445},
+	{15644, (BODY_INDEX)-1, 489, gen_type5_445},
+	{15645, 21, 346, NULL},
+	{15646, (BODY_INDEX)-1, (EIF_TYPE_INDEX)-1, NULL},
+	{15647, (BODY_INDEX)-1, (EIF_TYPE_INDEX)-1, NULL},
+	{15648, (BODY_INDEX)-1, 359, NULL},
 };
 
 extern void Init445(void);

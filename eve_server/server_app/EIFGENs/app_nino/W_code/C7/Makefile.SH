@@ -62,8 +62,8 @@ OLDOBJECTS =  ws216.o ws216d.o it215.o it215d.o it214.o it214d.o ex211.o ex211d.
 	cr203.o cr203d.o ad202.o ad202d.o ws217.o ws217d.o da226.o da226d.o \
 	ws218.o ws218d.o ws221.o ws221d.o co227.o co227d.o it213.o it213d.o \
 	as204.o as204d.o re230.o re230d.o ei201.o ei201d.o ra219.o ra219d.o \
-	sh229.o sh229d.o da225.o da225d.o ti224.o ti224d.o ab228.o ab228d.o \
-	du223.o du223d.o 
+	sh229.o sh229d.o da225.o da225d.o ti224.o ti224d.o du223.o du223d.o \
+	ab228.o ab228d.o 
 
 all: Cobj7.o
 

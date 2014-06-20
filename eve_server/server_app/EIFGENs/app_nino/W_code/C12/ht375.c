@@ -10,9 +10,9 @@
 extern "C" {
 #endif
 
-extern EIF_TYPED_VALUE F375_18869(EIF_REFERENCE);
-extern EIF_TYPED_VALUE F375_18870(EIF_REFERENCE);
-extern EIF_TYPED_VALUE F375_18871(EIF_REFERENCE);
+extern EIF_TYPED_VALUE F375_18876(EIF_REFERENCE);
+extern EIF_TYPED_VALUE F375_18877(EIF_REFERENCE);
+extern EIF_TYPED_VALUE F375_18878(EIF_REFERENCE);
 extern void EIF_Minit375(void);
 
 #ifdef __cplusplus
@@ -35,7 +35,7 @@ extern "C" {
 #endif
 
 /* {HTTP_CONTENT_TYPE}.charset_parameter */
-EIF_TYPED_VALUE F375_18869 (EIF_REFERENCE Current)
+EIF_TYPED_VALUE F375_18876 (EIF_REFERENCE Current)
 {
 	GTCX
 	char *l_feature_name = "charset_parameter";
@@ -61,22 +61,22 @@ EIF_TYPED_VALUE F375_18869 (EIF_REFERENCE Current)
 	RTLU (SK_REF, &Result);
 	RTLU (SK_REF, &Current);
 	
-	RTEAA(l_feature_name, 374, Current, 0, 0, 12454);
+	RTEAA(l_feature_name, 374, Current, 0, 0, 12461);
 	RTSA(dtype);
 	RTSC;
 	RTME(dtype, 0);
 	RTGC;
-	RTDBGEAA(374, Current, 12454);
+	RTDBGEAA(374, Current, 12461);
 	RTIV(Current, RTAL);
 	RTHOOK(1);
-	tb1 = (((FUNCTION_CAST(EIF_TYPED_VALUE, (EIF_REFERENCE)) RTWF(16657, dtype))(Current)).it_b);
+	tb1 = (((FUNCTION_CAST(EIF_TYPED_VALUE, (EIF_REFERENCE)) RTWF(16664, dtype))(Current)).it_b);
 	if (tb1) {
 		RTHOOK(2);
 		RTDBGAL(Current, 0, 0xF8000163, 0,0); /* Result */
 		
-		tr1 = ((up1x = (FUNCTION_CAST(EIF_TYPED_VALUE, (EIF_REFERENCE)) RTWF(16658, dtype))(Current)), (((up1x.type & SK_HEAD) == SK_REF)? (EIF_REFERENCE) 0: (up1x.it_r = RTBU(up1x))), (up1x.type = SK_POINTER), up1x.it_r);
+		tr1 = ((up1x = (FUNCTION_CAST(EIF_TYPED_VALUE, (EIF_REFERENCE)) RTWF(16665, dtype))(Current)), (((up1x.type & SK_HEAD) == SK_REF)? (EIF_REFERENCE) 0: (up1x.it_r = RTBU(up1x))), (up1x.type = SK_POINTER), up1x.it_r);
 		ur1 = RTCCL(tr1);
-		Result = ((up1x = (FUNCTION_CAST(EIF_TYPED_VALUE, (EIF_REFERENCE, EIF_TYPED_VALUE)) RTWF(16645, dtype))(Current, ur1x)), (((up1x.type & SK_HEAD) == SK_REF)? (EIF_REFERENCE) 0: (up1x.it_r = RTBU(up1x))), (up1x.type = SK_POINTER), up1x.it_r);
+		Result = ((up1x = (FUNCTION_CAST(EIF_TYPED_VALUE, (EIF_REFERENCE, EIF_TYPED_VALUE)) RTWF(16652, dtype))(Current, ur1x)), (((up1x.type & SK_HEAD) == SK_REF)? (EIF_REFERENCE) 0: (up1x.it_r = RTBU(up1x))), (up1x.type = SK_POINTER), up1x.it_r);
 	}
 	RTVI(Current, RTAL);
 	RTRS;
@@ -92,7 +92,7 @@ EIF_TYPED_VALUE F375_18869 (EIF_REFERENCE Current)
 }
 
 /* {HTTP_CONTENT_TYPE}.has_charset_parameter */
-EIF_TYPED_VALUE F375_18870 (EIF_REFERENCE Current)
+EIF_TYPED_VALUE F375_18877 (EIF_REFERENCE Current)
 {
 	GTCX
 	char *l_feature_name = "has_charset_parameter";
@@ -116,19 +116,19 @@ EIF_TYPED_VALUE F375_18870 (EIF_REFERENCE Current)
 	RTLU (SK_BOOL, &Result);
 	RTLU (SK_REF, &Current);
 	
-	RTEAA(l_feature_name, 374, Current, 0, 0, 12455);
+	RTEAA(l_feature_name, 374, Current, 0, 0, 12462);
 	RTSA(dtype);
 	RTSC;
 	RTME(dtype, 0);
 	RTGC;
-	RTDBGEAA(374, Current, 12455);
+	RTDBGEAA(374, Current, 12462);
 	RTIV(Current, RTAL);
 	RTHOOK(1);
 	RTDBGAL(Current, 0, 0x04000000, 1,0); /* Result */
 	
-	tr1 = ((up1x = (FUNCTION_CAST(EIF_TYPED_VALUE, (EIF_REFERENCE)) RTWF(16658, dtype))(Current)), (((up1x.type & SK_HEAD) == SK_REF)? (EIF_REFERENCE) 0: (up1x.it_r = RTBU(up1x))), (up1x.type = SK_POINTER), up1x.it_r);
+	tr1 = ((up1x = (FUNCTION_CAST(EIF_TYPED_VALUE, (EIF_REFERENCE)) RTWF(16665, dtype))(Current)), (((up1x.type & SK_HEAD) == SK_REF)? (EIF_REFERENCE) 0: (up1x.it_r = RTBU(up1x))), (up1x.type = SK_POINTER), up1x.it_r);
 	ur1 = RTCCL(tr1);
-	Result = (((FUNCTION_CAST(EIF_TYPED_VALUE, (EIF_REFERENCE, EIF_TYPED_VALUE)) RTWF(16644, dtype))(Current, ur1x)).it_b);
+	Result = (((FUNCTION_CAST(EIF_TYPED_VALUE, (EIF_REFERENCE, EIF_TYPED_VALUE)) RTWF(16651, dtype))(Current, ur1x)).it_b);
 	RTVI(Current, RTAL);
 	RTRS;
 	RTHOOK(2);
@@ -143,19 +143,19 @@ EIF_TYPED_VALUE F375_18870 (EIF_REFERENCE Current)
 }
 
 /* {HTTP_CONTENT_TYPE}.charset_parameter_name */
-RTOID (F375_18871)
+RTOID (F375_18878)
 
 
-EIF_TYPED_VALUE F375_18871 (EIF_REFERENCE Current)
+EIF_TYPED_VALUE F375_18878 (EIF_REFERENCE Current)
 {
 	GTCX
-	RTOTC (F375_18871,12457,RTMS_EX_H("charset",7,414198644));
+	RTOTC (F375_18878,12464,RTMS_EX_H("charset",7,414198644));
 }
 
 void EIF_Minit375 (void)
 {
 	GTCX
-	RTOTS (18871,F375_18871)
+	RTOTS (18878,F375_18878)
 }
 
 

@@ -51,7 +51,7 @@ static struct desc_info desc_337[] = {
 	{31, (BODY_INDEX)-1, (EIF_TYPE_INDEX)-1, NULL},
 	{32, (BODY_INDEX)-1, (EIF_TYPE_INDEX)-1, NULL},
 	{(BODY_INDEX)-1, (BODY_INDEX)-1, 400, NULL},
-	{9893, (BODY_INDEX)-1, 346, NULL},
+	{9900, (BODY_INDEX)-1, 346, NULL},
 };
 
 extern void Init337(void);

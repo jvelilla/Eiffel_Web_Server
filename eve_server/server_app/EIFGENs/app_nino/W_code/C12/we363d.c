@@ -50,9 +50,9 @@ static struct desc_info desc_363[] = {
 	{30, (BODY_INDEX)-1, 362, NULL},
 	{31, (BODY_INDEX)-1, (EIF_TYPE_INDEX)-1, NULL},
 	{32, (BODY_INDEX)-1, (EIF_TYPE_INDEX)-1, NULL},
-	{10861, (BODY_INDEX)-1, 400, NULL},
-	{10862, (BODY_INDEX)-1, 400, NULL},
-	{10863, (BODY_INDEX)-1, 346, NULL},
+	{10868, (BODY_INDEX)-1, 400, NULL},
+	{10869, (BODY_INDEX)-1, 400, NULL},
+	{10870, (BODY_INDEX)-1, 346, NULL},
 };
 
 extern void Init363(void);
@@ -60,7 +60,7 @@ void Init363(void)
 {
 	IDSC(desc_363, 0, 362);
 	IDSC(desc_363 + 1, 4, 362);
-	IDSC(desc_363 + 34, 482, 362);
+	IDSC(desc_363 + 34, 481, 362);
 }
 
 

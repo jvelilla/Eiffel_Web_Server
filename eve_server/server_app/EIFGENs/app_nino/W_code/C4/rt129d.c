@@ -51,9 +51,9 @@ static struct desc_info desc_129[] = {
 	{30, (BODY_INDEX)-1, 128, NULL},
 	{31, (BODY_INDEX)-1, (EIF_TYPE_INDEX)-1, NULL},
 	{32, (BODY_INDEX)-1, (EIF_TYPE_INDEX)-1, NULL},
-	{1881, (BODY_INDEX)-1, (EIF_TYPE_INDEX)-1, NULL},
-	{1882, (BODY_INDEX)-1, (EIF_TYPE_INDEX)-1, NULL},
-	{1920, (BODY_INDEX)-1, 485, gen_type4_129},
+	{1885, (BODY_INDEX)-1, (EIF_TYPE_INDEX)-1, NULL},
+	{1886, (BODY_INDEX)-1, (EIF_TYPE_INDEX)-1, NULL},
+	{1924, (BODY_INDEX)-1, 485, gen_type4_129},
 };
 
 extern void Init129(void);

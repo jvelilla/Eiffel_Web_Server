@@ -16,7 +16,7 @@ static EIF_TYPE_INDEX gen_type3_161 [] = {0,0xFFFF};
 
 
 static struct desc_info desc_161[] = {
-	{(BODY_INDEX) 2361, (BODY_INDEX) -1, INVALID_DTYPE, NULL},
+	{(BODY_INDEX) 2358, (BODY_INDEX) -1, INVALID_DTYPE, NULL},
 	{0, (BODY_INDEX)-1, 359, NULL},
 	{1, (BODY_INDEX)-1, 459, gen_type0_161},
 	{2, (BODY_INDEX)-1, 346, NULL},
@@ -50,14 +50,14 @@ static struct desc_info desc_161[] = {
 	{30, (BODY_INDEX)-1, 160, NULL},
 	{31, (BODY_INDEX)-1, (EIF_TYPE_INDEX)-1, NULL},
 	{32, (BODY_INDEX)-1, (EIF_TYPE_INDEX)-1, NULL},
-	{2354, (BODY_INDEX)-1, (EIF_TYPE_INDEX)-1, NULL},
-	{2355, (BODY_INDEX)-1, (EIF_TYPE_INDEX)-1, NULL},
-	{2356, 8, 346, NULL},
-	{2357, (BODY_INDEX)-1, 349, NULL},
-	{2358, (BODY_INDEX)-1, 346, NULL},
+	{2359, (BODY_INDEX)-1, (EIF_TYPE_INDEX)-1, NULL},
+	{2360, (BODY_INDEX)-1, (EIF_TYPE_INDEX)-1, NULL},
+	{2361, 8, 346, NULL},
+	{2362, (BODY_INDEX)-1, 349, NULL},
+	{2363, (BODY_INDEX)-1, 346, NULL},
 	{(BODY_INDEX)-1, (BODY_INDEX)-1, 400, NULL},
-	{2359, 16, 349, NULL},
-	{2360, 0, 315, NULL},
+	{2364, 16, 349, NULL},
+	{2365, 0, 315, NULL},
 };
 
 extern void Init161(void);
@@ -65,7 +65,7 @@ void Init161(void)
 {
 	IDSC(desc_161, 0, 160);
 	IDSC(desc_161 + 1, 4, 160);
-	IDSC(desc_161 + 34, 459, 160);
+	IDSC(desc_161 + 34, 468, 160);
 }
 
 

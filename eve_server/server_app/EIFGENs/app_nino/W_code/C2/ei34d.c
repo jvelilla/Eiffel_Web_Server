@@ -1,5 +1,5 @@
 /*
- * Class EIFFEL_FEATURE_CALLERS
+ * Class EIFFEL_PARSER
  */
 
 #include "eif_macros.h"
@@ -50,16 +50,15 @@ static struct desc_info desc_34[] = {
 	{30, (BODY_INDEX)-1, 33, NULL},
 	{31, (BODY_INDEX)-1, (EIF_TYPE_INDEX)-1, NULL},
 	{32, (BODY_INDEX)-1, (EIF_TYPE_INDEX)-1, NULL},
-	{492, (BODY_INDEX)-1, (EIF_TYPE_INDEX)-1, NULL},
-	{493, 0, 359, NULL},
-	{494, 8, 359, NULL},
-	{495, 16, 359, NULL},
-	{496, 24, 426, NULL},
-	{497, 32, 359, NULL},
-	{498, 40, 400, NULL},
-	{499, (BODY_INDEX)-1, (EIF_TYPE_INDEX)-1, NULL},
-	{500, (BODY_INDEX)-1, (EIF_TYPE_INDEX)-1, NULL},
-	{501, (BODY_INDEX)-1, 400, NULL},
+	{497, (BODY_INDEX)-1, (EIF_TYPE_INDEX)-1, NULL},
+	{498, 0, 359, NULL},
+	{499, 8, 359, NULL},
+	{500, 16, 359, NULL},
+	{501, 24, 359, NULL},
+	{502, 32, 359, NULL},
+	{503, 40, 359, NULL},
+	{504, (BODY_INDEX)-1, (EIF_TYPE_INDEX)-1, NULL},
+	{505, (BODY_INDEX)-1, (EIF_TYPE_INDEX)-1, NULL},
 };
 
 extern void Init34(void);
@@ -67,7 +66,7 @@ void Init34(void)
 {
 	IDSC(desc_34, 0, 33);
 	IDSC(desc_34 + 1, 4, 33);
-	IDSC(desc_34 + 34, 172, 33);
+	IDSC(desc_34 + 34, 169, 33);
 }
 
 

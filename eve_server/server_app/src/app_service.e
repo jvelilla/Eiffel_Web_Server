@@ -49,10 +49,10 @@ feature {NONE} -- Initialization
 			--initialize timeout from arguments
 			--initialize_timeouts_from_arguments
 
-			--Remove the existing EIFGEN's if they are older than 90 days
-			create my_thread
-			io.put_boolean (my_thread.is_launchable)
-			--my_thread.launch
+			--Remove the existing EIFGEN's if they are older than EIFGEN's duration
+			create my_thread.make_with_values (seconds_after_midnight, eifgen_duration)
+			my_thread.launch
+
 		end
 
 	setup_router
@@ -108,6 +108,9 @@ feature --Access
 	needs_target:BOOLEAN
 	target:STRING
 	my_thread: MY_THREAD
+	sleep_time:INTEGER
+	seconds_after_midnight:INTEGER
+	eifgen_duration:INTEGER
 	--Change this address
 	fixed_project_path:STRING = "C:/Users/Manav/Desktop/eve_server/projects/"
 
@@ -1511,6 +1514,9 @@ feature --Helper functions
 				json_object:=jv
 				compilation_timeout:=send_json_value (json_object, "Compilation_Timeout").to_integer
 				execution_timeout:=send_json_value (json_object, "Runtime_Timeout").to_integer
+				sleep_time:=send_json_value (json_object, "Sleep_Time").to_integer
+				seconds_after_midnight:=send_json_value (json_object, "Seconds_After_Midnight").to_integer
+				eifgen_duration:=send_json_value (json_object, "EIFGEN_Duration").to_integer
 			end
 		end
 
@@ -1539,8 +1545,19 @@ feature -- Commands to the command line
 			l_duration:DATE_TIME_DURATION
 			duration:INTEGER_64
 			timeout:BOOLEAN
+			thread_string:STRING
 		do
 			--Compile
+
+			--Resolve synchronisation with the thread
+			if my_thread.sub_path/=Void then
+				thread_string:=my_thread.sub_path.out
+				thread_string.replace_substring_all ("\", "/")
+				thread_string.replace_substring_all ("/EIFGENs", "")
+				if thread_string.is_equal (project_path) then
+					my_thread.sleep (sleep_time)
+				end
+			end
 
 			ec_process:=p_factory.process_launcher_with_command_line (command_line,path)
 		--	ec_process:=p_factory.process_launcher_with_command_line ("ec -config sample_1.ecf -c_compile -batch","C:/Users/Manav/Desktop/eve_server/sample_1")
@@ -1627,8 +1644,20 @@ feature -- Commands to the command line
 			l_duration:DATE_TIME_DURATION
 			duration:INTEGER_64
 			timeout:BOOLEAN
+			thread_string:STRING
 		do
 			--Run the project
+
+			--Resolve synchronisation with the thread
+			if my_thread.sub_path/=Void then
+				thread_string:=my_thread.sub_path.out
+				thread_string.replace_substring_all ("\", "/")
+				thread_string.replace_substring_all ("/EIFGENs", "")
+				if thread_string.is_equal (project_path) then
+					my_thread.sleep (sleep_time)
+				end
+			end
+
 			command_line:=project_path+"/EIFGENs/"+project_name+"/W_code/"+project_name+".exe"
 			command_line.replace_substring_all (".ecf", "")
 			ec_process:=p_factory.process_launcher_with_command_line (command_line,"")
@@ -1679,8 +1708,20 @@ feature -- Commands to the command line
 			l_duration:DATE_TIME_DURATION
 			duration:INTEGER_64
 			timeout:BOOLEAN
+			thread_string:STRING
 		do
 			--Get the class views
+
+			--Resolve synchronisation with the thread
+			if my_thread.sub_path/=Void then
+				thread_string:=my_thread.sub_path.out
+				thread_string.replace_substring_all ("\", "/")
+				thread_string.replace_substring_all ("/EIFGENs", "")
+				if thread_string.is_equal (project_path) then
+					my_thread.sleep (sleep_time)
+				end
+			end
+
 			ec_process:=p_factory.process_launcher_with_command_line (command_line,project_path)
 			ec_process.enable_launch_in_new_process_group
 			ec_process.set_separate_console (true)
@@ -1764,8 +1805,20 @@ feature -- Commands to the command line
 			l_duration:DATE_TIME_DURATION
 			duration:INTEGER_64
 			timeout:BOOLEAN
+			thread_string:STRING
 		do
 			--Get the class views
+
+			--Resolve synchronisation with the thread
+			if my_thread.sub_path/=Void then
+				thread_string:=my_thread.sub_path.out
+				thread_string.replace_substring_all ("\", "/")
+				thread_string.replace_substring_all ("/EIFGENs", "")
+				if thread_string.is_equal (project_path) then
+					my_thread.sleep (sleep_time)
+				end
+			end
+
 			ec_process:=p_factory.process_launcher_with_command_line (command_line,project_path)
 			ec_process.enable_launch_in_new_process_group
 			ec_process.set_separate_console (true)
@@ -1849,8 +1902,20 @@ feature -- Commands to the command line
 			l_duration:DATE_TIME_DURATION
 			duration:INTEGER_64
 			timeout:BOOLEAN
+			thread_string:STRING
 		do
 			--Get the command line output
+
+			--Resolve synchronisation with the thread
+			if my_thread.sub_path/=Void then
+				thread_string:=my_thread.sub_path.out
+				thread_string.replace_substring_all ("\", "/")
+				thread_string.replace_substring_all ("/EIFGENs", "")
+				if thread_string.is_equal (project_path) then
+					my_thread.sleep (sleep_time)
+				end
+			end
+			
 			ec_process:=p_factory.process_launcher_with_command_line (command_line,project_path)
 			ec_process.enable_launch_in_new_process_group
 			ec_process.set_separate_console (true)

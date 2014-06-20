@@ -1,5 +1,5 @@
 /*
- * Class WGI_OUTPUT_STREAM
+ * Class WGI_ERROR_STREAM
  */
 
 #include "eif_macros.h"
@@ -51,14 +51,6 @@ static struct desc_info desc_57[] = {
 	{31, (BODY_INDEX)-1, (EIF_TYPE_INDEX)-1, NULL},
 	{32, (BODY_INDEX)-1, (EIF_TYPE_INDEX)-1, NULL},
 	{(BODY_INDEX)-1, (BODY_INDEX)-1, (EIF_TYPE_INDEX)-1, NULL},
-	{981, (BODY_INDEX)-1, (EIF_TYPE_INDEX)-1, NULL},
-	{(BODY_INDEX)-1, (BODY_INDEX)-1, (EIF_TYPE_INDEX)-1, NULL},
-	{982, (BODY_INDEX)-1, (EIF_TYPE_INDEX)-1, NULL},
-	{983, (BODY_INDEX)-1, (EIF_TYPE_INDEX)-1, NULL},
-	{(BODY_INDEX)-1, (BODY_INDEX)-1, (EIF_TYPE_INDEX)-1, NULL},
-	{(BODY_INDEX)-1, (BODY_INDEX)-1, 346, NULL},
-	{(BODY_INDEX)-1, (BODY_INDEX)-1, (EIF_TYPE_INDEX)-1, NULL},
-	{984, (BODY_INDEX)-1, 359, NULL},
 };
 
 extern void Init57(void);

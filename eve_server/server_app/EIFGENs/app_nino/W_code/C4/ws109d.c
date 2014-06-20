@@ -50,11 +50,11 @@ static struct desc_info desc_109[] = {
 	{30, (BODY_INDEX)-1, 108, NULL},
 	{31, (BODY_INDEX)-1, (EIF_TYPE_INDEX)-1, NULL},
 	{32, (BODY_INDEX)-1, (EIF_TYPE_INDEX)-1, NULL},
-	{1714, (BODY_INDEX)-1, 359, NULL},
-	{1715, (BODY_INDEX)-1, (EIF_TYPE_INDEX)-1, NULL},
-	{1716, (BODY_INDEX)-1, (EIF_TYPE_INDEX)-1, NULL},
-	{1717, (BODY_INDEX)-1, 389, NULL},
-	{1718, (BODY_INDEX)-1, 260, NULL},
+	{1718, (BODY_INDEX)-1, 359, NULL},
+	{1719, (BODY_INDEX)-1, (EIF_TYPE_INDEX)-1, NULL},
+	{1720, (BODY_INDEX)-1, (EIF_TYPE_INDEX)-1, NULL},
+	{1721, (BODY_INDEX)-1, 389, NULL},
+	{1722, (BODY_INDEX)-1, 260, NULL},
 };
 
 extern void Init109(void);
@@ -62,7 +62,7 @@ void Init109(void)
 {
 	IDSC(desc_109, 0, 108);
 	IDSC(desc_109 + 1, 4, 108);
-	IDSC(desc_109 + 34, 377, 108);
+	IDSC(desc_109 + 34, 381, 108);
 }
 
 

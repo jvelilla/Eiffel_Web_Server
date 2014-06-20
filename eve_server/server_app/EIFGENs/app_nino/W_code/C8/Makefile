@@ -45,10 +45,10 @@ OLDOBJECTS =  in233.obj in233d.obj c_252.obj c_252d.obj it238.obj it238d.obj pl2
 	re232.obj re232d.obj re235.obj re235d.obj ws249.obj ws249d.obj ws248.obj ws248d.obj \
 	na263.obj na263d.obj cu256.obj cu256d.obj st250.obj st250d.obj ar258.obj ar258d.obj \
 	re236.obj re236d.obj ha257.obj ha257d.obj re234.obj re234d.obj re231.obj re231d.obj \
-	wg253.obj wg253d.obj se237.obj se237d.obj ws247.obj ws247d.obj ws246.obj ws246d.obj \
-	ws245.obj ws245d.obj ws244.obj ws244d.obj ws243.obj ws243d.obj ht240.obj ht240d.obj \
+	wg253.obj wg253d.obj se237.obj se237d.obj ws247.obj ws247d.obj ws245.obj ws245d.obj \
+	ws246.obj ws246d.obj ws244.obj ws244d.obj ws243.obj ws243d.obj ht240.obj ht240d.obj \
 	wg255.obj wg255d.obj ws241.obj ws241d.obj ht260.obj ht260d.obj ws242.obj ws242d.obj \
-	ur261.obj ur261d.obj ut262.obj ut262d.obj ht239.obj ht239d.obj wg254.obj wg254d.obj \
+	ur261.obj ur261d.obj ht239.obj ht239d.obj ut262.obj ut262d.obj wg254.obj wg254d.obj \
 	we251.obj we251d.obj 
 
 all::  Cobj8.lib

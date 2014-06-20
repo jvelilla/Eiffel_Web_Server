@@ -13,9 +13,9 @@ static EIF_TYPE_INDEX gen_type0_154 [] = {459,153,0xFFFF};
 static EIF_TYPE_INDEX gen_type1_154 [] = {0,0xFFFF};
 static EIF_TYPE_INDEX gen_type2_154 [] = {0,0xFFFF};
 static EIF_TYPE_INDEX gen_type3_154 [] = {0,0xFFFF};
-static EIF_TYPE_INDEX gen_type4_154 [] = {514,0,400,0xFFFF};
-static EIF_TYPE_INDEX gen_type5_154 [] = {911,424,0xFFFF};
-static EIF_TYPE_INDEX gen_type6_154 [] = {911,424,0xFFFF};
+static EIF_TYPE_INDEX gen_type4_154 [] = {515,0,400,0xFFFF};
+static EIF_TYPE_INDEX gen_type5_154 [] = {897,424,0xFFFF};
+static EIF_TYPE_INDEX gen_type6_154 [] = {897,424,0xFFFF};
 static EIF_TYPE_INDEX gen_type7_154 [] = {460,0,0xFFFF};
 
 
@@ -54,18 +54,18 @@ static struct desc_info desc_154[] = {
 	{30, (BODY_INDEX)-1, 153, NULL},
 	{31, (BODY_INDEX)-1, (EIF_TYPE_INDEX)-1, NULL},
 	{32, (BODY_INDEX)-1, (EIF_TYPE_INDEX)-1, NULL},
+	{2250, (BODY_INDEX)-1, 359, NULL},
+	{2251, (BODY_INDEX)-1, 0, NULL},
+	{2252, (BODY_INDEX)-1, 0, NULL},
+	{2253, (BODY_INDEX)-1, 0, NULL},
 	{2242, (BODY_INDEX)-1, 359, NULL},
-	{2243, (BODY_INDEX)-1, 0, NULL},
-	{2244, (BODY_INDEX)-1, 0, NULL},
-	{2245, (BODY_INDEX)-1, 0, NULL},
+	{2243, (BODY_INDEX)-1, 359, NULL},
+	{2244, (BODY_INDEX)-1, 515, gen_type4_154},
+	{2245, (BODY_INDEX)-1, 897, gen_type5_154},
 	{2246, (BODY_INDEX)-1, 359, NULL},
-	{2247, (BODY_INDEX)-1, 359, NULL},
-	{2248, (BODY_INDEX)-1, 514, gen_type4_154},
-	{2249, (BODY_INDEX)-1, 911, gen_type5_154},
-	{2238, (BODY_INDEX)-1, 359, NULL},
-	{2239, (BODY_INDEX)-1, 911, gen_type6_154},
-	{2240, (BODY_INDEX)-1, 359, NULL},
-	{2241, (BODY_INDEX)-1, 460, gen_type7_154},
+	{2247, (BODY_INDEX)-1, 897, gen_type6_154},
+	{2248, (BODY_INDEX)-1, 359, NULL},
+	{2249, (BODY_INDEX)-1, 460, gen_type7_154},
 };
 
 extern void Init154(void);

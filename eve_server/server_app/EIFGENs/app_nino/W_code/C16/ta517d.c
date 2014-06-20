@@ -1,5 +1,5 @@
 /*
- * Class TABLE_ITERATION_CURSOR [G#1, INTEGER_32]
+ * Class TABLE_ITERABLE [G#1, INTEGER_32]
  */
 
 #include "eif_macros.h"
@@ -18,10 +18,9 @@ static EIF_TYPE_INDEX gen_type5_517 [] = {516,0xFFF8,1,400,0xFFFF};
 static EIF_TYPE_INDEX gen_type6_517 [] = {0,0xFFFF};
 static EIF_TYPE_INDEX gen_type7_517 [] = {516,0xFFF8,1,400,0xFFFF};
 static EIF_TYPE_INDEX gen_type8_517 [] = {516,0xFFF8,1,400,0xFFFF};
-static EIF_TYPE_INDEX gen_type9_517 [] = {0xFFF8,2,0xFFFF};
-static EIF_TYPE_INDEX gen_type10_517 [] = {0xFFF8,2,0xFFFF};
-static EIF_TYPE_INDEX gen_type11_517 [] = {0xFFF8,1,0xFFFF};
-static EIF_TYPE_INDEX gen_type12_517 [] = {0xFFF8,1,0xFFFF};
+static EIF_TYPE_INDEX gen_type9_517 [] = {517,0xFFF8,1,0xFFF8,2,0xFFFF};
+static EIF_TYPE_INDEX gen_type10_517 [] = {0xFFF8,1,0xFFFF};
+static EIF_TYPE_INDEX gen_type11_517 [] = {0xFFF8,2,0xFFFF};
 
 
 static struct desc_info desc_517[] = {
@@ -59,12 +58,9 @@ static struct desc_info desc_517[] = {
 	{30, (BODY_INDEX)-1, 516, gen_type8_517},
 	{31, (BODY_INDEX)-1, (EIF_TYPE_INDEX)-1, NULL},
 	{32, (BODY_INDEX)-1, (EIF_TYPE_INDEX)-1, NULL},
-	{(BODY_INDEX)-1, (BODY_INDEX)-1, (EIF_TYPE_INDEX)-1, gen_type9_517},
+	{(BODY_INDEX)-1, (BODY_INDEX)-1, 517, gen_type9_517},
 	{(BODY_INDEX)-1, (BODY_INDEX)-1, (EIF_TYPE_INDEX)-1, gen_type10_517},
 	{(BODY_INDEX)-1, (BODY_INDEX)-1, (EIF_TYPE_INDEX)-1, gen_type11_517},
-	{(BODY_INDEX)-1, (BODY_INDEX)-1, 346, NULL},
-	{(BODY_INDEX)-1, (BODY_INDEX)-1, (EIF_TYPE_INDEX)-1, NULL},
-	{(BODY_INDEX)-1, (BODY_INDEX)-1, (EIF_TYPE_INDEX)-1, gen_type12_517},
 };
 
 extern void Init517(void);
@@ -72,8 +68,8 @@ void Init517(void)
 {
 	IDSC(desc_517, 0, 516);
 	IDSC(desc_517 + 1, 4, 516);
-	IDSC(desc_517 + 34, 143, 516);
-	IDSC(desc_517 + 36, 84, 516);
+	IDSC(desc_517 + 34, 83, 516);
+	IDSC(desc_517 + 36, 145, 516);
 }
 
 

@@ -50,8 +50,8 @@ static struct desc_info desc_263[] = {
 	{30, (BODY_INDEX)-1, 262, NULL},
 	{31, (BODY_INDEX)-1, (EIF_TYPE_INDEX)-1, NULL},
 	{32, (BODY_INDEX)-1, (EIF_TYPE_INDEX)-1, NULL},
-	{4334, (BODY_INDEX)-1, 400, NULL},
-	{4335, (BODY_INDEX)-1, 409, NULL},
+	{4338, (BODY_INDEX)-1, 400, NULL},
+	{4339, (BODY_INDEX)-1, 409, NULL},
 };
 
 extern void Init263(void);

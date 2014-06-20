@@ -16,7 +16,7 @@ static EIF_TYPE_INDEX gen_type3_3 [] = {0,0xFFFF};
 
 
 static struct desc_info desc_3[] = {
-	{(BODY_INDEX) 64, (BODY_INDEX) -1, INVALID_DTYPE, NULL},
+	{(BODY_INDEX) 56, (BODY_INDEX) -1, INVALID_DTYPE, NULL},
 	{0, (BODY_INDEX)-1, 359, NULL},
 	{1, (BODY_INDEX)-1, 459, gen_type0_3},
 	{2, (BODY_INDEX)-1, 346, NULL},
@@ -50,14 +50,14 @@ static struct desc_info desc_3[] = {
 	{30, (BODY_INDEX)-1, 2, NULL},
 	{31, (BODY_INDEX)-1, (EIF_TYPE_INDEX)-1, NULL},
 	{32, (BODY_INDEX)-1, (EIF_TYPE_INDEX)-1, NULL},
-	{56, (BODY_INDEX)-1, (EIF_TYPE_INDEX)-1, NULL},
-	{57, 0, 359, NULL},
-	{58, 8, 346, NULL},
-	{59, (BODY_INDEX)-1, (EIF_TYPE_INDEX)-1, NULL},
+	{57, (BODY_INDEX)-1, (EIF_TYPE_INDEX)-1, NULL},
+	{58, 0, 359, NULL},
+	{59, 8, 346, NULL},
 	{60, (BODY_INDEX)-1, (EIF_TYPE_INDEX)-1, NULL},
 	{61, (BODY_INDEX)-1, (EIF_TYPE_INDEX)-1, NULL},
 	{62, (BODY_INDEX)-1, (EIF_TYPE_INDEX)-1, NULL},
-	{63, (BODY_INDEX)-1, 400, NULL},
+	{63, (BODY_INDEX)-1, (EIF_TYPE_INDEX)-1, NULL},
+	{64, (BODY_INDEX)-1, 400, NULL},
 };
 
 extern void Init3(void);

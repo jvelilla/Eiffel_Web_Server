@@ -50,7 +50,7 @@ static struct desc_info desc_121[] = {
 	{30, (BODY_INDEX)-1, 120, NULL},
 	{31, (BODY_INDEX)-1, (EIF_TYPE_INDEX)-1, NULL},
 	{32, (BODY_INDEX)-1, (EIF_TYPE_INDEX)-1, NULL},
-	{1862, (BODY_INDEX)-1, 267, NULL},
+	{1866, (BODY_INDEX)-1, 267, NULL},
 };
 
 extern void Init121(void);

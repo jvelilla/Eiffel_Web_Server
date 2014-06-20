@@ -68,7 +68,7 @@ void F51_6485 (EIF_REFERENCE Current)
 	RTHOOK(1);
 	(FUNCTION_CAST(void, (EIF_REFERENCE)) RTWF(32, 49))(Current);
 	RTHOOK(2);
-	RTDBGAA(Current, dtype, 6394, 0xF80001F0, 0); /* on_router_actions */
+	RTDBGAA(Current, dtype, 6394, 0xF80001F2, 0); /* on_router_actions */
 	
 	tr1 = RTLNSMART(eif_non_attached_type(RTWCT(6394, dtype, Dftype(Current))));
 	(FUNCTION_CAST(void, (EIF_REFERENCE)) RTWC(32, Dtype(tr1)))(tr1);
@@ -76,7 +76,7 @@ void F51_6485 (EIF_REFERENCE Current)
 	RTAR(Current, tr1);
 	*(EIF_REFERENCE *)(Current + RTWA(6394, dtype)) = (EIF_REFERENCE) RTCCL(tr1);
 	RTHOOK(3);
-	RTDBGAA(Current, dtype, 6395, 0xF80001F0, 0); /* on_item_actions */
+	RTDBGAA(Current, dtype, 6395, 0xF80001F2, 0); /* on_item_actions */
 	
 	tr1 = RTLNSMART(eif_non_attached_type(RTWCT(6395, dtype, Dftype(Current))));
 	(FUNCTION_CAST(void, (EIF_REFERENCE)) RTWC(32, Dtype(tr1)))(tr1);
@@ -84,7 +84,7 @@ void F51_6485 (EIF_REFERENCE Current)
 	RTAR(Current, tr1);
 	*(EIF_REFERENCE *)(Current + RTWA(6395, dtype)) = (EIF_REFERENCE) RTCCL(tr1);
 	RTHOOK(4);
-	RTDBGAA(Current, dtype, 6396, 0xF80001F0, 0); /* on_mapping_actions */
+	RTDBGAA(Current, dtype, 6396, 0xF80001F2, 0); /* on_mapping_actions */
 	
 	tr1 = RTLNSMART(eif_non_attached_type(RTWCT(6396, dtype, Dftype(Current))));
 	(FUNCTION_CAST(void, (EIF_REFERENCE)) RTWC(32, Dtype(tr1)))(tr1);
@@ -92,7 +92,7 @@ void F51_6485 (EIF_REFERENCE Current)
 	RTAR(Current, tr1);
 	*(EIF_REFERENCE *)(Current + RTWA(6396, dtype)) = (EIF_REFERENCE) RTCCL(tr1);
 	RTHOOK(5);
-	RTDBGAA(Current, dtype, 6397, 0xF80001F0, 0); /* on_handler_actions */
+	RTDBGAA(Current, dtype, 6397, 0xF80001F2, 0); /* on_handler_actions */
 	
 	tr1 = RTLNSMART(eif_non_attached_type(RTWCT(6397, dtype, Dftype(Current))));
 	(FUNCTION_CAST(void, (EIF_REFERENCE)) RTWC(32, Dtype(tr1)))(tr1);
@@ -202,7 +202,7 @@ void F51_6490 (EIF_REFERENCE Current, EIF_TYPED_VALUE arg1x)
 	((EIF_TYPED_VALUE *)tr2+1)->it_r = arg1;
 	RTAR(tr2,arg1);
 	ur1 = RTCCL(tr2);
-	(FUNCTION_CAST(void, (EIF_REFERENCE, EIF_TYPED_VALUE)) RTVF(11593, "call", tr1))(tr1, ur1x);
+	(FUNCTION_CAST(void, (EIF_REFERENCE, EIF_TYPED_VALUE)) RTVF(11600, "call", tr1))(tr1, ur1x);
 	RTHOOK(2);
 	ur1 = RTCCL(arg1);
 	(FUNCTION_CAST(void, (EIF_REFERENCE, EIF_TYPED_VALUE)) RTWF(6390, 49))(Current, ur1x);
@@ -272,7 +272,7 @@ void F51_6491 (EIF_REFERENCE Current, EIF_TYPED_VALUE arg1x)
 	((EIF_TYPED_VALUE *)tr2+1)->it_r = arg1;
 	RTAR(tr2,arg1);
 	ur1 = RTCCL(tr2);
-	(FUNCTION_CAST(void, (EIF_REFERENCE, EIF_TYPED_VALUE)) RTVF(11593, "call", tr1))(tr1, ur1x);
+	(FUNCTION_CAST(void, (EIF_REFERENCE, EIF_TYPED_VALUE)) RTVF(11600, "call", tr1))(tr1, ur1x);
 	RTHOOK(2);
 	ur1 = RTCCL(arg1);
 	(FUNCTION_CAST(void, (EIF_REFERENCE, EIF_TYPED_VALUE)) RTWF(6391, 49))(Current, ur1x);
@@ -342,7 +342,7 @@ void F51_6492 (EIF_REFERENCE Current, EIF_TYPED_VALUE arg1x)
 	((EIF_TYPED_VALUE *)tr2+1)->it_r = arg1;
 	RTAR(tr2,arg1);
 	ur1 = RTCCL(tr2);
-	(FUNCTION_CAST(void, (EIF_REFERENCE, EIF_TYPED_VALUE)) RTVF(11593, "call", tr1))(tr1, ur1x);
+	(FUNCTION_CAST(void, (EIF_REFERENCE, EIF_TYPED_VALUE)) RTVF(11600, "call", tr1))(tr1, ur1x);
 	RTHOOK(2);
 	ur1 = RTCCL(arg1);
 	(FUNCTION_CAST(void, (EIF_REFERENCE, EIF_TYPED_VALUE)) RTWF(6392, 49))(Current, ur1x);
@@ -412,7 +412,7 @@ void F51_6493 (EIF_REFERENCE Current, EIF_TYPED_VALUE arg1x)
 	((EIF_TYPED_VALUE *)tr2+1)->it_r = arg1;
 	RTAR(tr2,arg1);
 	ur1 = RTCCL(tr2);
-	(FUNCTION_CAST(void, (EIF_REFERENCE, EIF_TYPED_VALUE)) RTVF(11593, "call", tr1))(tr1, ur1x);
+	(FUNCTION_CAST(void, (EIF_REFERENCE, EIF_TYPED_VALUE)) RTVF(11600, "call", tr1))(tr1, ur1x);
 	RTHOOK(2);
 	ur1 = RTCCL(arg1);
 	(FUNCTION_CAST(void, (EIF_REFERENCE, EIF_TYPED_VALUE)) RTWF(6393, 49))(Current, ur1x);

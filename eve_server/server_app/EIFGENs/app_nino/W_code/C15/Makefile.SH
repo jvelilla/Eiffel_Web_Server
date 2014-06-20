@@ -59,9 +59,9 @@ OLDOBJECTS =  ar473.o ar473d.o ro468.o ro468d.o pr472.o pr472d.o fu467.o fu467d.
 	ty469.o ty469d.o ty470.o ty470d.o ty471.o ty471d.o ar486.o ar486d.o \
 	na462.o na462d.o re463.o re463d.o li475.o li475d.o re481.o re481d.o \
 	in492.o in492d.o to485.o to485d.o it465.o it465d.o it466.o it466d.o \
-	li488.o li488d.o se489.o se489d.o dy487.o dy487d.o ta493.o ta493d.o \
+	li490.o li490d.o se488.o se488d.o dy487.o dy487d.o ta493.o ta493d.o \
 	in464.o in464d.o cu477.o cu477d.o tr476.o tr476d.o bo482.o bo482d.o \
-	ch491.o ch491d.o ac478.o ac478d.o bi490.o bi490d.o fi483.o fi483d.o \
+	ch491.o ch491d.o ac478.o ac478d.o bi489.o bi489d.o fi483.o fi483d.o \
 	dy494.o dy494d.o ba479.o ba479d.o co480.o co480d.o co474.o co474d.o \
 	bo484.o bo484d.o 
 

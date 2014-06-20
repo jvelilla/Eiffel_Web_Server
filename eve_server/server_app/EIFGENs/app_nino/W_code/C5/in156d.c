@@ -13,7 +13,7 @@ static EIF_TYPE_INDEX gen_type0_156 [] = {459,155,0xFFFF};
 static EIF_TYPE_INDEX gen_type1_156 [] = {0,0xFFFF};
 static EIF_TYPE_INDEX gen_type2_156 [] = {0,0xFFFF};
 static EIF_TYPE_INDEX gen_type3_156 [] = {0,0xFFFF};
-static EIF_TYPE_INDEX gen_type4_156 [] = {911,424,0xFFFF};
+static EIF_TYPE_INDEX gen_type4_156 [] = {897,424,0xFFFF};
 
 
 static struct desc_info desc_156[] = {
@@ -51,10 +51,10 @@ static struct desc_info desc_156[] = {
 	{30, (BODY_INDEX)-1, 155, NULL},
 	{31, (BODY_INDEX)-1, (EIF_TYPE_INDEX)-1, NULL},
 	{32, (BODY_INDEX)-1, (EIF_TYPE_INDEX)-1, NULL},
-	{2283, (BODY_INDEX)-1, 400, NULL},
-	{2284, (BODY_INDEX)-1, 400, NULL},
-	{2285, 8, 400, NULL},
-	{2286, (BODY_INDEX)-1, 346, NULL},
+	{2287, (BODY_INDEX)-1, 400, NULL},
+	{2288, (BODY_INDEX)-1, 400, NULL},
+	{2289, 8, 400, NULL},
+	{2290, (BODY_INDEX)-1, 346, NULL},
 	{(BODY_INDEX)-1, (BODY_INDEX)-1, 346, NULL},
 	{(BODY_INDEX)-1, (BODY_INDEX)-1, 346, NULL},
 	{(BODY_INDEX)-1, (BODY_INDEX)-1, 346, NULL},
@@ -64,12 +64,12 @@ static struct desc_info desc_156[] = {
 	{(BODY_INDEX)-1, (BODY_INDEX)-1, 346, NULL},
 	{(BODY_INDEX)-1, (BODY_INDEX)-1, 346, NULL},
 	{(BODY_INDEX)-1, (BODY_INDEX)-1, 346, NULL},
-	{2287, (BODY_INDEX)-1, 359, NULL},
+	{2291, (BODY_INDEX)-1, 359, NULL},
 	{(BODY_INDEX)-1, (BODY_INDEX)-1, 359, NULL},
-	{(BODY_INDEX)-1, (BODY_INDEX)-1, 911, gen_type4_156},
+	{(BODY_INDEX)-1, (BODY_INDEX)-1, 897, gen_type4_156},
 	{(BODY_INDEX)-1, (BODY_INDEX)-1, 315, NULL},
-	{2288, 0, 359, NULL},
-	{2289, (BODY_INDEX)-1, 400, NULL},
+	{2292, 0, 359, NULL},
+	{2293, (BODY_INDEX)-1, 400, NULL},
 };
 
 extern void Init156(void);

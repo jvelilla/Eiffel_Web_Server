@@ -10,8 +10,8 @@
 extern "C" {
 #endif
 
-extern EIF_TYPED_VALUE F324_14020(EIF_REFERENCE);
-extern EIF_TYPED_VALUE F324_14022(EIF_REFERENCE);
+extern EIF_TYPED_VALUE F324_14027(EIF_REFERENCE);
+extern EIF_TYPED_VALUE F324_14029(EIF_REFERENCE);
 extern void EIF_Minit324(void);
 
 #ifdef __cplusplus
@@ -34,7 +34,7 @@ extern "C" {
 #endif
 
 /* {STREAM_SOCKET}.support_storable */
-EIF_TYPED_VALUE F324_14020 (EIF_REFERENCE Current)
+EIF_TYPED_VALUE F324_14027 (EIF_REFERENCE Current)
 {
 	EIF_TYPED_VALUE r;
 	r.type = SK_BOOL;
@@ -43,11 +43,11 @@ EIF_TYPED_VALUE F324_14020 (EIF_REFERENCE Current)
 }
 
 /* {STREAM_SOCKET}.accepted */
-EIF_TYPED_VALUE F324_14022 (EIF_REFERENCE Current)
+EIF_TYPED_VALUE F324_14029 (EIF_REFERENCE Current)
 {
 	EIF_TYPED_VALUE r;
 	r.type = SK_REF;
-	r.it_r = *(EIF_REFERENCE *)(Current + RTWA(12434,Dtype(Current)));
+	r.it_r = *(EIF_REFERENCE *)(Current + RTWA(12441,Dtype(Current)));
 	return r;
 }
 

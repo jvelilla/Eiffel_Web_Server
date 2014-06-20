@@ -10,8 +10,8 @@
 extern "C" {
 #endif
 
-extern EIF_TYPED_VALUE F149_8555(EIF_REFERENCE, EIF_TYPED_VALUE);
-extern EIF_TYPED_VALUE F149_8556(EIF_REFERENCE, EIF_TYPED_VALUE);
+extern EIF_TYPED_VALUE F149_8559(EIF_REFERENCE, EIF_TYPED_VALUE);
+extern EIF_TYPED_VALUE F149_8560(EIF_REFERENCE, EIF_TYPED_VALUE);
 extern void EIF_Minit149(void);
 
 #ifdef __cplusplus
@@ -34,7 +34,7 @@ extern "C" {
 #endif
 
 /* {HTTP_STATUS_CODE_MESSAGES}.is_valid_http_status_code */
-EIF_TYPED_VALUE F149_8555 (EIF_REFERENCE Current, EIF_TYPED_VALUE arg1x)
+EIF_TYPED_VALUE F149_8559 (EIF_REFERENCE Current, EIF_TYPED_VALUE arg1x)
 {
 	GTCX
 	char *l_feature_name = "is_valid_http_status_code";
@@ -57,18 +57,18 @@ EIF_TYPED_VALUE F149_8555 (EIF_REFERENCE Current, EIF_TYPED_VALUE arg1x)
 	RTLU(SK_INT32,&arg1);
 	RTLU (SK_REF, &Current);
 	
-	RTEAA(l_feature_name, 148, Current, 0, 1, 2153);
+	RTEAA(l_feature_name, 148, Current, 0, 1, 2156);
 	RTSA(dtype);
 	RTSC;
 	RTME(dtype, 0);
 	RTGC;
-	RTDBGEAA(148, Current, 2153);
+	RTDBGEAA(148, Current, 2156);
 	RTIV(Current, RTAL);
 	RTHOOK(1);
 	RTDBGAL(Current, 0, 0x04000000, 1,0); /* Result */
 	
-	ti4_1 = (((FUNCTION_CAST(EIF_TYPED_VALUE, (EIF_REFERENCE)) RTWF(8232, dtype))(Current)).it_i4);
-	ti4_2 = (((FUNCTION_CAST(EIF_TYPED_VALUE, (EIF_REFERENCE)) RTWF(8292, dtype))(Current)).it_i4);
+	ti4_1 = (((FUNCTION_CAST(EIF_TYPED_VALUE, (EIF_REFERENCE)) RTWF(8236, dtype))(Current)).it_i4);
+	ti4_2 = (((FUNCTION_CAST(EIF_TYPED_VALUE, (EIF_REFERENCE)) RTWF(8296, dtype))(Current)).it_i4);
 	Result = (EIF_BOOLEAN) (EIF_BOOLEAN) ((EIF_BOOLEAN) (arg1 >= ti4_1) && (EIF_BOOLEAN) (arg1 <= ti4_2));
 	RTVI(Current, RTAL);
 	RTRS;
@@ -83,7 +83,7 @@ EIF_TYPED_VALUE F149_8555 (EIF_REFERENCE Current, EIF_TYPED_VALUE arg1x)
 }
 
 /* {HTTP_STATUS_CODE_MESSAGES}.http_status_code_message */
-EIF_TYPED_VALUE F149_8556 (EIF_REFERENCE Current, EIF_TYPED_VALUE arg1x)
+EIF_TYPED_VALUE F149_8560 (EIF_REFERENCE Current, EIF_TYPED_VALUE arg1x)
 {
 	GTCX
 	char *l_feature_name = "http_status_code_message";
@@ -104,12 +104,12 @@ EIF_TYPED_VALUE F149_8556 (EIF_REFERENCE Current, EIF_TYPED_VALUE arg1x)
 	RTLU(SK_INT32,&arg1);
 	RTLU (SK_REF, &Current);
 	
-	RTEAA(l_feature_name, 148, Current, 0, 1, 2152);
+	RTEAA(l_feature_name, 148, Current, 0, 1, 2157);
 	RTSA(Dtype(Current));
 	RTSC;
 	RTME(Dtype(Current), 0);
 	RTGC;
-	RTDBGEAA(148, Current, 2152);
+	RTDBGEAA(148, Current, 2157);
 	RTIV(Current, RTAL);
 	RTHOOK(1);
 	switch (arg1) {

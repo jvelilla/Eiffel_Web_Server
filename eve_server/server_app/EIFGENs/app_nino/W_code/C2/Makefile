@@ -43,11 +43,11 @@ OBJECTS = big_file_C2_c.obj
 
 OLDOBJECTS =  eq46.obj eq46d.obj it45.obj it45d.obj is44.obj is44d.obj st43.obj st43d.obj op42.obj \
 	op42d.obj rt41.obj rt41d.obj sy40.obj sy40d.obj ut38.obj ut38d.obj ut39.obj ut39d.obj \
-	uu37.obj uu37d.obj ei36.obj ei36d.obj ei35.obj ei35d.obj ei34.obj ei34d.obj ei33.obj \
-	ei33d.obj ht62.obj ht62d.obj wg60.obj wg60d.obj ws65.obj ws65d.obj gr64.obj gr64d.obj \
-	ws51.obj ws51d.obj so63.obj so63d.obj eq55.obj eq55d.obj ht61.obj ht61d.obj wg59.obj \
-	wg59d.obj ht58.obj ht58d.obj wg57.obj wg57d.obj ba56.obj ba56d.obj ws50.obj ws50d.obj \
-	eq54.obj eq54d.obj da48.obj da48d.obj we53.obj we53d.obj we52.obj we52d.obj ws49.obj \
+	pr37.obj pr37d.obj ei36.obj ei36d.obj uu35.obj uu35d.obj ei34.obj ei34d.obj ei33.obj \
+	ei33d.obj ht62.obj ht62d.obj wg58.obj wg58d.obj ws65.obj ws65d.obj gr64.obj gr64d.obj \
+	ws51.obj ws51d.obj so63.obj so63d.obj eq55.obj eq55d.obj ht61.obj ht61d.obj ht60.obj \
+	ht60d.obj wg59.obj wg59d.obj wg57.obj wg57d.obj ba56.obj ba56d.obj ws50.obj ws50d.obj \
+	eq54.obj eq54d.obj we53.obj we53d.obj we52.obj we52d.obj da48.obj da48d.obj ws49.obj \
 	ws49d.obj da47.obj da47d.obj 
 
 all::  Cobj2.lib

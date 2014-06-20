@@ -1,5 +1,5 @@
 /*
- * Class LINKABLE [INTEGER_32]
+ * Class LINKED_LIST_CURSOR [INTEGER_32]
  */
 
 #include "eif_macros.h"
@@ -18,13 +18,12 @@ static EIF_TYPE_INDEX gen_type5_1075 [] = {1074,400,0xFFFF};
 static EIF_TYPE_INDEX gen_type6_1075 [] = {0,0xFFFF};
 static EIF_TYPE_INDEX gen_type7_1075 [] = {1074,400,0xFFFF};
 static EIF_TYPE_INDEX gen_type8_1075 [] = {1074,400,0xFFFF};
-static EIF_TYPE_INDEX gen_type9_1075 [] = {0xFFF8,1,0xFFFF};
+static EIF_TYPE_INDEX gen_type9_1075 [] = {1072,0xFFF8,1,0xFFFF};
 static EIF_TYPE_INDEX gen_type10_1075 [] = {0xFFF8,1,0xFFFF};
-static EIF_TYPE_INDEX gen_type11_1075 [] = {1074,400,0xFFFF};
 
 
 static struct desc_info desc_1075[] = {
-	{(BODY_INDEX) -1, (BODY_INDEX) -1, INVALID_DTYPE, NULL},
+	{(BODY_INDEX) 4272, (BODY_INDEX) -1, INVALID_DTYPE, NULL},
 	{0, (BODY_INDEX)-1, 359, NULL},
 	{1, (BODY_INDEX)-1, 459, gen_type0_1075},
 	{2, (BODY_INDEX)-1, 346, NULL},
@@ -58,13 +57,11 @@ static struct desc_info desc_1075[] = {
 	{30, (BODY_INDEX)-1, 1074, gen_type8_1075},
 	{31, (BODY_INDEX)-1, (EIF_TYPE_INDEX)-1, NULL},
 	{32, (BODY_INDEX)-1, (EIF_TYPE_INDEX)-1, NULL},
-	{3564, 8, (EIF_TYPE_INDEX)-1, gen_type9_1075},
-	{3565, (BODY_INDEX)-1, (EIF_TYPE_INDEX)-1, NULL},
-	{3566, (BODY_INDEX)-1, (EIF_TYPE_INDEX)-1, NULL},
+	{4268, (BODY_INDEX)-1, (EIF_TYPE_INDEX)-1, NULL},
+	{4269, 0, 1072, gen_type9_1075},
+	{4270, 8, 346, NULL},
+	{4271, 9, 346, NULL},
 	{(BODY_INDEX)-1, (BODY_INDEX)-1, (EIF_TYPE_INDEX)-1, gen_type10_1075},
-	{3576, 0, 1074, gen_type11_1075},
-	{3577, (BODY_INDEX)-1, (EIF_TYPE_INDEX)-1, NULL},
-	{3578, (BODY_INDEX)-1, (EIF_TYPE_INDEX)-1, NULL},
 };
 
 extern void Init1075(void);
@@ -72,8 +69,7 @@ void Init1075(void)
 {
 	IDSC(desc_1075, 0, 1074);
 	IDSC(desc_1075 + 1, 4, 1074);
-	IDSC(desc_1075 + 34, 108, 1074);
-	IDSC(desc_1075 + 38, 225, 1074);
+	IDSC(desc_1075 + 34, 224, 1074);
 }
 
 

@@ -16,7 +16,7 @@ static EIF_TYPE_INDEX gen_type3_40 [] = {0,0xFFFF};
 
 
 static struct desc_info desc_40[] = {
-	{(BODY_INDEX) 665, (BODY_INDEX) -1, INVALID_DTYPE, NULL},
+	{(BODY_INDEX) 664, (BODY_INDEX) -1, INVALID_DTYPE, NULL},
 	{0, (BODY_INDEX)-1, 359, NULL},
 	{1, (BODY_INDEX)-1, 459, gen_type0_40},
 	{2, (BODY_INDEX)-1, 346, NULL},
@@ -50,7 +50,7 @@ static struct desc_info desc_40[] = {
 	{30, (BODY_INDEX)-1, 39, NULL},
 	{31, (BODY_INDEX)-1, (EIF_TYPE_INDEX)-1, NULL},
 	{32, (BODY_INDEX)-1, (EIF_TYPE_INDEX)-1, NULL},
-	{664, (BODY_INDEX)-1, 400, NULL},
+	{665, (BODY_INDEX)-1, 400, NULL},
 };
 
 extern void Init40(void);

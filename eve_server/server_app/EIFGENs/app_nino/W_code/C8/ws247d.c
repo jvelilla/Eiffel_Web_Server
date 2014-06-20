@@ -50,10 +50,10 @@ static struct desc_info desc_247[] = {
 	{30, (BODY_INDEX)-1, 246, NULL},
 	{31, (BODY_INDEX)-1, (EIF_TYPE_INDEX)-1, NULL},
 	{32, (BODY_INDEX)-1, (EIF_TYPE_INDEX)-1, NULL},
-	{3951, (BODY_INDEX)-1, 346, NULL},
-	{3952, (BODY_INDEX)-1, (EIF_TYPE_INDEX)-1, NULL},
+	{3955, (BODY_INDEX)-1, 346, NULL},
+	{3956, (BODY_INDEX)-1, (EIF_TYPE_INDEX)-1, NULL},
 	{(BODY_INDEX)-1, (BODY_INDEX)-1, (EIF_TYPE_INDEX)-1, NULL},
-	{3967, (BODY_INDEX)-1, 376, NULL},
+	{3971, (BODY_INDEX)-1, 376, NULL},
 };
 
 extern void Init247(void);
@@ -61,9 +61,9 @@ void Init247(void)
 {
 	IDSC(desc_247, 0, 246);
 	IDSC(desc_247 + 1, 4, 246);
-	IDSC(desc_247 + 34, 402, 246);
-	IDSC(desc_247 + 36, 319, 246);
-	IDSC(desc_247 + 37, 403, 246);
+	IDSC(desc_247 + 34, 409, 246);
+	IDSC(desc_247 + 36, 322, 246);
+	IDSC(desc_247 + 37, 410, 246);
 }
 
 

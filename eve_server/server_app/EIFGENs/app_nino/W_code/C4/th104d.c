@@ -13,7 +13,7 @@ static EIF_TYPE_INDEX gen_type0_104 [] = {459,103,0xFFFF};
 static EIF_TYPE_INDEX gen_type1_104 [] = {0,0xFFFF};
 static EIF_TYPE_INDEX gen_type2_104 [] = {0,0xFFFF};
 static EIF_TYPE_INDEX gen_type3_104 [] = {0,0xFFFF};
-static EIF_TYPE_INDEX gen_type4_104 [] = {590,346,0xFFFF};
+static EIF_TYPE_INDEX gen_type4_104 [] = {718,346,0xFFFF};
 
 
 static struct desc_info desc_104[] = {
@@ -70,7 +70,7 @@ static struct desc_info desc_104[] = {
 	{1663, (BODY_INDEX)-1, 346, NULL},
 	{1664, (BODY_INDEX)-1, (EIF_TYPE_INDEX)-1, NULL},
 	{1665, 0, 314, NULL},
-	{1666, (BODY_INDEX)-1, 590, gen_type4_104},
+	{1666, (BODY_INDEX)-1, 718, gen_type4_104},
 	{1667, (BODY_INDEX)-1, (EIF_TYPE_INDEX)-1, NULL},
 	{1668, (BODY_INDEX)-1, (EIF_TYPE_INDEX)-1, NULL},
 	{1669, (BODY_INDEX)-1, 346, NULL},
@@ -82,9 +82,9 @@ void Init104(void)
 {
 	IDSC(desc_104, 0, 103);
 	IDSC(desc_104 + 1, 4, 103);
-	IDSC(desc_104 + 34, 460, 103);
-	IDSC(desc_104 + 36, 400, 103);
-	IDSC(desc_104 + 38, 296, 103);
+	IDSC(desc_104 + 34, 459, 103);
+	IDSC(desc_104 + 36, 407, 103);
+	IDSC(desc_104 + 38, 300, 103);
 }
 
 

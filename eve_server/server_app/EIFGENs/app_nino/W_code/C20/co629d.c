@@ -1,5 +1,5 @@
 /*
- * Class CONTAINER [NATURAL_32]
+ * Class CONTAINER [INTEGER_64]
  */
 
 #include "eif_macros.h"
@@ -9,15 +9,15 @@
 extern "C" {
 #endif
 
-static EIF_TYPE_INDEX gen_type0_629 [] = {459,628,412,0xFFFF};
-static EIF_TYPE_INDEX gen_type1_629 [] = {628,412,0xFFFF};
+static EIF_TYPE_INDEX gen_type0_629 [] = {459,628,397,0xFFFF};
+static EIF_TYPE_INDEX gen_type1_629 [] = {628,397,0xFFFF};
 static EIF_TYPE_INDEX gen_type2_629 [] = {0,0xFFFF};
 static EIF_TYPE_INDEX gen_type3_629 [] = {0,0xFFFF};
-static EIF_TYPE_INDEX gen_type4_629 [] = {628,412,0xFFFF};
-static EIF_TYPE_INDEX gen_type5_629 [] = {628,412,0xFFFF};
+static EIF_TYPE_INDEX gen_type4_629 [] = {628,397,0xFFFF};
+static EIF_TYPE_INDEX gen_type5_629 [] = {628,397,0xFFFF};
 static EIF_TYPE_INDEX gen_type6_629 [] = {0,0xFFFF};
-static EIF_TYPE_INDEX gen_type7_629 [] = {628,412,0xFFFF};
-static EIF_TYPE_INDEX gen_type8_629 [] = {628,412,0xFFFF};
+static EIF_TYPE_INDEX gen_type7_629 [] = {628,397,0xFFFF};
+static EIF_TYPE_INDEX gen_type8_629 [] = {628,397,0xFFFF};
 static EIF_TYPE_INDEX gen_type9_629 [] = {629,0xFFF8,1,0xFFFF};
 static EIF_TYPE_INDEX gen_type10_629 [] = {0xFFF8,1,0xFFFF};
 
@@ -59,11 +59,11 @@ static struct desc_info desc_629[] = {
 	{32, (BODY_INDEX)-1, (EIF_TYPE_INDEX)-1, NULL},
 	{(BODY_INDEX)-1, (BODY_INDEX)-1, 346, NULL},
 	{(BODY_INDEX)-1, (BODY_INDEX)-1, 346, NULL},
-	{2760, (BODY_INDEX)-1, 346, NULL},
-	{2761, 0, 346, NULL},
-	{2762, (BODY_INDEX)-1, 346, NULL},
-	{2763, (BODY_INDEX)-1, (EIF_TYPE_INDEX)-1, NULL},
+	{2766, (BODY_INDEX)-1, 346, NULL},
+	{2767, 0, 346, NULL},
+	{2768, (BODY_INDEX)-1, 346, NULL},
 	{2764, (BODY_INDEX)-1, (EIF_TYPE_INDEX)-1, NULL},
+	{2765, (BODY_INDEX)-1, (EIF_TYPE_INDEX)-1, NULL},
 	{(BODY_INDEX)-1, (BODY_INDEX)-1, 629, gen_type9_629},
 	{(BODY_INDEX)-1, (BODY_INDEX)-1, (EIF_TYPE_INDEX)-1, gen_type10_629},
 };

@@ -10,8 +10,8 @@
 extern "C" {
 #endif
 
-extern EIF_TYPED_VALUE F241_11016(EIF_REFERENCE, EIF_TYPED_VALUE);
-extern void F241_11017(EIF_REFERENCE, EIF_TYPED_VALUE, EIF_TYPED_VALUE);
+extern EIF_TYPED_VALUE F241_11020(EIF_REFERENCE, EIF_TYPED_VALUE);
+extern void F241_11021(EIF_REFERENCE, EIF_TYPED_VALUE, EIF_TYPED_VALUE);
 extern void EIF_Minit241(void);
 
 #ifdef __cplusplus
@@ -34,7 +34,7 @@ extern "C" {
 #endif
 
 /* {WSF_HANDLER}.is_valid_context */
-EIF_TYPED_VALUE F241_11016 (EIF_REFERENCE Current, EIF_TYPED_VALUE arg1x)
+EIF_TYPED_VALUE F241_11020 (EIF_REFERENCE Current, EIF_TYPED_VALUE arg1x)
 {
 	GTCX
 	char *l_feature_name = "is_valid_context";
@@ -54,12 +54,12 @@ EIF_TYPED_VALUE F241_11016 (EIF_REFERENCE Current, EIF_TYPED_VALUE arg1x)
 	RTLU(SK_REF,&arg1);
 	RTLU (SK_REF, &Current);
 	
-	RTEAA(l_feature_name, 240, Current, 0, 1, 3951);
+	RTEAA(l_feature_name, 240, Current, 0, 1, 3955);
 	RTSA(Dtype(Current));
 	RTSC;
 	RTME(Dtype(Current), 0);
 	RTGC;
-	RTDBGEAA(240, Current, 3951);
+	RTDBGEAA(240, Current, 3955);
 	if (arg1) {
 		RTCC(arg1, 240, l_feature_name, 1, 370);
 	}
@@ -91,7 +91,7 @@ body:;
 }
 
 /* {WSF_HANDLER}.on_mapped */
-void F241_11017 (EIF_REFERENCE Current, EIF_TYPED_VALUE arg1x, EIF_TYPED_VALUE arg2x)
+void F241_11021 (EIF_REFERENCE Current, EIF_TYPED_VALUE arg1x, EIF_TYPED_VALUE arg2x)
 {
 	GTCX
 	char *l_feature_name = "on_mapped";
@@ -112,12 +112,12 @@ void F241_11017 (EIF_REFERENCE Current, EIF_TYPED_VALUE arg1x, EIF_TYPED_VALUE a
 	RTLU(SK_REF,&arg2);
 	RTLU (SK_REF, &Current);
 	
-	RTEAA(l_feature_name, 240, Current, 0, 2, 3952);
+	RTEAA(l_feature_name, 240, Current, 0, 2, 3956);
 	RTSA(Dtype(Current));
 	RTSC;
 	RTME(Dtype(Current), 0);
 	RTGC;
-	RTDBGEAA(240, Current, 3952);
+	RTDBGEAA(240, Current, 3956);
 	if (arg1) {
 		RTCC(arg1, 240, l_feature_name, 1, 376);
 	}

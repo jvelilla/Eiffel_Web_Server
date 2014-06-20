@@ -16,7 +16,7 @@ static EIF_TYPE_INDEX gen_type3_83 [] = {0,0xFFFF};
 
 
 static struct desc_info desc_83[] = {
-	{(BODY_INDEX) 1449, (BODY_INDEX) -1, INVALID_DTYPE, NULL},
+	{(BODY_INDEX) 1451, (BODY_INDEX) -1, INVALID_DTYPE, NULL},
 	{0, (BODY_INDEX)-1, 359, NULL},
 	{1, (BODY_INDEX)-1, 459, gen_type0_83},
 	{2, (BODY_INDEX)-1, 346, NULL},
@@ -60,9 +60,9 @@ static struct desc_info desc_83[] = {
 	{(BODY_INDEX)-1, (BODY_INDEX)-1, (EIF_TYPE_INDEX)-1, NULL},
 	{1448, (BODY_INDEX)-1, 346, NULL},
 	{(BODY_INDEX)-1, (BODY_INDEX)-1, 85, NULL},
-	{1450, (BODY_INDEX)-1, 355, NULL},
+	{1449, (BODY_INDEX)-1, 355, NULL},
 	{(BODY_INDEX)-1, (BODY_INDEX)-1, (EIF_TYPE_INDEX)-1, NULL},
-	{1451, 8, 299, NULL},
+	{1450, 8, 299, NULL},
 };
 
 extern void Init83(void);

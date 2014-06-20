@@ -16,7 +16,7 @@ static EIF_TYPE_INDEX gen_type3_141 [] = {0,0xFFFF};
 
 
 static struct desc_info desc_141[] = {
-	{(BODY_INDEX) 2068, (BODY_INDEX) -1, INVALID_DTYPE, NULL},
+	{(BODY_INDEX) 2072, (BODY_INDEX) -1, INVALID_DTYPE, NULL},
 	{0, (BODY_INDEX)-1, 359, NULL},
 	{1, (BODY_INDEX)-1, 459, gen_type0_141},
 	{2, (BODY_INDEX)-1, 346, NULL},
@@ -50,9 +50,9 @@ static struct desc_info desc_141[] = {
 	{30, (BODY_INDEX)-1, 140, NULL},
 	{31, (BODY_INDEX)-1, (EIF_TYPE_INDEX)-1, NULL},
 	{32, (BODY_INDEX)-1, (EIF_TYPE_INDEX)-1, NULL},
-	{2065, (BODY_INDEX)-1, 346, NULL},
-	{2066, (BODY_INDEX)-1, 346, NULL},
-	{2067, (BODY_INDEX)-1, (EIF_TYPE_INDEX)-1, NULL},
+	{2069, (BODY_INDEX)-1, 346, NULL},
+	{2070, (BODY_INDEX)-1, 346, NULL},
+	{2071, (BODY_INDEX)-1, (EIF_TYPE_INDEX)-1, NULL},
 };
 
 extern void Init141(void);

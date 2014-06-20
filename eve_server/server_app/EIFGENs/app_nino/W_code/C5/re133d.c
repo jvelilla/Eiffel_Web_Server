@@ -14,7 +14,7 @@ static EIF_TYPE_INDEX gen_type1_133 [] = {0,0xFFFF};
 static EIF_TYPE_INDEX gen_type2_133 [] = {0,0xFFFF};
 static EIF_TYPE_INDEX gen_type3_133 [] = {0,0xFFFF};
 static EIF_TYPE_INDEX gen_type4_133 [] = {485,353,0xFFFF};
-static EIF_TYPE_INDEX gen_type5_133 [] = {548,359,0xFFFF};
+static EIF_TYPE_INDEX gen_type5_133 [] = {549,359,0xFFFF};
 
 
 static struct desc_info desc_133[] = {
@@ -52,18 +52,18 @@ static struct desc_info desc_133[] = {
 	{30, (BODY_INDEX)-1, 132, NULL},
 	{31, (BODY_INDEX)-1, (EIF_TYPE_INDEX)-1, NULL},
 	{32, (BODY_INDEX)-1, (EIF_TYPE_INDEX)-1, NULL},
-	{1940, (BODY_INDEX)-1, 346, NULL},
-	{1941, (BODY_INDEX)-1, 346, NULL},
-	{1942, (BODY_INDEX)-1, 351, NULL},
-	{1943, (BODY_INDEX)-1, 346, NULL},
-	{1944, (BODY_INDEX)-1, 485, gen_type4_133},
-	{1945, (BODY_INDEX)-1, 548, gen_type5_133},
-	{1946, (BODY_INDEX)-1, 340, NULL},
-	{1947, (BODY_INDEX)-1, 340, NULL},
-	{1948, (BODY_INDEX)-1, 359, NULL},
-	{1949, (BODY_INDEX)-1, 359, NULL},
-	{1938, (BODY_INDEX)-1, 359, NULL},
-	{1939, (BODY_INDEX)-1, 359, NULL},
+	{1948, (BODY_INDEX)-1, 346, NULL},
+	{1949, (BODY_INDEX)-1, 346, NULL},
+	{1950, (BODY_INDEX)-1, 351, NULL},
+	{1951, (BODY_INDEX)-1, 346, NULL},
+	{1952, (BODY_INDEX)-1, 485, gen_type4_133},
+	{1953, (BODY_INDEX)-1, 549, gen_type5_133},
+	{1942, (BODY_INDEX)-1, 340, NULL},
+	{1943, (BODY_INDEX)-1, 340, NULL},
+	{1944, (BODY_INDEX)-1, 359, NULL},
+	{1945, (BODY_INDEX)-1, 359, NULL},
+	{1946, (BODY_INDEX)-1, 359, NULL},
+	{1947, (BODY_INDEX)-1, 359, NULL},
 };
 
 extern void Init133(void);

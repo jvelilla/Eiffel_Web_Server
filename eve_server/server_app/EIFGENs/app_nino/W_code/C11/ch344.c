@@ -10,8 +10,8 @@
 extern "C" {
 #endif
 
-extern EIF_TYPED_VALUE F344_16941(EIF_REFERENCE);
-extern EIF_TYPED_VALUE F344_16942(EIF_REFERENCE);
+extern EIF_TYPED_VALUE F344_16948(EIF_REFERENCE);
+extern EIF_TYPED_VALUE F344_16949(EIF_REFERENCE);
 extern void EIF_Minit344(void);
 
 #ifdef __cplusplus
@@ -34,7 +34,7 @@ extern "C" {
 #endif
 
 /* {CHARACTER_8}.code */
-EIF_TYPED_VALUE F344_16941 (EIF_REFERENCE Current)
+EIF_TYPED_VALUE F344_16948 (EIF_REFERENCE Current)
 {
 	GTCX
 	char *l_feature_name = "code";
@@ -52,17 +52,17 @@ EIF_TYPED_VALUE F344_16941 (EIF_REFERENCE Current)
 	RTLU (SK_INT32, &Result);
 	RTLU (SK_REF, &Current);
 	
-	RTEAA(l_feature_name, 343, Current, 0, 0, 10171);
+	RTEAA(l_feature_name, 343, Current, 0, 0, 10178);
 	RTSA(Dtype(Current));
 	RTSC;
 	RTME(Dtype(Current), 0);
 	RTGC;
-	RTDBGEAA(343, Current, 10171);
+	RTDBGEAA(343, Current, 10178);
 	RTIV(Current, RTAL);
 	RTHOOK(1);
 	RTDBGAL(Current, 0, 0x10000000, 1,0); /* Result */
 	
-	tu4_1 = (((FUNCTION_CAST(EIF_TYPED_VALUE, (EIF_REFERENCE)) RTWF(14961, Dtype(Current)))(Current)).it_n4);
+	tu4_1 = (((FUNCTION_CAST(EIF_TYPED_VALUE, (EIF_REFERENCE)) RTWF(14968, Dtype(Current)))(Current)).it_n4);
 	RTNHOOK(1,1);
 	ti4_1 = (EIF_INTEGER_32) tu4_1;
 	Result = (EIF_INTEGER_32) ti4_1;
@@ -78,7 +78,7 @@ EIF_TYPED_VALUE F344_16941 (EIF_REFERENCE Current)
 }
 
 /* {CHARACTER_8}.to_character_32 */
-EIF_TYPED_VALUE F344_16942 (EIF_REFERENCE Current)
+EIF_TYPED_VALUE F344_16949 (EIF_REFERENCE Current)
 {
 	GTCX
 	char *l_feature_name = "to_character_32";
@@ -94,17 +94,17 @@ EIF_TYPED_VALUE F344_16942 (EIF_REFERENCE Current)
 	RTLU (SK_CHAR32, &Result);
 	RTLU (SK_REF, &Current);
 	
-	RTEAA(l_feature_name, 343, Current, 0, 0, 10172);
+	RTEAA(l_feature_name, 343, Current, 0, 0, 10179);
 	RTSA(Dtype(Current));
 	RTSC;
 	RTME(Dtype(Current), 0);
 	RTGC;
-	RTDBGEAA(343, Current, 10172);
+	RTDBGEAA(343, Current, 10179);
 	RTIV(Current, RTAL);
 	RTHOOK(1);
 	RTDBGAL(Current, 0, 0x1C000000, 1,0); /* Result */
 	
-	Result = (((FUNCTION_CAST(EIF_TYPED_VALUE, (EIF_REFERENCE)) RTWF(14974, 342))(Current)).it_c4);
+	Result = (((FUNCTION_CAST(EIF_TYPED_VALUE, (EIF_REFERENCE)) RTWF(14981, 342))(Current)).it_c4);
 	RTVI(Current, RTAL);
 	RTRS;
 	RTHOOK(2);

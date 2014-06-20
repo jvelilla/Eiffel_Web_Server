@@ -62,7 +62,7 @@ void Init22(void)
 {
 	IDSC(desc_22, 0, 21);
 	IDSC(desc_22 + 1, 4, 21);
-	IDSC(desc_22 + 34, 250, 21);
+	IDSC(desc_22 + 34, 249, 21);
 }
 
 

@@ -57,11 +57,11 @@ OBJECTS = big_file_C2_c.obj
 
 OLDOBJECTS =  eq46.o eq46d.o it45.o it45d.o is44.o is44d.o st43.o st43d.o op42.o \
 	op42d.o rt41.o rt41d.o sy40.o sy40d.o ut38.o ut38d.o ut39.o ut39d.o \
-	uu37.o uu37d.o ei36.o ei36d.o ei35.o ei35d.o ei34.o ei34d.o ei33.o \
-	ei33d.o ht62.o ht62d.o wg60.o wg60d.o ws65.o ws65d.o gr64.o gr64d.o \
-	ws51.o ws51d.o so63.o so63d.o eq55.o eq55d.o ht61.o ht61d.o wg59.o \
-	wg59d.o ht58.o ht58d.o wg57.o wg57d.o ba56.o ba56d.o ws50.o ws50d.o \
-	eq54.o eq54d.o da48.o da48d.o we53.o we53d.o we52.o we52d.o ws49.o \
+	pr37.o pr37d.o ei36.o ei36d.o uu35.o uu35d.o ei34.o ei34d.o ei33.o \
+	ei33d.o ht62.o ht62d.o wg58.o wg58d.o ws65.o ws65d.o gr64.o gr64d.o \
+	ws51.o ws51d.o so63.o so63d.o eq55.o eq55d.o ht61.o ht61d.o ht60.o \
+	ht60d.o wg59.o wg59d.o wg57.o wg57d.o ba56.o ba56d.o ws50.o ws50d.o \
+	eq54.o eq54d.o we53.o we53d.o we52.o we52d.o da48.o da48d.o ws49.o \
 	ws49d.o da47.o da47d.o 
 
 all: Cobj2.o

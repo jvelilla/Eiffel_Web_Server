@@ -44,9 +44,9 @@ OBJECTS = big_file_C9_c.obj
 OLDOBJECTS =  ap296.obj ap296d.obj eq273.obj eq273d.obj ap295.obj ap295d.obj eq288.obj eq288d.obj \
 	eq276.obj eq276d.obj ex268.obj ex268d.obj mi287.obj mi287d.obj ar294.obj ar294d.obj \
 	eq289.obj eq289d.obj na266.obj na266d.obj fi264.obj fi264d.obj st292.obj st292d.obj \
-	pr272.obj pr272d.obj ws293.obj ws293d.obj ws291.obj ws291d.obj pr275.obj pr275d.obj \
-	pr274.obj pr274d.obj eq286.obj eq286d.obj un265.obj un265d.obj da290.obj da290d.obj \
-	pr271.obj pr271d.obj pr270.obj pr270d.obj pr269.obj pr269d.obj we267.obj we267d.obj \
+	pr274.obj pr274d.obj pr275.obj pr275d.obj pr272.obj pr272d.obj ws293.obj ws293d.obj \
+	ws291.obj ws291d.obj eq286.obj eq286d.obj un265.obj un265d.obj pr271.obj pr271d.obj \
+	pr270.obj pr270d.obj pr269.obj pr269d.obj da290.obj da290d.obj we267.obj we267d.obj \
 	te285.obj te285d.obj te284.obj te284d.obj te283.obj te283d.obj te282.obj te282d.obj \
 	te281.obj te281d.obj te280.obj te280d.obj te279.obj te279d.obj te278.obj te278d.obj \
 	te277.obj te277d.obj 

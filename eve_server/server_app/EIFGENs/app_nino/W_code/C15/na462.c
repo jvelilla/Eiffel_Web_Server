@@ -10,7 +10,7 @@
 extern "C" {
 #endif
 
-extern void F462_22909(EIF_REFERENCE, int);
+extern void F462_22916(EIF_REFERENCE, int);
 extern void EIF_Minit462(void);
 
 #ifdef __cplusplus
@@ -33,7 +33,7 @@ extern "C" {
 #endif
 
 /* {NATIVE_ARRAY}._invariant */
-void F462_22909 (EIF_REFERENCE Current, int where)
+void F462_22916 (EIF_REFERENCE Current, int where)
 {
 	GTCX
 	char *l_feature_name = "_invariant";
@@ -46,11 +46,11 @@ void F462_22909 (EIF_REFERENCE Current, int where)
 	RTLR(0,Current);
 	RTLU (SK_VOID, NULL);
 	RTLU (SK_REF, &Current);
-	RTEAINV(l_feature_name, 461, Current, 0, 22908);
+	RTEAINV(l_feature_name, 461, Current, 0, 22915);
 	RTSA(Dtype(Current));
 	RTME(Dtype(Current), 0);
 	RTIT("is_dotnet", Current);
-	tb1 = (((FUNCTION_CAST(EIF_TYPED_VALUE, (EIF_REFERENCE)) RTWF(10570, 258))(Current)).it_b);
+	tb1 = (((FUNCTION_CAST(EIF_TYPED_VALUE, (EIF_REFERENCE)) RTWF(10574, 258))(Current)).it_b);
 	if (tb1) {
 		RTCK;
 	} else {

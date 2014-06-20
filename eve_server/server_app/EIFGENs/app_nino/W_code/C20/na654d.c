@@ -1,5 +1,5 @@
 /*
- * Class NATIVE_ARRAY [NATURAL_32]
+ * Class NATIVE_ARRAY [INTEGER_8]
  */
 
 #include "eif_macros.h"
@@ -9,20 +9,20 @@
 extern "C" {
 #endif
 
-static EIF_TYPE_INDEX gen_type0_654 [] = {459,653,412,0xFFFF};
-static EIF_TYPE_INDEX gen_type1_654 [] = {653,412,0xFFFF};
+static EIF_TYPE_INDEX gen_type0_654 [] = {459,653,406,0xFFFF};
+static EIF_TYPE_INDEX gen_type1_654 [] = {653,406,0xFFFF};
 static EIF_TYPE_INDEX gen_type2_654 [] = {0,0xFFFF};
 static EIF_TYPE_INDEX gen_type3_654 [] = {0,0xFFFF};
-static EIF_TYPE_INDEX gen_type4_654 [] = {653,412,0xFFFF};
-static EIF_TYPE_INDEX gen_type5_654 [] = {653,412,0xFFFF};
+static EIF_TYPE_INDEX gen_type4_654 [] = {653,406,0xFFFF};
+static EIF_TYPE_INDEX gen_type5_654 [] = {653,406,0xFFFF};
 static EIF_TYPE_INDEX gen_type6_654 [] = {0,0xFFFF};
-static EIF_TYPE_INDEX gen_type7_654 [] = {653,412,0xFFFF};
-static EIF_TYPE_INDEX gen_type8_654 [] = {653,412,0xFFFF};
+static EIF_TYPE_INDEX gen_type7_654 [] = {653,406,0xFFFF};
+static EIF_TYPE_INDEX gen_type8_654 [] = {653,406,0xFFFF};
 static EIF_TYPE_INDEX gen_type9_654 [] = {0xFFF8,1,0xFFFF};
 
 
 static struct desc_info desc_654[] = {
-	{(BODY_INDEX) 679, (BODY_INDEX) -1, INVALID_DTYPE, NULL},
+	{(BODY_INDEX) 680, (BODY_INDEX) -1, INVALID_DTYPE, NULL},
 	{0, (BODY_INDEX)-1, 359, NULL},
 	{1, (BODY_INDEX)-1, 459, gen_type0_654},
 	{2, (BODY_INDEX)-1, 346, NULL},

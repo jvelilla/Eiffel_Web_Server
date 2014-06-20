@@ -1,4 +1,7 @@
 {
 	"Compilation_Timeout" : 180,
-	"Runtime_Timeout" : 10
+	"Runtime_Timeout" : 10,
+	"EIFGEN_Duration" : 7776000,
+	"Seconds_After_Midnight" : 10,
+	"Sleep_Time": 5000000
 }

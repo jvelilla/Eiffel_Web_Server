@@ -58,7 +58,7 @@ void Init162(void)
 {
 	IDSC(desc_162, 0, 161);
 	IDSC(desc_162 + 1, 4, 161);
-	IDSC(desc_162 + 34, 403, 161);
+	IDSC(desc_162 + 34, 410, 161);
 }
 
 

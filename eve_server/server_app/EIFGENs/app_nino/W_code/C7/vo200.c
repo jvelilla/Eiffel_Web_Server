@@ -10,8 +10,8 @@
 extern "C" {
 #endif
 
-extern EIF_TYPED_VALUE F200_9332(EIF_REFERENCE);
-extern EIF_TYPED_VALUE F200_9333(EIF_REFERENCE);
+extern EIF_TYPED_VALUE F200_9336(EIF_REFERENCE);
+extern EIF_TYPED_VALUE F200_9337(EIF_REFERENCE);
 extern void EIF_Minit200(void);
 
 #ifdef __cplusplus
@@ -34,7 +34,7 @@ extern "C" {
 #endif
 
 /* {VOID_TARGET}.code */
-EIF_TYPED_VALUE F200_9332 (EIF_REFERENCE Current)
+EIF_TYPED_VALUE F200_9336 (EIF_REFERENCE Current)
 {
 	GTCX
 	char *l_feature_name = "code";
@@ -50,17 +50,17 @@ EIF_TYPED_VALUE F200_9332 (EIF_REFERENCE Current)
 	RTLU (SK_INT32, &Result);
 	RTLU (SK_REF, &Current);
 	
-	RTEAA(l_feature_name, 199, Current, 0, 0, 2616);
+	RTEAA(l_feature_name, 199, Current, 0, 0, 2620);
 	RTSA(Dtype(Current));
 	RTSC;
 	RTME(Dtype(Current), 0);
 	RTGC;
-	RTDBGEAA(199, Current, 2616);
+	RTDBGEAA(199, Current, 2620);
 	RTIV(Current, RTAL);
 	RTHOOK(1);
 	RTDBGAL(Current, 0, 0x10000000, 1,0); /* Result */
 	
-	Result = (((FUNCTION_CAST(EIF_TYPED_VALUE, (EIF_REFERENCE)) RTWF(8436, 154))(Current)).it_i4);
+	Result = (((FUNCTION_CAST(EIF_TYPED_VALUE, (EIF_REFERENCE)) RTWF(8440, 154))(Current)).it_i4);
 	Result = (EIF_INTEGER_32) Result;
 	RTVI(Current, RTAL);
 	RTRS;
@@ -74,8 +74,8 @@ EIF_TYPED_VALUE F200_9332 (EIF_REFERENCE Current)
 }
 
 /* {VOID_TARGET}.tag */
-RTOID (F200_9333)
-EIF_TYPED_VALUE F200_9333 (EIF_REFERENCE Current)
+RTOID (F200_9337)
+EIF_TYPED_VALUE F200_9337 (EIF_REFERENCE Current)
 {
 	GTCX
 	char *l_feature_name = "tag";
@@ -89,7 +89,7 @@ EIF_TYPED_VALUE F200_9333 (EIF_REFERENCE Current)
 	RTLD;
 	
 #define Result RTOTRR
-	RTOTDR(F200_9333);
+	RTOTDR(F200_9337);
 
 	RTLI(4);
 	RTLR(0,tr1);
@@ -99,12 +99,12 @@ EIF_TYPED_VALUE F200_9333 (EIF_REFERENCE Current)
 	RTLU (SK_REF, &Result);
 	RTLU (SK_REF, &Current);
 	
-	RTEAA(l_feature_name, 199, Current, 0, 0, 2617);
+	RTEAA(l_feature_name, 199, Current, 0, 0, 2621);
 	RTSA(Dtype(Current));
 	RTSC;
 	RTME(Dtype(Current), 0);
 	RTGC;
-	RTDBGEAA(199, Current, 2617);
+	RTDBGEAA(199, Current, 2621);
 	RTIV(Current, RTAL);
 	RTOTP;
 	RTHOOK(1);
@@ -113,7 +113,7 @@ EIF_TYPED_VALUE F200_9333 (EIF_REFERENCE Current)
 	tr1 = RTLN(354);
 	tr2 = RTMS_EX_H("Feature call on void target.",28,484619566);
 	ur1 = tr2;
-	(FUNCTION_CAST(void, (EIF_REFERENCE, EIF_TYPED_VALUE)) RTWC(15205, Dtype(tr1)))(tr1, ur1x);
+	(FUNCTION_CAST(void, (EIF_REFERENCE, EIF_TYPED_VALUE)) RTWC(15212, Dtype(tr1)))(tr1, ur1x);
 	RTNHOOK(1,1);
 	Result = (EIF_REFERENCE) tr1;
 	RTVI(Current, RTAL);
@@ -133,7 +133,7 @@ EIF_TYPED_VALUE F200_9333 (EIF_REFERENCE Current)
 void EIF_Minit200 (void)
 {
 	GTCX
-	RTOTS (9333,F200_9333)
+	RTOTS (9337,F200_9337)
 }
 
 

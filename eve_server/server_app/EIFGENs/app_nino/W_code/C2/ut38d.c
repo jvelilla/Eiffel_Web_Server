@@ -13,14 +13,14 @@ static EIF_TYPE_INDEX gen_type0_38 [] = {848,37,0xFFFF};
 static EIF_TYPE_INDEX gen_type1_38 [] = {0,0xFFFF};
 static EIF_TYPE_INDEX gen_type2_38 [] = {0,0xFFFF};
 static EIF_TYPE_INDEX gen_type3_38 [] = {0,0xFFFF};
-static EIF_TYPE_INDEX gen_type4_38 [] = {905,424,0xFFFF};
-static EIF_TYPE_INDEX gen_type5_38 [] = {905,424,0xFFFF};
-static EIF_TYPE_INDEX gen_type6_38 [] = {888,415,0xFFFF};
-static EIF_TYPE_INDEX gen_type7_38 [] = {888,415,0xFFFF};
-static EIF_TYPE_INDEX gen_type8_38 [] = {888,415,0xFFFF};
-static EIF_TYPE_INDEX gen_type9_38 [] = {888,415,0xFFFF};
-static EIF_TYPE_INDEX gen_type10_38 [] = {888,415,0xFFFF};
-static EIF_TYPE_INDEX gen_type11_38 [] = {888,415,0xFFFF};
+static EIF_TYPE_INDEX gen_type4_38 [] = {914,424,0xFFFF};
+static EIF_TYPE_INDEX gen_type5_38 [] = {914,424,0xFFFF};
+static EIF_TYPE_INDEX gen_type6_38 [] = {882,415,0xFFFF};
+static EIF_TYPE_INDEX gen_type7_38 [] = {882,415,0xFFFF};
+static EIF_TYPE_INDEX gen_type8_38 [] = {882,415,0xFFFF};
+static EIF_TYPE_INDEX gen_type9_38 [] = {882,415,0xFFFF};
+static EIF_TYPE_INDEX gen_type10_38 [] = {882,415,0xFFFF};
+static EIF_TYPE_INDEX gen_type11_38 [] = {882,415,0xFFFF};
 
 
 static struct desc_info desc_38[] = {
@@ -76,8 +76,8 @@ static struct desc_info desc_38[] = {
 	{568, (BODY_INDEX)-1, (EIF_TYPE_INDEX)-1, NULL},
 	{569, (BODY_INDEX)-1, (EIF_TYPE_INDEX)-1, NULL},
 	{570, (BODY_INDEX)-1, (EIF_TYPE_INDEX)-1, NULL},
-	{571, (BODY_INDEX)-1, 905, gen_type4_38},
-	{572, (BODY_INDEX)-1, 905, gen_type5_38},
+	{571, (BODY_INDEX)-1, 914, gen_type4_38},
+	{572, (BODY_INDEX)-1, 914, gen_type5_38},
 	{573, (BODY_INDEX)-1, 358, NULL},
 	{574, (BODY_INDEX)-1, (EIF_TYPE_INDEX)-1, NULL},
 	{575, (BODY_INDEX)-1, 358, NULL},
@@ -86,10 +86,10 @@ static struct desc_info desc_38[] = {
 	{578, (BODY_INDEX)-1, (EIF_TYPE_INDEX)-1, NULL},
 	{579, (BODY_INDEX)-1, 358, NULL},
 	{580, (BODY_INDEX)-1, (EIF_TYPE_INDEX)-1, NULL},
-	{581, (BODY_INDEX)-1, 888, gen_type6_38},
-	{582, (BODY_INDEX)-1, 888, gen_type7_38},
-	{583, (BODY_INDEX)-1, 888, gen_type8_38},
-	{584, (BODY_INDEX)-1, 888, gen_type9_38},
+	{581, (BODY_INDEX)-1, 882, gen_type6_38},
+	{582, (BODY_INDEX)-1, 882, gen_type7_38},
+	{583, (BODY_INDEX)-1, 882, gen_type8_38},
+	{584, (BODY_INDEX)-1, 882, gen_type9_38},
 	{585, (BODY_INDEX)-1, (EIF_TYPE_INDEX)-1, NULL},
 	{586, (BODY_INDEX)-1, (EIF_TYPE_INDEX)-1, NULL},
 	{587, (BODY_INDEX)-1, (EIF_TYPE_INDEX)-1, NULL},
@@ -117,8 +117,8 @@ static struct desc_info desc_38[] = {
 	{539, (BODY_INDEX)-1, (EIF_TYPE_INDEX)-1, NULL},
 	{540, (BODY_INDEX)-1, 359, NULL},
 	{541, (BODY_INDEX)-1, (EIF_TYPE_INDEX)-1, NULL},
-	{542, (BODY_INDEX)-1, 888, gen_type10_38},
-	{543, (BODY_INDEX)-1, 888, gen_type11_38},
+	{542, (BODY_INDEX)-1, 882, gen_type10_38},
+	{543, (BODY_INDEX)-1, 882, gen_type11_38},
 	{544, (BODY_INDEX)-1, 359, NULL},
 	{545, (BODY_INDEX)-1, 359, NULL},
 	{546, (BODY_INDEX)-1, 359, NULL},

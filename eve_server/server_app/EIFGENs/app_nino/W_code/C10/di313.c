@@ -10,7 +10,7 @@
 extern "C" {
 #endif
 
-extern EIF_TYPED_VALUE F313_13405(EIF_REFERENCE);
+extern EIF_TYPED_VALUE F313_13412(EIF_REFERENCE);
 extern void EIF_Minit313(void);
 
 #ifdef __cplusplus
@@ -23,13 +23,13 @@ extern void EIF_Minit313(void);
 extern "C" {
 #endif
 
-#ifndef INLINE_F313_13405
-static int inline_F313_13405 (void)
+#ifndef INLINE_F313_13412
+static int inline_F313_13412 (void)
 {
 	return eif_is_in_final_collect;
 	;
 }
-#define INLINE_F313_13405
+#define INLINE_F313_13412
 #endif
 
 #ifdef __cplusplus
@@ -42,7 +42,7 @@ extern "C" {
 #endif
 
 /* {DISPOSABLE}.is_in_final_collect */
-EIF_TYPED_VALUE F313_13405 (EIF_REFERENCE Current)
+EIF_TYPED_VALUE F313_13412 (EIF_REFERENCE Current)
 {
 	GTCX
 	char *l_feature_name = "is_in_final_collect";
@@ -58,13 +58,13 @@ EIF_TYPED_VALUE F313_13405 (EIF_REFERENCE Current)
 	RTLU (SK_BOOL, &Result);
 	RTLU (SK_REF, &Current);
 	
-	RTEAA(l_feature_name, 312, Current, 0, 0, 8988);
+	RTEAA(l_feature_name, 312, Current, 0, 0, 8995);
 	RTSA(Dtype(Current));
 	RTSC;
 	RTME(Dtype(Current), 1);
-	RTDBGEAA(312, Current, 8988);
+	RTDBGEAA(312, Current, 8995);
 	RTIV(Current, RTAL);
-	Result = EIF_TEST(inline_F313_13405 ());
+	Result = EIF_TEST(inline_F313_13412 ());
 	RTVI(Current, RTAL);
 	RTRS;
 	RTHOOK(1);

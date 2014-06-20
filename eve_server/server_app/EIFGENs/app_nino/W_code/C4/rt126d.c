@@ -50,8 +50,8 @@ static struct desc_info desc_126[] = {
 	{30, (BODY_INDEX)-1, 125, NULL},
 	{31, (BODY_INDEX)-1, (EIF_TYPE_INDEX)-1, NULL},
 	{32, (BODY_INDEX)-1, (EIF_TYPE_INDEX)-1, NULL},
-	{1881, (BODY_INDEX)-1, (EIF_TYPE_INDEX)-1, NULL},
-	{1882, (BODY_INDEX)-1, (EIF_TYPE_INDEX)-1, NULL},
+	{1885, (BODY_INDEX)-1, (EIF_TYPE_INDEX)-1, NULL},
+	{1886, (BODY_INDEX)-1, (EIF_TYPE_INDEX)-1, NULL},
 };
 
 extern void Init126(void);

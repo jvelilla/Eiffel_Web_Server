@@ -50,10 +50,10 @@ static struct desc_info desc_318[] = {
 	{30, (BODY_INDEX)-1, 317, NULL},
 	{31, (BODY_INDEX)-1, (EIF_TYPE_INDEX)-1, NULL},
 	{32, (BODY_INDEX)-1, (EIF_TYPE_INDEX)-1, NULL},
-	{9170, (BODY_INDEX)-1, (EIF_TYPE_INDEX)-1, NULL},
-	{8988, (BODY_INDEX)-1, 346, NULL},
-	{9169, (BODY_INDEX)-1, (EIF_TYPE_INDEX)-1, NULL},
-	{9171, 0, 349, NULL},
+	{9177, (BODY_INDEX)-1, (EIF_TYPE_INDEX)-1, NULL},
+	{8995, (BODY_INDEX)-1, 346, NULL},
+	{9176, (BODY_INDEX)-1, (EIF_TYPE_INDEX)-1, NULL},
+	{9178, 0, 349, NULL},
 	{(BODY_INDEX)-1, (BODY_INDEX)-1, (EIF_TYPE_INDEX)-1, NULL},
 };
 
@@ -62,7 +62,7 @@ void Init318(void)
 {
 	IDSC(desc_318, 0, 317);
 	IDSC(desc_318 + 1, 4, 317);
-	IDSC(desc_318 + 34, 308, 317);
+	IDSC(desc_318 + 34, 311, 317);
 	IDSC(desc_318 + 36, 349, 317);
 }
 

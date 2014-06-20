@@ -29,6 +29,7 @@
 	</target>
 	<target name="app_nino" extends="common">
 		<root class="APPLICATION" feature="make_and_launch"/>
+		<setting name="concurrency" value="thread"/>
 		<library name="dft_nino" location="$ISE_LIBRARY\contrib\library\web\framework\ewf\wsf\default\nino.ecf"/>
 		<library name="nino" location="$ISE_LIBRARY\contrib\library\web\framework\ewf\wsf\connector\nino.ecf"/>
 		<library name="testing" location="$ISE_LIBRARY\library\testing\testing.ecf"/>

@@ -1,5 +1,5 @@
 /*
- * Class EIFFEL_PARSER
+ * Class EIFFEL_ARCHITECTURE
  */
 
 #include "eif_macros.h"
@@ -50,15 +50,16 @@ static struct desc_info desc_36[] = {
 	{30, (BODY_INDEX)-1, 35, NULL},
 	{31, (BODY_INDEX)-1, (EIF_TYPE_INDEX)-1, NULL},
 	{32, (BODY_INDEX)-1, (EIF_TYPE_INDEX)-1, NULL},
-	{510, (BODY_INDEX)-1, (EIF_TYPE_INDEX)-1, NULL},
-	{511, 0, 359, NULL},
-	{512, 8, 359, NULL},
-	{513, 16, 359, NULL},
-	{514, 24, 359, NULL},
-	{515, 32, 359, NULL},
-	{516, 40, 359, NULL},
-	{517, (BODY_INDEX)-1, (EIF_TYPE_INDEX)-1, NULL},
-	{518, (BODY_INDEX)-1, (EIF_TYPE_INDEX)-1, NULL},
+	{512, (BODY_INDEX)-1, (EIF_TYPE_INDEX)-1, NULL},
+	{513, 0, 359, NULL},
+	{514, 8, 359, NULL},
+	{515, 16, 426, NULL},
+	{516, 24, 359, NULL},
+	{517, 32, 400, NULL},
+	{518, 36, 400, NULL},
+	{519, (BODY_INDEX)-1, (EIF_TYPE_INDEX)-1, NULL},
+	{520, (BODY_INDEX)-1, 426, NULL},
+	{511, (BODY_INDEX)-1, 400, NULL},
 };
 
 extern void Init36(void);
@@ -66,7 +67,7 @@ void Init36(void)
 {
 	IDSC(desc_36, 0, 35);
 	IDSC(desc_36 + 1, 4, 35);
-	IDSC(desc_36 + 34, 167, 35);
+	IDSC(desc_36 + 34, 155, 35);
 }
 
 

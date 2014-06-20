@@ -146,7 +146,7 @@ void F82_7099 (EIF_REFERENCE Current, EIF_TYPED_VALUE arg1x, EIF_TYPED_VALUE arg
 	RTGC;
 	RTDBGEAA(81, Current, 1441);
 	if (arg1) {
-		RTCC(arg1, 81, l_feature_name, 1, 72);
+		RTCC(arg1, 81, l_feature_name, 1, 74);
 	}
 	if (arg2) {
 		RTCC(arg2, 81, l_feature_name, 2, 116);
@@ -155,7 +155,7 @@ void F82_7099 (EIF_REFERENCE Current, EIF_TYPED_VALUE arg1x, EIF_TYPED_VALUE arg
 	if ((RTAL & CK_REQUIRE) || RTAC) {
 		RTHOOK(1);
 		RTCT("res_status_unset", EX_PRE);
-		tb1 = (((FUNCTION_CAST(EIF_TYPED_VALUE, (EIF_REFERENCE)) RTVF(8011, "status_is_set", arg2))(arg2)).it_b);
+		tb1 = (((FUNCTION_CAST(EIF_TYPED_VALUE, (EIF_REFERENCE)) RTVF(8015, "status_is_set", arg2))(arg2)).it_b);
 		RTTE((EIF_BOOLEAN) !tb1, label_1);
 		RTCK;
 		RTJB;
@@ -169,7 +169,7 @@ body:;
 	
 	tr1 = RTLN(150);
 	ur1 = RTCCL(arg2);
-	(FUNCTION_CAST(void, (EIF_REFERENCE, EIF_TYPED_VALUE)) RTWC(8304, Dtype(tr1)))(tr1, ur1x);
+	(FUNCTION_CAST(void, (EIF_REFERENCE, EIF_TYPED_VALUE)) RTWC(8308, Dtype(tr1)))(tr1, ur1x);
 	RTNHOOK(2,1);
 	loc1 = (EIF_REFERENCE) RTCCL(tr1);
 	RTHOOK(3);
@@ -177,7 +177,7 @@ body:;
 	
 	tr1 = RTLN(370);
 	ur1 = RTCCL(arg1);
-	(FUNCTION_CAST(void, (EIF_REFERENCE, EIF_TYPED_VALUE)) RTWC(16420, Dtype(tr1)))(tr1, ur1x);
+	(FUNCTION_CAST(void, (EIF_REFERENCE, EIF_TYPED_VALUE)) RTWC(16427, Dtype(tr1)))(tr1, ur1x);
 	RTNHOOK(3,1);
 	loc2 = (EIF_REFERENCE) RTCCL(tr1);
 	RTHOOK(4);
@@ -185,13 +185,13 @@ body:;
 	RTNHOOK(4,1);
 	ur1 = RTCCL(loc2);
 	ur2 = RTCCL(loc1);
-	(FUNCTION_CAST(void, (EIF_REFERENCE, EIF_TYPED_VALUE, EIF_TYPED_VALUE)) RTVF(9072, "execute", tr1))(tr1, ur1x, ur2x);
+	(FUNCTION_CAST(void, (EIF_REFERENCE, EIF_TYPED_VALUE, EIF_TYPED_VALUE)) RTVF(9076, "execute", tr1))(tr1, ur1x, ur2x);
 	RTHOOK(5);
-	(FUNCTION_CAST(void, (EIF_REFERENCE)) RTVF(16423, "destroy", loc2))(loc2);
+	(FUNCTION_CAST(void, (EIF_REFERENCE)) RTVF(16430, "destroy", loc2))(loc2);
 	if (RTAL & CK_ENSURE) {
 		RTHOOK(6);
 		RTCT("res_status_set", EX_POST);
-		tb1 = (((FUNCTION_CAST(EIF_TYPED_VALUE, (EIF_REFERENCE)) RTVF(8011, "status_is_set", arg2))(arg2)).it_b);
+		tb1 = (((FUNCTION_CAST(EIF_TYPED_VALUE, (EIF_REFERENCE)) RTVF(8015, "status_is_set", arg2))(arg2)).it_b);
 		if (tb1) {
 			RTCK;
 		} else {
@@ -207,24 +207,24 @@ body:;
 	if ((EIF_BOOLEAN)(loc1 != NULL)) {
 		RTHOOK(8);
 		tb1 = '\01';
-		tb2 = (((FUNCTION_CAST(EIF_TYPED_VALUE, (EIF_REFERENCE)) RTVF(8309, "status_committed", loc1))(loc1)).it_b);
+		tb2 = (((FUNCTION_CAST(EIF_TYPED_VALUE, (EIF_REFERENCE)) RTVF(8313, "status_committed", loc1))(loc1)).it_b);
 		if (!tb2) {
-			tb2 = (((FUNCTION_CAST(EIF_TYPED_VALUE, (EIF_REFERENCE)) RTVF(8310, "header_committed", loc1))(loc1)).it_b);
+			tb2 = (((FUNCTION_CAST(EIF_TYPED_VALUE, (EIF_REFERENCE)) RTVF(8314, "header_committed", loc1))(loc1)).it_b);
 			tb1 = tb2;
 		}
 		if ((EIF_BOOLEAN) !tb1) {
 			RTHOOK(9);
-			ti4_1 = (((FUNCTION_CAST(EIF_TYPED_VALUE, (EIF_REFERENCE)) RTWF(8282, 146))(Current)).it_i4);
+			ti4_1 = (((FUNCTION_CAST(EIF_TYPED_VALUE, (EIF_REFERENCE)) RTWF(8286, 146))(Current)).it_i4);
 			ui4_1 = ti4_1;
-			(FUNCTION_CAST(void, (EIF_REFERENCE, EIF_TYPED_VALUE)) RTVF(8314, "set_status_code", loc1))(loc1, ui4_1x);
+			(FUNCTION_CAST(void, (EIF_REFERENCE, EIF_TYPED_VALUE)) RTVF(8318, "set_status_code", loc1))(loc1, ui4_1x);
 		}
 		RTHOOK(10);
-		(FUNCTION_CAST(void, (EIF_REFERENCE)) RTVF(8336, "flush", loc1))(loc1);
+		(FUNCTION_CAST(void, (EIF_REFERENCE)) RTVF(8340, "flush", loc1))(loc1);
 	}
 	RTHOOK(11);
 	if ((EIF_BOOLEAN)(loc2 != NULL)) {
 		RTHOOK(12);
-		(FUNCTION_CAST(void, (EIF_REFERENCE)) RTVF(16423, "destroy", loc2))(loc2);
+		(FUNCTION_CAST(void, (EIF_REFERENCE)) RTVF(16430, "destroy", loc2))(loc2);
 	}
 	RTMD(0);
 	/* NOTREACHED */

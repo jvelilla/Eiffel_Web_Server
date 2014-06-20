@@ -50,10 +50,10 @@ static struct desc_info desc_245[] = {
 	{30, (BODY_INDEX)-1, 244, NULL},
 	{31, (BODY_INDEX)-1, (EIF_TYPE_INDEX)-1, NULL},
 	{32, (BODY_INDEX)-1, (EIF_TYPE_INDEX)-1, NULL},
-	{3951, (BODY_INDEX)-1, 346, NULL},
-	{3952, (BODY_INDEX)-1, (EIF_TYPE_INDEX)-1, NULL},
+	{3955, (BODY_INDEX)-1, 346, NULL},
+	{3956, (BODY_INDEX)-1, (EIF_TYPE_INDEX)-1, NULL},
 	{(BODY_INDEX)-1, (BODY_INDEX)-1, (EIF_TYPE_INDEX)-1, NULL},
-	{3963, (BODY_INDEX)-1, 376, NULL},
+	{3967, (BODY_INDEX)-1, 376, NULL},
 };
 
 extern void Init245(void);
@@ -61,9 +61,9 @@ void Init245(void)
 {
 	IDSC(desc_245, 0, 244);
 	IDSC(desc_245 + 1, 4, 244);
-	IDSC(desc_245 + 34, 402, 244);
-	IDSC(desc_245 + 36, 342, 244);
-	IDSC(desc_245 + 37, 403, 244);
+	IDSC(desc_245 + 34, 409, 244);
+	IDSC(desc_245 + 36, 340, 244);
+	IDSC(desc_245 + 37, 410, 244);
 }
 
 

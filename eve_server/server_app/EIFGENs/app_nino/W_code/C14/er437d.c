@@ -16,7 +16,7 @@ static EIF_TYPE_INDEX gen_type3_437 [] = {0,0xFFFF};
 
 
 static struct desc_info desc_437[] = {
-	{(BODY_INDEX) 14722, (BODY_INDEX) -1, INVALID_DTYPE, NULL},
+	{(BODY_INDEX) 14733, (BODY_INDEX) -1, INVALID_DTYPE, NULL},
 	{0, (BODY_INDEX)-1, 359, NULL},
 	{1, (BODY_INDEX)-1, 459, gen_type0_437},
 	{2, (BODY_INDEX)-1, 346, NULL},
@@ -53,11 +53,11 @@ static struct desc_info desc_437[] = {
 	{(BODY_INDEX)-1, (BODY_INDEX)-1, 400, NULL},
 	{(BODY_INDEX)-1, (BODY_INDEX)-1, 355, NULL},
 	{(BODY_INDEX)-1, (BODY_INDEX)-1, 353, NULL},
-	{14723, 0, 436, NULL},
-	{14724, (BODY_INDEX)-1, 358, NULL},
-	{14726, (BODY_INDEX)-1, (EIF_TYPE_INDEX)-1, NULL},
+	{14729, 0, 436, NULL},
+	{14730, (BODY_INDEX)-1, 358, NULL},
+	{14732, (BODY_INDEX)-1, (EIF_TYPE_INDEX)-1, NULL},
 	{(BODY_INDEX)-1, (BODY_INDEX)-1, (EIF_TYPE_INDEX)-1, NULL},
-	{14725, (BODY_INDEX)-1, 359, NULL},
+	{14731, (BODY_INDEX)-1, 359, NULL},
 };
 
 extern void Init437(void);
@@ -65,7 +65,7 @@ void Init437(void)
 {
 	IDSC(desc_437, 0, 436);
 	IDSC(desc_437 + 1, 4, 436);
-	IDSC(desc_437 + 34, 376, 436);
+	IDSC(desc_437 + 34, 375, 436);
 	IDSC(desc_437 + 41, 106, 436);
 }
 

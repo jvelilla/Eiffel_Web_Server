@@ -10,8 +10,8 @@
 extern "C" {
 #endif
 
-extern EIF_TYPED_VALUE F186_9300(EIF_REFERENCE);
-extern EIF_TYPED_VALUE F186_9301(EIF_REFERENCE);
+extern EIF_TYPED_VALUE F186_9304(EIF_REFERENCE);
+extern EIF_TYPED_VALUE F186_9305(EIF_REFERENCE);
 extern void EIF_Minit186(void);
 
 #ifdef __cplusplus
@@ -34,7 +34,7 @@ extern "C" {
 #endif
 
 /* {OLD_VIOLATION}.code */
-EIF_TYPED_VALUE F186_9300 (EIF_REFERENCE Current)
+EIF_TYPED_VALUE F186_9304 (EIF_REFERENCE Current)
 {
 	GTCX
 	char *l_feature_name = "code";
@@ -50,17 +50,17 @@ EIF_TYPED_VALUE F186_9300 (EIF_REFERENCE Current)
 	RTLU (SK_INT32, &Result);
 	RTLU (SK_REF, &Current);
 	
-	RTEAA(l_feature_name, 185, Current, 0, 0, 2584);
+	RTEAA(l_feature_name, 185, Current, 0, 0, 2588);
 	RTSA(Dtype(Current));
 	RTSC;
 	RTME(Dtype(Current), 0);
 	RTGC;
-	RTDBGEAA(185, Current, 2584);
+	RTDBGEAA(185, Current, 2588);
 	RTIV(Current, RTAL);
 	RTHOOK(1);
 	RTDBGAL(Current, 0, 0x10000000, 1,0); /* Result */
 	
-	Result = (((FUNCTION_CAST(EIF_TYPED_VALUE, (EIF_REFERENCE)) RTWF(8465, 154))(Current)).it_i4);
+	Result = (((FUNCTION_CAST(EIF_TYPED_VALUE, (EIF_REFERENCE)) RTWF(8469, 154))(Current)).it_i4);
 	Result = (EIF_INTEGER_32) Result;
 	RTVI(Current, RTAL);
 	RTRS;
@@ -74,8 +74,8 @@ EIF_TYPED_VALUE F186_9300 (EIF_REFERENCE Current)
 }
 
 /* {OLD_VIOLATION}.tag */
-RTOID (F186_9301)
-EIF_TYPED_VALUE F186_9301 (EIF_REFERENCE Current)
+RTOID (F186_9305)
+EIF_TYPED_VALUE F186_9305 (EIF_REFERENCE Current)
 {
 	GTCX
 	char *l_feature_name = "tag";
@@ -89,7 +89,7 @@ EIF_TYPED_VALUE F186_9301 (EIF_REFERENCE Current)
 	RTLD;
 	
 #define Result RTOTRR
-	RTOTDR(F186_9301);
+	RTOTDR(F186_9305);
 
 	RTLI(4);
 	RTLR(0,tr1);
@@ -99,12 +99,12 @@ EIF_TYPED_VALUE F186_9301 (EIF_REFERENCE Current)
 	RTLU (SK_REF, &Result);
 	RTLU (SK_REF, &Current);
 	
-	RTEAA(l_feature_name, 185, Current, 0, 0, 2585);
+	RTEAA(l_feature_name, 185, Current, 0, 0, 2589);
 	RTSA(Dtype(Current));
 	RTSC;
 	RTME(Dtype(Current), 0);
 	RTGC;
-	RTDBGEAA(185, Current, 2585);
+	RTDBGEAA(185, Current, 2589);
 	RTIV(Current, RTAL);
 	RTOTP;
 	RTHOOK(1);
@@ -113,7 +113,7 @@ EIF_TYPED_VALUE F186_9301 (EIF_REFERENCE Current)
 	tr1 = RTLN(354);
 	tr2 = RTMS_EX_H("Old expression evaluation failed.",33,707157806);
 	ur1 = tr2;
-	(FUNCTION_CAST(void, (EIF_REFERENCE, EIF_TYPED_VALUE)) RTWC(15205, Dtype(tr1)))(tr1, ur1x);
+	(FUNCTION_CAST(void, (EIF_REFERENCE, EIF_TYPED_VALUE)) RTWC(15212, Dtype(tr1)))(tr1, ur1x);
 	RTNHOOK(1,1);
 	Result = (EIF_REFERENCE) tr1;
 	RTVI(Current, RTAL);
@@ -133,7 +133,7 @@ EIF_TYPED_VALUE F186_9301 (EIF_REFERENCE Current)
 void EIF_Minit186 (void)
 {
 	GTCX
-	RTOTS (9301,F186_9301)
+	RTOTS (9305,F186_9305)
 }
 
 

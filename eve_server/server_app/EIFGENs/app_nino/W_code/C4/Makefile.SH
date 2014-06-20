@@ -57,13 +57,13 @@ OBJECTS = big_file_C4_c.obj
 
 OLDOBJECTS =  rt128.o rt128d.o rt127.o rt127d.o my105.o my105d.o ob113.o ob113d.o \
 	it114.o it114d.o do111.o do111d.o st130.o st130d.o st131.o st131d.o \
-	rt129.o rt129d.o rt126.o rt126d.o ws123.o ws123d.o ws125.o ws125d.o \
-	ht122.o ht122d.o ws124.o ws124d.o sh121.o sh121d.o wg117.o wg117d.o \
-	wg120.o wg120d.o th104.o th104d.o ht116.o ht116d.o ws115.o ws115d.o \
-	da101.o da101d.o da100.o da100d.o ob112.o ob112d.o ma110.o ma110d.o \
-	ws109.o ws109d.o ws108.o ws108d.o wg119.o wg119d.o th103.o th103d.o \
-	da99.o da99d.o pe107.o pe107d.o wg118.o wg118d.o th102.o th102d.o \
-	pr106.o pr106d.o 
+	rt129.o rt129d.o rt126.o rt126d.o ws123.o ws123d.o ht122.o ht122d.o \
+	ws125.o ws125d.o ws124.o ws124d.o sh121.o sh121d.o wg120.o wg120d.o \
+	wg117.o wg117d.o pr101.o pr101d.o th104.o th104d.o ht116.o ht116d.o \
+	ws115.o ws115d.o ob112.o ob112d.o ma110.o ma110d.o ws109.o ws109d.o \
+	ws108.o ws108d.o wg119.o wg119d.o pr100.o pr100d.o th103.o th103d.o \
+	pe107.o pe107d.o wg118.o wg118d.o th102.o th102d.o pr106.o pr106d.o \
+	we99.o we99d.o 
 
 all: Cobj4.o
 

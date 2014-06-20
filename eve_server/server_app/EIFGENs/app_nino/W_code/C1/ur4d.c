@@ -13,8 +13,8 @@ static EIF_TYPE_INDEX gen_type0_4 [] = {459,3,0xFFFF};
 static EIF_TYPE_INDEX gen_type1_4 [] = {0,0xFFFF};
 static EIF_TYPE_INDEX gen_type2_4 [] = {0,0xFFFF};
 static EIF_TYPE_INDEX gen_type3_4 [] = {0,0xFFFF};
-static EIF_TYPE_INDEX gen_type4_4 [] = {506,355,355,0xFFFF};
-static EIF_TYPE_INDEX gen_type5_4 [] = {506,355,355,0xFFFF};
+static EIF_TYPE_INDEX gen_type4_4 [] = {507,355,355,0xFFFF};
+static EIF_TYPE_INDEX gen_type5_4 [] = {507,355,355,0xFFFF};
 
 
 static struct desc_info desc_4[] = {
@@ -54,8 +54,8 @@ static struct desc_info desc_4[] = {
 	{32, (BODY_INDEX)-1, (EIF_TYPE_INDEX)-1, NULL},
 	{65, (BODY_INDEX)-1, (EIF_TYPE_INDEX)-1, NULL},
 	{66, (BODY_INDEX)-1, (EIF_TYPE_INDEX)-1, NULL},
-	{67, 0, 506, gen_type4_4},
-	{68, 8, 506, gen_type5_4},
+	{67, 0, 507, gen_type4_4},
+	{68, 8, 507, gen_type5_4},
 	{69, (BODY_INDEX)-1, 355, NULL},
 	{70, (BODY_INDEX)-1, 355, NULL},
 	{71, (BODY_INDEX)-1, 355, NULL},

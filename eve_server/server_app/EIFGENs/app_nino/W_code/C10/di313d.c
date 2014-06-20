@@ -51,7 +51,7 @@ static struct desc_info desc_313[] = {
 	{31, (BODY_INDEX)-1, (EIF_TYPE_INDEX)-1, NULL},
 	{32, (BODY_INDEX)-1, (EIF_TYPE_INDEX)-1, NULL},
 	{(BODY_INDEX)-1, (BODY_INDEX)-1, (EIF_TYPE_INDEX)-1, NULL},
-	{8988, (BODY_INDEX)-1, 346, NULL},
+	{8995, (BODY_INDEX)-1, 346, NULL},
 };
 
 extern void Init313(void);
@@ -59,7 +59,7 @@ void Init313(void)
 {
 	IDSC(desc_313, 0, 312);
 	IDSC(desc_313 + 1, 4, 312);
-	IDSC(desc_313 + 34, 308, 312);
+	IDSC(desc_313 + 34, 311, 312);
 }
 
 

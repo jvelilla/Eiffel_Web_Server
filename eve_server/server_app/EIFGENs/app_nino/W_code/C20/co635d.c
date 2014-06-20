@@ -1,5 +1,5 @@
 /*
- * Class COLLECTION [NATURAL_32]
+ * Class COLLECTION [INTEGER_64]
  */
 
 #include "eif_macros.h"
@@ -9,15 +9,15 @@
 extern "C" {
 #endif
 
-static EIF_TYPE_INDEX gen_type0_635 [] = {459,634,412,0xFFFF};
-static EIF_TYPE_INDEX gen_type1_635 [] = {634,412,0xFFFF};
+static EIF_TYPE_INDEX gen_type0_635 [] = {459,634,397,0xFFFF};
+static EIF_TYPE_INDEX gen_type1_635 [] = {634,397,0xFFFF};
 static EIF_TYPE_INDEX gen_type2_635 [] = {0,0xFFFF};
 static EIF_TYPE_INDEX gen_type3_635 [] = {0,0xFFFF};
-static EIF_TYPE_INDEX gen_type4_635 [] = {634,412,0xFFFF};
-static EIF_TYPE_INDEX gen_type5_635 [] = {634,412,0xFFFF};
+static EIF_TYPE_INDEX gen_type4_635 [] = {634,397,0xFFFF};
+static EIF_TYPE_INDEX gen_type5_635 [] = {634,397,0xFFFF};
 static EIF_TYPE_INDEX gen_type6_635 [] = {0,0xFFFF};
-static EIF_TYPE_INDEX gen_type7_635 [] = {634,412,0xFFFF};
-static EIF_TYPE_INDEX gen_type8_635 [] = {634,412,0xFFFF};
+static EIF_TYPE_INDEX gen_type7_635 [] = {634,397,0xFFFF};
+static EIF_TYPE_INDEX gen_type8_635 [] = {634,397,0xFFFF};
 static EIF_TYPE_INDEX gen_type9_635 [] = {629,0xFFF8,1,0xFFFF};
 static EIF_TYPE_INDEX gen_type10_635 [] = {0xFFF8,1,0xFFFF};
 
@@ -59,21 +59,21 @@ static struct desc_info desc_635[] = {
 	{32, (BODY_INDEX)-1, (EIF_TYPE_INDEX)-1, NULL},
 	{(BODY_INDEX)-1, (BODY_INDEX)-1, 346, NULL},
 	{(BODY_INDEX)-1, (BODY_INDEX)-1, 346, NULL},
-	{2760, (BODY_INDEX)-1, 346, NULL},
-	{2761, 0, 346, NULL},
-	{2762, (BODY_INDEX)-1, 346, NULL},
-	{2763, (BODY_INDEX)-1, (EIF_TYPE_INDEX)-1, NULL},
+	{2766, (BODY_INDEX)-1, 346, NULL},
+	{2767, 0, 346, NULL},
+	{2768, (BODY_INDEX)-1, 346, NULL},
 	{2764, (BODY_INDEX)-1, (EIF_TYPE_INDEX)-1, NULL},
+	{2765, (BODY_INDEX)-1, (EIF_TYPE_INDEX)-1, NULL},
 	{(BODY_INDEX)-1, (BODY_INDEX)-1, 629, gen_type9_635},
 	{(BODY_INDEX)-1, (BODY_INDEX)-1, (EIF_TYPE_INDEX)-1, gen_type10_635},
 	{(BODY_INDEX)-1, (BODY_INDEX)-1, 346, NULL},
 	{(BODY_INDEX)-1, (BODY_INDEX)-1, 346, NULL},
-	{2980, (BODY_INDEX)-1, 346, NULL},
+	{2984, (BODY_INDEX)-1, 346, NULL},
 	{(BODY_INDEX)-1, (BODY_INDEX)-1, (EIF_TYPE_INDEX)-1, NULL},
 	{(BODY_INDEX)-1, (BODY_INDEX)-1, (EIF_TYPE_INDEX)-1, NULL},
-	{2981, (BODY_INDEX)-1, (EIF_TYPE_INDEX)-1, NULL},
+	{2985, (BODY_INDEX)-1, (EIF_TYPE_INDEX)-1, NULL},
 	{(BODY_INDEX)-1, (BODY_INDEX)-1, (EIF_TYPE_INDEX)-1, NULL},
-	{2982, (BODY_INDEX)-1, (EIF_TYPE_INDEX)-1, NULL},
+	{2986, (BODY_INDEX)-1, (EIF_TYPE_INDEX)-1, NULL},
 	{(BODY_INDEX)-1, (BODY_INDEX)-1, (EIF_TYPE_INDEX)-1, NULL},
 };
 

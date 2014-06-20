@@ -48,8 +48,8 @@ OLDOBJECTS =  ws216.obj ws216d.obj it215.obj it215d.obj it214.obj it214d.obj ex2
 	cr203.obj cr203d.obj ad202.obj ad202d.obj ws217.obj ws217d.obj da226.obj da226d.obj \
 	ws218.obj ws218d.obj ws221.obj ws221d.obj co227.obj co227d.obj it213.obj it213d.obj \
 	as204.obj as204d.obj re230.obj re230d.obj ei201.obj ei201d.obj ra219.obj ra219d.obj \
-	sh229.obj sh229d.obj da225.obj da225d.obj ti224.obj ti224d.obj ab228.obj ab228d.obj \
-	du223.obj du223d.obj 
+	sh229.obj sh229d.obj da225.obj da225d.obj ti224.obj ti224d.obj du223.obj du223d.obj \
+	ab228.obj ab228d.obj 
 
 all::  Cobj7.lib
 

@@ -1,5 +1,5 @@
 /*
- * Class EIFFEL_ERRORS
+ * Class EIFFEL_RUNTIME
  */
 
 #include "eif_macros.h"
@@ -50,14 +50,20 @@ static struct desc_info desc_30[] = {
 	{30, (BODY_INDEX)-1, 29, NULL},
 	{31, (BODY_INDEX)-1, (EIF_TYPE_INDEX)-1, NULL},
 	{32, (BODY_INDEX)-1, (EIF_TYPE_INDEX)-1, NULL},
-	{454, (BODY_INDEX)-1, (EIF_TYPE_INDEX)-1, NULL},
-	{455, 0, 359, NULL},
-	{456, 24, 400, NULL},
-	{457, 8, 426, NULL},
-	{458, 16, 427, NULL},
-	{459, (BODY_INDEX)-1, (EIF_TYPE_INDEX)-1, NULL},
-	{452, (BODY_INDEX)-1, (EIF_TYPE_INDEX)-1, NULL},
-	{453, (BODY_INDEX)-1, (EIF_TYPE_INDEX)-1, NULL},
+	{470, (BODY_INDEX)-1, (EIF_TYPE_INDEX)-1, NULL},
+	{457, 0, 359, NULL},
+	{458, 32, 400, NULL},
+	{459, 8, 426, NULL},
+	{460, 16, 427, NULL},
+	{461, 24, 359, NULL},
+	{462, (BODY_INDEX)-1, (EIF_TYPE_INDEX)-1, NULL},
+	{463, (BODY_INDEX)-1, (EIF_TYPE_INDEX)-1, NULL},
+	{464, (BODY_INDEX)-1, 346, NULL},
+	{465, (BODY_INDEX)-1, 400, NULL},
+	{466, (BODY_INDEX)-1, 400, NULL},
+	{467, (BODY_INDEX)-1, 346, NULL},
+	{468, (BODY_INDEX)-1, 346, NULL},
+	{469, (BODY_INDEX)-1, 400, NULL},
 };
 
 extern void Init30(void);

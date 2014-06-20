@@ -1,5 +1,5 @@
 /*
- * Class JSON_READER
+ * Class JSON_TOKENS
  */
 
 #include "eif_macros.h"
@@ -16,7 +16,7 @@ static EIF_TYPE_INDEX gen_type3_69 [] = {0,0xFFFF};
 
 
 static struct desc_info desc_69[] = {
-	{(BODY_INDEX) 1169, (BODY_INDEX) -1, INVALID_DTYPE, NULL},
+	{(BODY_INDEX) -1, (BODY_INDEX) -1, INVALID_DTYPE, NULL},
 	{0, (BODY_INDEX)-1, 359, NULL},
 	{1, (BODY_INDEX)-1, 459, gen_type0_69},
 	{2, (BODY_INDEX)-1, 346, NULL},
@@ -50,18 +50,18 @@ static struct desc_info desc_69[] = {
 	{30, (BODY_INDEX)-1, 68, NULL},
 	{31, (BODY_INDEX)-1, (EIF_TYPE_INDEX)-1, NULL},
 	{32, (BODY_INDEX)-1, (EIF_TYPE_INDEX)-1, NULL},
-	{1170, (BODY_INDEX)-1, (EIF_TYPE_INDEX)-1, NULL},
-	{1171, (BODY_INDEX)-1, (EIF_TYPE_INDEX)-1, NULL},
-	{1172, (BODY_INDEX)-1, 343, NULL},
-	{1173, (BODY_INDEX)-1, (EIF_TYPE_INDEX)-1, NULL},
-	{1174, (BODY_INDEX)-1, (EIF_TYPE_INDEX)-1, NULL},
-	{1175, (BODY_INDEX)-1, (EIF_TYPE_INDEX)-1, NULL},
-	{1163, (BODY_INDEX)-1, 359, NULL},
-	{1164, (BODY_INDEX)-1, 346, NULL},
-	{1165, (BODY_INDEX)-1, 346, NULL},
-	{1166, 0, 359, NULL},
+	{1162, (BODY_INDEX)-1, 343, NULL},
+	{1163, (BODY_INDEX)-1, 343, NULL},
+	{1164, (BODY_INDEX)-1, 343, NULL},
+	{1165, (BODY_INDEX)-1, 343, NULL},
+	{1166, (BODY_INDEX)-1, 343, NULL},
 	{1167, (BODY_INDEX)-1, 343, NULL},
-	{1168, 8, 400, NULL},
+	{1168, (BODY_INDEX)-1, 343, NULL},
+	{1169, (BODY_INDEX)-1, 343, NULL},
+	{1158, (BODY_INDEX)-1, 346, NULL},
+	{1159, (BODY_INDEX)-1, 346, NULL},
+	{1160, (BODY_INDEX)-1, 346, NULL},
+	{1161, (BODY_INDEX)-1, 346, NULL},
 };
 
 extern void Init69(void);
@@ -69,7 +69,7 @@ void Init69(void)
 {
 	IDSC(desc_69, 0, 68);
 	IDSC(desc_69 + 1, 4, 68);
-	IDSC(desc_69 + 34, 312, 68);
+	IDSC(desc_69 + 34, 313, 68);
 }
 
 

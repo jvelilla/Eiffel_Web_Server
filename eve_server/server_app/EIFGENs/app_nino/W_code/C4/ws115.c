@@ -10,7 +10,7 @@
 extern "C" {
 #endif
 
-extern void F115_8106(EIF_REFERENCE, EIF_TYPED_VALUE);
+extern void F115_8110(EIF_REFERENCE, EIF_TYPED_VALUE);
 extern void EIF_Minit115(void);
 
 #ifdef __cplusplus
@@ -33,7 +33,7 @@ extern "C" {
 #endif
 
 /* {WSF_VALUE_VISITOR}.safe_process_value */
-void F115_8106 (EIF_REFERENCE Current, EIF_TYPED_VALUE arg1x)
+void F115_8110 (EIF_REFERENCE Current, EIF_TYPED_VALUE arg1x)
 {
 	GTCX
 	char *l_feature_name = "safe_process_value";
@@ -54,12 +54,12 @@ void F115_8106 (EIF_REFERENCE Current, EIF_TYPED_VALUE arg1x)
 	RTLU(SK_REF,&arg1);
 	RTLU (SK_REF, &Current);
 	
-	RTEAA(l_feature_name, 114, Current, 0, 1, 1767);
+	RTEAA(l_feature_name, 114, Current, 0, 1, 1771);
 	RTSA(Dtype(Current));
 	RTSC;
 	RTME(Dtype(Current), 0);
 	RTGC;
-	RTDBGEAA(114, Current, 1767);
+	RTDBGEAA(114, Current, 1771);
 	if (arg1) {
 		RTCC(arg1, 114, l_feature_name, 1, 387);
 	}
@@ -68,7 +68,7 @@ void F115_8106 (EIF_REFERENCE Current, EIF_TYPED_VALUE arg1x)
 	if ((EIF_BOOLEAN)(arg1 != NULL)) {
 		RTHOOK(2);
 		ur1 = RTCCL(Current);
-		(FUNCTION_CAST(void, (EIF_REFERENCE, EIF_TYPED_VALUE)) RTVF(16743, "process", arg1))(arg1, ur1x);
+		(FUNCTION_CAST(void, (EIF_REFERENCE, EIF_TYPED_VALUE)) RTVF(16750, "process", arg1))(arg1, ur1x);
 	}
 	RTVI(Current, RTAL);
 	RTRS;

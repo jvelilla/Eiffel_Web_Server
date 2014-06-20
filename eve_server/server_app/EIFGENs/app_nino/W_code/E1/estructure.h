@@ -7,7 +7,7 @@
 extern "C" {
 #endif
 
-struct eif_ex_11 {union overhead overhead; char data [1];};
+struct eif_ex_10 {union overhead overhead; char data [1];};
 struct eif_ex_37 {union overhead overhead; char data [1];};
 struct eif_ex_340 {union overhead overhead; char data [8];};
 struct eif_ex_343 {union overhead overhead; char data [8];};
@@ -24,20 +24,20 @@ struct eif_ex_418 {union overhead overhead; char data [8];};
 struct eif_ex_421 {union overhead overhead; char data [8];};
 struct eif_ex_424 {union overhead overhead; char data [8];};
 struct eif_ex_468 {union overhead overhead; char data [8];};
-struct eif_ex_511 {union overhead overhead; char data [8];};
-struct eif_ex_726 {union overhead overhead; char data [8];};
-struct eif_ex_805 {union overhead overhead; char data [8];};
-struct eif_ex_809 {union overhead overhead; char data [8];};
-struct eif_ex_813 {union overhead overhead; char data [8];};
+struct eif_ex_512 {union overhead overhead; char data [8];};
+struct eif_ex_793 {union overhead overhead; char data [8];};
+struct eif_ex_797 {union overhead overhead; char data [8];};
+struct eif_ex_801 {union overhead overhead; char data [8];};
+struct eif_ex_835 {union overhead overhead; char data [8];};
 struct eif_ex_839 {union overhead overhead; char data [8];};
 struct eif_ex_843 {union overhead overhead; char data [8];};
 struct eif_ex_851 {union overhead overhead; char data [8];};
+struct eif_ex_857 {union overhead overhead; char data [8];};
 struct eif_ex_860 {union overhead overhead; char data [8];};
-struct eif_ex_863 {union overhead overhead; char data [8];};
-struct eif_ex_867 {union overhead overhead; char data [8];};
-struct eif_ex_935 {union overhead overhead; char data [8];};
-struct eif_ex_980 {union overhead overhead; char data [8];};
-struct eif_ex_1059 {union overhead overhead; char data [8];};
+struct eif_ex_927 {union overhead overhead; char data [8];};
+struct eif_ex_974 {union overhead overhead; char data [8];};
+struct eif_ex_1051 {union overhead overhead; char data [8];};
+struct eif_ex_1060 {union overhead overhead; char data [8];};
 
 #ifdef __cplusplus
 }

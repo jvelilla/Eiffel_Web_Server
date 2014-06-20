@@ -51,12 +51,12 @@ static struct desc_info desc_246[] = {
 	{30, (BODY_INDEX)-1, 245, NULL},
 	{31, (BODY_INDEX)-1, (EIF_TYPE_INDEX)-1, NULL},
 	{32, (BODY_INDEX)-1, (EIF_TYPE_INDEX)-1, NULL},
-	{3951, (BODY_INDEX)-1, 346, NULL},
-	{3952, (BODY_INDEX)-1, (EIF_TYPE_INDEX)-1, NULL},
-	{3963, (BODY_INDEX)-1, 376, NULL},
-	{3964, (BODY_INDEX)-1, (EIF_TYPE_INDEX)-1, NULL},
-	{3965, 0, 471, gen_type4_246},
-	{3966, (BODY_INDEX)-1, (EIF_TYPE_INDEX)-1, NULL},
+	{3955, (BODY_INDEX)-1, 346, NULL},
+	{3956, (BODY_INDEX)-1, (EIF_TYPE_INDEX)-1, NULL},
+	{3967, (BODY_INDEX)-1, 376, NULL},
+	{3968, (BODY_INDEX)-1, (EIF_TYPE_INDEX)-1, NULL},
+	{3969, 0, 471, gen_type4_246},
+	{3970, (BODY_INDEX)-1, (EIF_TYPE_INDEX)-1, NULL},
 };
 
 extern void Init246(void);
@@ -64,10 +64,10 @@ void Init246(void)
 {
 	IDSC(desc_246, 0, 245);
 	IDSC(desc_246 + 1, 4, 245);
-	IDSC(desc_246 + 34, 402, 245);
-	IDSC(desc_246 + 36, 403, 245);
-	IDSC(desc_246 + 37, 340, 245);
-	IDSC(desc_246 + 39, 342, 245);
+	IDSC(desc_246 + 34, 409, 245);
+	IDSC(desc_246 + 36, 410, 245);
+	IDSC(desc_246 + 37, 342, 245);
+	IDSC(desc_246 + 39, 340, 245);
 }
 
 

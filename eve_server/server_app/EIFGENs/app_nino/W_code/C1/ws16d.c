@@ -60,7 +60,7 @@ void Init16(void)
 {
 	IDSC(desc_16, 0, 15);
 	IDSC(desc_16 + 1, 4, 15);
-	IDSC(desc_16 + 34, 338, 15);
+	IDSC(desc_16 + 34, 339, 15);
 }
 
 

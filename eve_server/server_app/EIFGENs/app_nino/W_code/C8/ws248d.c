@@ -16,7 +16,7 @@ static EIF_TYPE_INDEX gen_type3_248 [] = {0,0xFFFF};
 
 
 static struct desc_info desc_248[] = {
-	{(BODY_INDEX) 3968, (BODY_INDEX) -1, INVALID_DTYPE, NULL},
+	{(BODY_INDEX) 3975, (BODY_INDEX) -1, INVALID_DTYPE, NULL},
 	{0, (BODY_INDEX)-1, 359, NULL},
 	{1, (BODY_INDEX)-1, 459, gen_type0_248},
 	{2, (BODY_INDEX)-1, 346, NULL},
@@ -50,16 +50,16 @@ static struct desc_info desc_248[] = {
 	{30, (BODY_INDEX)-1, 247, NULL},
 	{31, (BODY_INDEX)-1, (EIF_TYPE_INDEX)-1, NULL},
 	{32, (BODY_INDEX)-1, (EIF_TYPE_INDEX)-1, NULL},
-	{3951, (BODY_INDEX)-1, 346, NULL},
-	{3975, (BODY_INDEX)-1, (EIF_TYPE_INDEX)-1, NULL},
-	{3967, (BODY_INDEX)-1, 376, NULL},
-	{3969, (BODY_INDEX)-1, (EIF_TYPE_INDEX)-1, NULL},
-	{3970, (BODY_INDEX)-1, (EIF_TYPE_INDEX)-1, NULL},
-	{3971, 0, 290, NULL},
-	{3972, 8, 359, NULL},
-	{3973, 16, 346, NULL},
-	{3974, (BODY_INDEX)-1, 16, NULL},
+	{3955, (BODY_INDEX)-1, 346, NULL},
+	{3973, (BODY_INDEX)-1, (EIF_TYPE_INDEX)-1, NULL},
+	{3971, (BODY_INDEX)-1, 376, NULL},
 	{3976, (BODY_INDEX)-1, (EIF_TYPE_INDEX)-1, NULL},
+	{3977, (BODY_INDEX)-1, (EIF_TYPE_INDEX)-1, NULL},
+	{3978, 0, 290, NULL},
+	{3979, 8, 359, NULL},
+	{3980, 16, 346, NULL},
+	{3972, (BODY_INDEX)-1, 16, NULL},
+	{3974, (BODY_INDEX)-1, (EIF_TYPE_INDEX)-1, NULL},
 };
 
 extern void Init248(void);
@@ -67,11 +67,11 @@ void Init248(void)
 {
 	IDSC(desc_248, 0, 247);
 	IDSC(desc_248 + 1, 4, 247);
-	IDSC(desc_248 + 34, 402, 247);
-	IDSC(desc_248 + 36, 403, 247);
-	IDSC(desc_248 + 37, 170, 247);
-	IDSC(desc_248 + 42, 320, 247);
-	IDSC(desc_248 + 43, 319, 247);
+	IDSC(desc_248 + 34, 409, 247);
+	IDSC(desc_248 + 36, 410, 247);
+	IDSC(desc_248 + 37, 171, 247);
+	IDSC(desc_248 + 42, 323, 247);
+	IDSC(desc_248 + 43, 322, 247);
 }
 
 

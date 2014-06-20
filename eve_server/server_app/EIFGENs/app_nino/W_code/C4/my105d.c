@@ -13,7 +13,7 @@ static EIF_TYPE_INDEX gen_type0_105 [] = {459,104,0xFFFF};
 static EIF_TYPE_INDEX gen_type1_105 [] = {0,0xFFFF};
 static EIF_TYPE_INDEX gen_type2_105 [] = {0,0xFFFF};
 static EIF_TYPE_INDEX gen_type3_105 [] = {0,0xFFFF};
-static EIF_TYPE_INDEX gen_type4_105 [] = {590,346,0xFFFF};
+static EIF_TYPE_INDEX gen_type4_105 [] = {718,346,0xFFFF};
 
 
 static struct desc_info desc_105[] = {
@@ -56,9 +56,9 @@ static struct desc_info desc_105[] = {
 	{1656, (BODY_INDEX)-1, (EIF_TYPE_INDEX)-1, NULL},
 	{1657, (BODY_INDEX)-1, (EIF_TYPE_INDEX)-1, NULL},
 	{1671, (BODY_INDEX)-1, (EIF_TYPE_INDEX)-1, NULL},
-	{1672, 16, 349, NULL},
-	{1673, 8, 346, NULL},
-	{1678, (BODY_INDEX)-1, (EIF_TYPE_INDEX)-1, NULL},
+	{1672, 32, 349, NULL},
+	{1673, 16, 346, NULL},
+	{1682, (BODY_INDEX)-1, (EIF_TYPE_INDEX)-1, NULL},
 	{1674, (BODY_INDEX)-1, (EIF_TYPE_INDEX)-1, NULL},
 	{1675, (BODY_INDEX)-1, (EIF_TYPE_INDEX)-1, NULL},
 	{1676, (BODY_INDEX)-1, (EIF_TYPE_INDEX)-1, NULL},
@@ -70,13 +70,17 @@ static struct desc_info desc_105[] = {
 	{1663, (BODY_INDEX)-1, 346, NULL},
 	{1664, (BODY_INDEX)-1, (EIF_TYPE_INDEX)-1, NULL},
 	{1665, 0, 314, NULL},
-	{1666, (BODY_INDEX)-1, 590, gen_type4_105},
+	{1666, (BODY_INDEX)-1, 718, gen_type4_105},
 	{1667, (BODY_INDEX)-1, (EIF_TYPE_INDEX)-1, NULL},
 	{1668, (BODY_INDEX)-1, (EIF_TYPE_INDEX)-1, NULL},
 	{1669, (BODY_INDEX)-1, 346, NULL},
 	{1670, (BODY_INDEX)-1, 349, NULL},
-	{1677, (BODY_INDEX)-1, 359, NULL},
-	{1679, (BODY_INDEX)-1, (EIF_TYPE_INDEX)-1, NULL},
+	{1677, (BODY_INDEX)-1, (EIF_TYPE_INDEX)-1, NULL},
+	{1678, (BODY_INDEX)-1, 359, NULL},
+	{1679, 8, 372, NULL},
+	{1680, 20, 400, NULL},
+	{1681, 24, 400, NULL},
+	{1683, (BODY_INDEX)-1, (EIF_TYPE_INDEX)-1, NULL},
 };
 
 extern void Init105(void);
@@ -84,10 +88,10 @@ void Init105(void)
 {
 	IDSC(desc_105, 0, 104);
 	IDSC(desc_105 + 1, 4, 104);
-	IDSC(desc_105 + 34, 460, 104);
-	IDSC(desc_105 + 36, 400, 104);
-	IDSC(desc_105 + 38, 296, 104);
-	IDSC(desc_105 + 58, 153, 104);
+	IDSC(desc_105 + 34, 459, 104);
+	IDSC(desc_105 + 36, 407, 104);
+	IDSC(desc_105 + 38, 300, 104);
+	IDSC(desc_105 + 58, 156, 104);
 }
 
 

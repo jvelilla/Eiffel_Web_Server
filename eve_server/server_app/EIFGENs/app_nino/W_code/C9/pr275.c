@@ -10,8 +10,8 @@
 extern "C" {
 #endif
 
-extern EIF_TYPED_VALUE F275_11637(EIF_REFERENCE);
-extern void F275_11638(EIF_REFERENCE, EIF_TYPED_VALUE, EIF_TYPED_VALUE, EIF_TYPED_VALUE);
+extern EIF_TYPED_VALUE F275_11641(EIF_REFERENCE);
+extern void F275_11642(EIF_REFERENCE, EIF_TYPED_VALUE, EIF_TYPED_VALUE, EIF_TYPED_VALUE);
 extern void EIF_Minit275(void);
 
 #ifdef __cplusplus
@@ -23,16 +23,16 @@ extern void EIF_Minit275(void);
 extern "C" {
 #endif
 
-#ifndef INLINE_F275_11637
-static EIF_INTEGER_32 inline_F275_11637 (void)
+#ifndef INLINE_F275_11641
+static EIF_INTEGER_32 inline_F275_11641 (void)
 {
 	return (EIF_INTEGER_32) (GetCurrentProcessId ())
 	;
 }
-#define INLINE_F275_11637
+#define INLINE_F275_11641
 #endif
-#ifndef INLINE_F275_11638
-static void inline_F275_11638 (EIF_POINTER* arg1, EIF_INTEGER_32* arg2, EIF_BOOLEAN* arg3)
+#ifndef INLINE_F275_11642
+static void inline_F275_11642 (EIF_POINTER* arg1, EIF_INTEGER_32* arg2, EIF_BOOLEAN* arg3)
 {
 	{										
 	TCHAR *buffer;
@@ -49,7 +49,7 @@ static void inline_F275_11638 (EIF_POINTER* arg1, EIF_INTEGER_32* arg2, EIF_BOOL
 }
 	;
 }
-#define INLINE_F275_11638
+#define INLINE_F275_11642
 #endif
 
 #ifdef __cplusplus
@@ -62,7 +62,7 @@ extern "C" {
 #endif
 
 /* {PROCESS_INFO_IMP}.process_id */
-EIF_TYPED_VALUE F275_11637 (EIF_REFERENCE Current)
+EIF_TYPED_VALUE F275_11641 (EIF_REFERENCE Current)
 {
 	GTCX
 	char *l_feature_name = "process_id";
@@ -78,13 +78,13 @@ EIF_TYPED_VALUE F275_11637 (EIF_REFERENCE Current)
 	RTLU (SK_INT32, &Result);
 	RTLU (SK_REF, &Current);
 	
-	RTEAA(l_feature_name, 274, Current, 0, 0, 4510);
+	RTEAA(l_feature_name, 274, Current, 0, 0, 4514);
 	RTSA(Dtype(Current));
 	RTSC;
 	RTME(Dtype(Current), 1);
-	RTDBGEAA(274, Current, 4510);
+	RTDBGEAA(274, Current, 4514);
 	RTIV(Current, RTAL);
-	Result = inline_F275_11637 ();
+	Result = inline_F275_11641 ();
 	RTVI(Current, RTAL);
 	RTRS;
 	RTHOOK(1);
@@ -97,7 +97,7 @@ EIF_TYPED_VALUE F275_11637 (EIF_REFERENCE Current)
 }
 
 /* {PROCESS_INFO_IMP}.get_process_module */
-void F275_11638 (EIF_REFERENCE Current, EIF_TYPED_VALUE arg1x, EIF_TYPED_VALUE arg2x, EIF_TYPED_VALUE arg3x)
+void F275_11642 (EIF_REFERENCE Current, EIF_TYPED_VALUE arg1x, EIF_TYPED_VALUE arg2x, EIF_TYPED_VALUE arg3x)
 {
 	GTCX
 	char *l_feature_name = "get_process_module";
@@ -121,13 +121,13 @@ void F275_11638 (EIF_REFERENCE Current, EIF_TYPED_VALUE arg1x, EIF_TYPED_VALUE a
 	RTLU(SK_POINTER,&arg3);
 	RTLU (SK_REF, &Current);
 	
-	RTEAA(l_feature_name, 274, Current, 0, 3, 4511);
+	RTEAA(l_feature_name, 274, Current, 0, 3, 4515);
 	RTSA(Dtype(Current));
 	RTSC;
 	RTME(Dtype(Current), 1);
-	RTDBGEAA(274, Current, 4511);
+	RTDBGEAA(274, Current, 4515);
 	RTIV(Current, RTAL);
-	inline_F275_11638 ((EIF_POINTER*) arg1, (EIF_INTEGER_32*) arg2, (EIF_BOOLEAN*) arg3);
+	inline_F275_11642 ((EIF_POINTER*) arg1, (EIF_INTEGER_32*) arg2, (EIF_BOOLEAN*) arg3);
 	RTVI(Current, RTAL);
 	RTRS;
 	RTHOOK(1);

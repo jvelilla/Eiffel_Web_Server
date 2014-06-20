@@ -61,8 +61,8 @@ void Init103(void)
 {
 	IDSC(desc_103, 0, 102);
 	IDSC(desc_103 + 1, 4, 102);
-	IDSC(desc_103 + 34, 460, 102);
-	IDSC(desc_103 + 36, 400, 102);
+	IDSC(desc_103 + 34, 459, 102);
+	IDSC(desc_103 + 36, 407, 102);
 }
 
 

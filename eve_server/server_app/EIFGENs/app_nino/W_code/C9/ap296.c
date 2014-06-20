@@ -10,8 +10,8 @@
 extern "C" {
 #endif
 
-extern void F296_12118(EIF_REFERENCE);
-extern void F296_12119(EIF_REFERENCE, EIF_TYPED_VALUE, EIF_TYPED_VALUE);
+extern void F296_12125(EIF_REFERENCE);
+extern void F296_12126(EIF_REFERENCE, EIF_TYPED_VALUE, EIF_TYPED_VALUE);
 extern void EIF_Minit296(void);
 
 #ifdef __cplusplus
@@ -34,7 +34,7 @@ extern "C" {
 #endif
 
 /* {APPLICATION}.initialize */
-void F296_12118 (EIF_REFERENCE Current)
+void F296_12125 (EIF_REFERENCE Current)
 {
 	GTCX
 	char *l_feature_name = "initialize";
@@ -57,21 +57,21 @@ void F296_12118 (EIF_REFERENCE Current)
 	RTLU (SK_VOID, NULL);
 	RTLU (SK_REF, &Current);
 	
-	RTEAA(l_feature_name, 295, Current, 0, 0, 4962);
+	RTEAA(l_feature_name, 295, Current, 0, 0, 4969);
 	RTSA(dtype);
 	RTSC;
 	RTME(dtype, 0);
 	RTGC;
-	RTDBGEAA(295, Current, 4962);
+	RTDBGEAA(295, Current, 4969);
 	RTIV(Current, RTAL);
 	RTHOOK(1);
 	tr1 = RTMS_EX_H("port",4,1886351988);
 	ur1 = tr1;
 	ur2 = RTLN(400);
 	*(EIF_INTEGER_32 *)ur2 = ((EIF_INTEGER_32) 9090L);
-	(FUNCTION_CAST(void, (EIF_REFERENCE, EIF_TYPED_VALUE, EIF_TYPED_VALUE)) RTWF(9081, dtype))(Current, ur1x, ur2x);
+	(FUNCTION_CAST(void, (EIF_REFERENCE, EIF_TYPED_VALUE, EIF_TYPED_VALUE)) RTWF(9085, dtype))(Current, ur1x, ur2x);
 	RTHOOK(2);
-	(FUNCTION_CAST(void, (EIF_REFERENCE)) RTWF(9078, 294))(Current);
+	(FUNCTION_CAST(void, (EIF_REFERENCE)) RTWF(9082, 294))(Current);
 	RTVI(Current, RTAL);
 	RTRS;
 	RTHOOK(3);
@@ -85,7 +85,7 @@ void F296_12118 (EIF_REFERENCE Current)
 }
 
 /* {APPLICATION}.launch */
-void F296_12119 (EIF_REFERENCE Current, EIF_TYPED_VALUE arg1x, EIF_TYPED_VALUE arg2x)
+void F296_12126 (EIF_REFERENCE Current, EIF_TYPED_VALUE arg1x, EIF_TYPED_VALUE arg2x)
 {
 	GTCX
 	char *l_feature_name = "launch";
@@ -117,12 +117,12 @@ void F296_12119 (EIF_REFERENCE Current, EIF_TYPED_VALUE arg1x, EIF_TYPED_VALUE a
 	RTLU (SK_REF, &Current);
 	RTLU(SK_REF, &loc1);
 	
-	RTEAA(l_feature_name, 295, Current, 1, 2, 4963);
+	RTEAA(l_feature_name, 295, Current, 1, 2, 4970);
 	RTSA(Dtype(Current));
 	RTSC;
 	RTME(Dtype(Current), 0);
 	RTGC;
-	RTDBGEAA(295, Current, 4963);
+	RTDBGEAA(295, Current, 4970);
 	if (arg1) {
 		RTCC(arg1, 295, l_feature_name, 1, 215);
 	}

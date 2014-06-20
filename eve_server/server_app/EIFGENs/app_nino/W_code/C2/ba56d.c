@@ -63,7 +63,7 @@ void Init56(void)
 {
 	IDSC(desc_56, 0, 55);
 	IDSC(desc_56 + 1, 4, 55);
-	IDSC(desc_56 + 34, 464, 55);
+	IDSC(desc_56 + 34, 472, 55);
 }
 
 

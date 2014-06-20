@@ -10,16 +10,43 @@ class
 inherit
 	THREAD
 
+create
+	make, make_with_values
+
+feature
+	make_with_values (sec:INTEGER; lifetime:INTEGER)
+		do
+			make
+			seconds_after_midnight:=sec
+			eifgen_duration:=lifetime
+		end
 
 feature --Variables
 
 	--Change this address
 	fixed_project_path:STRING = "C:/Users/Manav/Desktop/eve_server/projects/"
+	sub_path:PATH
+	seconds_after_midnight:INTEGER
+	eifgen_duration:INTEGER
 
 feature --Execute
 	execute
+		local
+			time:DATE_TIME
 		do
-			delete_eifgens
+			--Running this thread infinitely. And when the time is seconds_after_midnight seconds past midnight ,it will check to delete the usused EIFGEN's
+			from
+
+			until
+				false
+			loop
+				create time.make_now
+				--io.put_integer (time.time.seconds)
+				--At seconds_after_midnight seconds past midnight everyday, it will check to delete the EIFGEN's if they haven't been used for over 90 days.
+				if time.time.seconds=seconds_after_midnight then
+					delete_eifgens
+				end
+			end
 		end
 
 feature --Executing functions
@@ -28,7 +55,6 @@ feature --Executing functions
 			local
 				main_dir:DIRECTORY
 				file:RAW_FILE
-				sub_path:PATH
 				eifgen_dir:DIRECTORY
 				date:DATE_TIME
 				cur_date:DATE_TIME
@@ -50,7 +76,7 @@ feature --Executing functions
 							create date.make_from_epoch(file.date)
 							create cur_date.make_now
 							duration:=cur_date.relative_duration (date)
-							if duration.seconds_count>=(60*60*24*90) then
+							if duration.seconds_count>=eifgen_duration then
 								eifgen_dir.recursive_delete
 --								io.put_string (date.out)
 --								io.put_new_line

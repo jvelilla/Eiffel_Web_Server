@@ -50,8 +50,8 @@ static struct desc_info desc_159[] = {
 	{30, (BODY_INDEX)-1, 158, NULL},
 	{31, (BODY_INDEX)-1, (EIF_TYPE_INDEX)-1, NULL},
 	{32, (BODY_INDEX)-1, (EIF_TYPE_INDEX)-1, NULL},
-	{2338, (BODY_INDEX)-1, (EIF_TYPE_INDEX)-1, NULL},
-	{2339, (BODY_INDEX)-1, (EIF_TYPE_INDEX)-1, NULL},
+	{2342, (BODY_INDEX)-1, (EIF_TYPE_INDEX)-1, NULL},
+	{2343, (BODY_INDEX)-1, (EIF_TYPE_INDEX)-1, NULL},
 };
 
 extern void Init159(void);

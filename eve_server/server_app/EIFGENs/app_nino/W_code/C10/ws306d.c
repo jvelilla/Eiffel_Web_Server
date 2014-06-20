@@ -51,16 +51,16 @@ static struct desc_info desc_306[] = {
 	{30, (BODY_INDEX)-1, 305, NULL},
 	{31, (BODY_INDEX)-1, (EIF_TYPE_INDEX)-1, NULL},
 	{32, (BODY_INDEX)-1, (EIF_TYPE_INDEX)-1, NULL},
-	{3714, (BODY_INDEX)-1, 259, NULL},
-	{8888, (BODY_INDEX)-1, (EIF_TYPE_INDEX)-1, NULL},
-	{8889, 0, 296, NULL},
-	{8890, 8, 370, NULL},
-	{8891, 16, 485, gen_type4_306},
-	{8892, 24, 355, NULL},
-	{8893, (BODY_INDEX)-1, (EIF_TYPE_INDEX)-1, NULL},
-	{8894, (BODY_INDEX)-1, (EIF_TYPE_INDEX)-1, NULL},
+	{3718, (BODY_INDEX)-1, 259, NULL},
 	{8895, (BODY_INDEX)-1, (EIF_TYPE_INDEX)-1, NULL},
-	{8896, (BODY_INDEX)-1, (EIF_TYPE_INDEX)-1, NULL},
+	{8896, 0, 296, NULL},
+	{8897, 8, 370, NULL},
+	{8898, 16, 485, gen_type4_306},
+	{8899, 24, 355, NULL},
+	{8900, (BODY_INDEX)-1, (EIF_TYPE_INDEX)-1, NULL},
+	{8901, (BODY_INDEX)-1, (EIF_TYPE_INDEX)-1, NULL},
+	{8902, (BODY_INDEX)-1, (EIF_TYPE_INDEX)-1, NULL},
+	{8903, (BODY_INDEX)-1, (EIF_TYPE_INDEX)-1, NULL},
 };
 
 extern void Init306(void);
@@ -68,7 +68,7 @@ void Init306(void)
 {
 	IDSC(desc_306, 0, 305);
 	IDSC(desc_306 + 1, 4, 305);
-	IDSC(desc_306 + 34, 321, 305);
+	IDSC(desc_306 + 34, 324, 305);
 	IDSC(desc_306 + 35, 435, 305);
 	IDSC(desc_306 + 43, 288, 305);
 }

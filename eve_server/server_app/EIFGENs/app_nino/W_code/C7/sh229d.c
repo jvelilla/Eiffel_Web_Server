@@ -50,7 +50,7 @@ static struct desc_info desc_229[] = {
 	{30, (BODY_INDEX)-1, 228, NULL},
 	{31, (BODY_INDEX)-1, (EIF_TYPE_INDEX)-1, NULL},
 	{32, (BODY_INDEX)-1, (EIF_TYPE_INDEX)-1, NULL},
-	{3714, (BODY_INDEX)-1, 259, NULL},
+	{3718, (BODY_INDEX)-1, 259, NULL},
 };
 
 extern void Init229(void);
@@ -58,7 +58,7 @@ void Init229(void)
 {
 	IDSC(desc_229, 0, 228);
 	IDSC(desc_229 + 1, 4, 228);
-	IDSC(desc_229 + 34, 321, 228);
+	IDSC(desc_229 + 34, 324, 228);
 }
 
 

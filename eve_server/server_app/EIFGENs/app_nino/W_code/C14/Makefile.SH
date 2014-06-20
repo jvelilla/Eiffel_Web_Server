@@ -57,12 +57,12 @@ OBJECTS = big_file_C14_c.obj
 
 OLDOBJECTS =  it458.o it458d.o sp461.o sp461d.o ty460.o ty460d.o rt443.o rt443d.o \
 	ce459.o ce459d.o da454.o da454d.o eq455.o eq455d.o co433.o co433d.o \
-	rt442.o rt442d.o rt444.o rt444d.o rt441.o rt441d.o er432.o er432d.o \
-	ws440.o ws440d.o ht431.o ht431d.o da451.o da451d.o da449.o da449d.o \
-	ti447.o ti447d.o da452.o da452d.o er439.o er439d.o er438.o er438d.o \
-	er437.o er437d.o ht434.o ht434d.o wg436.o wg436d.o th430.o th430d.o \
-	da453.o da453d.o fi450.o fi450d.o da448.o da448d.o ti446.o ti446d.o \
-	we457.o we457d.o ht435.o ht435d.o we456.o we456d.o ur445.o ur445d.o \
+	rt444.o rt444d.o rt442.o rt442d.o rt441.o rt441d.o er432.o er432d.o \
+	ws440.o ws440d.o ht431.o ht431d.o da451.o da451d.o ti449.o ti449d.o \
+	da447.o da447d.o da452.o da452d.o er439.o er439d.o er437.o er437d.o \
+	er438.o er438d.o wg436.o wg436d.o ht434.o ht434d.o we457.o we457d.o \
+	th430.o th430d.o da450.o da450d.o ti448.o ti448d.o da453.o da453d.o \
+	fi446.o fi446d.o ht435.o ht435d.o we456.o we456d.o ur445.o ur445d.o \
 	ur429.o ur429d.o 
 
 all: Cobj14.o

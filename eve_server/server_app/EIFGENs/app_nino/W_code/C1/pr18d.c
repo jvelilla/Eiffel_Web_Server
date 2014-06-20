@@ -62,7 +62,7 @@ void Init18(void)
 {
 	IDSC(desc_18, 0, 17);
 	IDSC(desc_18 + 1, 4, 17);
-	IDSC(desc_18 + 34, 309, 17);
+	IDSC(desc_18 + 34, 314, 17);
 }
 
 
