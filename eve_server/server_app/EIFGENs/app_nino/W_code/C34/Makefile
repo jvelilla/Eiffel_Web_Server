@@ -41,9 +41,16 @@ SYSTEM_IN_DYNAMIC_LIB = app.dll
 
 OBJECTS = big_file_C34_c.obj 
 
-OLDOBJECTS =  fu1090.obj fu1090d.obj fu1091.obj fu1091d.obj ty1089.obj ty1089d.obj st1092.obj \
-	st1092d.obj rt1098.obj rt1098d.obj rt1094.obj rt1094d.obj rt1097.obj rt1097d.obj \
-	rt1093.obj rt1093d.obj rt1095.obj rt1095d.obj rt1096.obj rt1096d.obj 
+OLDOBJECTS =  fu1094.obj fu1094d.obj fu1105.obj fu1105d.obj fu1107.obj fu1107d.obj fu1109.obj \
+	fu1109d.obj fu1110.obj fu1110d.obj fu1115.obj fu1115d.obj ty1096.obj ty1096d.obj \
+	ty1097.obj ty1097d.obj ty1098.obj ty1098d.obj ty1106.obj ty1106d.obj ty1119.obj \
+	ty1119d.obj ty1120.obj ty1120d.obj li1111.obj li1111d.obj in1090.obj in1090d.obj \
+	li1093.obj li1093d.obj li1113.obj li1113d.obj li1112.obj li1112d.obj li1114.obj \
+	li1114d.obj un1092.obj un1092d.obj ta1091.obj ta1091d.obj se1118.obj se1118d.obj \
+	co1121.obj co1121d.obj ch1089.obj ch1089d.obj rt1095.obj rt1095d.obj rt1101.obj \
+	rt1101d.obj rt1102.obj rt1102d.obj rt1116.obj rt1116d.obj rt1117.obj rt1117d.obj \
+	rt1099.obj rt1099d.obj rt1103.obj rt1103d.obj rt1100.obj rt1100d.obj rt1104.obj \
+	rt1104d.obj rt1108.obj rt1108d.obj 
 
 all::  Cobj34.lib
 

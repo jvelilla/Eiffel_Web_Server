@@ -41,15 +41,15 @@ SYSTEM_IN_DYNAMIC_LIB = app.dll
 
 OBJECTS = big_file_C6_c.obj 
 
-OLDOBJECTS =  ex172.obj ex172d.obj in169.obj in169d.obj no191.obj no191d.obj fl176.obj fl176d.obj \
-	op180.obj op180d.obj ei187.obj ei187d.obj re184.obj re184d.obj re183.obj re183d.obj \
-	ex190.obj ex190d.obj vo197.obj vo197d.obj ex182.obj ex182d.obj io195.obj io195d.obj \
-	op179.obj op179d.obj mi194.obj mi194d.obj de173.obj de173d.obj co178.obj co178d.obj \
-	ol186.obj ol186d.obj se193.obj se193d.obj ex171.obj ex171d.obj so168.obj so168d.obj \
-	la196.obj la196d.obj ei189.obj ei189d.obj ha175.obj ha175d.obj op177.obj op177d.obj \
-	sy185.obj sy185d.obj ob181.obj ob181d.obj da192.obj da192d.obj sh167.obj sh167d.obj \
-	ws165.obj ws165d.obj ws166.obj ws166d.obj ne170.obj ne170d.obj ei188.obj ei188d.obj \
-	ma174.obj ma174d.obj 
+OLDOBJECTS =  is169.obj is169d.obj ex197.obj ex197d.obj in194.obj in194d.obj eq175.obj eq175d.obj \
+	in172.obj in172d.obj ex171.obj ex171d.obj eq170.obj eq170d.obj ex168.obj ex168d.obj \
+	ex196.obj ex196d.obj ws167.obj ws167d.obj in174.obj in174d.obj in173.obj in173d.obj \
+	so193.obj so193d.obj sh192.obj sh192d.obj ws190.obj ws190d.obj ne195.obj ne195d.obj \
+	ht185.obj ht185d.obj ws191.obj ws191d.obj ht165.obj ht165d.obj ws188.obj ws188d.obj \
+	wg166.obj wg166d.obj ht184.obj ht184d.obj ws187.obj ws187d.obj ws189.obj ws189d.obj \
+	ht183.obj ht183d.obj me186.obj me186d.obj ht180.obj ht180d.obj ht181.obj ht181d.obj \
+	ht178.obj ht178d.obj ba177.obj ba177d.obj ht182.obj ht182d.obj we176.obj we176d.obj \
+	ht179.obj ht179d.obj 
 
 all::  Cobj6.lib
 

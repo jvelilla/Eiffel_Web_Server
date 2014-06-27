@@ -2,12 +2,12 @@ INCLUDE_PATH =
 SHELL = \bin\sh
 CC = cl
 CPP = cl
-CFLAGS = -Od -MT -w -nologo -D_WIN32_WINNT=0x0500 -DWINVER=0x0500 -D_CRT_SECURE_NO_DEPRECATE -D_UNICODE -DUNICODE   -DEIF_IEEE_BEHAVIOR -DWORKBENCH -I"C:\Python27\Eiffel_14.05_95158\studio\spec\win64\include" -I. $(INCLUDE_PATH)
-CPPFLAGS = -Od -MT -w -nologo -D_WIN32_WINNT=0x0500 -DWINVER=0x0500 -D_CRT_SECURE_NO_DEPRECATE -D_UNICODE -DUNICODE   -DWORKBENCH -I"C:\Python27\Eiffel_14.05_95158\studio\spec\win64\include" -I. $(INCLUDE_PATH)
+CFLAGS = -Od -MT -w -nologo -D_WIN32_WINNT=0x0500 -DWINVER=0x0500 -D_CRT_SECURE_NO_DEPRECATE -D_UNICODE -DUNICODE  -DEIF_THREADS  -DEIF_IEEE_BEHAVIOR -DWORKBENCH -I"C:\Python27\Eiffel_14.05_95158\studio\spec\win64\include" -I. $(INCLUDE_PATH)
+CPPFLAGS = -Od -MT -w -nologo -D_WIN32_WINNT=0x0500 -DWINVER=0x0500 -D_CRT_SECURE_NO_DEPRECATE -D_UNICODE -DUNICODE  -DEIF_THREADS  -DWORKBENCH -I"C:\Python27\Eiffel_14.05_95158\studio\spec\win64\include" -I. $(INCLUDE_PATH)
 LDFLAGS = -STACK:5000000 -NODEFAULTLIB:libc
 CCLDFLAGS = -STACK:5000000 -NODEFAULTLIB:libc  -SUBSYSTEM:CONSOLE
 LDSHAREDFLAGS =  -dll -incremental:no -NODEFAULTLIB:libc
-EIFLIB = "C:\Python27\Eiffel_14.05_95158\studio\spec\win64\lib\msc\wkbench.lib"
+EIFLIB = "C:\Python27\Eiffel_14.05_95158\studio\spec\win64\lib\msc\mtwkbench.lib"
 EIFTEMPLATES = C:\Python27\Eiffel_14.05_95158\studio\config\win64\templates
 LIBS = 
 MAKE = nmake -s -nologo
@@ -39,7 +39,7 @@ SYSTEM_IN_DYNAMIC_LIB = sample.dll
 .cpp.obj:
 	$(CPP) $(CPPFLAGS) -c $<
 
-SUBDIRS = C1 E1
+SUBDIRS = C1 C2 C3 C4 C5 C6 C7 C8 C9 C10 C11 C12 C13 C14 C15 C16 C17 C18 C19 C20 C21 E1
 
 EXTERNALS = 
 
@@ -49,6 +49,106 @@ all:: sample.exe
 C1\Cobj1.lib: Makefile E1\estructure.h
 	cd C1
 	$(START_TEST) $(MAKE) Cobj1.lib $(END_TEST)
+	cd ..
+
+C2\Cobj2.lib: Makefile E1\estructure.h
+	cd C2
+	$(START_TEST) $(MAKE) Cobj2.lib $(END_TEST)
+	cd ..
+
+C3\Cobj3.lib: Makefile E1\estructure.h
+	cd C3
+	$(START_TEST) $(MAKE) Cobj3.lib $(END_TEST)
+	cd ..
+
+C4\Cobj4.lib: Makefile E1\estructure.h
+	cd C4
+	$(START_TEST) $(MAKE) Cobj4.lib $(END_TEST)
+	cd ..
+
+C5\Cobj5.lib: Makefile E1\estructure.h
+	cd C5
+	$(START_TEST) $(MAKE) Cobj5.lib $(END_TEST)
+	cd ..
+
+C6\Cobj6.lib: Makefile E1\estructure.h
+	cd C6
+	$(START_TEST) $(MAKE) Cobj6.lib $(END_TEST)
+	cd ..
+
+C7\Cobj7.lib: Makefile E1\estructure.h
+	cd C7
+	$(START_TEST) $(MAKE) Cobj7.lib $(END_TEST)
+	cd ..
+
+C8\Cobj8.lib: Makefile E1\estructure.h
+	cd C8
+	$(START_TEST) $(MAKE) Cobj8.lib $(END_TEST)
+	cd ..
+
+C9\Cobj9.lib: Makefile E1\estructure.h
+	cd C9
+	$(START_TEST) $(MAKE) Cobj9.lib $(END_TEST)
+	cd ..
+
+C10\Cobj10.lib: Makefile E1\estructure.h
+	cd C10
+	$(START_TEST) $(MAKE) Cobj10.lib $(END_TEST)
+	cd ..
+
+C11\Cobj11.lib: Makefile E1\estructure.h
+	cd C11
+	$(START_TEST) $(MAKE) Cobj11.lib $(END_TEST)
+	cd ..
+
+C12\Cobj12.lib: Makefile E1\estructure.h
+	cd C12
+	$(START_TEST) $(MAKE) Cobj12.lib $(END_TEST)
+	cd ..
+
+C13\Cobj13.lib: Makefile E1\estructure.h
+	cd C13
+	$(START_TEST) $(MAKE) Cobj13.lib $(END_TEST)
+	cd ..
+
+C14\Cobj14.lib: Makefile E1\estructure.h
+	cd C14
+	$(START_TEST) $(MAKE) Cobj14.lib $(END_TEST)
+	cd ..
+
+C15\Cobj15.lib: Makefile E1\estructure.h
+	cd C15
+	$(START_TEST) $(MAKE) Cobj15.lib $(END_TEST)
+	cd ..
+
+C16\Cobj16.lib: Makefile E1\estructure.h
+	cd C16
+	$(START_TEST) $(MAKE) Cobj16.lib $(END_TEST)
+	cd ..
+
+C17\Cobj17.lib: Makefile E1\estructure.h
+	cd C17
+	$(START_TEST) $(MAKE) Cobj17.lib $(END_TEST)
+	cd ..
+
+C18\Cobj18.lib: Makefile E1\estructure.h
+	cd C18
+	$(START_TEST) $(MAKE) Cobj18.lib $(END_TEST)
+	cd ..
+
+C19\Cobj19.lib: Makefile E1\estructure.h
+	cd C19
+	$(START_TEST) $(MAKE) Cobj19.lib $(END_TEST)
+	cd ..
+
+C20\Cobj20.lib: Makefile E1\estructure.h
+	cd C20
+	$(START_TEST) $(MAKE) Cobj20.lib $(END_TEST)
+	cd ..
+
+C21\Cobj21.lib: Makefile E1\estructure.h
+	cd C21
+	$(START_TEST) $(MAKE) Cobj21.lib $(END_TEST)
 	cd ..
 
 E1\emain.obj:  Makefile E1\Makefile
@@ -112,13 +212,13 @@ E1\eparents.obj : Makefile E1\Makefile E1\estructure.h
 	$(START_TEST) $(MAKE) eparents.obj  $(END_TEST)
 	cd ..
 
-OBJECTS = E1\eparents.obj  E1\einit.obj  E1\ececil.obj  E1\evisib.obj  E1\enames.obj  E1\eskelet.obj  E1\eplug.obj  E1\ecall.obj  E1\efrozen.obj  E1\epattern.obj  E1\eoption.obj  C1\Cobj1.lib 
+OBJECTS = E1\eparents.obj  E1\einit.obj  E1\ececil.obj  E1\evisib.obj  E1\enames.obj  E1\eskelet.obj  E1\eplug.obj  E1\ecall.obj  E1\efrozen.obj  E1\epattern.obj  E1\eoption.obj  C21\Cobj21.lib C20\Cobj20.lib C19\Cobj19.lib C18\Cobj18.lib C17\Cobj17.lib C16\Cobj16.lib C15\Cobj15.lib C14\Cobj14.lib C13\Cobj13.lib C12\Cobj12.lib C11\Cobj11.lib C10\Cobj10.lib C9\Cobj9.lib C8\Cobj8.lib C7\Cobj7.lib C6\Cobj6.lib C5\Cobj5.lib C4\Cobj4.lib C3\Cobj3.lib C2\Cobj2.lib C1\Cobj1.lib 
 
-C_OBJECTS = C1\Cobj1.lib 
+C_OBJECTS = C21\Cobj21.lib C20\Cobj20.lib C19\Cobj19.lib C18\Cobj18.lib C17\Cobj17.lib C16\Cobj16.lib C15\Cobj15.lib C14\Cobj14.lib C13\Cobj13.lib C12\Cobj12.lib C11\Cobj11.lib C10\Cobj10.lib C9\Cobj9.lib C8\Cobj8.lib C7\Cobj7.lib C6\Cobj6.lib C5\Cobj5.lib C4\Cobj4.lib C3\Cobj3.lib C2\Cobj2.lib C1\Cobj1.lib 
 
 EOBJECTS = E1\eparents.obj  E1\einit.obj  E1\ececil.obj  E1\evisib.obj  E1\enames.obj  E1\eskelet.obj  E1\eplug.obj  E1\ecall.obj  E1\efrozen.obj  E1\epattern.obj  E1\eoption.obj  
 
-PRECOMP_OBJECTS= "e:\manav\documents\eiffel user files\14.05\precomp\spec\win64\EIFGENs\base-safe\W_code\msc\precomp.lib"
+
 
 
 sample.exe: sample.lnk sample.res
@@ -141,17 +241,24 @@ sample.lnk: $(OBJECTS) e1\emain.obj sample.res Makefile
 	@echo sample.res >> $@
 	echo E1\eparents.obj  E1\einit.obj  E1\ececil.obj  E1\evisib.obj  E1\enames.obj   >> $@ 
 	echo E1\eskelet.obj  E1\eplug.obj  E1\ecall.obj  E1\efrozen.obj  E1\epattern.obj   >> $@ 
-	echo E1\eoption.obj  C1\Cobj1.lib  >> $@ 
+	echo E1\eoption.obj  C21\Cobj21.lib C20\Cobj20.lib C19\Cobj19.lib C18\Cobj18.lib  >> $@ 
+	echo C17\Cobj17.lib C16\Cobj16.lib C15\Cobj15.lib C14\Cobj14.lib C13\Cobj13.lib  >> $@ 
+	echo C12\Cobj12.lib C11\Cobj11.lib C10\Cobj10.lib C9\Cobj9.lib C8\Cobj8.lib  >> $@ 
+	echo C7\Cobj7.lib C6\Cobj6.lib C5\Cobj5.lib C4\Cobj4.lib C3\Cobj3.lib  >> $@ 
+	echo C2\Cobj2.lib C1\Cobj1.lib  >> $@ 
 
 
-RCECIL = wmalloc.obj wgarcol.obj wlocal.obj wexcept.obj wstore.obj wretrieve.obj whash.obj \
-	wtraverse.obj whashin.obj wtools.obj winternal.obj wplug.obj wcopy.obj wequal.obj \
-	wlmalloc.obj wout.obj wtimer.obj wurgent.obj wsig.obj whector.obj wcecil.obj \
-	wfile.obj wdir.obj wmisc.obj werror.obj wumain.obj wmemory.obj wargv.obj wboolstr.obj \
-	wsearch.obj wmain.obj debug.obj interp.obj woption.obj update.obj wbench.obj \
-	wrun_idr.obj wcompress.obj wconsole.obj wpath_name.obj wobject_id.obj \
-	weif_threads.obj wgen_conf.obj weif_type_id.obj wrout_obj.obj weif_project.obj \
-	idrs.obj wposix_threads.obj network.obj ipc.obj wmemory_analyzer.obj woffset.obj 
+RCECIL = MTwmalloc.obj MTwgarcol.obj MTwlocal.obj MTwexcept.obj MTwstore.obj \
+	MTwretrieve.obj MTwhash.obj MTwtraverse.obj MTwhashin.obj MTwtools.obj \
+	MTwinternal.obj MTwplug.obj MTwcopy.obj MTwequal.obj MTwlmalloc.obj MTwout.obj \
+	MTwtimer.obj MTwurgent.obj MTwsig.obj MTwhector.obj MTwcecil.obj MTwbits.obj \
+	MTwfile.obj MTwdir.obj MTwmisc.obj MTwerror.obj MTwumain.obj MTwmemory.obj \
+	MTwargv.obj MTwboolstr.obj MTwsearch.obj MTwmain.obj MTdebug.obj MTinterp.obj \
+	MTwoption.obj MTupdate.obj MTwbench.obj MTwrun_idr.obj MTwcompress.obj \
+	MTwconsole.obj MTwpath_name.obj MTwobject_id.obj MTweif_threads.obj \
+	MTwgen_conf.obj MTweif_type_id.obj MTwrout_obj.obj MTweif_project.obj \
+	MTidrs.obj MTwposix_threads.obj MTnetwork.obj mtipc.obj MTwscoop.obj \
+	MTwmemory_analyzer.obj MTwoffset.obj 
 
 
 #STATIC_CECIL PART

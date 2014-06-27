@@ -5,7 +5,7 @@
 extern "C" {
 #endif
 
-extern void F235_6956(EIF_REFERENCE, EIF_TYPED_VALUE);
+extern void F175_4602(EIF_REFERENCE, EIF_TYPED_VALUE);
 
 #ifdef __cplusplus
 }

@@ -63,4 +63,8 @@ body {
   display: none;
 }
 
+.user_input{
+    margin-left: 150px;
+}
+
 p .content {white-space: pre}

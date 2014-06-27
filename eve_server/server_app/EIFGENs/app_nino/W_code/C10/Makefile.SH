@@ -55,15 +55,15 @@ $spitshell >>Makefile <<'!NO!SUBS!'
 
 OBJECTS = big_file_C10_c.obj 
 
-OLDOBJECTS =  ws300.o ws300d.o ne326.o ne326d.o ra329.o ra329d.o ar299.o ar299d.o \
-	in301.o in301d.o ht297.o ht297d.o di317.o di317d.o ma316.o ma316d.o \
-	ne325.o ne325d.o st324.o st324d.o ad319.o ad319d.o fi328.o fi328d.o \
-	st322.o st322d.o mi303.o mi303d.o ws304.o ws304d.o ws298.o ws298d.o \
-	di313.o di313d.o ws310.o ws310d.o ws309.o ws309d.o ws312.o ws312d.o \
-	so323.o so323d.o ad320.o ad320d.o ex318.o ex318d.o io321.o io321d.o \
-	tc327.o tc327d.o mu315.o mu315d.o ws308.o ws308d.o ws307.o ws307d.o \
-	ws306.o ws306d.o ws311.o ws311d.o ht302.o ht302d.o ws305.o ws305d.o \
-	co314.o co314d.o 
+OLDOBJECTS =  ap324.o ap324d.o eq301.o eq301d.o ws328.o ws328d.o ap323.o ap323d.o \
+	eq316.o eq316d.o eq304.o eq304d.o ar327.o ar327d.o mi315.o mi315d.o \
+	in329.o in329d.o ht325.o ht325d.o ar322.o ar322d.o eq317.o eq317d.o \
+	st320.o st320d.o ws326.o ws326d.o pr303.o pr303d.o pr302.o pr302d.o \
+	pr300.o pr300d.o ws321.o ws321d.o ws319.o ws319d.o eq314.o eq314d.o \
+	pr299.o pr299d.o pr298.o pr298d.o pr297.o pr297d.o da318.o da318d.o \
+	te313.o te313d.o te312.o te312d.o te311.o te311d.o te310.o te310d.o \
+	te309.o te309d.o te308.o te308d.o te307.o te307d.o te306.o te306d.o \
+	te305.o te305d.o 
 
 all: Cobj10.o
 

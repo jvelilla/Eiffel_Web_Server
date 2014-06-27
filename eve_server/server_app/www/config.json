@@ -1,7 +1,9 @@
 {
-	"Compilation_Timeout" : 180,
-	"Runtime_Timeout" : 10,
-	"EIFGEN_Duration" : 7776000,
-	"Seconds_After_Midnight" : 10,
-	"Sleep_Time": 5000000
+	"Compilation_Timeout" : 180000,
+	"Runtime_Timeout" : 10000,
+	"Project_Duration" : 300000,
+	"Pre_Project_Duration" : 240000,
+	"Periodic_Time" : 1000,
+	"Initial_Sleep_Time": 3000,
+	"New_Project_Wait_Time":120000000000
 }

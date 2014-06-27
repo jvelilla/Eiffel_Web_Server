@@ -15,14 +15,14 @@ INCLUDE_PATH =
 SHELL = /bin/sh
 CC = $cc
 CPP = $cpp
-CFLAGS = $wkoptimize $ccflags $large -DEIF_IEEE_BEHAVIOR -DWORKBENCH -I"$rt_include" -I. \$(INCLUDE_PATH)
-CPPFLAGS = $wkoptimize $cppflags $large -DWORKBENCH -I"$rt_include" -I. \$(INCLUDE_PATH)
+CFLAGS = $wkoptimize $mtccflags $large -DEIF_IEEE_BEHAVIOR -DWORKBENCH -I"$rt_include" -I. \$(INCLUDE_PATH)
+CPPFLAGS = $wkoptimize $mtcppflags $large -DWORKBENCH -I"$rt_include" -I. \$(INCLUDE_PATH)
 LDFLAGS = $ldflags
 CCLDFLAGS = $ccldflags  $console_flags
-LDSHAREDFLAGS =  $ldsharedflags
-EIFLIB = "$rt_lib/$prefix$wkeiflib$suffix"
+LDSHAREDFLAGS =  $mtldsharedflags
+EIFLIB = "$rt_lib/$prefix$mt_prefix$wkeiflib$suffix"
 EIFTEMPLATES = $rt_templates
-LIBS = $libs
+LIBS = $mtlibs
 MAKE = $make
 AR = $ar
 LD = $ld
@@ -55,7 +55,14 @@ $spitshell >>Makefile <<'!NO!SUBS!'
 
 OBJECTS = big_file_C1_c.obj 
 
-OLDOBJECTS =  ap862.o ap862d.o ac861.o ac861d.o 
+OLDOBJECTS =  an1.o an1d.o rt31.o rt31d.o is22.o is22d.o ac13.o ac13d.o my28.o \
+	my28d.o st12.o st12d.o op11.o op11d.o pl24.o pl24d.o is10.o is10d.o \
+	rt9.o rt9d.o rt30.o rt30d.o sy8.o sy8d.o ex23.o ex23d.o ex21.o \
+	ex21d.o ut6.o ut6d.o ut7.o ut7d.o th27.o th27d.o re20.o re20d.o \
+	re19.o re19d.o ch5.o ch5d.o do18.o do18d.o sy4.o sy4d.o rt32.o \
+	rt32d.o rt29.o rt29d.o th26.o th26d.o ve3.o ve3d.o ma17.o ma17d.o \
+	ob15.o ob15d.o me16.o me16d.o th25.o th25d.o ob14.o ob14d.o ob2.o \
+	ob2d.o 
 
 all: Cobj1.o
 

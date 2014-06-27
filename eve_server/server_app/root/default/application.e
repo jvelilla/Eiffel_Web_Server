@@ -25,6 +25,8 @@ feature {NONE} -- Initialization
 --			set_service_option ("verbose", True)
 --			create {WSF_SERVICE_LAUNCHER_OPTIONS_FROM_INI} service_options.make_from_file_and_defaults ("server.ini", service_options)
 			Precursor
+		rescue
+			retry
 		end
 
 feature {NONE} -- Launcher
@@ -32,7 +34,10 @@ feature {NONE} -- Launcher
 	launch (a_service: WSF_SERVICE; opts: detachable WSF_SERVICE_LAUNCHER_OPTIONS)
 		local
 			launcher: WSF_SERVICE_LAUNCHER
+--			server_thread:SERVER_THREAD
 		do
+--			create server_thread.make_with_port(9999)
+--			server_thread.launch
 			create {WSF_DEFAULT_SERVICE_LAUNCHER} launcher.make_and_launch (a_service, opts)
 		end
 

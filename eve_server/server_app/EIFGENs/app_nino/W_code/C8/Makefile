@@ -41,15 +41,15 @@ SYSTEM_IN_DYNAMIC_LIB = app.dll
 
 OBJECTS = big_file_C8_c.obj 
 
-OLDOBJECTS =  in233.obj in233d.obj c_252.obj c_252d.obj it238.obj it238d.obj pl259.obj pl259d.obj \
-	re232.obj re232d.obj re235.obj re235d.obj ws249.obj ws249d.obj ws248.obj ws248d.obj \
-	na263.obj na263d.obj cu256.obj cu256d.obj st250.obj st250d.obj ar258.obj ar258d.obj \
-	re236.obj re236d.obj ha257.obj ha257d.obj re234.obj re234d.obj re231.obj re231d.obj \
-	wg253.obj wg253d.obj se237.obj se237d.obj ws247.obj ws247d.obj ws245.obj ws245d.obj \
-	ws246.obj ws246d.obj ws244.obj ws244d.obj ws243.obj ws243d.obj ht240.obj ht240d.obj \
-	wg255.obj wg255d.obj ws241.obj ws241d.obj ht260.obj ht260d.obj ws242.obj ws242d.obj \
-	ur261.obj ur261d.obj ht239.obj ht239d.obj ut262.obj ut262d.obj wg254.obj wg254d.obj \
-	we251.obj we251d.obj 
+OLDOBJECTS =  ws241.obj ws241d.obj in258.obj in258d.obj it240.obj it240d.obj it239.obj it239d.obj \
+	ex236.obj ex236d.obj er237.obj er237d.obj pr245.obj pr245d.obj re257.obj re257d.obj \
+	pa247.obj pa247d.obj re260.obj re260d.obj pr235.obj pr235d.obj po234.obj po234d.obj \
+	in233.obj in233d.obj ch232.obj ch232d.obj va231.obj va231d.obj ws242.obj ws242d.obj \
+	da251.obj da251d.obj ws243.obj ws243d.obj ws246.obj ws246d.obj co252.obj co252d.obj \
+	it238.obj it238d.obj re255.obj re255d.obj re259.obj re259d.obj re256.obj re256d.obj \
+	da250.obj da250d.obj ti249.obj ti249d.obj du248.obj du248d.obj ab253.obj ab253d.obj \
+	ra244.obj ra244d.obj sh254.obj sh254d.obj ws263.obj ws263d.obj ws261.obj ws261d.obj \
+	ws262.obj ws262d.obj 
 
 all::  Cobj8.lib
 

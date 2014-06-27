@@ -1,5 +1,5 @@
 /*
- * Code for class FINITE [REAL_64]
+ * Code for class FINITE [INTEGER_32]
  */
 
 #include "eif_eiffel.h"
@@ -10,8 +10,8 @@
 extern "C" {
 #endif
 
-extern EIF_TYPED_VALUE F569_9618(EIF_REFERENCE);
-extern void F569_22935(EIF_REFERENCE, int);
+extern EIF_TYPED_VALUE F569_10050(EIF_REFERENCE);
+extern void F569_23493(EIF_REFERENCE, int);
 extern void EIF_Minit569(void);
 
 #ifdef __cplusplus
@@ -34,7 +34,7 @@ extern "C" {
 #endif
 
 /* {FINITE}.is_empty */
-EIF_TYPED_VALUE F569_9618 (EIF_REFERENCE Current)
+EIF_TYPED_VALUE F569_10050 (EIF_REFERENCE Current)
 {
 	GTCX
 	char *l_feature_name = "is_empty";
@@ -51,17 +51,17 @@ EIF_TYPED_VALUE F569_9618 (EIF_REFERENCE Current)
 	RTLU (SK_BOOL, &Result);
 	RTLU (SK_REF, &Current);
 	
-	RTEAA(l_feature_name, 568, Current, 0, 0, 2826);
+	RTEAA(l_feature_name, 568, Current, 0, 0, 3200);
 	RTSA(Dtype(Current));
 	RTSC;
 	RTME(Dtype(Current), 0);
 	RTGC;
-	RTDBGEAA(568, Current, 2826);
+	RTDBGEAA(568, Current, 3200);
 	RTIV(Current, RTAL);
 	RTHOOK(1);
 	RTDBGAL(Current, 0, 0x04000000, 1,0); /* Result */
 	
-	ti4_1 = (((FUNCTION_CAST(EIF_TYPED_VALUE, (EIF_REFERENCE)) RTWF(9231, Dtype(Current)))(Current)).it_i4);
+	ti4_1 = (((FUNCTION_CAST(EIF_TYPED_VALUE, (EIF_REFERENCE)) RTWF(9633, Dtype(Current)))(Current)).it_i4);
 	Result = (EIF_BOOLEAN) (EIF_BOOLEAN)(ti4_1 == ((EIF_INTEGER_32) 0L));
 	RTVI(Current, RTAL);
 	RTRS;
@@ -75,7 +75,7 @@ EIF_TYPED_VALUE F569_9618 (EIF_REFERENCE Current)
 }
 
 /* {FINITE}._invariant */
-void F569_22935 (EIF_REFERENCE Current, int where)
+void F569_23493 (EIF_REFERENCE Current, int where)
 {
 	GTCX
 	char *l_feature_name = "_invariant";
@@ -90,12 +90,12 @@ void F569_22935 (EIF_REFERENCE Current, int where)
 	RTLR(0,Current);
 	RTLU (SK_VOID, NULL);
 	RTLU (SK_REF, &Current);
-	RTEAINV(l_feature_name, 568, Current, 0, 22934);
+	RTEAINV(l_feature_name, 568, Current, 0, 23492);
 	RTSA(dtype);
 	RTME(dtype, 0);
 	RTIT("empty_definition", Current);
-	tb1 = (((FUNCTION_CAST(EIF_TYPED_VALUE, (EIF_REFERENCE)) RTWF(9221, dtype))(Current)).it_b);
-	ti4_1 = (((FUNCTION_CAST(EIF_TYPED_VALUE, (EIF_REFERENCE)) RTWF(9231, dtype))(Current)).it_i4);
+	tb1 = (((FUNCTION_CAST(EIF_TYPED_VALUE, (EIF_REFERENCE)) RTWF(9623, dtype))(Current)).it_b);
+	ti4_1 = (((FUNCTION_CAST(EIF_TYPED_VALUE, (EIF_REFERENCE)) RTWF(9633, dtype))(Current)).it_i4);
 	if ((EIF_BOOLEAN)(tb1 == (EIF_BOOLEAN)(ti4_1 == ((EIF_INTEGER_32) 0L)))) {
 		RTCK;
 	} else {

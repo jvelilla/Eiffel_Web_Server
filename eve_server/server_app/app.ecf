@@ -23,13 +23,21 @@
 				<platform value="windows"/>
 			</condition>
 		</library>
+		<library name="httpd" location="$ISE_LIBRARY\library\httpd\httpd.ecf" readonly="false"/>
+		<library name="websocket_server" location="$ISE_LIBRARY\library\server\websocket_server.ecf" readonly="false">
+			<option debug="true">
+				<debug name="ws" enabled="true"/>
+			</option>
+		</library>
 		<library name="wsf" location="$ISE_LIBRARY\contrib\library\web\framework\ewf\wsf\wsf.ecf" readonly="false"/>
 		<library name="wsf_html" location="$ISE_LIBRARY\contrib\library\web\framework\ewf\wsf_html\wsf_html.ecf"/>
+		
 		<cluster name="src" location=".\src\" recursive="true"/>
 	</target>
 	<target name="app_nino" extends="common">
 		<root class="APPLICATION" feature="make_and_launch"/>
 		<setting name="concurrency" value="thread"/>
+		<variable name="httpd_ssl_disabled" value="true"/>
 		<library name="dft_nino" location="$ISE_LIBRARY\contrib\library\web\framework\ewf\wsf\default\nino.ecf"/>
 		<library name="nino" location="$ISE_LIBRARY\contrib\library\web\framework\ewf\wsf\connector\nino.ecf"/>
 		<library name="testing" location="$ISE_LIBRARY\library\testing\testing.ecf"/>

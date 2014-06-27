@@ -5,18 +5,24 @@
 var serverControllers = angular.module('mainControllers', []);
 
 
-serverControllers.controller('MainCtrl',['$scope', '$http', 'CompileService','RunService','InterfaceViewService','FlatViewService','ContractViewService','ClassDescendantsService','ClassAncestorsService','ClassClientsService','ClassSuppliersService','FeatureCallersService','CommandLineService',
-  function($scope,$http,CompileService,RunService,InterfaceViewService,FlatViewService,ContractViewService,ClassDescendantsService,ClassAncestorsService,ClassSuppliersService,ClassClientsService,FeatureCallersService,CommandLineService){
+serverControllers.controller('MainCtrl',['$scope', '$http', 'CompileService','RunService','InterfaceViewService','FlatViewService','ContractViewService','ClassDescendantsService','ClassAncestorsService','ClassClientsService','ClassSuppliersService','FeatureCallersService','CommandLineService','mySocket',
+  function($scope,$http,CompileService,RunService,InterfaceViewService,FlatViewService,ContractViewService,ClassDescendantsService,ClassAncestorsService,ClassSuppliersService,ClassClientsService,FeatureCallersService,CommandLineService,mySocket){
     $scope.message='Hi there';
     $scope.status_code=200;
+    //mySocket.connect();
+
+    $scope.send_input=function(){
+        mySocket.sendMessage($scope.project.input);
+    }
+
     $scope.compile=function(){
-        $scope.result=CompileService.query({id :$scope.project.id, clean:false, path: $scope.project.path, target: $scope.project.target}, function(response,headers){
+        if ($scope.project.target=''){
+        }
+        $scope.result=CompileService.query({id :$scope.project.id, clean:false, path:$scope.project.path, target:$scope.project.target}, function(response,headers){
             $scope.id=headers('id');
             $scope.status_code=200;
             $scope.dump=response;
         },function(response,headers){
-            //console.log(response);
-            //alert(response.status);
             $scope.status_code=response.status;
             alert("The process timed out!");
             $scope.dump=response;
@@ -24,7 +30,9 @@ serverControllers.controller('MainCtrl',['$scope', '$http', 'CompileService','Ru
     };
 
     $scope.cleanCompile=function(){
-        $scope.result=CompileService.query({id :$scope.project.id, clean:true, path:$scope.project.path, target: $scope.project.target}, function(response,headers){
+        if ($scope.project.target=''){
+        }
+        $scope.result=CompileService.query({id :$scope.project.id, clean:true, path:$scope.project.path, target:$scope.project.target}, function(response,headers){
             $scope.id=headers('id');
             $scope.status_code=200;
             $scope.dump=response;
@@ -36,10 +44,19 @@ serverControllers.controller('MainCtrl',['$scope', '$http', 'CompileService','Ru
     };
 
     $scope.run_exe=function(){
+        //mySocket.sendMessage('abcdef');
+        mySocket.connect();
+        $scope.websocket_tester='';
+        mySocket.subscribe(function(message){
+            $scope.websocket_tester=$scope.websocket_tester+message;
+            $scope.$apply();
+        });
+        
         $scope.result=RunService.query({id :$scope.project.id}, function(response,headers){
             $scope.id=headers('id');
             $scope.status_code=200;
             $scope.dump=response;
+            mySocket.closeSocket();
         },function(response,headers){
             $scope.status_code=response.status;
             alert("The process timed out!");

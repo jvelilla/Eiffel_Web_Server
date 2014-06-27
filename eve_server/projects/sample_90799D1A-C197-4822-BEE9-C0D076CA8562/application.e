@@ -17,22 +17,27 @@ feature {NONE} -- Initialization
 	make
 			-- Run application.
 		local
-			a,c: INTEGER
 			bal:ACCOUNT
+			my_thread:MY_THREAD
+			a,c:INTEGER
 		do
 			--| Add your code here
 			io.put_string ("Hello Eiffel World!%N")
 			extra_feature(0)
-			from
-				c:=1
-			until
-				c=2
-			loop
-				io.put_string (a.out)
-			end
+
+			io.read_integer
+			a:=io.last_integer
+
+			create my_thread.make_here (a)
+			my_thread.launch
+
+
+			my_thread.join
+
 			create bal.make (10)
 			bal.withdraw (5)
 		end
+
 
 	extra_feature (a:INTEGER)
 		require
@@ -40,9 +45,8 @@ feature {NONE} -- Initialization
 		local
 			s:STRING
 		do
-			io.put_string ("Number not out of range")
+			io.put_string ("In extra feature")
 			io.put_new_line
-			create s.make_from_string ("abcd")
 		ensure
 			number_out_of_range: a=0
 		end

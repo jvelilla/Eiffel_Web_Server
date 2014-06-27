@@ -2,12 +2,12 @@ INCLUDE_PATH =
 SHELL = \bin\sh
 CC = cl
 CPP = cl
-CFLAGS = -Od -MT -w -nologo -D_WIN32_WINNT=0x0500 -DWINVER=0x0500 -D_CRT_SECURE_NO_DEPRECATE -D_UNICODE -DUNICODE   -DEIF_IEEE_BEHAVIOR -DWORKBENCH -I"C:\Python27\Eiffel_14.05_95158\studio\spec\win64\include" -I. $(INCLUDE_PATH)
-CPPFLAGS = -Od -MT -w -nologo -D_WIN32_WINNT=0x0500 -DWINVER=0x0500 -D_CRT_SECURE_NO_DEPRECATE -D_UNICODE -DUNICODE   -DWORKBENCH -I"C:\Python27\Eiffel_14.05_95158\studio\spec\win64\include" -I. $(INCLUDE_PATH)
+CFLAGS = -Od -MT -w -nologo -D_WIN32_WINNT=0x0500 -DWINVER=0x0500 -D_CRT_SECURE_NO_DEPRECATE -D_UNICODE -DUNICODE  -DEIF_THREADS  -DEIF_IEEE_BEHAVIOR -DWORKBENCH -I"C:\Python27\Eiffel_14.05_95158\studio\spec\win64\include" -I. $(INCLUDE_PATH)
+CPPFLAGS = -Od -MT -w -nologo -D_WIN32_WINNT=0x0500 -DWINVER=0x0500 -D_CRT_SECURE_NO_DEPRECATE -D_UNICODE -DUNICODE  -DEIF_THREADS  -DWORKBENCH -I"C:\Python27\Eiffel_14.05_95158\studio\spec\win64\include" -I. $(INCLUDE_PATH)
 LDFLAGS = -STACK:5000000 -NODEFAULTLIB:libc
 CCLDFLAGS = -STACK:5000000 -NODEFAULTLIB:libc  -SUBSYSTEM:CONSOLE
 LDSHAREDFLAGS =  -dll -incremental:no -NODEFAULTLIB:libc
-EIFLIB = "C:\Python27\Eiffel_14.05_95158\studio\spec\win64\lib\msc\wkbench.lib"
+EIFLIB = "C:\Python27\Eiffel_14.05_95158\studio\spec\win64\lib\msc\mtwkbench.lib"
 EIFTEMPLATES = C:\Python27\Eiffel_14.05_95158\studio\config\win64\templates
 LIBS = 
 MAKE = nmake -s -nologo
@@ -41,7 +41,14 @@ SYSTEM_IN_DYNAMIC_LIB = sample.dll
 
 OBJECTS = big_file_C1_c.obj 
 
-OLDOBJECTS =  ap862.obj ap862d.obj ac861.obj ac861d.obj 
+OLDOBJECTS =  an1.obj an1d.obj rt31.obj rt31d.obj is22.obj is22d.obj ac13.obj ac13d.obj my28.obj \
+	my28d.obj st12.obj st12d.obj op11.obj op11d.obj pl24.obj pl24d.obj is10.obj is10d.obj \
+	rt9.obj rt9d.obj rt30.obj rt30d.obj sy8.obj sy8d.obj ex23.obj ex23d.obj ex21.obj \
+	ex21d.obj ut6.obj ut6d.obj ut7.obj ut7d.obj th27.obj th27d.obj re20.obj re20d.obj \
+	re19.obj re19d.obj ch5.obj ch5d.obj do18.obj do18d.obj sy4.obj sy4d.obj rt32.obj \
+	rt32d.obj rt29.obj rt29d.obj th26.obj th26d.obj ve3.obj ve3d.obj ma17.obj ma17d.obj \
+	ob15.obj ob15d.obj me16.obj me16d.obj th25.obj th25d.obj ob14.obj ob14d.obj ob2.obj \
+	ob2d.obj 
 
 all::  Cobj1.lib
 

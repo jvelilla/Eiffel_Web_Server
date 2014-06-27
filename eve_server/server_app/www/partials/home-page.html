@@ -89,11 +89,22 @@
 			</div>
 			
 		</div>
-		<h2 class="response_dump_text"> Response Dump</h2>
+		<h2 class="response_dump_text"> Websocket tester</h2>
+		<div class="user_input">
+			<label>Your input: </label>
+			<input type="text" ng-model="project.input"></input>
+			<button class="btn" ng-click="send_input()">Send</button>
+		</div>
 		<div class="response_dump">
-			<textarea class="response_textarea">{{dump}}
+			<textarea class="response_textarea" ng-model="websocket_tester">
 			</textarea>
 		</div>
+		<h2 class="response_dump_text"> Response Dump</h2>
+		<div class="response_dump">
+			<textarea class="response_textarea">{{dump}}{{output}}
+			</textarea>
+		</div>
+		
 		
 	</div>
  </div>

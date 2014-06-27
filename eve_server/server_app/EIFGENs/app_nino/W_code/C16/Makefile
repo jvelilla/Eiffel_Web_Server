@@ -41,15 +41,15 @@ SYSTEM_IN_DYNAMIC_LIB = app.dll
 
 OBJECTS = big_file_C16_c.obj 
 
-OLDOBJECTS =  ar519.obj ar519d.obj fu498.obj fu498d.obj pr496.obj pr496d.obj ty513.obj ty513d.obj \
-	ty514.obj ty514d.obj ty515.obj ty515d.obj ty520.obj ty520d.obj eq497.obj eq497d.obj \
-	li504.obj li504d.obj ha508.obj ha508d.obj ha516.obj ha516d.obj re524.obj re524d.obj \
-	li526.obj li526d.obj it522.obj it522d.obj it523.obj it523d.obj ta510.obj ta510d.obj \
-	ta518.obj ta518d.obj ta509.obj ta509d.obj ta517.obj ta517d.obj li502.obj li502d.obj \
-	li505.obj li505d.obj li503.obj li503d.obj ha512.obj ha512d.obj un495.obj un495d.obj \
-	ta511.obj ta511d.obj in521.obj in521d.obj tr527.obj tr527d.obj ac499.obj ac499d.obj \
-	co525.obj co525d.obj li501.obj li501d.obj in500.obj in500d.obj qu506.obj qu506d.obj \
-	di507.obj di507d.obj 
+OLDOBJECTS =  ar504.obj ar504d.obj ro502.obj ro502d.obj pr503.obj pr503d.obj fu501.obj fu501d.obj \
+	pr527.obj pr527d.obj ty498.obj ty498d.obj ty499.obj ty499d.obj ty500.obj ty500d.obj \
+	ar517.obj ar517d.obj li508.obj li508d.obj re505.obj re505d.obj in523.obj in523d.obj \
+	to516.obj to516d.obj it496.obj it496d.obj it497.obj it497d.obj li526.obj li526d.obj \
+	se518.obj se518d.obj dy520.obj dy520d.obj un525.obj un525d.obj ta524.obj ta524d.obj \
+	in495.obj in495d.obj cu509.obj cu509d.obj tr514.obj tr514d.obj bo506.obj bo506d.obj \
+	ch522.obj ch522d.obj ac510.obj ac510d.obj bi519.obj bi519d.obj fi507.obj fi507d.obj \
+	dy521.obj dy521d.obj ba511.obj ba511d.obj co512.obj co512d.obj co513.obj co513d.obj \
+	bo515.obj bo515d.obj 
 
 all::  Cobj16.lib
 

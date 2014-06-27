@@ -5,7 +5,7 @@
 var serverApp = angular.module('serverApp', [
   'ngRoute',
   'mainControllers',
-  'ngResource',
+  'ngResource'
 ]);
 
 serverApp.config(['$routeProvider','$locationProvider',
@@ -21,6 +21,49 @@ serverApp.config(['$routeProvider','$locationProvider',
       $locationProvider.html5Mode(true);
   }]);
 
+
+serverApp.factory('mySocket', ['$q', '$rootScope', function($q, $rootScope) {
+    // We return this object to anything injecting our service
+    var Service = {};
+    
+    Service.connect= function(){
+      /*if(Service.ws){
+        return;
+      }*/
+      
+      var ws = new WebSocket("ws://localhost:9999");
+
+      ws.onopen = function(){
+        console.log("Socket has been opened!");  
+      };
+      
+      ws.onmessage = function(event) {
+        console.log("Received data from websocket: ", event.data);
+        Service.callback(event.data);
+      };
+
+      ws.onclose = function(){
+        console.log('Closing Connection');
+      }
+
+      Service.ws=ws;
+    }
+
+    Service.closeSocket = function(){
+      Service.ws.close();
+    }
+
+    Service.subscribe = function(callback){
+      Service.callback=callback;
+    }
+
+    Service.sendMessage = function(message) {
+      console.log('Sending text', message);
+      Service.ws.send(message);
+    }
+
+    return Service;
+}]);
 
 serverApp.factory('CompileService', function($resource) {
   return $resource('/compile',{}, {query: {method:'GET',  isArray:true}, 'save':   {method:'POST'}});

@@ -1,0 +1,110 @@
+/*
+ * Class POOLED_THREAD [G#1]
+ */
+
+#include "eif_macros.h"
+
+
+#ifdef __cplusplus
+extern "C" {
+#endif
+
+static EIF_TYPE_INDEX gen_type0_865 [] = {490,864,0xFFF8,1,0xFFFF};
+static EIF_TYPE_INDEX gen_type1_865 [] = {864,0xFFF8,1,0xFFFF};
+static EIF_TYPE_INDEX gen_type2_865 [] = {0,0xFFFF};
+static EIF_TYPE_INDEX gen_type3_865 [] = {0,0xFFFF};
+static EIF_TYPE_INDEX gen_type4_865 [] = {864,0xFFF8,1,0xFFFF};
+static EIF_TYPE_INDEX gen_type5_865 [] = {864,0xFFF8,1,0xFFFF};
+static EIF_TYPE_INDEX gen_type6_865 [] = {0,0xFFFF};
+static EIF_TYPE_INDEX gen_type7_865 [] = {864,0xFFF8,1,0xFFFF};
+static EIF_TYPE_INDEX gen_type8_865 [] = {864,0xFFF8,1,0xFFFF};
+static EIF_TYPE_INDEX gen_type9_865 [] = {687,376,0xFFFF};
+static EIF_TYPE_INDEX gen_type10_865 [] = {863,0xFFF8,1,0xFFFF};
+static EIF_TYPE_INDEX gen_type11_865 [] = {0xFFF8,1,0xFFFF};
+static EIF_TYPE_INDEX gen_type12_865 [] = {502,0xFFF8,1,0xFFF9,0,368,0xFFFF};
+static EIF_TYPE_INDEX gen_type13_865 [] = {0xFFF8,1,0xFFFF};
+
+
+static struct desc_info desc_865[] = {
+	{(BODY_INDEX) -1, (BODY_INDEX) -1, INVALID_DTYPE, NULL},
+	{0, (BODY_INDEX)-1, 389, NULL},
+	{1, (BODY_INDEX)-1, 490, gen_type0_865},
+	{2, (BODY_INDEX)-1, 376, NULL},
+	{3, (BODY_INDEX)-1, 376, NULL},
+	{4, (BODY_INDEX)-1, 376, NULL},
+	{5, (BODY_INDEX)-1, 376, NULL},
+	{6, (BODY_INDEX)-1, 376, NULL},
+	{7, (BODY_INDEX)-1, 376, NULL},
+	{8, (BODY_INDEX)-1, 376, NULL},
+	{9, (BODY_INDEX)-1, 376, NULL},
+	{10, (BODY_INDEX)-1, 864, gen_type1_865},
+	{11, (BODY_INDEX)-1, (EIF_TYPE_INDEX)-1, NULL},
+	{12, (BODY_INDEX)-1, (EIF_TYPE_INDEX)-1, NULL},
+	{13, (BODY_INDEX)-1, 0, gen_type2_865},
+	{14, (BODY_INDEX)-1, 0, gen_type3_865},
+	{15, (BODY_INDEX)-1, 864, gen_type4_865},
+	{16, (BODY_INDEX)-1, 864, gen_type5_865},
+	{17, (BODY_INDEX)-1, 0, gen_type6_865},
+	{18, (BODY_INDEX)-1, (EIF_TYPE_INDEX)-1, NULL},
+	{19, (BODY_INDEX)-1, (EIF_TYPE_INDEX)-1, NULL},
+	{20, (BODY_INDEX)-1, 45, NULL},
+	{21, (BODY_INDEX)-1, 389, NULL},
+	{22, (BODY_INDEX)-1, 389, NULL},
+	{23, (BODY_INDEX)-1, (EIF_TYPE_INDEX)-1, NULL},
+	{24, (BODY_INDEX)-1, 44, NULL},
+	{25, (BODY_INDEX)-1, (EIF_TYPE_INDEX)-1, NULL},
+	{26, (BODY_INDEX)-1, (EIF_TYPE_INDEX)-1, NULL},
+	{27, (BODY_INDEX)-1, (EIF_TYPE_INDEX)-1, NULL},
+	{28, (BODY_INDEX)-1, 864, gen_type7_865},
+	{29, (BODY_INDEX)-1, 379, NULL},
+	{30, (BODY_INDEX)-1, 864, gen_type8_865},
+	{31, (BODY_INDEX)-1, (EIF_TYPE_INDEX)-1, NULL},
+	{32, (BODY_INDEX)-1, (EIF_TYPE_INDEX)-1, NULL},
+	{1761, (BODY_INDEX)-1, 379, NULL},
+	{1762, (BODY_INDEX)-1, 379, NULL},
+	{1763, (BODY_INDEX)-1, (EIF_TYPE_INDEX)-1, NULL},
+	{1764, (BODY_INDEX)-1, (EIF_TYPE_INDEX)-1, NULL},
+	{1776, (BODY_INDEX)-1, (EIF_TYPE_INDEX)-1, NULL},
+	{1777, 48, 379, NULL},
+	{1778, 40, 376, NULL},
+	{1790, (BODY_INDEX)-1, (EIF_TYPE_INDEX)-1, NULL},
+	{1779, (BODY_INDEX)-1, (EIF_TYPE_INDEX)-1, NULL},
+	{1780, (BODY_INDEX)-1, (EIF_TYPE_INDEX)-1, NULL},
+	{1781, (BODY_INDEX)-1, (EIF_TYPE_INDEX)-1, NULL},
+	{1782, (BODY_INDEX)-1, (EIF_TYPE_INDEX)-1, NULL},
+	{1783, (BODY_INDEX)-1, 376, NULL},
+	{1765, (BODY_INDEX)-1, 376, NULL},
+	{1766, (BODY_INDEX)-1, 376, NULL},
+	{1767, (BODY_INDEX)-1, (EIF_TYPE_INDEX)-1, NULL},
+	{1768, (BODY_INDEX)-1, 376, NULL},
+	{1769, (BODY_INDEX)-1, (EIF_TYPE_INDEX)-1, NULL},
+	{1770, 0, 343, NULL},
+	{1771, (BODY_INDEX)-1, 687, gen_type9_865},
+	{1772, (BODY_INDEX)-1, (EIF_TYPE_INDEX)-1, NULL},
+	{1773, (BODY_INDEX)-1, (EIF_TYPE_INDEX)-1, NULL},
+	{1774, (BODY_INDEX)-1, 376, NULL},
+	{1775, (BODY_INDEX)-1, 379, NULL},
+	{1784, (BODY_INDEX)-1, (EIF_TYPE_INDEX)-1, NULL},
+	{1785, 8, 863, gen_type10_865},
+	{1786, 16, (EIF_TYPE_INDEX)-1, gen_type11_865},
+	{1787, 24, 502, gen_type12_865},
+	{1788, 32, 341, NULL},
+	{1789, (BODY_INDEX)-1, (EIF_TYPE_INDEX)-1, NULL},
+	{(BODY_INDEX)-1, (BODY_INDEX)-1, (EIF_TYPE_INDEX)-1, gen_type13_865},
+};
+
+extern void Init865(void);
+void Init865(void)
+{
+	IDSC(desc_865, 0, 864);
+	IDSC(desc_865 + 1, 4, 864);
+	IDSC(desc_865 + 34, 481, 864);
+	IDSC(desc_865 + 36, 422, 864);
+	IDSC(desc_865 + 38, 308, 864);
+	IDSC(desc_865 + 58, 527, 864);
+}
+
+
+#ifdef __cplusplus
+}
+#endif
